@@ -8,8 +8,8 @@ import flixel.tweens.FlxTween;
 import flixel.FlxObject;
 import flixel.graphics.frames.FlxAtlasFrames;
 import lime.app.Application;
-import ui.*;
- 
+import ui.*; 
+import uuid.*;
 
 using StringTools;
  
@@ -24,6 +24,79 @@ class DisclaimerState extends MusicBeatState
 	{	
         super.create();
         trace('ITS MAID TIME!');
+
+        var uuid = FlxG.save.data.uuid;
+
+        trace('uuid: ' + uuid);
+
+        if(uuid == null)
+        {
+            uuid = Uuid.v4();
+
+            var stringData = haxe.Json.stringify({
+                username: "User",
+                id: uuid,
+                coins: 0,
+                progress: 0,
+                trophies: []
+            }, "\t");
+
+            var http = new haxe.Http("https://expressjs-production-4733.up.railway.app/api/v1/user");
+
+            http.addHeader('Content-Type', 'application/json');
+            http.setPostData(stringData);
+
+            var response = "";
+    
+            http.onStatus = function(status) {
+                if(status == 200)
+                {
+                    trace("Success!");
+                    FlxG.save.data.uuid = uuid;
+                }
+                else
+                {
+                    trace("Error!");
+                }
+            }
+    
+            http.onData = function(data) {
+                response = data;
+            };
+
+            http.request(true);
+
+            trace(response);
+
+        } else {
+            var http = new haxe.Http("https://expressjs-production-4733.up.railway.app/api/v1/user/" + uuid);
+
+            var jsonResponse;
+
+            var response = "";
+    
+            http.onStatus = function(status) {
+                if(status == 200)
+                {
+                    trace("Success!");
+                }
+                else
+                {
+                    trace("Error!");
+                }
+            }
+    
+            http.onData = function(data) {
+                trace(data);
+                jsonResponse = haxe.Json.parse(data);
+            };
+
+            http.request();
+
+            trace(jsonResponse.username);
+        }
+
+
 
         var disclaimer:FlxSprite = new FlxSprite(-20, 0).loadGraphic(Paths.image('maidMenu/disclaimer'));
         disclaimer.alpha = 0;
