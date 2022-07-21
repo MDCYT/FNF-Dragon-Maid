@@ -13,7 +13,16 @@ import uuid.*;
 
 using StringTools;
  
-
+typedef UserData = {
+    username: String,
+    id: String,
+    coins: Int,
+    progress: Int,
+    trophies: Array<Any>,
+    avatar: String,
+    createdAt: Date,
+    updatedAt: Date,
+};
 class DisclaimerState extends MusicBeatState
 {
 
@@ -66,14 +75,10 @@ class DisclaimerState extends MusicBeatState
 
             http.request(true);
 
-            trace(response);
-
         } else {
             var http = new haxe.Http("https://expressjs-production-4733.up.railway.app/api/v1/user/" + uuid);
 
-            var jsonResponse;
-
-            var response = "";
+            var jsonResponse:UserData;
     
             http.onStatus = function(status) {
                 if(status == 200)
@@ -87,13 +92,84 @@ class DisclaimerState extends MusicBeatState
             }
     
             http.onData = function(data) {
-                trace(data);
                 jsonResponse = haxe.Json.parse(data);
+
+                trace(jsonResponse);
+
+                var coins;
+
+                if(jsonResponse.coins < FlxG.save.data.coins)
+                {
+                    coins = FlxG.save.data.coins;
+                } else {
+                    coins = jsonResponse.coins;
+                } 
+
+                var username;
+                if(jsonResponse.username != FlxG.save.data.user)
+                {
+                    username = FlxG.save.data.user;
+                } else {
+                    username = jsonResponse.username;
+                }
+
+                var progress;
+                if(jsonResponse.progress < FlxG.save.data.progress)
+                {
+                    progress = FlxG.save.data.progress;
+                } else {
+                    progress = jsonResponse.progress;
+                }
+
+                var trophies;
+                if(!FlxG.save.data.trophies) {
+                    trophies = jsonResponse.trophies;
+                } else {
+                    if(jsonResponse.trophies.length < FlxG.save.data.trophies.length)
+                    {
+                        trophies = FlxG.save.data.trophies;
+                    } else {
+                        trophies = jsonResponse.trophies;
+                    }
+                }
+
+
+                var stringData = haxe.Json.stringify({
+                    username: username,
+                    id: uuid,
+                    coins: coins,
+                    progress: progress,
+                    trophies: trophies
+                }, "\t");
+
+                var http = new haxe.Http("https://expressjs-production-4733.up.railway.app/api/v1/user/update/" + uuid);
+
+                http.addHeader('Content-Type', 'application/json');
+                http.setPostData(stringData);
+
+                var response2 = "";
+
+                http.onStatus = function(status) {
+                    if(status == 200)
+                    {
+                        trace("Success!");
+                    }
+                    else
+                    {
+                        trace("Error!");
+                    }
+                }
+
+                http.onData = function(data) {
+                    response2 = data;
+                }
+
+                http.request(true);
+
+                trace(response2);
             };
 
             http.request();
-
-            trace(jsonResponse.username);
         }
 
 
