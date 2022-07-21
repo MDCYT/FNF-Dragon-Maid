@@ -8,9 +8,11 @@ import flixel.tweens.FlxTween;
 import flixel.FlxObject;
 import flixel.graphics.frames.FlxAtlasFrames;
 import lime.app.Application;
-import ui.*; 
+import ui.*;
+ 
 
-using StringTools; 
+using StringTools;
+ 
 
 class DisclaimerState extends MusicBeatState
 {
