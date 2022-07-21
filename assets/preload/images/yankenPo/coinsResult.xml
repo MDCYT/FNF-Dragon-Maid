@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="coinsResult.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="loser0000" x="0" y="0" width="426" height="188"/>
+	<SubTexture name="winer0000" x="0" y="202" width="426" height="188"/>
+</TextureAtlas>

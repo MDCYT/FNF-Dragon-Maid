@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="idleHand.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="shake0000" x="0" y="0" width="30" height="24" frameX="-12" frameY="-16" frameWidth="42" frameHeight="40"/>
+	<SubTexture name="shake0001" x="30" y="0" width="30" height="24" frameX="-12" frameY="-16" frameWidth="42" frameHeight="40"/>
+	<SubTexture name="shake0002" x="60" y="0" width="34" height="29" frameX="-8" frameY="-11" frameWidth="42" frameHeight="40"/>
+	<SubTexture name="shake0003" x="94" y="0" width="34" height="29" frameX="-8" frameY="-11" frameWidth="42" frameHeight="40"/>
+	<SubTexture name="shake0004" x="0" y="29" width="38" height="36" frameX="0" frameY="0" frameWidth="42" frameHeight="40"/>
+	<SubTexture name="shake0005" x="38" y="29" width="38" height="36" frameX="0" frameY="0" frameWidth="42" frameHeight="40"/>
+	<SubTexture name="shake0006" x="76" y="29" width="38" height="36" frameX="0" frameY="0" frameWidth="42" frameHeight="40"/>
+	<SubTexture name="shake0007" x="0" y="65" width="35" height="30" frameX="-6" frameY="-9" frameWidth="42" frameHeight="40"/>
+	<SubTexture name="shake0008" x="35" y="65" width="30" height="24" frameX="-12" frameY="-16" frameWidth="42" frameHeight="40"/>
+	<SubTexture name="shake0009" x="65" y="65" width="30" height="24" frameX="-12" frameY="-16" frameWidth="42" frameHeight="40"/>
+	<SubTexture name="shake0010" x="95" y="65" width="30" height="24" frameX="-12" frameY="-16" frameWidth="42" frameHeight="40"/>
+	<SubTexture name="shake0011" x="0" y="95" width="30" height="24" frameX="-12" frameY="-16" frameWidth="42" frameHeight="40"/>
+	<SubTexture name="shake0012" x="30" y="95" width="30" height="24" frameX="-12" frameY="-16" frameWidth="42" frameHeight="40"/>
+	<SubTexture name="shake0013" x="60" y="95" width="30" height="24" frameX="-12" frameY="-16" frameWidth="42" frameHeight="40"/>
+	<SubTexture name="shake0014" x="90" y="95" width="30" height="24" frameX="-12" frameY="-16" frameWidth="42" frameHeight="40"/>
+</TextureAtlas>

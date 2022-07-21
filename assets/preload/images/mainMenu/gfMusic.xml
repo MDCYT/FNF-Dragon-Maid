@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="gfMusic.png"><SubTexture name="gf-menu dance0000" x="0" y="0" width="26" height="32" frameX="-3" frameY="-1" frameWidth="32" frameHeight="34" />
+<SubTexture name="gf-menu dance0001" x="0" y="32" width="28" height="31" frameX="-3" frameY="-2" frameWidth="32" frameHeight="34" />
+<SubTexture name="gf-menu dance0002" x="26" y="0" width="27" height="32" frameX="-3" frameY="-1" frameWidth="32" frameHeight="34" />
+<SubTexture name="gf-menu dance0003" x="0" y="0" width="26" height="32" frameX="-3" frameY="-1" frameWidth="32" frameHeight="34" />
+<SubTexture name="gf-menu dance0004" x="28" y="32" width="28" height="30" frameX="-1" frameY="-3" frameWidth="32" frameHeight="34" />
+<SubTexture name="gf-menu dance0005" x="53" y="0" width="26" height="32" frameX="-3" frameY="-1" frameWidth="32" frameHeight="34" />
+</TextureAtlas>

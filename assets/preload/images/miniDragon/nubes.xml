@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="nubes.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="nube0000" x="0" y="0" width="1236" height="272" frameX="-44" frameY="0" frameWidth="1280" frameHeight="272"/>
+	<SubTexture name="nube0001" x="0" y="0" width="1236" height="272" frameX="-44" frameY="0" frameWidth="1280" frameHeight="272"/>
+	<SubTexture name="nube0002" x="0" y="0" width="1236" height="272" frameX="-44" frameY="0" frameWidth="1280" frameHeight="272"/>
+	<SubTexture name="nube0003" x="0" y="0" width="1236" height="272" frameX="-44" frameY="0" frameWidth="1280" frameHeight="272"/>
+	<SubTexture name="nube0004" x="0" y="0" width="1236" height="272" frameX="-44" frameY="0" frameWidth="1280" frameHeight="272"/>
+	<SubTexture name="nube0005" x="0" y="0" width="1236" height="272" frameX="-44" frameY="0" frameWidth="1280" frameHeight="272"/>
+	<SubTexture name="nube0006" x="0" y="272" width="1280" height="272"/>
+	<SubTexture name="nube0007" x="0" y="272" width="1280" height="272"/>
+	<SubTexture name="nube0008" x="0" y="272" width="1280" height="272"/>
+	<SubTexture name="nube0009" x="0" y="272" width="1280" height="272"/>
+	<SubTexture name="nube0010" x="0" y="272" width="1280" height="272"/>
+	<SubTexture name="nube0011" x="0" y="272" width="1280" height="272"/>
+	<SubTexture name="nube0012" x="0" y="544" width="1280" height="272"/>
+	<SubTexture name="nube0013" x="0" y="544" width="1280" height="272"/>
+	<SubTexture name="nube0014" x="0" y="544" width="1280" height="272"/>
+	<SubTexture name="nube0015" x="0" y="544" width="1280" height="272"/>
+	<SubTexture name="nube0016" x="0" y="544" width="1280" height="272"/>
+	<SubTexture name="nube0017" x="0" y="544" width="1280" height="272"/>
+	<SubTexture name="nube0018" x="0" y="816" width="1280" height="272"/>
+	<SubTexture name="nube0019" x="0" y="816" width="1280" height="272"/>
+	<SubTexture name="nube0020" x="0" y="816" width="1280" height="272"/>
+	<SubTexture name="nube0021" x="0" y="816" width="1280" height="272"/>
+	<SubTexture name="nube0022" x="0" y="816" width="1280" height="272"/>
+	<SubTexture name="nube0023" x="0" y="816" width="1280" height="272"/>
+	<SubTexture name="nube0024" x="0" y="1088" width="1280" height="272"/>
+	<SubTexture name="nube0025" x="0" y="1088" width="1280" height="272"/>
+	<SubTexture name="nube0026" x="0" y="1088" width="1280" height="272"/>
+	<SubTexture name="nube0027" x="0" y="1088" width="1280" height="272"/>
+	<SubTexture name="nube0028" x="0" y="1088" width="1280" height="272"/>
+	<SubTexture name="nube0029" x="0" y="1088" width="1280" height="272"/>
+	<SubTexture name="nube0030" x="0" y="1360" width="1280" height="272"/>
+	<SubTexture name="nube0031" x="0" y="1360" width="1280" height="272"/>
+	<SubTexture name="nube0032" x="0" y="1360" width="1280" height="272"/>
+	<SubTexture name="nube0033" x="0" y="1360" width="1280" height="272"/>
+	<SubTexture name="nube0034" x="0" y="1360" width="1280" height="272"/>
+	<SubTexture name="nube0035" x="0" y="1360" width="1280" height="272"/>
+</TextureAtlas>

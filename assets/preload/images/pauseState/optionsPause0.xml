@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="optionsPause0.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="exit off0000" x="0" y="0" width="149" height="71"/>
+	<SubTexture name="exit on0000" x="0" y="71" width="386" height="83"/>
+	<SubTexture name="restart off0000" x="0" y="154" width="274" height="68"/>
+	<SubTexture name="restart on0000" x="0" y="222" width="382" height="81"/>
+	<SubTexture name="resume off0000" x="0" y="303" width="298" height="68"/>
+	<SubTexture name="resume on0000" x="0" y="371" width="381" height="81"/>
+</TextureAtlas>

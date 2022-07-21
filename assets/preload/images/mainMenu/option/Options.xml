@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Options.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Options Off0000" x="0" y="0" width="381" height="813"/>
+	<SubTexture name="Options On0000" x="381" y="0" width="383" height="812" frameX="0" frameY="0" frameWidth="390" frameHeight="812"/>
+	<SubTexture name="Options On0001" x="764" y="0" width="383" height="812" frameX="0" frameY="0" frameWidth="390" frameHeight="812"/>
+	<SubTexture name="Options On0002" x="1147" y="0" width="383" height="812" frameX="0" frameY="0" frameWidth="390" frameHeight="812"/>
+	<SubTexture name="Options On0003" x="1530" y="0" width="384" height="812" frameX="0" frameY="0" frameWidth="390" frameHeight="812"/>
+	<SubTexture name="Options On0004" x="1530" y="0" width="384" height="812" frameX="0" frameY="0" frameWidth="390" frameHeight="812"/>
+	<SubTexture name="Options On0005" x="0" y="813" width="385" height="812" frameX="0" frameY="0" frameWidth="390" frameHeight="812"/>
+	<SubTexture name="Options On0006" x="0" y="813" width="385" height="812" frameX="0" frameY="0" frameWidth="390" frameHeight="812"/>
+	<SubTexture name="Options On0007" x="385" y="813" width="386" height="812" frameX="0" frameY="0" frameWidth="390" frameHeight="812"/>
+	<SubTexture name="Options On0008" x="771" y="813" width="387" height="812" frameX="0" frameY="0" frameWidth="390" frameHeight="812"/>
+	<SubTexture name="Options On0009" x="1158" y="813" width="387" height="812" frameX="0" frameY="0" frameWidth="390" frameHeight="812"/>
+	<SubTexture name="Options On0010" x="1545" y="813" width="388" height="812" frameX="0" frameY="0" frameWidth="390" frameHeight="812"/>
+	<SubTexture name="Options On0011" x="1545" y="813" width="388" height="812" frameX="0" frameY="0" frameWidth="390" frameHeight="812"/>
+	<SubTexture name="Options On0012" x="0" y="1625" width="389" height="812" frameX="0" frameY="0" frameWidth="390" frameHeight="812"/>
+	<SubTexture name="Options On0013" x="389" y="1625" width="390" height="812"/>
+	<SubTexture name="Options On0014" x="779" y="1625" width="389" height="812" frameX="0" frameY="0" frameWidth="390" frameHeight="812"/>
+	<SubTexture name="Options On0015" x="1168" y="1625" width="388" height="812" frameX="0" frameY="0" frameWidth="390" frameHeight="812"/>
+	<SubTexture name="Options On0016" x="1556" y="1625" width="387" height="812" frameX="0" frameY="0" frameWidth="390" frameHeight="812"/>
+	<SubTexture name="Options On0017" x="0" y="2437" width="386" height="812" frameX="0" frameY="0" frameWidth="390" frameHeight="812"/>
+	<SubTexture name="Options On0018" x="386" y="2437" width="385" height="812" frameX="0" frameY="0" frameWidth="390" frameHeight="812"/>
+	<SubTexture name="Options On0019" x="771" y="2437" width="384" height="812" frameX="0" frameY="0" frameWidth="390" frameHeight="812"/>
+	<SubTexture name="Options On0020" x="1155" y="2437" width="383" height="812" frameX="0" frameY="0" frameWidth="390" frameHeight="812"/>
+	<SubTexture name="Options On0021" x="381" y="0" width="383" height="812" frameX="0" frameY="0" frameWidth="390" frameHeight="812"/>
+</TextureAtlas>

@@ -1,0 +1,10 @@
+haxelib remove lime
+haxelib remove openfl
+haxelib remove flixel-tools
+haxelib remove flixel
+
+haxelib install lime
+haxelib install openfl
+haxelib install flixel
+haxelib install flixel-tools
+haxelib run flixel-tools setup

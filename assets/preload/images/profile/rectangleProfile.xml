@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="rectangleProfile.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="bf0000" x="0" y="0" width="732" height="408"/>
+	<SubTexture name="blue0000" x="0" y="416" width="732" height="408"/>
+	<SubTexture name="red0000" x="0" y="832" width="732" height="408"/>
+	<SubTexture name="yellow0000" x="0" y="1248" width="732" height="408"/>
+</TextureAtlas>

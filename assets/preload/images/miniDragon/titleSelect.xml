@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="titleSelect.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="exit false0000" x="0" y="0" width="143" height="25"/>
+	<SubTexture name="exit true0000" x="0" y="25" width="143" height="25"/>
+	<SubTexture name="play false0000" x="0" y="50" width="143" height="25"/>
+	<SubTexture name="play true0000" x="0" y="75" width="143" height="25"/>
+</TextureAtlas>

@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="gfMaid.png">
+<SubTexture name="gfMaid idle0000" x="345" y="1050" width="364" height="510" frameX="-67" frameY="-35" frameWidth="500" frameHeight="579" />
+<SubTexture name="gfMaid idle0001" x="345" y="1050" width="364" height="510" frameX="-67" frameY="-35" frameWidth="500" frameHeight="579" />
+<SubTexture name="gfMaid idle0002" x="1814" y="0" width="359" height="498" frameX="-67" frameY="-47" frameWidth="500" frameHeight="579" />
+<SubTexture name="gfMaid idle0003" x="1814" y="0" width="359" height="498" frameX="-67" frameY="-47" frameWidth="500" frameHeight="579" />
+<SubTexture name="gfMaid idle0004" x="709" y="1050" width="364" height="510" frameX="-67" frameY="-35" frameWidth="500" frameHeight="579" />
+<SubTexture name="gfMaid idle0005" x="709" y="1050" width="364" height="510" frameX="-67" frameY="-35" frameWidth="500" frameHeight="579" />
+<SubTexture name="gfMaid idle0006" x="354" y="532" width="375" height="517" frameX="-62" frameY="-28" frameWidth="500" frameHeight="579" />
+<SubTexture name="gfMaid idle0007" x="354" y="532" width="375" height="517" frameX="-62" frameY="-28" frameWidth="500" frameHeight="579" />
+<SubTexture name="gfMaid idle0008" x="710" y="0" width="379" height="518" frameX="-60" frameY="-26" frameWidth="500" frameHeight="579" />
+<SubTexture name="gfMaid idle0009" x="710" y="0" width="379" height="518" frameX="-60" frameY="-26" frameWidth="500" frameHeight="579" />
+<SubTexture name="gfMaid idle0010" x="1089" y="0" width="379" height="517" frameX="-60" frameY="-27" frameWidth="500" frameHeight="579" />
+<SubTexture name="gfMaid idle0011" x="1089" y="0" width="379" height="517" frameX="-60" frameY="-27" frameWidth="500" frameHeight="579" />
+<SubTexture name="gfMaid idle0012" x="1089" y="0" width="379" height="517" frameX="-60" frameY="-27" frameWidth="500" frameHeight="579" />
+<SubTexture name="gfMaid idle0013" x="1089" y="0" width="379" height="517" frameX="-60" frameY="-27" frameWidth="500" frameHeight="579" />
+<SubTexture name="gfMaid down0000" x="2173" y="0" width="352" height="429" frameX="-80" frameY="-124" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid down0001" x="2173" y="0" width="352" height="429" frameX="-80" frameY="-124" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid down0002" x="1795" y="1561" width="346" height="433" frameX="-94" frameY="-119" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid down0003" x="1795" y="1561" width="346" height="433" frameX="-94" frameY="-119" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid down0004" x="1111" y="1561" width="342" height="439" frameX="-98" frameY="-113" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid down0005" x="1111" y="1561" width="342" height="439" frameX="-98" frameY="-113" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid down0006" x="1111" y="1561" width="342" height="439" frameX="-98" frameY="-113" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid down0007" x="1111" y="1561" width="342" height="439" frameX="-98" frameY="-113" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid down0008" x="1111" y="1561" width="342" height="439" frameX="-98" frameY="-113" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid down0009" x="1111" y="1561" width="342" height="439" frameX="-98" frameY="-113" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid down0010" x="1111" y="1561" width="342" height="439" frameX="-98" frameY="-113" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid down0011" x="1111" y="1561" width="342" height="439" frameX="-98" frameY="-113" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss down0000" x="2173" y="0" width="352" height="429" frameX="-80" frameY="-124" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss down0001" x="0" y="2046" width="356" height="426" frameX="-89" frameY="-127" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss down0002" x="0" y="2046" width="356" height="426" frameX="-89" frameY="-127" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss down0003" x="1453" y="1561" width="342" height="439" frameX="-98" frameY="-113" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss down0004" x="1453" y="1561" width="342" height="439" frameX="-98" frameY="-113" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss down0005" x="1453" y="1561" width="342" height="439" frameX="-98" frameY="-113" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss down0006" x="1453" y="1561" width="342" height="439" frameX="-98" frameY="-113" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss down0007" x="1453" y="1561" width="342" height="439" frameX="-98" frameY="-113" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss down0008" x="1453" y="1561" width="342" height="439" frameX="-98" frameY="-113" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss down0009" x="1453" y="1561" width="342" height="439" frameX="-98" frameY="-113" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss down0010" x="1453" y="1561" width="342" height="439" frameX="-98" frameY="-113" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss down0011" x="1453" y="1561" width="342" height="439" frameX="-98" frameY="-113" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss down0012" x="1453" y="1561" width="342" height="439" frameX="-98" frameY="-113" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss down0013" x="1453" y="1561" width="342" height="439" frameX="-98" frameY="-113" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss down0014" x="1453" y="1561" width="342" height="439" frameX="-98" frameY="-113" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss down0015" x="1453" y="1561" width="342" height="439" frameX="-98" frameY="-113" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss down0016" x="1453" y="1561" width="342" height="439" frameX="-98" frameY="-113" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss down0017" x="1453" y="1561" width="342" height="439" frameX="-98" frameY="-113" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss down0018" x="1453" y="1561" width="342" height="439" frameX="-98" frameY="-113" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss down0019" x="1453" y="1561" width="342" height="439" frameX="-98" frameY="-113" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss down0020" x="1453" y="1561" width="342" height="439" frameX="-98" frameY="-113" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss down0021" x="1453" y="1561" width="342" height="439" frameX="-98" frameY="-113" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss down0022" x="1453" y="1561" width="342" height="439" frameX="-98" frameY="-113" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss down0023" x="1453" y="1561" width="342" height="439" frameX="-98" frameY="-113" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid left0000" x="723" y="1561" width="388" height="471" frameX="-8" frameY="-95" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid left0001" x="723" y="1561" width="388" height="471" frameX="-8" frameY="-95" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid left0002" x="0" y="1561" width="354" height="485" frameX="-39" frameY="-80" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid left0003" x="0" y="1561" width="354" height="485" frameX="-39" frameY="-80" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid left0004" x="1814" y="498" width="353" height="489" frameX="-41" frameY="-76" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid left0005" x="1814" y="498" width="353" height="489" frameX="-41" frameY="-76" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid left0006" x="1814" y="498" width="353" height="489" frameX="-41" frameY="-76" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid left0007" x="1814" y="498" width="353" height="489" frameX="-41" frameY="-76" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid left0008" x="1814" y="498" width="353" height="489" frameX="-41" frameY="-76" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid left0009" x="1814" y="498" width="353" height="489" frameX="-41" frameY="-76" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid left0010" x="1814" y="498" width="353" height="489" frameX="-41" frameY="-76" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid left0011" x="1814" y="498" width="353" height="489" frameX="-41" frameY="-76" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss left0000" x="723" y="1561" width="388" height="471" frameX="-8" frameY="-95" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss left0001" x="354" y="1561" width="369" height="479" frameX="-33" frameY="-87" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss left0002" x="354" y="1561" width="369" height="479" frameX="-33" frameY="-87" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss left0003" x="1814" y="987" width="353" height="489" frameX="-41" frameY="-76" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss left0004" x="1814" y="987" width="353" height="489" frameX="-41" frameY="-76" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss left0005" x="1814" y="987" width="353" height="489" frameX="-41" frameY="-76" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss left0006" x="1814" y="987" width="353" height="489" frameX="-41" frameY="-76" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss left0007" x="1814" y="987" width="353" height="489" frameX="-41" frameY="-76" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss left0008" x="1814" y="987" width="353" height="489" frameX="-41" frameY="-76" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss left0009" x="1814" y="987" width="353" height="489" frameX="-41" frameY="-76" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss left0010" x="1814" y="987" width="353" height="489" frameX="-41" frameY="-76" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss left0011" x="1814" y="987" width="353" height="489" frameX="-41" frameY="-76" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss left0012" x="1814" y="987" width="353" height="489" frameX="-41" frameY="-76" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss left0013" x="1814" y="987" width="353" height="489" frameX="-41" frameY="-76" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss left0014" x="1814" y="987" width="353" height="489" frameX="-41" frameY="-76" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss left0015" x="1814" y="987" width="353" height="489" frameX="-41" frameY="-76" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss left0016" x="1814" y="987" width="353" height="489" frameX="-41" frameY="-76" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss left0017" x="1814" y="987" width="353" height="489" frameX="-41" frameY="-76" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss left0018" x="1814" y="987" width="353" height="489" frameX="-41" frameY="-76" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss left0019" x="1814" y="987" width="353" height="489" frameX="-41" frameY="-76" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss left0020" x="1814" y="987" width="353" height="489" frameX="-41" frameY="-76" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss left0021" x="1814" y="987" width="353" height="489" frameX="-41" frameY="-76" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss left0022" x="1814" y="987" width="353" height="489" frameX="-41" frameY="-76" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss left0023" x="1814" y="987" width="353" height="489" frameX="-41" frameY="-76" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid right0000" x="1073" y="1050" width="347" height="501" frameX="-115" frameY="-56" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid right0001" x="1073" y="1050" width="347" height="501" frameX="-115" frameY="-56" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid right0002" x="0" y="1050" width="345" height="511" frameX="-119" frameY="-46" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid right0003" x="0" y="1050" width="345" height="511" frameX="-119" frameY="-46" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid right0004" x="1468" y="0" width="346" height="515" frameX="-118" frameY="-42" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid right0005" x="1468" y="0" width="346" height="515" frameX="-118" frameY="-42" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid right0006" x="1468" y="0" width="346" height="515" frameX="-118" frameY="-42" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid right0007" x="1468" y="0" width="346" height="515" frameX="-118" frameY="-42" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid right0008" x="1468" y="0" width="346" height="515" frameX="-118" frameY="-42" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid right0009" x="1468" y="0" width="346" height="515" frameX="-118" frameY="-42" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid right0010" x="1468" y="0" width="346" height="515" frameX="-118" frameY="-42" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid right0011" x="1468" y="0" width="346" height="515" frameX="-118" frameY="-42" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss right0000" x="1073" y="1050" width="347" height="501" frameX="-115" frameY="-56" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss right0001" x="1420" y="1050" width="358" height="500" frameX="-112" frameY="-57" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss right0002" x="1420" y="1050" width="358" height="500" frameX="-112" frameY="-57" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss right0003" x="1468" y="515" width="346" height="515" frameX="-118" frameY="-42" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss right0004" x="1468" y="515" width="346" height="515" frameX="-118" frameY="-42" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss right0005" x="1468" y="515" width="346" height="515" frameX="-118" frameY="-42" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss right0006" x="1468" y="515" width="346" height="515" frameX="-118" frameY="-42" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss right0007" x="1468" y="515" width="346" height="515" frameX="-118" frameY="-42" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss right0008" x="1468" y="515" width="346" height="515" frameX="-118" frameY="-42" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss right0009" x="1468" y="515" width="346" height="515" frameX="-118" frameY="-42" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss right0010" x="1468" y="515" width="346" height="515" frameX="-118" frameY="-42" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss right0011" x="1468" y="515" width="346" height="515" frameX="-118" frameY="-42" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss right0012" x="1468" y="515" width="346" height="515" frameX="-118" frameY="-42" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss right0013" x="1468" y="515" width="346" height="515" frameX="-118" frameY="-42" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss right0014" x="1468" y="515" width="346" height="515" frameX="-118" frameY="-42" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss right0015" x="1468" y="515" width="346" height="515" frameX="-118" frameY="-42" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss right0016" x="1468" y="515" width="346" height="515" frameX="-118" frameY="-42" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss right0017" x="1468" y="515" width="346" height="515" frameX="-118" frameY="-42" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss right0018" x="1468" y="515" width="346" height="515" frameX="-118" frameY="-42" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss right0019" x="1468" y="515" width="346" height="515" frameX="-118" frameY="-42" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss right0020" x="1468" y="515" width="346" height="515" frameX="-118" frameY="-42" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss right0021" x="1468" y="515" width="346" height="515" frameX="-118" frameY="-42" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss right0022" x="1468" y="515" width="346" height="515" frameX="-118" frameY="-42" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss right0023" x="1468" y="515" width="346" height="515" frameX="-118" frameY="-42" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid up0000" x="0" y="0" width="364" height="532" frameX="-80" frameY="-16" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid up0001" x="0" y="0" width="364" height="532" frameX="-80" frameY="-16" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid up0002" x="364" y="0" width="346" height="522" frameX="-96" frameY="-25" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid up0003" x="364" y="0" width="346" height="522" frameX="-96" frameY="-25" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid up0004" x="1089" y="517" width="342" height="517" frameX="-100" frameY="-30" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid up0005" x="1089" y="517" width="342" height="517" frameX="-100" frameY="-30" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid up0006" x="1089" y="517" width="342" height="517" frameX="-100" frameY="-30" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid up0007" x="1089" y="517" width="342" height="517" frameX="-100" frameY="-30" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid up0008" x="1089" y="517" width="342" height="517" frameX="-100" frameY="-30" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid up0009" x="1089" y="517" width="342" height="517" frameX="-100" frameY="-30" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid up0010" x="1089" y="517" width="342" height="517" frameX="-100" frameY="-30" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid up0011" x="1089" y="517" width="342" height="517" frameX="-100" frameY="-30" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss up0000" x="0" y="0" width="364" height="532" frameX="-80" frameY="-16" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss up0001" x="0" y="532" width="354" height="518" frameX="-93" frameY="-30" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss up0002" x="0" y="532" width="354" height="518" frameX="-93" frameY="-30" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss up0003" x="729" y="532" width="342" height="517" frameX="-100" frameY="-30" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss up0004" x="729" y="532" width="342" height="517" frameX="-100" frameY="-30" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss up0005" x="729" y="532" width="342" height="517" frameX="-100" frameY="-30" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss up0006" x="729" y="532" width="342" height="517" frameX="-100" frameY="-30" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss up0007" x="729" y="532" width="342" height="517" frameX="-100" frameY="-30" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss up0008" x="729" y="532" width="342" height="517" frameX="-100" frameY="-30" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss up0009" x="729" y="532" width="342" height="517" frameX="-100" frameY="-30" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss up0010" x="729" y="532" width="342" height="517" frameX="-100" frameY="-30" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss up0011" x="729" y="532" width="342" height="517" frameX="-100" frameY="-30" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss up0012" x="729" y="532" width="342" height="517" frameX="-100" frameY="-30" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss up0013" x="729" y="532" width="342" height="517" frameX="-100" frameY="-30" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss up0014" x="729" y="532" width="342" height="517" frameX="-100" frameY="-30" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss up0015" x="729" y="532" width="342" height="517" frameX="-100" frameY="-30" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss up0016" x="729" y="532" width="342" height="517" frameX="-100" frameY="-30" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss up0017" x="729" y="532" width="342" height="517" frameX="-100" frameY="-30" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss up0018" x="729" y="532" width="342" height="517" frameX="-100" frameY="-30" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss up0019" x="729" y="532" width="342" height="517" frameX="-100" frameY="-30" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss up0020" x="729" y="532" width="342" height="517" frameX="-100" frameY="-30" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss up0021" x="729" y="532" width="342" height="517" frameX="-100" frameY="-30" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss up0022" x="729" y="532" width="342" height="517" frameX="-100" frameY="-30" frameWidth="500" frameHeight="600" />
+<SubTexture name="gfMaid miss up0023" x="729" y="532" width="342" height="517" frameX="-100" frameY="-30" frameWidth="500" frameHeight="600" />
+</TextureAtlas>

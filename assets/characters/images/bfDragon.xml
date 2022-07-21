@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="bfDragon.png">
+	<!-- Created with Adobe Animate version 22.0.2.168 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="BF normal0000" x="14" y="14" width="485" height="570"/>
+	<SubTexture name="BF normal0001" x="14" y="14" width="485" height="570"/>
+	<SubTexture name="BF normal0002" x="514" y="14" width="485" height="570"/>
+	<SubTexture name="BF normal0003" x="514" y="14" width="485" height="570"/>
+	<SubTexture name="BF normal0004" x="1014" y="14" width="485" height="570"/>
+	<SubTexture name="BF normal0005" x="1014" y="14" width="485" height="570"/>
+	<SubTexture name="BF normal0006" x="1514" y="14" width="485" height="570"/>
+	<SubTexture name="BF normal0007" x="1514" y="14" width="485" height="570"/>
+	<SubTexture name="BF normal0008" x="2014" y="14" width="485" height="570"/>
+	<SubTexture name="BF normal0009" x="2014" y="14" width="485" height="570"/>
+	<SubTexture name="BF normal0010" x="2514" y="14" width="485" height="570"/>
+	<SubTexture name="BF normal0011" x="2514" y="14" width="485" height="570"/>
+	<SubTexture name="BF normal0012" x="2514" y="14" width="485" height="570"/>
+	<SubTexture name="BF normal0013" x="2514" y="14" width="485" height="570"/>
+	<SubTexture name="abajo0000" x="3014" y="14" width="471" height="488"/>
+	<SubTexture name="abajo0001" x="3014" y="14" width="471" height="488"/>
+	<SubTexture name="abajo0002" x="3500" y="14" width="471" height="488"/>
+	<SubTexture name="abajo0003" x="3500" y="14" width="471" height="488"/>
+	<SubTexture name="abajo0004" x="3500" y="14" width="471" height="488"/>
+	<SubTexture name="abajo0005" x="3500" y="14" width="471" height="488"/>
+	<SubTexture name="abajo0006" x="3500" y="14" width="471" height="488"/>
+	<SubTexture name="abajo0007" x="3500" y="14" width="471" height="488"/>
+	<SubTexture name="abajo0008" x="3500" y="14" width="471" height="488"/>
+	<SubTexture name="abajo0009" x="3500" y="14" width="471" height="488"/>
+	<SubTexture name="abajo0010" x="3500" y="14" width="471" height="488"/>
+	<SubTexture name="abajo0011" x="3500" y="14" width="471" height="488"/>
+	<SubTexture name="abajo0012" x="3500" y="14" width="471" height="488"/>
+	<SubTexture name="abajo0013" x="3500" y="14" width="471" height="488"/>
+	<SubTexture name="adelante0000" x="3986" y="14" width="435" height="563"/>
+	<SubTexture name="adelante0001" x="3986" y="14" width="435" height="563"/>
+	<SubTexture name="adelante0002" x="4436" y="14" width="435" height="563"/>
+	<SubTexture name="adelante0003" x="4436" y="14" width="435" height="563"/>
+	<SubTexture name="adelante0004" x="4436" y="14" width="435" height="563"/>
+	<SubTexture name="adelante0005" x="4436" y="14" width="435" height="563"/>
+	<SubTexture name="adelante0006" x="4436" y="14" width="435" height="563"/>
+	<SubTexture name="adelante0007" x="4436" y="14" width="435" height="563"/>
+	<SubTexture name="adelante0008" x="4436" y="14" width="435" height="563"/>
+	<SubTexture name="adelante0009" x="4436" y="14" width="435" height="563"/>
+	<SubTexture name="adelante0010" x="4436" y="14" width="435" height="563"/>
+	<SubTexture name="adelante0011" x="4436" y="14" width="435" height="563"/>
+	<SubTexture name="adelante0012" x="4436" y="14" width="435" height="563"/>
+	<SubTexture name="adelante0013" x="4436" y="14" width="435" height="563"/>
+	<SubTexture name="arriba0000" x="4886" y="14" width="405" height="580"/>
+	<SubTexture name="arriba0001" x="4886" y="14" width="405" height="580"/>
+	<SubTexture name="arriba0002" x="5306" y="14" width="405" height="580"/>
+	<SubTexture name="arriba0003" x="5306" y="14" width="405" height="580"/>
+	<SubTexture name="arriba0004" x="5306" y="14" width="405" height="580"/>
+	<SubTexture name="arriba0005" x="5306" y="14" width="405" height="580"/>
+	<SubTexture name="arriba0006" x="5306" y="14" width="405" height="580"/>
+	<SubTexture name="arriba0007" x="5306" y="14" width="405" height="580"/>
+	<SubTexture name="arriba0008" x="5306" y="14" width="405" height="580"/>
+	<SubTexture name="arriba0009" x="5306" y="14" width="405" height="580"/>
+	<SubTexture name="arriba0010" x="5306" y="14" width="405" height="580"/>
+	<SubTexture name="arriba0011" x="5306" y="14" width="405" height="580"/>
+	<SubTexture name="arriba0012" x="5306" y="14" width="405" height="580"/>
+	<SubTexture name="arriba0013" x="5306" y="14" width="405" height="580"/>
+	<SubTexture name="atras0000" x="5726" y="14" width="411" height="533"/>
+	<SubTexture name="atras0001" x="5726" y="14" width="411" height="533"/>
+	<SubTexture name="atras0002" x="6152" y="14" width="411" height="533"/>
+	<SubTexture name="atras0003" x="6152" y="14" width="411" height="533"/>
+	<SubTexture name="atras0004" x="6152" y="14" width="411" height="533"/>
+	<SubTexture name="atras0005" x="6152" y="14" width="411" height="533"/>
+	<SubTexture name="atras0006" x="6152" y="14" width="411" height="533"/>
+	<SubTexture name="atras0007" x="6152" y="14" width="411" height="533"/>
+	<SubTexture name="atras0008" x="6152" y="14" width="411" height="533"/>
+	<SubTexture name="atras0009" x="6152" y="14" width="411" height="533"/>
+	<SubTexture name="atras0010" x="6152" y="14" width="411" height="533"/>
+	<SubTexture name="atras0011" x="6152" y="14" width="411" height="533"/>
+	<SubTexture name="atras0012" x="6152" y="14" width="411" height="533"/>
+	<SubTexture name="atras0013" x="6152" y="14" width="411" height="533"/>
+	<SubTexture name="death BF0000" x="6578" y="14" width="537" height="509"/>
+	<SubTexture name="death BF0001" x="7130" y="14" width="537" height="509"/>
+	<SubTexture name="death BF0002" x="14" y="609" width="537" height="509"/>
+	<SubTexture name="death BF0003" x="566" y="609" width="537" height="509"/>
+	<SubTexture name="death BF0004" x="566" y="609" width="537" height="509"/>
+	<SubTexture name="death BF0005" x="1118" y="609" width="537" height="509"/>
+	<SubTexture name="death BF0006" x="1670" y="609" width="537" height="509"/>
+	<SubTexture name="death BF0007" x="1670" y="609" width="537" height="509"/>
+	<SubTexture name="death BF0008" x="1670" y="609" width="537" height="509"/>
+	<SubTexture name="death BF0009" x="1670" y="609" width="537" height="509"/>
+	<SubTexture name="death BF0010" x="1670" y="609" width="537" height="509"/>
+	<SubTexture name="death BF0011" x="1670" y="609" width="537" height="509"/>
+	<SubTexture name="death BF0012" x="1670" y="609" width="537" height="509"/>
+	<SubTexture name="death BF0013" x="1670" y="609" width="537" height="509"/>
+	<SubTexture name="death BF0014" x="1670" y="609" width="537" height="509"/>
+	<SubTexture name="death BF0015" x="2222" y="609" width="537" height="509"/>
+	<SubTexture name="death BF0016" x="2222" y="609" width="537" height="509"/>
+	<SubTexture name="death BF0017" x="2222" y="609" width="537" height="509"/>
+	<SubTexture name="death BF0018" x="2774" y="609" width="537" height="509"/>
+	<SubTexture name="death BF0019" x="2774" y="609" width="537" height="509"/>
+	<SubTexture name="death BF0020" x="3326" y="609" width="537" height="509"/>
+	<SubTexture name="death BF0021" x="3326" y="609" width="537" height="509"/>
+	<SubTexture name="death BF0022" x="3878" y="609" width="537" height="509"/>
+	<SubTexture name="death BF0023" x="3878" y="609" width="537" height="509"/>
+	<SubTexture name="death BF0024" x="4430" y="609" width="537" height="509"/>
+	<SubTexture name="death BF0025" x="4982" y="609" width="537" height="509"/>
+	<SubTexture name="death BF0026" x="4982" y="609" width="537" height="509"/>
+	<SubTexture name="death BF0027" x="5534" y="609" width="537" height="509"/>
+	<SubTexture name="death BF0028" x="5534" y="609" width="537" height="509"/>
+	<SubTexture name="death BF0029" x="6086" y="609" width="537" height="509"/>
+	<SubTexture name="death BF0030" x="6086" y="609" width="537" height="509"/>
+	<SubTexture name="death BF0031" x="6638" y="609" width="537" height="509"/>
+	<SubTexture name="death BF0032" x="6638" y="609" width="537" height="509"/>
+	<SubTexture name="death BF0033" x="6638" y="609" width="537" height="509"/>
+	<SubTexture name="death BF0034" x="7190" y="609" width="537" height="509"/>
+	<SubTexture name="death BF0035" x="14" y="1133" width="537" height="509"/>
+	<SubTexture name="death BF0036" x="566" y="1133" width="537" height="509"/>
+	<SubTexture name="death BF0037" x="1118" y="1133" width="537" height="509"/>
+	<SubTexture name="death BF0038" x="1670" y="1133" width="537" height="509"/>
+	<SubTexture name="death BF0039" x="2222" y="1133" width="537" height="509"/>
+	<SubTexture name="death BF0040" x="2774" y="1133" width="537" height="509"/>
+	<SubTexture name="death BF0041" x="3326" y="1133" width="537" height="509"/>
+	<SubTexture name="death BF0042" x="3878" y="1133" width="537" height="509"/>
+	<SubTexture name="death BF0043" x="4430" y="1133" width="537" height="509"/>
+	<SubTexture name="death BF0044" x="4982" y="1133" width="537" height="509"/>
+	<SubTexture name="death BF0045" x="5534" y="1133" width="537" height="509"/>
+	<SubTexture name="death BF0046" x="6086" y="1133" width="537" height="509"/>
+	<SubTexture name="death BF0047" x="6638" y="1133" width="537" height="509"/>
+	<SubTexture name="death BF0048" x="7190" y="1133" width="537" height="509"/>
+	<SubTexture name="death BF0049" x="14" y="1657" width="537" height="509"/>
+	<SubTexture name="death BF0050" x="566" y="1657" width="537" height="509"/>
+	<SubTexture name="death BF0051" x="1118" y="1657" width="537" height="509"/>
+	<SubTexture name="death BF0052" x="1670" y="1657" width="537" height="509"/>
+	<SubTexture name="death BF0053" x="2222" y="1657" width="537" height="509"/>
+	<SubTexture name="death BF0054" x="2222" y="1657" width="537" height="509"/>
+	<SubTexture name="death BF0055" x="2222" y="1657" width="537" height="509"/>
+	<SubTexture name="death BF0056" x="2222" y="1657" width="537" height="509"/>
+	<SubTexture name="death BF0057" x="2222" y="1657" width="537" height="509"/>
+	<SubTexture name="death confirm BF0000" x="2774" y="1657" width="533" height="553"/>
+	<SubTexture name="death confirm BF0001" x="3322" y="1657" width="533" height="553"/>
+	<SubTexture name="death confirm BF0002" x="3870" y="1657" width="533" height="553"/>
+	<SubTexture name="death confirm BF0003" x="4418" y="1657" width="533" height="553"/>
+	<SubTexture name="death confirm BF0004" x="4966" y="1657" width="533" height="553"/>
+	<SubTexture name="death confirm BF0005" x="5514" y="1657" width="533" height="553"/>
+	<SubTexture name="death confirm BF0006" x="6062" y="1657" width="533" height="553"/>
+	<SubTexture name="death confirm BF0007" x="6610" y="1657" width="533" height="553"/>
+	<SubTexture name="death confirm BF0008" x="7158" y="1657" width="533" height="553"/>
+	<SubTexture name="death confirm BF0009" x="14" y="2225" width="533" height="553"/>
+	<SubTexture name="death confirm BF0010" x="562" y="2225" width="533" height="553"/>
+	<SubTexture name="death confirm BF0011" x="1110" y="2225" width="533" height="553"/>
+	<SubTexture name="death confirm BF0012" x="1658" y="2225" width="533" height="553"/>
+	<SubTexture name="death confirm BF0013" x="2206" y="2225" width="533" height="553"/>
+	<SubTexture name="death confirm BF0014" x="2754" y="2225" width="533" height="553"/>
+	<SubTexture name="death confirm BF0015" x="3302" y="2225" width="533" height="553"/>
+	<SubTexture name="death confirm BF0016" x="3850" y="2225" width="533" height="553"/>
+	<SubTexture name="death confirm BF0017" x="4398" y="2225" width="533" height="553"/>
+	<SubTexture name="death confirm BF0018" x="4946" y="2225" width="533" height="553"/>
+	<SubTexture name="death confirm BF0019" x="5494" y="2225" width="533" height="553"/>
+	<SubTexture name="death confirm BF0020" x="6042" y="2225" width="533" height="553"/>
+	<SubTexture name="death confirm BF0021" x="6590" y="2225" width="533" height="553"/>
+	<SubTexture name="death confirm BF0022" x="7138" y="2225" width="533" height="553"/>
+	<SubTexture name="death confirm BF0023" x="14" y="2793" width="533" height="553"/>
+	<SubTexture name="death confirm BF0024" x="562" y="2793" width="533" height="553"/>
+	<SubTexture name="death confirm BF0025" x="1110" y="2793" width="533" height="553"/>
+	<SubTexture name="death confirm BF0026" x="1110" y="2793" width="533" height="553"/>
+	<SubTexture name="death confirm BF0027" x="1110" y="2793" width="533" height="553"/>
+	<SubTexture name="death confirm BF0028" x="1110" y="2793" width="533" height="553"/>
+	<SubTexture name="death confirm BF0029" x="1110" y="2793" width="533" height="553"/>
+	<SubTexture name="death confirm BF0030" x="1110" y="2793" width="533" height="553"/>
+	<SubTexture name="death confirm BF0031" x="1110" y="2793" width="533" height="553"/>
+	<SubTexture name="death confirm BF0032" x="1110" y="2793" width="533" height="553"/>
+	<SubTexture name="death confirm BF0033" x="1110" y="2793" width="533" height="553"/>
+	<SubTexture name="death loop BF0000" x="1658" y="2793" width="533" height="497"/>
+	<SubTexture name="death loop BF0001" x="2206" y="2793" width="533" height="497"/>
+	<SubTexture name="death loop BF0002" x="2206" y="2793" width="533" height="497"/>
+	<SubTexture name="death loop BF0003" x="2754" y="2793" width="533" height="497"/>
+	<SubTexture name="death loop BF0004" x="2754" y="2793" width="533" height="497"/>
+	<SubTexture name="death loop BF0005" x="3302" y="2793" width="533" height="497"/>
+	<SubTexture name="death loop BF0006" x="3302" y="2793" width="533" height="497"/>
+	<SubTexture name="death loop BF0007" x="3850" y="2793" width="533" height="497"/>
+	<SubTexture name="death loop BF0008" x="4398" y="2793" width="533" height="497"/>
+	<SubTexture name="death loop BF0009" x="4398" y="2793" width="533" height="497"/>
+	<SubTexture name="death loop BF0010" x="4398" y="2793" width="533" height="497"/>
+	<SubTexture name="death loop BF0011" x="4398" y="2793" width="533" height="497"/>
+	<SubTexture name="death loop BF0012" x="4398" y="2793" width="533" height="497"/>
+	<SubTexture name="death loop BF0013" x="4398" y="2793" width="533" height="497"/>
+	<SubTexture name="death loop BF0014" x="4398" y="2793" width="533" height="497"/>
+	<SubTexture name="death loop BF0015" x="4398" y="2793" width="533" height="497"/>
+	<SubTexture name="death loop BF0016" x="4398" y="2793" width="533" height="497"/>
+	<SubTexture name="death loop BF0017" x="1658" y="2793" width="533" height="497"/>
+	<SubTexture name="death loop BF0018" x="2206" y="2793" width="533" height="497"/>
+	<SubTexture name="death loop BF0019" x="2206" y="2793" width="533" height="497"/>
+	<SubTexture name="death loop BF0020" x="2754" y="2793" width="533" height="497"/>
+	<SubTexture name="death loop BF0021" x="2754" y="2793" width="533" height="497"/>
+	<SubTexture name="death loop BF0022" x="3302" y="2793" width="533" height="497"/>
+	<SubTexture name="death loop BF0023" x="3302" y="2793" width="533" height="497"/>
+	<SubTexture name="death loop BF0024" x="4398" y="2793" width="533" height="497"/>
+	<SubTexture name="death loop BF0025" x="4398" y="2793" width="533" height="497"/>
+	<SubTexture name="death loop BF0026" x="4398" y="2793" width="533" height="497"/>
+	<SubTexture name="death loop BF0027" x="4398" y="2793" width="533" height="497"/>
+	<SubTexture name="death loop BF0028" x="4398" y="2793" width="533" height="497"/>
+	<SubTexture name="death loop BF0029" x="4398" y="2793" width="533" height="497"/>
+	<SubTexture name="death loop BF0030" x="3850" y="2793" width="533" height="497"/>
+	<SubTexture name="death loop BF0031" x="4398" y="2793" width="533" height="497"/>
+	<SubTexture name="death loop BF0032" x="4398" y="2793" width="533" height="497"/>
+	<SubTexture name="death loop BF0033" x="4398" y="2793" width="533" height="497"/>
+	<SubTexture name="fallo abajo0000" x="4946" y="2793" width="485" height="486"/>
+	<SubTexture name="fallo abajo0001" x="5446" y="2793" width="485" height="486"/>
+	<SubTexture name="fallo abajo0002" x="5446" y="2793" width="485" height="486"/>
+	<SubTexture name="fallo abajo0003" x="5946" y="2793" width="485" height="486"/>
+	<SubTexture name="fallo abajo0004" x="5946" y="2793" width="485" height="486"/>
+	<SubTexture name="fallo abajo0005" x="6446" y="2793" width="485" height="486"/>
+	<SubTexture name="fallo abajo0006" x="6446" y="2793" width="485" height="486"/>
+	<SubTexture name="fallo abajo0007" x="5946" y="2793" width="485" height="486"/>
+	<SubTexture name="fallo abajo0008" x="5946" y="2793" width="485" height="486"/>
+	<SubTexture name="fallo abajo0009" x="6446" y="2793" width="485" height="486"/>
+	<SubTexture name="fallo abajo0010" x="6446" y="2793" width="485" height="486"/>
+	<SubTexture name="fallo abajo0011" x="5946" y="2793" width="485" height="486"/>
+	<SubTexture name="fallo abajo0012" x="5946" y="2793" width="485" height="486"/>
+	<SubTexture name="fallo abajo0013" x="6446" y="2793" width="485" height="486"/>
+	<SubTexture name="fallo abajo0014" x="6446" y="2793" width="485" height="486"/>
+	<SubTexture name="fallo abajo0015" x="5946" y="2793" width="485" height="486"/>
+	<SubTexture name="fallo abajo0016" x="5946" y="2793" width="485" height="486"/>
+	<SubTexture name="fallo abajo0017" x="6446" y="2793" width="485" height="486"/>
+	<SubTexture name="fallo abajo0018" x="6446" y="2793" width="485" height="486"/>
+	<SubTexture name="fallo abajo0019" x="5946" y="2793" width="485" height="486"/>
+	<SubTexture name="fallo abajo0020" x="5946" y="2793" width="485" height="486"/>
+	<SubTexture name="fallo abajo0021" x="6446" y="2793" width="485" height="486"/>
+	<SubTexture name="fallo abajo0022" x="6446" y="2793" width="485" height="486"/>
+	<SubTexture name="fallo abajo0023" x="5946" y="2793" width="485" height="486"/>
+	<SubTexture name="fallo arriba0000" x="6946" y="2793" width="399" height="597"/>
+	<SubTexture name="fallo arriba0001" x="7360" y="2793" width="399" height="597"/>
+	<SubTexture name="fallo arriba0002" x="7360" y="2793" width="399" height="597"/>
+	<SubTexture name="fallo arriba0003" x="7774" y="2793" width="399" height="597"/>
+	<SubTexture name="fallo arriba0004" x="7774" y="2793" width="399" height="597"/>
+	<SubTexture name="fallo arriba0005" x="14" y="3405" width="399" height="597"/>
+	<SubTexture name="fallo arriba0006" x="14" y="3405" width="399" height="597"/>
+	<SubTexture name="fallo arriba0007" x="7774" y="2793" width="399" height="597"/>
+	<SubTexture name="fallo arriba0008" x="7774" y="2793" width="399" height="597"/>
+	<SubTexture name="fallo arriba0009" x="14" y="3405" width="399" height="597"/>
+	<SubTexture name="fallo arriba0010" x="14" y="3405" width="399" height="597"/>
+	<SubTexture name="fallo arriba0011" x="7774" y="2793" width="399" height="597"/>
+	<SubTexture name="fallo arriba0012" x="7774" y="2793" width="399" height="597"/>
+	<SubTexture name="fallo arriba0013" x="14" y="3405" width="399" height="597"/>
+	<SubTexture name="fallo arriba0014" x="14" y="3405" width="399" height="597"/>
+	<SubTexture name="fallo arriba0015" x="7774" y="2793" width="399" height="597"/>
+	<SubTexture name="fallo arriba0016" x="7774" y="2793" width="399" height="597"/>
+	<SubTexture name="fallo arriba0017" x="14" y="3405" width="399" height="597"/>
+	<SubTexture name="fallo arriba0018" x="14" y="3405" width="399" height="597"/>
+	<SubTexture name="fallo arriba0019" x="7774" y="2793" width="399" height="597"/>
+	<SubTexture name="fallo arriba0020" x="7774" y="2793" width="399" height="597"/>
+	<SubTexture name="fallo arriba0021" x="14" y="3405" width="399" height="597"/>
+	<SubTexture name="fallo arriba0022" x="14" y="3405" width="399" height="597"/>
+	<SubTexture name="fallo arriba0023" x="7774" y="2793" width="399" height="597"/>
+	<SubTexture name="dano atras0000" x="428" y="3405" width="434" height="532"/>
+	<SubTexture name="dano atras0001" x="877" y="3405" width="434" height="532"/>
+	<SubTexture name="dano atras0002" x="877" y="3405" width="434" height="532"/>
+	<SubTexture name="dano atras0003" x="1326" y="3405" width="434" height="532"/>
+	<SubTexture name="dano atras0004" x="1326" y="3405" width="434" height="532"/>
+	<SubTexture name="dano atras0005" x="1775" y="3405" width="434" height="532"/>
+	<SubTexture name="dano atras0006" x="1775" y="3405" width="434" height="532"/>
+	<SubTexture name="dano atras0007" x="1326" y="3405" width="434" height="532"/>
+	<SubTexture name="dano atras0008" x="1326" y="3405" width="434" height="532"/>
+	<SubTexture name="dano atras0009" x="1775" y="3405" width="434" height="532"/>
+	<SubTexture name="dano atras0010" x="1775" y="3405" width="434" height="532"/>
+	<SubTexture name="dano atras0011" x="1326" y="3405" width="434" height="532"/>
+	<SubTexture name="dano atras0012" x="1326" y="3405" width="434" height="532"/>
+	<SubTexture name="dano atras0013" x="1775" y="3405" width="434" height="532"/>
+	<SubTexture name="dano atras0014" x="1775" y="3405" width="434" height="532"/>
+	<SubTexture name="dano atras0015" x="1326" y="3405" width="434" height="532"/>
+	<SubTexture name="dano atras0016" x="1326" y="3405" width="434" height="532"/>
+	<SubTexture name="dano atras0017" x="1775" y="3405" width="434" height="532"/>
+	<SubTexture name="dano atras0018" x="1775" y="3405" width="434" height="532"/>
+	<SubTexture name="dano atras0019" x="1326" y="3405" width="434" height="532"/>
+	<SubTexture name="dano atras0020" x="1326" y="3405" width="434" height="532"/>
+	<SubTexture name="dano atras0021" x="1775" y="3405" width="434" height="532"/>
+	<SubTexture name="dano atras0022" x="1775" y="3405" width="434" height="532"/>
+	<SubTexture name="dano atras0023" x="1326" y="3405" width="434" height="532"/>
+	<SubTexture name="fallo delante0000" x="2224" y="3405" width="452" height="572"/>
+	<SubTexture name="fallo delante0001" x="2691" y="3405" width="452" height="572"/>
+	<SubTexture name="fallo delante0002" x="2691" y="3405" width="452" height="572"/>
+	<SubTexture name="fallo delante0003" x="3158" y="3405" width="452" height="572"/>
+	<SubTexture name="fallo delante0004" x="3158" y="3405" width="452" height="572"/>
+	<SubTexture name="fallo delante0005" x="3625" y="3405" width="452" height="572"/>
+	<SubTexture name="fallo delante0006" x="3625" y="3405" width="452" height="572"/>
+	<SubTexture name="fallo delante0007" x="3158" y="3405" width="452" height="572"/>
+	<SubTexture name="fallo delante0008" x="3158" y="3405" width="452" height="572"/>
+	<SubTexture name="fallo delante0009" x="3625" y="3405" width="452" height="572"/>
+	<SubTexture name="fallo delante0010" x="3625" y="3405" width="452" height="572"/>
+	<SubTexture name="fallo delante0011" x="3158" y="3405" width="452" height="572"/>
+	<SubTexture name="fallo delante0012" x="3158" y="3405" width="452" height="572"/>
+	<SubTexture name="fallo delante0013" x="3625" y="3405" width="452" height="572"/>
+	<SubTexture name="fallo delante0014" x="3625" y="3405" width="452" height="572"/>
+	<SubTexture name="fallo delante0015" x="3158" y="3405" width="452" height="572"/>
+	<SubTexture name="fallo delante0016" x="3158" y="3405" width="452" height="572"/>
+	<SubTexture name="fallo delante0017" x="3625" y="3405" width="452" height="572"/>
+	<SubTexture name="fallo delante0018" x="3625" y="3405" width="452" height="572"/>
+	<SubTexture name="fallo delante0019" x="3158" y="3405" width="452" height="572"/>
+	<SubTexture name="fallo delante0020" x="3158" y="3405" width="452" height="572"/>
+	<SubTexture name="fallo delante0021" x="3625" y="3405" width="452" height="572"/>
+	<SubTexture name="fallo delante0022" x="3625" y="3405" width="452" height="572"/>
+	<SubTexture name="fallo delante0023" x="3158" y="3405" width="452" height="572"/>
+</TextureAtlas>

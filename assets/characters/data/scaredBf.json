@@ -1,0 +1,133 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				30,
+				-6
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "BF NOTE RIGHT instancia",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-20,
+				-54
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "BF NOTE DOWN instancia",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-54,
+				41
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "BF NOTE UP instancia",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-52,
+				1
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "BF NOTE LEFT instancia",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				2,
+				17
+			],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "BF NOTE RIGHT MISS instancia",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-23,
+				-22
+			],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "BF NOTE DOWN MISS instancia",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-42,
+				34
+			],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "BF NOTE UP MISS instancia",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-45,
+				18
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "BF NOTE LEFT MISS instancia",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-6,
+				2
+			],
+			"anim": "hey",
+			"fps": 24,
+			"name": "BF HEY!! instancia",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "BF idle dance instancia"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/scaredBf",
+	"position": [
+		10,
+		350
+	],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		20,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

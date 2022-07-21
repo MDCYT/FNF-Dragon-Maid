@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="optionShit.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="art off0000" x="0" y="0" width="254" height="49"/>
+	<SubTexture name="art on0000" x="254" y="0" width="254" height="51"/>
+	<SubTexture name="credits off0000" x="0" y="51" width="598" height="49"/>
+	<SubTexture name="credits on0000" x="0" y="100" width="598" height="51"/>
+	<SubTexture name="mini off0000" x="0" y="151" width="477" height="48"/>
+	<SubTexture name="mini on0000" x="477" y="151" width="477" height="50"/>
+	<SubTexture name="music off0000" x="0" y="201" width="346" height="49"/>
+	<SubTexture name="music on0000" x="346" y="201" width="346" height="51"/>
+</TextureAtlas>

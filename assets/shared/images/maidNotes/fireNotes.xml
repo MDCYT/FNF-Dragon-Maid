@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="fireNotes.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="blue0000" x="0" y="0" width="164" height="200" frameX="0" frameY="0" frameWidth="165" frameHeight="207"/>
+	<SubTexture name="blue0001" x="0" y="0" width="164" height="200" frameX="0" frameY="0" frameWidth="165" frameHeight="207"/>
+	<SubTexture name="blue0002" x="164" y="0" width="149" height="175" frameX="-10" frameY="-25" frameWidth="165" frameHeight="207"/>
+	<SubTexture name="blue0003" x="164" y="0" width="149" height="175" frameX="-10" frameY="-25" frameWidth="165" frameHeight="207"/>
+	<SubTexture name="blue0004" x="164" y="0" width="149" height="175" frameX="-10" frameY="-25" frameWidth="165" frameHeight="207"/>
+	<SubTexture name="blue0005" x="313" y="0" width="149" height="180" frameX="-3" frameY="-25" frameWidth="165" frameHeight="207"/>
+	<SubTexture name="blue0006" x="313" y="0" width="149" height="180" frameX="-3" frameY="-25" frameWidth="165" frameHeight="207"/>
+	<SubTexture name="blue0007" x="313" y="0" width="149" height="180" frameX="-3" frameY="-25" frameWidth="165" frameHeight="207"/>
+	<SubTexture name="blue0008" x="462" y="0" width="160" height="182" frameX="-5" frameY="-25" frameWidth="165" frameHeight="207"/>
+	<SubTexture name="blue0009" x="622" y="0" width="159" height="169" frameX="-4" frameY="-25" frameWidth="165" frameHeight="207"/>
+	<SubTexture name="blue hold end0000" x="781" y="0" width="50" height="64"/>
+	<SubTexture name="blue hold piece0000" x="831" y="0" width="50" height="44"/>
+	<SubTexture name="green0000" x="0" y="200" width="189" height="200" frameX="0" frameY="0" frameWidth="192" frameHeight="200"/>
+	<SubTexture name="green0001" x="0" y="200" width="189" height="200" frameX="0" frameY="0" frameWidth="192" frameHeight="200"/>
+	<SubTexture name="green0002" x="189" y="200" width="169" height="174" frameX="-10" frameY="0" frameWidth="192" frameHeight="200"/>
+	<SubTexture name="green0003" x="189" y="200" width="169" height="174" frameX="-10" frameY="0" frameWidth="192" frameHeight="200"/>
+	<SubTexture name="green0004" x="189" y="200" width="169" height="174" frameX="-10" frameY="0" frameWidth="192" frameHeight="200"/>
+	<SubTexture name="green0005" x="358" y="200" width="179" height="174" frameX="-3" frameY="0" frameWidth="192" frameHeight="200"/>
+	<SubTexture name="green0006" x="358" y="200" width="179" height="174" frameX="-3" frameY="0" frameWidth="192" frameHeight="200"/>
+	<SubTexture name="green0007" x="358" y="200" width="179" height="174" frameX="-3" frameY="0" frameWidth="192" frameHeight="200"/>
+	<SubTexture name="green0008" x="537" y="200" width="190" height="172" frameX="-2" frameY="-2" frameWidth="192" frameHeight="200"/>
+	<SubTexture name="green0009" x="727" y="200" width="183" height="168" frameX="-2" frameY="-6" frameWidth="192" frameHeight="200"/>
+	<SubTexture name="green hold end0000" x="910" y="200" width="50" height="64"/>
+	<SubTexture name="green hold piece0000" x="960" y="200" width="50" height="44"/>
+	<SubTexture name="pruple end hold0000" x="0" y="400" width="50" height="64"/>
+	<SubTexture name="purple0000" x="50" y="400" width="200" height="171" frameX="0" frameY="0" frameWidth="200" frameHeight="173"/>
+	<SubTexture name="purple0001" x="50" y="400" width="200" height="171" frameX="0" frameY="0" frameWidth="200" frameHeight="173"/>
+	<SubTexture name="purple0002" x="250" y="400" width="174" height="168" frameX="-1" frameY="-5" frameWidth="200" frameHeight="173"/>
+	<SubTexture name="purple0003" x="250" y="400" width="174" height="168" frameX="-1" frameY="-5" frameWidth="200" frameHeight="173"/>
+	<SubTexture name="purple0004" x="250" y="400" width="174" height="168" frameX="-1" frameY="-5" frameWidth="200" frameHeight="173"/>
+	<SubTexture name="purple0005" x="424" y="400" width="174" height="156" frameX="-1" frameY="-11" frameWidth="200" frameHeight="173"/>
+	<SubTexture name="purple0006" x="424" y="400" width="174" height="156" frameX="-1" frameY="-11" frameWidth="200" frameHeight="173"/>
+	<SubTexture name="purple0007" x="424" y="400" width="174" height="156" frameX="-1" frameY="-11" frameWidth="200" frameHeight="173"/>
+	<SubTexture name="purple0008" x="598" y="400" width="173" height="169" frameX="-2" frameY="-1" frameWidth="200" frameHeight="173"/>
+	<SubTexture name="purple0009" x="771" y="400" width="169" height="170" frameX="-6" frameY="-1" frameWidth="200" frameHeight="173"/>
+	<SubTexture name="purple hold piece0000" x="940" y="400" width="50" height="44"/>
+	<SubTexture name="red0000" x="0" y="571" width="200" height="171" frameX="0" frameY="0" frameWidth="200" frameHeight="172"/>
+	<SubTexture name="red0001" x="0" y="571" width="200" height="171" frameX="0" frameY="0" frameWidth="200" frameHeight="172"/>
+	<SubTexture name="red0002" x="200" y="571" width="174" height="167" frameX="-25" frameY="-5" frameWidth="200" frameHeight="172"/>
+	<SubTexture name="red0003" x="200" y="571" width="174" height="167" frameX="-25" frameY="-5" frameWidth="200" frameHeight="172"/>
+	<SubTexture name="red0004" x="200" y="571" width="174" height="167" frameX="-25" frameY="-5" frameWidth="200" frameHeight="172"/>
+	<SubTexture name="red0005" x="374" y="571" width="174" height="157" frameX="-25" frameY="-11" frameWidth="200" frameHeight="172"/>
+	<SubTexture name="red0006" x="374" y="571" width="174" height="157" frameX="-25" frameY="-11" frameWidth="200" frameHeight="172"/>
+	<SubTexture name="red0007" x="374" y="571" width="174" height="157" frameX="-25" frameY="-11" frameWidth="200" frameHeight="172"/>
+	<SubTexture name="red0008" x="548" y="571" width="173" height="171" frameX="-25" frameY="-1" frameWidth="200" frameHeight="172"/>
+	<SubTexture name="red0009" x="721" y="571" width="169" height="171" frameX="-25" frameY="-1" frameWidth="200" frameHeight="172"/>
+	<SubTexture name="red hold end0000" x="890" y="571" width="50" height="64"/>
+	<SubTexture name="red hold piece0000" x="940" y="571" width="50" height="44"/>
+</TextureAtlas>

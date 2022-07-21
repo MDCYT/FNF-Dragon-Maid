@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="bf.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="jump0000" x="0" y="0" width="190" height="230"/>
+	<SubTexture name="walk0000" x="218" y="0" width="170" height="220" frameX="-20" frameY="0" frameWidth="190" frameHeight="220"/>
+	<SubTexture name="walk0001" x="218" y="0" width="170" height="220" frameX="-20" frameY="0" frameWidth="190" frameHeight="220"/>
+	<SubTexture name="walk0002" x="0" y="258" width="190" height="220"/>
+	<SubTexture name="walk0003" x="0" y="258" width="190" height="220"/>
+	<SubTexture name="walk0004" x="218" y="258" width="180" height="220" frameX="-10" frameY="0" frameWidth="190" frameHeight="220"/>
+	<SubTexture name="walk0005" x="218" y="258" width="180" height="220" frameX="-10" frameY="0" frameWidth="190" frameHeight="220"/>
+	<SubTexture name="walk0006" x="0" y="506" width="170" height="220" frameX="-20" frameY="0" frameWidth="190" frameHeight="220"/>
+	<SubTexture name="walk0007" x="0" y="506" width="170" height="220" frameX="-20" frameY="0" frameWidth="190" frameHeight="220"/>
+</TextureAtlas>

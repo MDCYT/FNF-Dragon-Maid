@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="coin.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="idleCoin0000" x="0" y="0" width="178" height="180"/>
+	<SubTexture name="idleCoin0001" x="178" y="0" width="178" height="180"/>
+	<SubTexture name="idleCoin0002" x="356" y="0" width="178" height="180"/>
+	<SubTexture name="idleCoin0003" x="534" y="0" width="178" height="180"/>
+	<SubTexture name="idleCoin0004" x="712" y="0" width="178" height="180"/>
+	<SubTexture name="idleCoin0005" x="890" y="0" width="178" height="180"/>
+	<SubTexture name="idleCoin0006" x="1068" y="0" width="178" height="180"/>
+	<SubTexture name="idleCoin0007" x="1246" y="0" width="178" height="180"/>
+	<SubTexture name="idleCoin0008" x="1424" y="0" width="178" height="180"/>
+	<SubTexture name="idleCoin0009" x="1602" y="0" width="178" height="180"/>
+	<SubTexture name="idleCoin0010" x="1780" y="0" width="178" height="180"/>
+	<SubTexture name="idleCoin0011" x="0" y="180" width="178" height="180"/>
+	<SubTexture name="idleCoin0012" x="178" y="180" width="178" height="180"/>
+	<SubTexture name="idleCoin0013" x="356" y="180" width="178" height="180"/>
+	<SubTexture name="idleCoin0014" x="534" y="180" width="178" height="180"/>
+	<SubTexture name="idleCoin0015" x="712" y="180" width="178" height="180"/>
+	<SubTexture name="idleCoin0016" x="890" y="180" width="178" height="180"/>
+	<SubTexture name="idleCoin0017" x="1068" y="180" width="178" height="180"/>
+	<SubTexture name="idleCoin0018" x="1246" y="180" width="178" height="180"/>
+	<SubTexture name="idleCoin0019" x="1424" y="180" width="178" height="180"/>
+	<SubTexture name="idleCoin0020" x="1602" y="180" width="178" height="180"/>
+	<SubTexture name="idleCoin0021" x="1780" y="180" width="178" height="180"/>
+	<SubTexture name="idleCoin0022" x="0" y="360" width="178" height="180"/>
+	<SubTexture name="idleCoin0023" x="178" y="360" width="178" height="180"/>
+	<SubTexture name="idleCoin0024" x="356" y="360" width="178" height="180"/>
+	<SubTexture name="idleCoin0025" x="534" y="360" width="178" height="180"/>
+	<SubTexture name="idleCoin0026" x="712" y="360" width="178" height="180"/>
+	<SubTexture name="idleCoin0027" x="890" y="360" width="178" height="180"/>
+	<SubTexture name="idleCoin0028" x="1068" y="360" width="178" height="180"/>
+	<SubTexture name="idleCoin0029" x="1246" y="360" width="178" height="180"/>
+	<SubTexture name="idleCoin0030" x="1424" y="360" width="178" height="180"/>
+	<SubTexture name="idleCoin0031" x="1602" y="360" width="178" height="180"/>
+	<SubTexture name="idleCoin0032" x="1780" y="360" width="178" height="180"/>
+	<SubTexture name="idleCoin0033" x="0" y="540" width="178" height="180"/>
+	<SubTexture name="idleCoin0034" x="178" y="540" width="178" height="180"/>
+	<SubTexture name="idleCoin0035" x="356" y="540" width="178" height="180"/>
+	<SubTexture name="idleCoin0036" x="534" y="540" width="178" height="180"/>
+	<SubTexture name="idleCoin0037" x="712" y="540" width="178" height="180"/>
+	<SubTexture name="idleCoin0038" x="890" y="540" width="178" height="180"/>
+	<SubTexture name="idleCoin0039" x="1068" y="540" width="178" height="180"/>
+	<SubTexture name="pressIdle0000" x="1246" y="540" width="412" height="412"/>
+	<SubTexture name="pressIdle0001" x="0" y="952" width="412" height="412"/>
+	<SubTexture name="pressIdle0002" x="412" y="952" width="412" height="412"/>
+	<SubTexture name="pressIdle0003" x="824" y="952" width="412" height="412"/>
+	<SubTexture name="pressIdle0004" x="1236" y="952" width="412" height="412"/>
+	<SubTexture name="pressIdle0005" x="0" y="1364" width="412" height="412"/>
+	<SubTexture name="pressIdle0006" x="412" y="1364" width="412" height="412"/>
+	<SubTexture name="pressIdle0007" x="824" y="1364" width="412" height="412"/>
+	<SubTexture name="pressIdle0008" x="1236" y="1364" width="412" height="412"/>
+	<SubTexture name="pressIdle0009" x="0" y="1776" width="412" height="412"/>
+	<SubTexture name="pressIdle0010" x="412" y="1776" width="412" height="412"/>
+	<SubTexture name="pressIdle0011" x="824" y="1776" width="412" height="412"/>
+	<SubTexture name="pressIdle0012" x="1236" y="1776" width="412" height="412"/>
+	<SubTexture name="pressIdle0013" x="0" y="2188" width="412" height="412"/>
+	<SubTexture name="pressIdle0014" x="412" y="2188" width="412" height="412"/>
+	<SubTexture name="pressIdle0015" x="824" y="2188" width="412" height="412"/>
+	<SubTexture name="pressIdle0016" x="1236" y="2188" width="412" height="412"/>
+	<SubTexture name="pressIdle0017" x="0" y="2600" width="412" height="412"/>
+	<SubTexture name="pressIdle0018" x="412" y="2600" width="412" height="412"/>
+	<SubTexture name="pressIdle0019" x="824" y="2600" width="412" height="412"/>
+	<SubTexture name="pressIdle0020" x="1236" y="2600" width="412" height="412"/>
+	<SubTexture name="pressIdle0021" x="0" y="3012" width="412" height="412"/>
+</TextureAtlas>

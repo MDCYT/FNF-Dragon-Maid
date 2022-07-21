@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="transition.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="in0000" x="0" y="0" width="1281" height="721"/>
+	<SubTexture name="in0001" x="0" y="0" width="1281" height="721"/>
+	<SubTexture name="in0002" x="1281" y="0" width="1281" height="721"/>
+	<SubTexture name="in0003" x="1281" y="0" width="1281" height="721"/>
+	<SubTexture name="in0004" x="2562" y="0" width="1281" height="721"/>
+	<SubTexture name="in0005" x="0" y="721" width="1281" height="721"/>
+	<SubTexture name="in0006" x="0" y="721" width="1281" height="721"/>
+	<SubTexture name="in0007" x="1281" y="721" width="1281" height="721"/>
+	<SubTexture name="in0008" x="1281" y="721" width="1281" height="721"/>
+	<SubTexture name="in0009" x="2562" y="721" width="1281" height="721"/>
+	<SubTexture name="in0010" x="2562" y="721" width="1281" height="721"/>
+	<SubTexture name="in0011" x="0" y="1442" width="1281" height="721"/>
+	<SubTexture name="in0012" x="1281" y="1442" width="1281" height="721"/>
+	<SubTexture name="in0013" x="1281" y="1442" width="1281" height="721"/>
+	<SubTexture name="in0014" x="2562" y="1442" width="1281" height="721"/>
+	<SubTexture name="in0015" x="2562" y="1442" width="1281" height="721"/>
+	<SubTexture name="in0016" x="2562" y="1442" width="1281" height="721"/>
+	<SubTexture name="in0017" x="0" y="2163" width="1281" height="721"/>
+	<SubTexture name="out0000" x="1281" y="2163" width="1281" height="721"/>
+	<SubTexture name="out0001" x="1281" y="2163" width="1281" height="721"/>
+	<SubTexture name="out0002" x="2562" y="2163" width="1281" height="721"/>
+	<SubTexture name="out0003" x="0" y="2884" width="1281" height="721"/>
+	<SubTexture name="out0004" x="0" y="2884" width="1281" height="721"/>
+	<SubTexture name="out0005" x="1281" y="2884" width="1281" height="721"/>
+	<SubTexture name="out0006" x="1281" y="2884" width="1281" height="721"/>
+	<SubTexture name="out0007" x="2562" y="2884" width="1281" height="721"/>
+	<SubTexture name="out0008" x="2562" y="2884" width="1281" height="721"/>
+	<SubTexture name="out0009" x="0" y="3605" width="1281" height="721"/>
+	<SubTexture name="out0010" x="0" y="3605" width="1281" height="721"/>
+	<SubTexture name="out0011" x="1281" y="3605" width="1281" height="721"/>
+	<SubTexture name="out0012" x="2562" y="3605" width="1281" height="721"/>
+	<SubTexture name="out0013" x="2562" y="3605" width="1281" height="721"/>
+	<SubTexture name="out0014" x="0" y="4326" width="1281" height="721"/>
+	<SubTexture name="out0015" x="1281" y="4326" width="1281" height="721"/>
+	<SubTexture name="out0016" x="1281" y="4326" width="1281" height="721"/>
+	<SubTexture name="out0017" x="1281" y="4326" width="1281" height="721"/>
+</TextureAtlas>

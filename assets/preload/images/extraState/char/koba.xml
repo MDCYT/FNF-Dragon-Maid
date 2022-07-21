@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="koba.png">
+	<!-- Created with Adobe Animate version 22.0.2.168 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="koba0000" x="0" y="0" width="304" height="539" frameX="0" frameY="-8" frameWidth="304" frameHeight="548"/>
+	<SubTexture name="koba0001" x="0" y="0" width="304" height="539" frameX="0" frameY="-8" frameWidth="304" frameHeight="548"/>
+	<SubTexture name="koba0002" x="304" y="0" width="300" height="542" frameX="-4" frameY="-6" frameWidth="304" frameHeight="548"/>
+	<SubTexture name="koba0003" x="304" y="0" width="300" height="542" frameX="-4" frameY="-6" frameWidth="304" frameHeight="548"/>
+	<SubTexture name="koba0004" x="604" y="0" width="299" height="546" frameX="-5" frameY="-1" frameWidth="304" frameHeight="548"/>
+	<SubTexture name="koba0005" x="604" y="0" width="299" height="546" frameX="-5" frameY="-1" frameWidth="304" frameHeight="548"/>
+	<SubTexture name="koba0006" x="903" y="0" width="299" height="547" frameX="-5" frameY="0" frameWidth="304" frameHeight="548"/>
+	<SubTexture name="koba0007" x="903" y="0" width="299" height="547" frameX="-5" frameY="0" frameWidth="304" frameHeight="548"/>
+	<SubTexture name="koba0008" x="903" y="0" width="299" height="547" frameX="-5" frameY="0" frameWidth="304" frameHeight="548"/>
+	<SubTexture name="koba0009" x="903" y="0" width="299" height="547" frameX="-5" frameY="0" frameWidth="304" frameHeight="548"/>
+	<SubTexture name="koba0010" x="903" y="0" width="299" height="547" frameX="-5" frameY="0" frameWidth="304" frameHeight="548"/>
+	<SubTexture name="koba0011" x="903" y="0" width="299" height="547" frameX="-5" frameY="0" frameWidth="304" frameHeight="548"/>
+	<SubTexture name="koba0012" x="903" y="0" width="299" height="547" frameX="-5" frameY="0" frameWidth="304" frameHeight="548"/>
+	<SubTexture name="koba0013" x="903" y="0" width="299" height="547" frameX="-5" frameY="0" frameWidth="304" frameHeight="548"/>
+</TextureAtlas>

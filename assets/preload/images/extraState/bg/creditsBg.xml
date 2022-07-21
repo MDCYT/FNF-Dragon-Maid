@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="creditsBg.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="bg0000" x="0" y="0" width="1312" height="728"/>
+	<SubTexture name="bg0001" x="1312" y="0" width="1312" height="728"/>
+	<SubTexture name="bg0002" x="2624" y="0" width="1312" height="728"/>
+	<SubTexture name="bg0003" x="0" y="728" width="1312" height="728"/>
+	<SubTexture name="bg0004" x="1312" y="728" width="1312" height="728"/>
+	<SubTexture name="bg0005" x="2624" y="728" width="1312" height="728"/>
+	<SubTexture name="bg0006" x="0" y="1456" width="1312" height="728"/>
+	<SubTexture name="bg0007" x="1312" y="1456" width="1312" height="728"/>
+</TextureAtlas>

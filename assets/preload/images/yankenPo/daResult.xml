@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="daResult.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="lose0000" x="0" y="0" width="437" height="151" frameX="-82" frameY="-82" frameWidth="601" frameHeight="315"/>
+	<SubTexture name="lose0001" x="437" y="0" width="489" height="203" frameX="-56" frameY="-56" frameWidth="601" frameHeight="315"/>
+	<SubTexture name="lose0002" x="926" y="0" width="545" height="259" frameX="-28" frameY="-28" frameWidth="601" frameHeight="315"/>
+	<SubTexture name="lose0003" x="0" y="259" width="601" height="315"/>
+	<SubTexture name="lose0004" x="601" y="259" width="585" height="299" frameX="-8" frameY="-8" frameWidth="601" frameHeight="315"/>
+	<SubTexture name="lose0005" x="1186" y="259" width="571" height="285" frameX="-15" frameY="-15" frameWidth="601" frameHeight="315"/>
+	<SubTexture name="lose0006" x="0" y="574" width="555" height="269" frameX="-23" frameY="-23" frameWidth="601" frameHeight="315"/>
+	<SubTexture name="lose0007" x="555" y="574" width="541" height="255" frameX="-30" frameY="-30" frameWidth="601" frameHeight="315"/>
+	<SubTexture name="lose0008" x="1096" y="574" width="525" height="239" frameX="-38" frameY="-38" frameWidth="601" frameHeight="315"/>
+	<SubTexture name="lose0009" x="0" y="843" width="509" height="223" frameX="-46" frameY="-46" frameWidth="601" frameHeight="315"/>
+	<SubTexture name="lose0010" x="509" y="843" width="495" height="209" frameX="-53" frameY="-53" frameWidth="601" frameHeight="315"/>
+	<SubTexture name="lose0011" x="1004" y="843" width="479" height="193" frameX="-61" frameY="-61" frameWidth="601" frameHeight="315"/>
+	<SubTexture name="lose0012" x="1483" y="843" width="463" height="177" frameX="-69" frameY="-69" frameWidth="601" frameHeight="315"/>
+	<SubTexture name="lose0013" x="0" y="1066" width="449" height="163" frameX="-76" frameY="-76" frameWidth="601" frameHeight="315"/>
+	<SubTexture name="lose0014" x="449" y="1066" width="437" height="151" frameX="-82" frameY="-82" frameWidth="601" frameHeight="315"/>
+	<SubTexture name="lose0015" x="449" y="1066" width="437" height="151" frameX="-82" frameY="-82" frameWidth="601" frameHeight="315"/>
+	<SubTexture name="trie0000" x="886" y="1066" width="395" height="133" frameX="-82" frameY="-82" frameWidth="559" frameHeight="297"/>
+	<SubTexture name="trie0001" x="1281" y="1066" width="447" height="185" frameX="-56" frameY="-56" frameWidth="559" frameHeight="297"/>
+	<SubTexture name="trie0002" x="0" y="1251" width="503" height="241" frameX="-28" frameY="-28" frameWidth="559" frameHeight="297"/>
+	<SubTexture name="trie0003" x="503" y="1251" width="559" height="297"/>
+	<SubTexture name="trie0004" x="1062" y="1251" width="543" height="281" frameX="-8" frameY="-8" frameWidth="559" frameHeight="297"/>
+	<SubTexture name="trie0005" x="0" y="1548" width="529" height="267" frameX="-15" frameY="-15" frameWidth="559" frameHeight="297"/>
+	<SubTexture name="trie0006" x="529" y="1548" width="513" height="251" frameX="-23" frameY="-23" frameWidth="559" frameHeight="297"/>
+	<SubTexture name="trie0007" x="1042" y="1548" width="499" height="237" frameX="-30" frameY="-30" frameWidth="559" frameHeight="297"/>
+	<SubTexture name="trie0008" x="1541" y="1548" width="483" height="221" frameX="-38" frameY="-38" frameWidth="559" frameHeight="297"/>
+	<SubTexture name="trie0009" x="0" y="1815" width="467" height="205" frameX="-46" frameY="-46" frameWidth="559" frameHeight="297"/>
+	<SubTexture name="trie0010" x="467" y="1815" width="453" height="191" frameX="-53" frameY="-53" frameWidth="559" frameHeight="297"/>
+	<SubTexture name="trie0011" x="920" y="1815" width="437" height="175" frameX="-61" frameY="-61" frameWidth="559" frameHeight="297"/>
+	<SubTexture name="trie0012" x="1357" y="1815" width="421" height="159" frameX="-69" frameY="-69" frameWidth="559" frameHeight="297"/>
+	<SubTexture name="trie0013" x="0" y="2020" width="407" height="145" frameX="-76" frameY="-76" frameWidth="559" frameHeight="297"/>
+	<SubTexture name="trie0014" x="407" y="2020" width="395" height="133" frameX="-82" frameY="-82" frameWidth="559" frameHeight="297"/>
+	<SubTexture name="trie0015" x="407" y="2020" width="395" height="133" frameX="-82" frameY="-82" frameWidth="559" frameHeight="297"/>
+	<SubTexture name="win0000" x="802" y="2020" width="397" height="144" frameX="-82" frameY="-82" frameWidth="561" frameHeight="308"/>
+	<SubTexture name="win0001" x="1199" y="2020" width="449" height="196" frameX="-56" frameY="-56" frameWidth="561" frameHeight="308"/>
+	<SubTexture name="win0002" x="0" y="2216" width="505" height="252" frameX="-28" frameY="-28" frameWidth="561" frameHeight="308"/>
+	<SubTexture name="win0003" x="505" y="2216" width="561" height="308"/>
+	<SubTexture name="win0004" x="1066" y="2216" width="545" height="292" frameX="-8" frameY="-8" frameWidth="561" frameHeight="308"/>
+	<SubTexture name="win0005" x="0" y="2524" width="531" height="278" frameX="-15" frameY="-15" frameWidth="561" frameHeight="308"/>
+	<SubTexture name="win0006" x="531" y="2524" width="515" height="262" frameX="-23" frameY="-23" frameWidth="561" frameHeight="308"/>
+	<SubTexture name="win0007" x="1046" y="2524" width="501" height="248" frameX="-30" frameY="-30" frameWidth="561" frameHeight="308"/>
+	<SubTexture name="win0008" x="1547" y="2524" width="485" height="232" frameX="-38" frameY="-38" frameWidth="561" frameHeight="308"/>
+	<SubTexture name="win0009" x="0" y="2802" width="469" height="216" frameX="-46" frameY="-46" frameWidth="561" frameHeight="308"/>
+	<SubTexture name="win0010" x="469" y="2802" width="455" height="202" frameX="-53" frameY="-53" frameWidth="561" frameHeight="308"/>
+	<SubTexture name="win0011" x="924" y="2802" width="439" height="186" frameX="-61" frameY="-61" frameWidth="561" frameHeight="308"/>
+	<SubTexture name="win0012" x="1363" y="2802" width="423" height="170" frameX="-69" frameY="-69" frameWidth="561" frameHeight="308"/>
+	<SubTexture name="win0013" x="0" y="3018" width="409" height="156" frameX="-76" frameY="-76" frameWidth="561" frameHeight="308"/>
+	<SubTexture name="win0014" x="409" y="3018" width="397" height="144" frameX="-82" frameY="-82" frameWidth="561" frameHeight="308"/>
+	<SubTexture name="win0015" x="409" y="3018" width="397" height="144" frameX="-82" frameY="-82" frameWidth="561" frameHeight="308"/>
+</TextureAtlas>

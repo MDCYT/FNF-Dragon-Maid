@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Tohru Dragon Hunt.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="die0000" x="0" y="0" width="73" height="57"/>
+	<SubTexture name="diegold0000" x="73" y="0" width="73" height="57"/>
+	<SubTexture name="mov0000" x="146" y="0" width="62" height="50"/>
+	<SubTexture name="mov0001" x="208" y="0" width="62" height="50"/>
+	<SubTexture name="movgold0000" x="270" y="0" width="62" height="50"/>
+	<SubTexture name="movgold0001" x="332" y="0" width="62" height="50"/>
+</TextureAtlas>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="gf.png">
+	<!-- Created with Adobe Animate version 22.0.2.168 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="gf0000" x="0" y="0" width="444" height="451" frameX="0" frameY="-10" frameWidth="444" frameHeight="461"/>
+	<SubTexture name="gf0001" x="0" y="0" width="444" height="451" frameX="0" frameY="-10" frameWidth="444" frameHeight="461"/>
+	<SubTexture name="gf0002" x="444" y="0" width="443" height="453" frameX="-1" frameY="-8" frameWidth="444" frameHeight="461"/>
+	<SubTexture name="gf0003" x="444" y="0" width="443" height="453" frameX="-1" frameY="-8" frameWidth="444" frameHeight="461"/>
+	<SubTexture name="gf0004" x="0" y="453" width="434" height="458" frameX="-5" frameY="-3" frameWidth="444" frameHeight="461"/>
+	<SubTexture name="gf0005" x="0" y="453" width="434" height="458" frameX="-5" frameY="-3" frameWidth="444" frameHeight="461"/>
+	<SubTexture name="gf0006" x="434" y="453" width="428" height="460" frameX="-8" frameY="0" frameWidth="444" frameHeight="461"/>
+	<SubTexture name="gf0007" x="434" y="453" width="428" height="460" frameX="-8" frameY="0" frameWidth="444" frameHeight="461"/>
+	<SubTexture name="gf0008" x="434" y="453" width="428" height="460" frameX="-8" frameY="0" frameWidth="444" frameHeight="461"/>
+	<SubTexture name="gf0009" x="434" y="453" width="428" height="460" frameX="-8" frameY="0" frameWidth="444" frameHeight="461"/>
+	<SubTexture name="gf0010" x="434" y="453" width="428" height="460" frameX="-8" frameY="0" frameWidth="444" frameHeight="461"/>
+	<SubTexture name="gf0011" x="434" y="453" width="428" height="460" frameX="-8" frameY="0" frameWidth="444" frameHeight="461"/>
+	<SubTexture name="gf0012" x="434" y="453" width="428" height="460" frameX="-8" frameY="0" frameWidth="444" frameHeight="461"/>
+	<SubTexture name="gf0013" x="434" y="453" width="428" height="460" frameX="-8" frameY="0" frameWidth="444" frameHeight="461"/>
+</TextureAtlas>

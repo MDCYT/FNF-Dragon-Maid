@@ -1,0 +1,28 @@
+﻿<?xml versiOn="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Extra.png">
+	<!-- Created with Adobe Animate versiOn 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Extra Off0000" x="0" y="0" width="382" height="811"/>
+	<SubTexture name="Extra On0000" x="382" y="0" width="384" height="811" frameX="0" frameY="0" frameWidth="390" frameHeight="811"/>
+	<SubTexture name="Extra On0001" x="766" y="0" width="384" height="811" frameX="0" frameY="0" frameWidth="390" frameHeight="811"/>
+	<SubTexture name="Extra On0002" x="1150" y="0" width="385" height="811" frameX="0" frameY="0" frameWidth="390" frameHeight="811"/>
+	<SubTexture name="Extra On0003" x="1535" y="0" width="385" height="811" frameX="0" frameY="0" frameWidth="390" frameHeight="811"/>
+	<SubTexture name="Extra On0004" x="0" y="811" width="386" height="811" frameX="0" frameY="0" frameWidth="390" frameHeight="811"/>
+	<SubTexture name="Extra On0005" x="386" y="811" width="386" height="811" frameX="0" frameY="0" frameWidth="390" frameHeight="811"/>
+	<SubTexture name="Extra On0006" x="772" y="811" width="387" height="811" frameX="0" frameY="0" frameWidth="390" frameHeight="811"/>
+	<SubTexture name="Extra On0007" x="1159" y="811" width="387" height="811" frameX="0" frameY="0" frameWidth="390" frameHeight="811"/>
+	<SubTexture name="Extra On0008" x="1546" y="811" width="388" height="811" frameX="0" frameY="0" frameWidth="390" frameHeight="811"/>
+	<SubTexture name="Extra On0009" x="0" y="1622" width="388" height="811" frameX="0" frameY="0" frameWidth="390" frameHeight="811"/>
+	<SubTexture name="Extra On0010" x="388" y="1622" width="389" height="811" frameX="0" frameY="0" frameWidth="390" frameHeight="811"/>
+	<SubTexture name="Extra On0011" x="777" y="1622" width="389" height="811" frameX="0" frameY="0" frameWidth="390" frameHeight="811"/>
+	<SubTexture name="Extra On0012" x="1166" y="1622" width="390" height="811"/>
+	<SubTexture name="Extra On0013" x="1556" y="1622" width="390" height="811"/>
+	<SubTexture name="Extra On0014" x="0" y="2433" width="390" height="811"/>
+	<SubTexture name="Extra On0015" x="390" y="2433" width="389" height="811" frameX="0" frameY="0" frameWidth="390" frameHeight="811"/>
+	<SubTexture name="Extra On0016" x="779" y="2433" width="388" height="811" frameX="0" frameY="0" frameWidth="390" frameHeight="811"/>
+	<SubTexture name="Extra On0017" x="1167" y="2433" width="387" height="811" frameX="0" frameY="0" frameWidth="390" frameHeight="811"/>
+	<SubTexture name="Extra On0018" x="1554" y="2433" width="386" height="811" frameX="0" frameY="0" frameWidth="390" frameHeight="811"/>
+	<SubTexture name="Extra On0019" x="0" y="3244" width="385" height="811" frameX="0" frameY="0" frameWidth="390" frameHeight="811"/>
+	<SubTexture name="Extra On0020" x="385" y="3244" width="385" height="811" frameX="0" frameY="0" frameWidth="390" frameHeight="811"/>
+	<SubTexture name="Extra On0021" x="382" y="0" width="384" height="811" frameX="0" frameY="0" frameWidth="390" frameHeight="811"/>
+</TextureAtlas>

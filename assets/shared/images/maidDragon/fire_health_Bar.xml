@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="fire_health_Bar.png">
+	<!-- Created with Adobe Animate version 21.0.1.37179 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="health bar0000" x="0" y="0" width="608" height="77" frameX="-15" frameY="-9" frameWidth="627" frameHeight="89"/>
+	<SubTexture name="health bar0001" x="0" y="77" width="601" height="74" frameX="-15" frameY="-11" frameWidth="627" frameHeight="89"/>
+	<SubTexture name="health bar0002" x="0" y="151" width="616" height="83" frameX="-6" frameY="-6" frameWidth="627" frameHeight="89"/>
+	<SubTexture name="health bar0003" x="0" y="234" width="623" height="87" frameX="0" frameY="0" frameWidth="627" frameHeight="89"/>
+	<SubTexture name="health bar0004" x="0" y="321" width="612" height="76" frameX="-15" frameY="-11" frameWidth="627" frameHeight="89"/>
+	<SubTexture name="health bar0005" x="0" y="397" width="609" height="78" frameX="-15" frameY="-7" frameWidth="627" frameHeight="89"/>
+	<SubTexture name="health bar0006" x="0" y="475" width="610" height="69" frameX="-15" frameY="-16" frameWidth="627" frameHeight="89"/>
+	<SubTexture name="health bar_nada0000" x="0" y="544" width="601" height="19"/>
+	<SubTexture name="health bar_nada0001" x="0" y="544" width="601" height="19"/>
+	<SubTexture name="health bar_nada0002" x="0" y="544" width="601" height="19"/>
+	<SubTexture name="health bar_nada0003" x="0" y="544" width="601" height="19"/>
+	<SubTexture name="health bar_nada0004" x="0" y="544" width="601" height="19"/>
+	<SubTexture name="health bar_nada0005" x="0" y="544" width="601" height="19"/>
+	<SubTexture name="health bar_nada0006" x="0" y="544" width="601" height="19"/>
+</TextureAtlas>

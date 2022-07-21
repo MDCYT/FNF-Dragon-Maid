@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="killer-scream.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="killer-scream-lock0000" x="0" y="0" width="559" height="76"/>
+	<SubTexture name="killer-scream-unlock0000" x="0" y="76" width="559" height="76"/>
+</TextureAtlas>

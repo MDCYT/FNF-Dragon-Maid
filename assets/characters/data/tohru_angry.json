@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "tohru_idle"
+		},
+		{
+			"loop": true,
+			"offsets": [
+				61,
+				-11
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "tohru_left",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				58,
+				-37
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "tohru_down",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-72,
+				-10
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "tohru_right",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-3,
+				22
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "tohru_up",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/tohru_Angry",
+	"position": [
+		100,
+		100
+	],
+	"healthicon": "tohru-angry",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		221,
+		153
+	],
+	"camera_position": [
+		320,
+		460
+	],
+	"sing_duration": 6.1,
+	"scale": 0.5
+}

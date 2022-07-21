@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="boyfriendMaid.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="happy0000" x="0" y="0" width="373" height="314"/>
+	<SubTexture name="neutral0000" x="373" y="0" width="373" height="314"/>
+	<SubTexture name="scared0000" x="0" y="314" width="373" height="314"/>
+	<SubTexture name="sex0000" x="373" y="314" width="373" height="314"/>
+	<SubTexture name="worry0000" x="0" y="628" width="373" height="314"/>
+</TextureAtlas>

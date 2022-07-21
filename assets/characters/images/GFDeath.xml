@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="GFDeath.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="GF Dead Skip0000" x="0" y="0" width="319" height="496" frameX="-711" frameY="-4" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Dead Skip0001" x="0" y="0" width="319" height="496" frameX="-711" frameY="-4" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Dead Skip0002" x="0" y="0" width="319" height="496" frameX="-711" frameY="-4" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Dead Skip0003" x="0" y="0" width="319" height="496" frameX="-711" frameY="-4" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Dead Skip0004" x="0" y="0" width="319" height="496" frameX="-711" frameY="-4" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Dead Skip0005" x="0" y="0" width="319" height="496" frameX="-711" frameY="-4" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Dead Skip0006" x="319" y="0" width="319" height="500" frameX="-711" frameY="0" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Dead Skip0007" x="319" y="0" width="319" height="500" frameX="-711" frameY="0" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Dead Skip0008" x="638" y="0" width="327" height="430" frameX="-676" frameY="-67" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Dead Skip0009" x="638" y="0" width="327" height="430" frameX="-676" frameY="-67" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Dead Skip0010" x="965" y="0" width="453" height="164" frameX="-485" frameY="-344" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Dead Skip0011" x="1418" y="0" width="556" height="197" frameX="-382" frameY="-311" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Dead Skip0012" x="0" y="500" width="648" height="138" frameX="-287" frameY="-369" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Dead Skip0013" x="0" y="500" width="648" height="138" frameX="-287" frameY="-369" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Dead Skip0014" x="648" y="500" width="690" height="140" frameX="-245" frameY="-369" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Dead Skip0015" x="1338" y="500" width="688" height="143" frameX="-245" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Dead Skip0016" x="0" y="643" width="728" height="141" frameX="-205" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Dead Skip0017" x="728" y="643" width="865" height="141" frameX="-67" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Dead Skip0018" x="0" y="784" width="900" height="159" frameX="-32" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Dead Skip0019" x="900" y="784" width="899" height="159" frameX="-32" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Dead Skip0020" x="0" y="943" width="914" height="161" frameX="-17" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Dead Skip0021" x="914" y="943" width="914" height="161" frameX="-17" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Dead Skip0022" x="0" y="1104" width="920" height="160" frameX="-11" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Dead Skip0023" x="0" y="1104" width="920" height="160" frameX="-11" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Dead Skip0024" x="920" y="1104" width="929" height="161" frameX="-2" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Dead Skip0025" x="920" y="1104" width="929" height="161" frameX="-2" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Dead Skip0026" x="0" y="1265" width="931" height="159" frameX="0" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Dead Skip0027" x="0" y="1265" width="931" height="159" frameX="0" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Dead Skip0028" x="0" y="1265" width="931" height="159" frameX="0" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Dead Skip0029" x="0" y="1265" width="931" height="159" frameX="0" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Dead Skip0030" x="0" y="1265" width="931" height="159" frameX="0" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Dead Skip0031" x="0" y="1265" width="931" height="159" frameX="0" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Dead Skip0032" x="0" y="1265" width="931" height="159" frameX="0" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Dead Skip0033" x="0" y="1265" width="931" height="159" frameX="0" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Dead Skip0034" x="0" y="1265" width="931" height="159" frameX="0" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Dead Skip0035" x="0" y="1265" width="931" height="159" frameX="0" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Dead Skip0036" x="0" y="1265" width="931" height="159" frameX="0" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Dead Skip0037" x="0" y="1265" width="931" height="159" frameX="0" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Dead Skip0038" x="0" y="1265" width="931" height="159" frameX="0" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Dead Skip0039" x="0" y="1265" width="931" height="159" frameX="0" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Dead Skip0040" x="0" y="1265" width="931" height="159" frameX="0" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Dead Skip0041" x="0" y="1265" width="931" height="159" frameX="0" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Dead Skip0042" x="0" y="1265" width="931" height="159" frameX="0" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Dead Skip0043" x="0" y="1265" width="931" height="159" frameX="0" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Dead Skip0044" x="0" y="1265" width="931" height="159" frameX="0" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Dead Skip0045" x="0" y="1265" width="931" height="159" frameX="0" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Dead Skip0046" x="0" y="1265" width="931" height="159" frameX="0" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Dead Skip0047" x="0" y="1265" width="931" height="159" frameX="0" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Dead Skip0048" x="0" y="1265" width="931" height="159" frameX="0" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Dead Skip0049" x="0" y="1265" width="931" height="159" frameX="0" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Death Continue0000" x="931" y="1265" width="325" height="496"/>
+	<SubTexture name="GF Death Continue0001" x="931" y="1265" width="325" height="496"/>
+	<SubTexture name="GF Death Continue0002" x="1256" y="1265" width="320" height="494" frameX="0" frameY="-2" frameWidth="325" frameHeight="496"/>
+	<SubTexture name="GF Death Continue0003" x="1256" y="1265" width="320" height="494" frameX="0" frameY="-2" frameWidth="325" frameHeight="496"/>
+	<SubTexture name="GF Death Continue0004" x="1576" y="1265" width="320" height="496" frameX="0" frameY="0" frameWidth="325" frameHeight="496"/>
+	<SubTexture name="GF Death Continue0005" x="1576" y="1265" width="320" height="496" frameX="0" frameY="0" frameWidth="325" frameHeight="496"/>
+	<SubTexture name="GF Death Continue0006" x="0" y="1761" width="320" height="496" frameX="0" frameY="0" frameWidth="325" frameHeight="496"/>
+	<SubTexture name="GF Death Continue0007" x="0" y="1761" width="320" height="496" frameX="0" frameY="0" frameWidth="325" frameHeight="496"/>
+	<SubTexture name="GF Death Continue0008" x="320" y="1761" width="320" height="496" frameX="0" frameY="0" frameWidth="325" frameHeight="496"/>
+	<SubTexture name="GF Death Continue0009" x="320" y="1761" width="320" height="496" frameX="0" frameY="0" frameWidth="325" frameHeight="496"/>
+	<SubTexture name="GF Death Continue0010" x="320" y="1761" width="320" height="496" frameX="0" frameY="0" frameWidth="325" frameHeight="496"/>
+	<SubTexture name="GF Death Continue0011" x="320" y="1761" width="320" height="496" frameX="0" frameY="0" frameWidth="325" frameHeight="496"/>
+	<SubTexture name="GF Death Continue0012" x="320" y="1761" width="320" height="496" frameX="0" frameY="0" frameWidth="325" frameHeight="496"/>
+	<SubTexture name="GF Death Continue0013" x="320" y="1761" width="320" height="496" frameX="0" frameY="0" frameWidth="325" frameHeight="496"/>
+	<SubTexture name="GF Death Continue0014" x="320" y="1761" width="320" height="496" frameX="0" frameY="0" frameWidth="325" frameHeight="496"/>
+	<SubTexture name="GF Death Continue0015" x="320" y="1761" width="320" height="496" frameX="0" frameY="0" frameWidth="325" frameHeight="496"/>
+	<SubTexture name="GF Death Loop0000" x="640" y="1761" width="320" height="496"/>
+	<SubTexture name="GF Death Loop0001" x="640" y="1761" width="320" height="496"/>
+	<SubTexture name="GF Death Loop0002" x="960" y="1761" width="320" height="496"/>
+	<SubTexture name="GF Death Loop0003" x="960" y="1761" width="320" height="496"/>
+	<SubTexture name="GF Death Loop0004" x="960" y="1761" width="320" height="496"/>
+	<SubTexture name="GF Death Loop0005" x="960" y="1761" width="320" height="496"/>
+	<SubTexture name="GF Death Loop0006" x="1280" y="1761" width="320" height="496"/>
+	<SubTexture name="GF Death Loop0007" x="1280" y="1761" width="320" height="496"/>
+	<SubTexture name="GF Death Loop0008" x="1280" y="1761" width="320" height="496"/>
+	<SubTexture name="GF Death Loop0009" x="1280" y="1761" width="320" height="496"/>
+	<SubTexture name="GF Death Loop0010" x="1280" y="1761" width="320" height="496"/>
+	<SubTexture name="GF Death Loop0011" x="1280" y="1761" width="320" height="496"/>
+	<SubTexture name="GF Death Loop0012" x="1280" y="1761" width="320" height="496"/>
+	<SubTexture name="GF Death Loop0013" x="1280" y="1761" width="320" height="496"/>
+	<SubTexture name="GF Death Loop0014" x="1280" y="1761" width="320" height="496"/>
+	<SubTexture name="GF First Death0000" x="1600" y="1761" width="315" height="507" frameX="-8" frameY="0" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0001" x="1600" y="1761" width="315" height="507" frameX="-8" frameY="0" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0002" x="0" y="2268" width="327" height="491" frameX="-9" frameY="-16" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0003" x="0" y="2268" width="327" height="491" frameX="-9" frameY="-16" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0004" x="327" y="2268" width="330" height="496" frameX="0" frameY="-11" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0005" x="327" y="2268" width="330" height="496" frameX="0" frameY="-11" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0006" x="657" y="2268" width="321" height="497" frameX="-9" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0007" x="657" y="2268" width="321" height="497" frameX="-9" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0008" x="978" y="2268" width="320" height="497" frameX="-10" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0009" x="978" y="2268" width="320" height="497" frameX="-10" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0010" x="1298" y="2268" width="315" height="497" frameX="-15" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0011" x="1298" y="2268" width="315" height="497" frameX="-15" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0012" x="1613" y="2268" width="308" height="497" frameX="-22" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0013" x="1613" y="2268" width="308" height="497" frameX="-22" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0014" x="0" y="2765" width="320" height="497" frameX="-10" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0015" x="0" y="2765" width="320" height="497" frameX="-10" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0016" x="320" y="2765" width="320" height="497" frameX="-10" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0017" x="320" y="2765" width="320" height="497" frameX="-10" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0018" x="640" y="2765" width="320" height="497" frameX="-10" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0019" x="640" y="2765" width="320" height="497" frameX="-10" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0020" x="960" y="2765" width="320" height="497" frameX="-10" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0021" x="960" y="2765" width="320" height="497" frameX="-10" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0022" x="1280" y="2765" width="320" height="497" frameX="-10" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0023" x="1280" y="2765" width="320" height="497" frameX="-10" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0024" x="1600" y="2765" width="320" height="497" frameX="-10" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0025" x="1600" y="2765" width="320" height="497" frameX="-10" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0026" x="0" y="3262" width="320" height="497" frameX="-10" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0027" x="0" y="3262" width="320" height="497" frameX="-10" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0028" x="320" y="3262" width="320" height="497" frameX="-10" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0029" x="320" y="3262" width="320" height="497" frameX="-10" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0030" x="320" y="3262" width="320" height="497" frameX="-10" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0031" x="320" y="3262" width="320" height="497" frameX="-10" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0032" x="320" y="3262" width="320" height="497" frameX="-10" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0033" x="320" y="3262" width="320" height="497" frameX="-10" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0034" x="320" y="3262" width="320" height="497" frameX="-10" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0035" x="320" y="3262" width="320" height="497" frameX="-10" frameY="-10" frameWidth="336" frameHeight="507"/>
+</TextureAtlas>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="maidSplash.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="splash down0000" x="0" y="0" width="294" height="294"/>
+	<SubTexture name="splash down0001" x="294" y="0" width="294" height="294"/>
+	<SubTexture name="splash down0002" x="588" y="0" width="294" height="294"/>
+	<SubTexture name="splash down0003" x="588" y="588" width="294" height="294"/>
+	<SubTexture name="splash down0004" x="882" y="0" width="294" height="294"/>
+	<SubTexture name="splash down0005" x="1176" y="0" width="294" height="294"/>
+	<SubTexture name="splash left0000" x="1470" y="0" width="294" height="294"/>
+	<SubTexture name="splash left0001" x="0" y="294" width="294" height="294"/>
+	<SubTexture name="splash left0002" x="294" y="294" width="294" height="294"/>
+	<SubTexture name="splash left0003" x="588" y="294" width="294" height="294"/>
+	<SubTexture name="splash left0004" x="882" y="294" width="294" height="294"/>
+	<SubTexture name="splash left0005" x="1176" y="294" width="294" height="294"/>
+	<SubTexture name="splash right0000" x="1470" y="294" width="294" height="294"/>
+	<SubTexture name="splash right0001" x="0" y="588" width="294" height="294"/>
+	<SubTexture name="splash right0002" x="294" y="588" width="294" height="294"/>
+	<SubTexture name="splash right0003" x="588" y="588" width="294" height="294"/>
+	<SubTexture name="splash right0004" x="882" y="588" width="294" height="294"/>
+	<SubTexture name="splash right0005" x="1176" y="588" width="294" height="294"/>
+	<SubTexture name="splash up0000" x="1470" y="588" width="293" height="294"/>
+	<SubTexture name="splash up0001" x="0" y="882" width="293" height="294"/>
+	<SubTexture name="splash up0002" x="293" y="882" width="293" height="294"/>
+	<SubTexture name="splash up0003" x="586" y="882" width="293" height="294"/>
+	<SubTexture name="splash up0004" x="879" y="882" width="293" height="294"/>
+	<SubTexture name="splash up0005" x="1172" y="882" width="293" height="294"/>
+</TextureAtlas>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="hands.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="fail0000" x="0" y="0" width="40" height="35"/>
+	<SubTexture name="paper off0000" x="43" y="0" width="42" height="32"/>
+	<SubTexture name="paper on0000" x="0" y="38" width="42" height="32"/>
+	<SubTexture name="rock off0000" x="45" y="38" width="30" height="24"/>
+	<SubTexture name="rock on0000" x="78" y="38" width="30" height="24"/>
+	<SubTexture name="scissor off0000" x="0" y="73" width="42" height="29"/>
+	<SubTexture name="scissor on0000" x="45" y="73" width="42" height="29"/>
+</TextureAtlas>

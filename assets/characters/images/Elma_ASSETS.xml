@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Elma_ASSETS.png">
+	<!-- Created with Adobe Animate version 21.0.9.42677 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="elmaDown0000" x="0" y="0" width="1228" height="1364" frameX="-69" frameY="-24" frameWidth="1297" frameHeight="1389"/>
+	<SubTexture name="elmaDown0001" x="0" y="0" width="1228" height="1364" frameX="-69" frameY="-24" frameWidth="1297" frameHeight="1389"/>
+	<SubTexture name="elmaDown0002" x="1228" y="0" width="1222" height="1374" frameX="-60" frameY="-14" frameWidth="1297" frameHeight="1389"/>
+	<SubTexture name="elmaDown0003" x="1228" y="0" width="1222" height="1374" frameX="-60" frameY="-14" frameWidth="1297" frameHeight="1389"/>
+	<SubTexture name="elmaDown0004" x="2450" y="0" width="1257" height="1389" frameX="-24" frameY="0" frameWidth="1297" frameHeight="1389"/>
+	<SubTexture name="elmaDown0005" x="2450" y="0" width="1257" height="1389" frameX="-24" frameY="0" frameWidth="1297" frameHeight="1389"/>
+	<SubTexture name="elmaDown0006" x="3707" y="0" width="1282" height="1384" frameX="-8" frameY="-5" frameWidth="1297" frameHeight="1389"/>
+	<SubTexture name="elmaDown0007" x="4989" y="0" width="1291" height="1381" frameX="0" frameY="-8" frameWidth="1297" frameHeight="1389"/>
+	<SubTexture name="elmaIdle0000" x="6280" y="0" width="878" height="1513" frameX="-39" frameY="-7" frameWidth="917" frameHeight="1520"/>
+	<SubTexture name="elmaIdle0001" x="6280" y="0" width="878" height="1513" frameX="-39" frameY="-7" frameWidth="917" frameHeight="1520"/>
+	<SubTexture name="elmaIdle0002" x="7158" y="0" width="868" height="1517" frameX="-35" frameY="-3" frameWidth="917" frameHeight="1520"/>
+	<SubTexture name="elmaIdle0003" x="0" y="1517" width="871" height="1517" frameX="-31" frameY="-3" frameWidth="917" frameHeight="1520"/>
+	<SubTexture name="elmaIdle0004" x="0" y="1517" width="871" height="1517" frameX="-31" frameY="-3" frameWidth="917" frameHeight="1520"/>
+	<SubTexture name="elmaIdle0005" x="871" y="1517" width="874" height="1520" frameX="-26" frameY="0" frameWidth="917" frameHeight="1520"/>
+	<SubTexture name="elmaIdle0006" x="871" y="1517" width="874" height="1520" frameX="-26" frameY="0" frameWidth="917" frameHeight="1520"/>
+	<SubTexture name="elmaIdle0007" x="1745" y="1517" width="881" height="1518" frameX="-17" frameY="-2" frameWidth="917" frameHeight="1520"/>
+	<SubTexture name="elmaIdle0008" x="1745" y="1517" width="881" height="1518" frameX="-17" frameY="-2" frameWidth="917" frameHeight="1520"/>
+	<SubTexture name="elmaIdle0009" x="2626" y="1517" width="890" height="1515" frameX="-6" frameY="-5" frameWidth="917" frameHeight="1520"/>
+	<SubTexture name="elmaIdle0010" x="2626" y="1517" width="890" height="1515" frameX="-6" frameY="-5" frameWidth="917" frameHeight="1520"/>
+	<SubTexture name="elmaIdle0011" x="3516" y="1517" width="894" height="1513" frameX="0" frameY="-7" frameWidth="917" frameHeight="1520"/>
+	<SubTexture name="elmaIdle0012" x="4410" y="1517" width="892" height="1513" frameX="-2" frameY="-7" frameWidth="917" frameHeight="1520"/>
+	<SubTexture name="elmaIdle0013" x="5302" y="1517" width="867" height="1513" frameX="-27" frameY="-7" frameWidth="917" frameHeight="1520"/>
+	<SubTexture name="elmaIdle0014" x="6169" y="1517" width="864" height="1512" frameX="-39" frameY="-8" frameWidth="917" frameHeight="1520"/>
+	<SubTexture name="elmaIdle0015" x="7033" y="1517" width="864" height="1512" frameX="-39" frameY="-8" frameWidth="917" frameHeight="1520"/>
+	<SubTexture name="elmaLeft0000" x="0" y="3037" width="1184" height="1391" frameX="-34" frameY="-20" frameWidth="1237" frameHeight="1411"/>
+	<SubTexture name="elmaLeft0001" x="0" y="3037" width="1184" height="1391" frameX="-34" frameY="-20" frameWidth="1237" frameHeight="1411"/>
+	<SubTexture name="elmaLeft0002" x="1184" y="3037" width="1178" height="1395" frameX="-48" frameY="-10" frameWidth="1237" frameHeight="1411"/>
+	<SubTexture name="elmaLeft0003" x="1184" y="3037" width="1178" height="1395" frameX="-48" frameY="-10" frameWidth="1237" frameHeight="1411"/>
+	<SubTexture name="elmaLeft0004" x="2362" y="3037" width="1219" height="1405" frameX="-12" frameY="0" frameWidth="1237" frameHeight="1411"/>
+	<SubTexture name="elmaLeft0005" x="2362" y="3037" width="1219" height="1405" frameX="-12" frameY="0" frameWidth="1237" frameHeight="1411"/>
+	<SubTexture name="elmaLeft0006" x="3581" y="3037" width="1232" height="1405" frameX="-4" frameY="-1" frameWidth="1237" frameHeight="1411"/>
+	<SubTexture name="elmaLeft0007" x="4813" y="3037" width="1237" height="1404" frameX="0" frameY="-2" frameWidth="1237" frameHeight="1411"/>
+	<SubTexture name="elmaRight0000" x="6050" y="3037" width="1009" height="1504" frameX="-68" frameY="-33" frameWidth="1143" frameHeight="1538"/>
+	<SubTexture name="elmaRight0001" x="6050" y="3037" width="1009" height="1504" frameX="-68" frameY="-33" frameWidth="1143" frameHeight="1538"/>
+	<SubTexture name="elmaRight0002" x="7059" y="3037" width="1088" height="1521" frameX="-37" frameY="-16" frameWidth="1143" frameHeight="1538"/>
+	<SubTexture name="elmaRight0003" x="7059" y="3037" width="1088" height="1521" frameX="-37" frameY="-16" frameWidth="1143" frameHeight="1538"/>
+	<SubTexture name="elmaRight0004" x="0" y="4558" width="1121" height="1532" frameX="-13" frameY="-6" frameWidth="1143" frameHeight="1538"/>
+	<SubTexture name="elmaRight0005" x="0" y="4558" width="1121" height="1532" frameX="-13" frameY="-6" frameWidth="1143" frameHeight="1538"/>
+	<SubTexture name="elmaRight0006" x="1121" y="4558" width="1140" height="1537" frameX="0" frameY="-1" frameWidth="1143" frameHeight="1538"/>
+	<SubTexture name="elmaRight0007" x="2261" y="4558" width="1132" height="1538" frameX="-11" frameY="0" frameWidth="1143" frameHeight="1538"/>
+	<SubTexture name="elmaUp0000" x="3393" y="4558" width="1021" height="1493" frameX="0" frameY="-33" frameWidth="1082" frameHeight="1527"/>
+	<SubTexture name="elmaUp0001" x="3393" y="4558" width="1021" height="1493" frameX="0" frameY="-33" frameWidth="1082" frameHeight="1527"/>
+	<SubTexture name="elmaUp0002" x="4414" y="4558" width="1019" height="1508" frameX="-27" frameY="-19" frameWidth="1082" frameHeight="1527"/>
+	<SubTexture name="elmaUp0003" x="4414" y="4558" width="1019" height="1508" frameX="-27" frameY="-19" frameWidth="1082" frameHeight="1527"/>
+	<SubTexture name="elmaUp0004" x="5433" y="4558" width="1033" height="1511" frameX="-28" frameY="-16" frameWidth="1082" frameHeight="1527"/>
+	<SubTexture name="elmaUp0005" x="5433" y="4558" width="1033" height="1511" frameX="-28" frameY="-16" frameWidth="1082" frameHeight="1527"/>
+	<SubTexture name="elmaUp0006" x="6466" y="4558" width="1043" height="1523" frameX="-28" frameY="-4" frameWidth="1082" frameHeight="1527"/>
+	<SubTexture name="elmaUp0007" x="0" y="6096" width="1053" height="1527" frameX="-29" frameY="0" frameWidth="1082" frameHeight="1527"/>
+</TextureAtlas>

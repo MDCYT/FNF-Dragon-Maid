@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="smoke.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Humo0000" x="0" y="0" width="4077" height="1144" frameX="-47" frameY="-7" frameWidth="4217" frameHeight="1167"/>
+	<SubTexture name="Humo0001" x="0" y="0" width="4077" height="1144" frameX="-47" frameY="-7" frameWidth="4217" frameHeight="1167"/>
+	<SubTexture name="Humo0002" x="0" y="0" width="4077" height="1144" frameX="-47" frameY="-7" frameWidth="4217" frameHeight="1167"/>
+	<SubTexture name="Humo0003" x="0" y="0" width="4077" height="1144" frameX="-47" frameY="-7" frameWidth="4217" frameHeight="1167"/>
+	<SubTexture name="Humo0004" x="0" y="1144" width="4130" height="1058" frameX="-87" frameY="-59" frameWidth="4217" frameHeight="1167"/>
+	<SubTexture name="Humo0005" x="0" y="1144" width="4130" height="1058" frameX="-87" frameY="-59" frameWidth="4217" frameHeight="1167"/>
+	<SubTexture name="Humo0006" x="0" y="1144" width="4130" height="1058" frameX="-87" frameY="-59" frameWidth="4217" frameHeight="1167"/>
+	<SubTexture name="Humo0007" x="0" y="1144" width="4130" height="1058" frameX="-87" frameY="-59" frameWidth="4217" frameHeight="1167"/>
+	<SubTexture name="Humo0008" x="0" y="2202" width="4150" height="1106" frameX="-12" frameY="-51" frameWidth="4217" frameHeight="1167"/>
+	<SubTexture name="Humo0009" x="0" y="2202" width="4150" height="1106" frameX="-12" frameY="-51" frameWidth="4217" frameHeight="1167"/>
+	<SubTexture name="Humo0010" x="0" y="2202" width="4150" height="1106" frameX="-12" frameY="-51" frameWidth="4217" frameHeight="1167"/>
+	<SubTexture name="Humo0011" x="0" y="2202" width="4150" height="1106" frameX="-12" frameY="-51" frameWidth="4217" frameHeight="1167"/>
+	<SubTexture name="Humo0012" x="0" y="3308" width="4180" height="1148" frameX="0" frameY="0" frameWidth="4217" frameHeight="1167"/>
+	<SubTexture name="Humo0013" x="0" y="3308" width="4180" height="1148" frameX="0" frameY="0" frameWidth="4217" frameHeight="1167"/>
+	<SubTexture name="Humo0014" x="0" y="3308" width="4180" height="1148" frameX="0" frameY="0" frameWidth="4217" frameHeight="1167"/>
+	<SubTexture name="Humo0015" x="0" y="3308" width="4180" height="1148" frameX="0" frameY="0" frameWidth="4217" frameHeight="1167"/>
+	<SubTexture name="Humo0016" x="0" y="4456" width="4169" height="1165" frameX="-15" frameY="-2" frameWidth="4217" frameHeight="1167"/>
+	<SubTexture name="Humo0017" x="0" y="4456" width="4169" height="1165" frameX="-15" frameY="-2" frameWidth="4217" frameHeight="1167"/>
+	<SubTexture name="Humo0018" x="0" y="4456" width="4169" height="1165" frameX="-15" frameY="-2" frameWidth="4217" frameHeight="1167"/>
+	<SubTexture name="Humo0019" x="0" y="4456" width="4169" height="1165" frameX="-15" frameY="-2" frameWidth="4217" frameHeight="1167"/>
+</TextureAtlas>

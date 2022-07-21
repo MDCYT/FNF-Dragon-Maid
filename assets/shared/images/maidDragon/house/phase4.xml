@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="phase4.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="bumpinkanna0000" x="0" y="0" width="608" height="807" frameX="-8" frameY="0" frameWidth="626" frameHeight="807"/>
+	<SubTexture name="bumpinkanna0001" x="608" y="0" width="614" height="797" frameX="-7" frameY="-9" frameWidth="626" frameHeight="807"/>
+	<SubTexture name="bumpinkanna0002" x="1222" y="0" width="620" height="786" frameX="-6" frameY="-18" frameWidth="626" frameHeight="807"/>
+	<SubTexture name="bumpinkanna0003" x="1222" y="0" width="620" height="786" frameX="-6" frameY="-18" frameWidth="626" frameHeight="807"/>
+	<SubTexture name="bumpinkanna0004" x="0" y="807" width="614" height="772" frameX="-7" frameY="-30" frameWidth="626" frameHeight="807"/>
+	<SubTexture name="bumpinkanna0005" x="614" y="807" width="617" height="781" frameX="0" frameY="-22" frameWidth="626" frameHeight="807"/>
+	<SubTexture name="bumpinkanna0006" x="1231" y="807" width="609" height="801" frameX="-7" frameY="-5" frameWidth="626" frameHeight="807"/>
+</TextureAtlas>

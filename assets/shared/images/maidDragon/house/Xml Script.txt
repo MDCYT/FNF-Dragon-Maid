@@ -1,0 +1,14 @@
+$files = get-ChildItem "*.xml"
+foreach ( $file in $files )
+{
+    [System.Xml.XmlDocument]$doc = new-object System.Xml.XmlDocument;
+    $doc.set_PreserveWhiteSpace( $true );
+    $doc.Load( $file );
+
+    $root = $doc.get_DocumentElement();
+    $xml = $root.get_outerXml();
+    $xml = '<?xml version="1.0" encoding="utf-8"?>' + $xml
+
+    $newFile = $file.Name + ".new"
+    Set-Content -Encoding UTF8 $newFile $xml;
+}

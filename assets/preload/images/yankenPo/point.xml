@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="point.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="point00000" x="0" y="0" width="49" height="22"/>
+	<SubTexture name="point10000" x="0" y="26" width="49" height="22"/>
+	<SubTexture name="point20000" x="0" y="52" width="49" height="22"/>
+	<SubTexture name="point30000" x="0" y="78" width="49" height="22"/>
+</TextureAtlas>

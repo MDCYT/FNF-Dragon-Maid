@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="tohru_point.png">
+	<!-- Created with Adobe Flash CS6 version 12.0.0.481 -->
+	<!-- http://www.adobe.com/products/flash.html -->
+	<SubTexture name="point0000" x="0" y="0" width="954" height="804" frameX="-1" frameY="0" frameWidth="955" frameHeight="805" />
+	<SubTexture name="point0001" x="0" y="804" width="955" height="805" />
+</TextureAtlas>

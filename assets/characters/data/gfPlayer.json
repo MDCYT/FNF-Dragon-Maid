@@ -1,0 +1,135 @@
+{
+	"charOffset": [
+		0,
+		0
+	],
+	"scale": 1,
+	"singDur": 4,
+	"anims": [
+		{
+			"offsets": [
+				-6,
+				-1
+			],
+			"fps": 24,
+			"prefix": "GF Idle dance",
+			"looped": false,
+			"name": "idle",
+			"indices": null
+		},
+		{
+			"prefix": "GF Left",
+			"offsets": [
+				-4,
+				-19
+			],
+			"fps": 24,
+			"name": "singLEFT",
+			"looped": false
+		},
+		{
+			"offsets": [
+				-14,
+				-75
+			],
+			"fps": 24,
+			"prefix": "GF Down",
+			"looped": false,
+			"name": "singDOWN"
+		},
+		{
+			"prefix": "GF Up",
+			"offsets": [
+				-47,
+				9
+			],
+			"fps": 24,
+			"name": "singUP",
+			"looped": false
+		},
+		{
+			"prefix": "GF Right",
+			"offsets": [
+				-36,
+				-7
+			],
+			"fps": 24,
+			"name": "singRIGHT",
+			"looped": false
+		},
+		{
+			"prefix": "GF Miss Left",
+			"offsets": [
+				-16,
+				0
+			],
+			"fps": 24,
+			"name": "singLEFTmiss",
+			"looped": false
+		},
+		{
+			"offsets": [
+				-42,
+				-44
+			],
+			"fps": 24,
+			"prefix": "GF Miss Down",
+			"looped": false,
+			"name": "singDOWNmiss",
+			"indices": null
+		},
+		{
+			"prefix": "GF Miss Up",
+			"offsets": [
+				-46,
+				50
+			],
+			"fps": 24,
+			"name": "singUPmiss",
+			"looped": false
+		},
+		{
+			"prefix": "GF Miss Right",
+			"offsets": [
+				-70,
+				24
+			],
+			"fps": 24,
+			"name": "singRIGHTmiss",
+			"looped": false
+		},
+		{
+			"offsets": [
+				-36,
+				1
+			],
+			"fps": 24,
+			"prefix": "GF Hey",
+			"looped": false,
+			"name": "hey",
+			"indices": null
+		},
+		{
+			"offsets": [
+				-35,
+				-2
+			],
+			"fps": 24,
+			"prefix": "GF Scared",
+			"looped": true,
+			"name": "scared",
+			"indices": null
+		}
+	],
+	"spritesheet": "gfPlayer",
+	"camOffset": [
+		70,
+		-80
+	],
+	"flipX": false,
+	"iconName": "gf",
+	"antialiasing": true,
+	"beatDancer": false,
+	"format": "andromeda",
+	"healthColor": "0xFFA5004D"
+}

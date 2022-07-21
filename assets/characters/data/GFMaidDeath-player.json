@@ -1,0 +1,80 @@
+{
+	"camOffset": [
+		300,
+		200
+	],
+	"healthColor": "0xFFA5004D",
+	"beatDancer": false,
+	"charOffset": [
+		-100,
+		-250
+	],
+	"flipX": false,
+	"spritesheet": "GFMaidDeath",
+	"anims": [
+		{
+			"prefix": "GF maid death0",
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 24,
+			"name": "firstDeath",
+			"looped": false
+		},
+		{
+			"prefix": "GF maid death loop",
+			"offsets": [
+				-278,
+				-405
+			],
+			"fps": 24,
+			"name": "deathLoop",
+			"looped": true
+		},
+		{
+			"prefix": "GF maid death continue0",
+			"offsets": [
+				-278,
+				-379
+			],
+			"fps": 24,
+			"name": "deathConfirm",
+			"looped": false
+		},
+		{
+			"prefix": "GF maid death continue0",
+			"offsets": [
+				-278,
+				-379
+			],
+			"fps": 24,
+			"name": "deathSkip",
+			"looped": false
+		},
+		{
+			"prefix": "GF maid death NO CEREBRO",
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 24,
+			"name": "chaosfirstDeath",
+			"looped": false
+		},
+		{
+			"prefix": "GF maid death continue NO CEREBRO",
+			"offsets": [
+				-278,
+				-466
+			],
+			"fps": 24,
+			"name": "chaosdeathFinal",
+			"looped": false
+		}
+	],
+	"singDur": 4,
+	"antialiasing": false,
+	"iconName": "gf",
+	"scale": 1
+}

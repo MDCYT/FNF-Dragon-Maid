@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="specialsObjects.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="arrowKey0000" x="0" y="0" width="700" height="700"/>
+	<SubTexture name="arrowShield0000" x="700" y="0" width="700" height="700"/>
+	<SubTexture name="bfIdle0000" x="1400" y="0" width="700" height="700"/>
+	<SubTexture name="bfSpeed0000" x="2100" y="0" width="700" height="700"/>
+	<SubTexture name="coinPlus0000" x="2800" y="0" width="700" height="700"/>
+	<SubTexture name="gfIdle0000" x="0" y="700" width="700" height="700"/>
+	<SubTexture name="gfSpeed0000" x="700" y="700" width="700" height="700"/>
+	<SubTexture name="hearthShield0000" x="1400" y="700" width="700" height="700"/>
+	<SubTexture name="reverse0000" x="2100" y="700" width="700" height="700"/>
+	<SubTexture name="timer100000" x="2800" y="700" width="700" height="700"/>
+	<SubTexture name="timer50000" x="0" y="1400" width="700" height="700"/>
+	<SubTexture name="waterDrop0000" x="700" y="1400" width="700" height="700"/>
+</TextureAtlas>

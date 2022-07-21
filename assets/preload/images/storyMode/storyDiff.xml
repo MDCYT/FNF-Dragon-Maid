@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="storyDiff.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="CHAOS0000" x="0" y="0" width="289" height="68"/>
+	<SubTexture name="HARMONY0000" x="0" y="76" width="429" height="67"/>
+	<SubTexture name="arrow left0000" x="437" y="76" width="33" height="64"/>
+	<SubTexture name="arrow push left0000" x="478" y="76" width="27" height="52"/>
+	<SubTexture name="arrow push right0000" x="0" y="151" width="27" height="52"/>
+	<SubTexture name="arrow right0000" x="35" y="151" width="33" height="64"/>
+	<SubTexture name="lock0000" x="76" y="151" width="67" height="93"/>
+</TextureAtlas>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="loading.png">
+	<!-- Created with Adobe Animate version 21.0.1.37179 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Loadin_shit0000" x="0" y="0" width="155" height="49" frameX="-28" frameY="-14" frameWidth="184" frameHeight="83"/>
+	<SubTexture name="Loadin_shit0001" x="155" y="0" width="183" height="51" frameX="0" frameY="-24" frameWidth="184" frameHeight="83"/>
+	<SubTexture name="Loadin_shit0002" x="338" y="0" width="173" height="56" frameX="-10" frameY="-27" frameWidth="184" frameHeight="83"/>
+	<SubTexture name="Loadin_shit0003" x="0" y="56" width="172" height="36" frameX="-11" frameY="-27" frameWidth="184" frameHeight="83"/>
+	<SubTexture name="Loadin_shit0004" x="172" y="56" width="156" height="46" frameX="-27" frameY="-17" frameWidth="184" frameHeight="83"/>
+	<SubTexture name="Loadin_shit0005" x="328" y="56" width="149" height="53" frameX="-34" frameY="-10" frameWidth="184" frameHeight="83"/>
+	<SubTexture name="Loadin_shit0006" x="0" y="109" width="164" height="57" frameX="-19" frameY="-6" frameWidth="184" frameHeight="83"/>
+	<SubTexture name="Loadin_shit0007" x="164" y="109" width="163" height="59" frameX="-20" frameY="-4" frameWidth="184" frameHeight="83"/>
+	<SubTexture name="Loadin_shit0008" x="327" y="109" width="155" height="60" frameX="-28" frameY="-3" frameWidth="184" frameHeight="83"/>
+	<SubTexture name="Loadin_shit0009" x="0" y="169" width="155" height="62" frameX="-28" frameY="-3" frameWidth="184" frameHeight="83"/>
+	<SubTexture name="Loadin_shit0010" x="155" y="169" width="163" height="62" frameX="-20" frameY="-3" frameWidth="184" frameHeight="83"/>
+	<SubTexture name="Loadin_shit0011" x="318" y="169" width="163" height="63" frameX="-20" frameY="-2" frameWidth="184" frameHeight="83"/>
+	<SubTexture name="Loadin_shit0012" x="0" y="232" width="163" height="60" frameX="-20" frameY="-3" frameWidth="184" frameHeight="83"/>
+	<SubTexture name="Loadin_shit0013" x="163" y="232" width="163" height="63" frameX="-20" frameY="-2" frameWidth="184" frameHeight="83"/>
+	<SubTexture name="Loadin_shit0014" x="326" y="232" width="163" height="60" frameX="-20" frameY="-3" frameWidth="184" frameHeight="83"/>
+	<SubTexture name="Loadin_shit0015" x="0" y="295" width="155" height="63" frameX="-20" frameY="-2" frameWidth="184" frameHeight="83"/>
+	<SubTexture name="Loadin_shit0016" x="155" y="295" width="152" height="79" frameX="-20" frameY="-3" frameWidth="184" frameHeight="83"/>
+	<SubTexture name="Loadin_shit0017" x="307" y="295" width="164" height="65" frameX="-20" frameY="0" frameWidth="184" frameHeight="83"/>
+	<SubTexture name="Loadin_shit0018" x="0" y="374" width="158" height="61" frameX="-20" frameY="-2" frameWidth="184" frameHeight="83"/>
+	<SubTexture name="Loadin_shit0019" x="158" y="374" width="160" height="37" frameX="-20" frameY="-28" frameWidth="184" frameHeight="83"/>
+	<SubTexture name="Loadin_shit0020" x="318" y="374" width="161" height="36" frameX="-20" frameY="-27" frameWidth="184" frameHeight="83"/>
+	<SubTexture name="Loadin_shit0021" x="0" y="435" width="162" height="36" frameX="-20" frameY="-27" frameWidth="184" frameHeight="83"/>
+</TextureAtlas>

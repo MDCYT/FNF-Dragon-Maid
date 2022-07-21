@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Freeplay.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Freeplay Off0000" x="0" y="0" width="566" height="775"/>
+	<SubTexture name="Freeplay On0000" x="566" y="0" width="568" height="775" frameX="0" frameY="0" frameWidth="577" frameHeight="775"/>
+	<SubTexture name="Freeplay On0001" x="1134" y="0" width="568" height="775" frameX="0" frameY="0" frameWidth="577" frameHeight="775"/>
+	<SubTexture name="Freeplay On0002" x="1702" y="0" width="568" height="775" frameX="0" frameY="0" frameWidth="577" frameHeight="775"/>
+	<SubTexture name="Freeplay On0003" x="2270" y="0" width="568" height="775" frameX="0" frameY="0" frameWidth="577" frameHeight="775"/>
+	<SubTexture name="Freeplay On0004" x="2838" y="0" width="569" height="775" frameX="0" frameY="0" frameWidth="577" frameHeight="775"/>
+	<SubTexture name="Freeplay On0005" x="3407" y="0" width="570" height="775" frameX="0" frameY="0" frameWidth="577" frameHeight="775"/>
+	<SubTexture name="Freeplay On0006" x="3407" y="0" width="570" height="775" frameX="0" frameY="0" frameWidth="577" frameHeight="775"/>
+	<SubTexture name="Freeplay On0007" x="0" y="775" width="572" height="775" frameX="0" frameY="0" frameWidth="577" frameHeight="775"/>
+	<SubTexture name="Freeplay On0008" x="572" y="775" width="573" height="775" frameX="0" frameY="0" frameWidth="577" frameHeight="775"/>
+	<SubTexture name="Freeplay On0009" x="1145" y="775" width="573" height="775" frameX="0" frameY="0" frameWidth="577" frameHeight="775"/>
+	<SubTexture name="Freeplay On0010" x="1718" y="775" width="574" height="775" frameX="0" frameY="0" frameWidth="577" frameHeight="775"/>
+	<SubTexture name="Freeplay On0011" x="2292" y="775" width="575" height="775" frameX="0" frameY="0" frameWidth="577" frameHeight="775"/>
+	<SubTexture name="Freeplay On0012" x="2292" y="775" width="575" height="775" frameX="0" frameY="0" frameWidth="577" frameHeight="775"/>
+	<SubTexture name="Freeplay On0013" x="2867" y="775" width="577" height="775"/>
+	<SubTexture name="Freeplay On0014" x="3444" y="775" width="575" height="775" frameX="0" frameY="0" frameWidth="577" frameHeight="775"/>
+	<SubTexture name="Freeplay On0015" x="0" y="1550" width="574" height="775" frameX="0" frameY="0" frameWidth="577" frameHeight="775"/>
+	<SubTexture name="Freeplay On0016" x="574" y="1550" width="573" height="775" frameX="0" frameY="0" frameWidth="577" frameHeight="775"/>
+	<SubTexture name="Freeplay On0017" x="1147" y="1550" width="571" height="775" frameX="0" frameY="0" frameWidth="577" frameHeight="775"/>
+	<SubTexture name="Freeplay On0018" x="1718" y="1550" width="570" height="775" frameX="0" frameY="0" frameWidth="577" frameHeight="775"/>
+	<SubTexture name="Freeplay On0019" x="2288" y="1550" width="569" height="775" frameX="0" frameY="0" frameWidth="577" frameHeight="775"/>
+	<SubTexture name="Freeplay On0020" x="2857" y="1550" width="568" height="775" frameX="0" frameY="0" frameWidth="577" frameHeight="775"/>
+	<SubTexture name="Freeplay On0021" x="566" y="0" width="568" height="775" frameX="0" frameY="0" frameWidth="577" frameHeight="775"/>
+</TextureAtlas>

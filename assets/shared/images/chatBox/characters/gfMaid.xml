@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="gfMaid.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="happy0000" x="0" y="0" width="357" height="398"/>
+	<SubTexture name="neutral0000" x="357" y="0" width="357" height="398"/>
+	<SubTexture name="ovo0000" x="0" y="398" width="357" height="398"/>
+	<SubTexture name="scared0000" x="357" y="398" width="357" height="398"/>
+</TextureAtlas>

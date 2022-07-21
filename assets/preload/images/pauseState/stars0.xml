@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="stars0.png">
+	<!-- Created with Adobe Animate version 21.0.1.37179 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="ASAAA0000" x="0" y="0" width="395" height="442" frameX="-22" frameY="-4" frameWidth="424" frameHeight="451"/>
+	<SubTexture name="ASAAA0001" x="395" y="0" width="408" height="429" frameX="0" frameY="-17" frameWidth="424" frameHeight="451"/>
+	<SubTexture name="ASAAA0002" x="803" y="0" width="411" height="438" frameX="-5" frameY="-3" frameWidth="424" frameHeight="451"/>
+	<SubTexture name="ASAAA0003" x="1214" y="0" width="399" height="432" frameX="-15" frameY="-12" frameWidth="424" frameHeight="451"/>
+	<SubTexture name="ASAAA0004" x="1613" y="0" width="410" height="439" frameX="0" frameY="-8" frameWidth="424" frameHeight="451"/>
+	<SubTexture name="ASAAA0005" x="2023" y="0" width="413" height="448" frameX="-4" frameY="0" frameWidth="424" frameHeight="451"/>
+	<SubTexture name="ASAAA0006" x="2436" y="0" width="393" height="438" frameX="-24" frameY="-8" frameWidth="424" frameHeight="451"/>
+	<SubTexture name="ASAAA0007" x="2829" y="0" width="398" height="419" frameX="-14" frameY="-23" frameWidth="424" frameHeight="451"/>
+	<SubTexture name="ASAAA0008" x="3227" y="0" width="409" height="439" frameX="-7" frameY="-7" frameWidth="424" frameHeight="451"/>
+	<SubTexture name="ASAAA0009" x="3636" y="0" width="408" height="446" frameX="-11" frameY="-3" frameWidth="424" frameHeight="451"/>
+	<SubTexture name="ASAAA0010" x="0" y="448" width="396" height="442" frameX="-22" frameY="-9" frameWidth="424" frameHeight="451"/>
+	<SubTexture name="ASAAA0011" x="396" y="448" width="395" height="430" frameX="-20" frameY="-21" frameWidth="424" frameHeight="451"/>
+	<SubTexture name="ASAAA0012" x="791" y="448" width="405" height="420" frameX="-10" frameY="-31" frameWidth="424" frameHeight="451"/>
+	<SubTexture name="ASAAA0013" x="1196" y="448" width="415" height="429" frameX="-5" frameY="-21" frameWidth="424" frameHeight="451"/>
+	<SubTexture name="ASAAA0014" x="1611" y="448" width="416" height="432" frameX="-6" frameY="-16" frameWidth="424" frameHeight="451"/>
+	<SubTexture name="ASAAA0015" x="2027" y="448" width="412" height="431" frameX="-10" frameY="-15" frameWidth="424" frameHeight="451"/>
+	<SubTexture name="ASAAA0016" x="2439" y="448" width="404" height="427" frameX="-17" frameY="-17" frameWidth="424" frameHeight="451"/>
+	<SubTexture name="ASAAA0017" x="2843" y="448" width="396" height="422" frameX="-23" frameY="-22" frameWidth="424" frameHeight="451"/>
+	<SubTexture name="ASAAA0018" x="3239" y="448" width="401" height="417" frameX="-15" frameY="-29" frameWidth="424" frameHeight="451"/>
+	<SubTexture name="ASAAA0019" x="3640" y="448" width="404" height="412" frameX="-9" frameY="-36" frameWidth="424" frameHeight="451"/>
+	<SubTexture name="ASAAA0020" x="0" y="890" width="411" height="414" frameX="-6" frameY="-35" frameWidth="424" frameHeight="451"/>
+	<SubTexture name="ASAAA0021" x="411" y="890" width="415" height="419" frameX="-4" frameY="-30" frameWidth="424" frameHeight="451"/>
+	<SubTexture name="ASAAA0022" x="826" y="890" width="418" height="424" frameX="-3" frameY="-26" frameWidth="424" frameHeight="451"/>
+	<SubTexture name="ASAAA0023" x="1244" y="890" width="418" height="427" frameX="-4" frameY="-23" frameWidth="424" frameHeight="451"/>
+	<SubTexture name="ASAAA0024" x="1662" y="890" width="419" height="428" frameX="-4" frameY="-22" frameWidth="424" frameHeight="451"/>
+	<SubTexture name="ASAAA0025" x="2081" y="890" width="418" height="431" frameX="-6" frameY="-19" frameWidth="424" frameHeight="451"/>
+	<SubTexture name="ASAAA0026" x="2499" y="890" width="416" height="432" frameX="-7" frameY="-18" frameWidth="424" frameHeight="451"/>
+	<SubTexture name="ASAAA0027" x="2915" y="890" width="414" height="433" frameX="-9" frameY="-17" frameWidth="424" frameHeight="451"/>
+	<SubTexture name="ASAAA0028" x="3329" y="890" width="413" height="434" frameX="-10" frameY="-16" frameWidth="424" frameHeight="451"/>
+	<SubTexture name="ASAAA0029" x="0" y="1324" width="411" height="435" frameX="-12" frameY="-15" frameWidth="424" frameHeight="451"/>
+	<SubTexture name="ASAAA0030" x="411" y="1324" width="408" height="436" frameX="-14" frameY="-14" frameWidth="424" frameHeight="451"/>
+	<SubTexture name="ASAAA0031" x="819" y="1324" width="407" height="435" frameX="-15" frameY="-14" frameWidth="424" frameHeight="451"/>
+	<SubTexture name="ASAAA0032" x="1226" y="1324" width="406" height="435" frameX="-16" frameY="-14" frameWidth="424" frameHeight="451"/>
+	<SubTexture name="ASAAA0033" x="1632" y="1324" width="404" height="436" frameX="-17" frameY="-13" frameWidth="424" frameHeight="451"/>
+	<SubTexture name="ASAAA0034" x="2036" y="1324" width="403" height="436" frameX="-18" frameY="-13" frameWidth="424" frameHeight="451"/>
+	<SubTexture name="ASAAA0035" x="2439" y="1324" width="402" height="437" frameX="-19" frameY="-12" frameWidth="424" frameHeight="451"/>
+	<SubTexture name="ASAAA0036" x="2841" y="1324" width="400" height="436" frameX="-20" frameY="-12" frameWidth="424" frameHeight="451"/>
+	<SubTexture name="ASAAA0037" x="3241" y="1324" width="400" height="437" frameX="-20" frameY="-11" frameWidth="424" frameHeight="451"/>
+	<SubTexture name="ASAAA0038" x="3641" y="1324" width="399" height="437" frameX="-21" frameY="-11" frameWidth="424" frameHeight="451"/>
+	<SubTexture name="ASAAA0039" x="0" y="1761" width="398" height="438" frameX="-21" frameY="-10" frameWidth="424" frameHeight="451"/>
+	<SubTexture name="ASAAA0040" x="398" y="1761" width="398" height="437" frameX="-21" frameY="-10" frameWidth="424" frameHeight="451"/>
+</TextureAtlas>

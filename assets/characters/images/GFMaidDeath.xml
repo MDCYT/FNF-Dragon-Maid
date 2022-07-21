@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="GFMaidDeath.png">
+	<!-- Created with Adobe Animate version 22.0.2.168 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="GF Death Continue0000" x="15" y="15" width="325" height="496"/>
+	<SubTexture name="GF Death Continue0001" x="15" y="15" width="325" height="496"/>
+	<SubTexture name="GF Death Continue0002" x="355" y="15" width="320" height="494" frameX="0" frameY="-2" frameWidth="325" frameHeight="496"/>
+	<SubTexture name="GF Death Continue0003" x="355" y="15" width="320" height="494" frameX="0" frameY="-2" frameWidth="325" frameHeight="496"/>
+	<SubTexture name="GF Death Continue0004" x="690" y="15" width="320" height="496" frameX="0" frameY="0" frameWidth="325" frameHeight="496"/>
+	<SubTexture name="GF Death Continue0005" x="690" y="15" width="320" height="496" frameX="0" frameY="0" frameWidth="325" frameHeight="496"/>
+	<SubTexture name="GF Death Continue0006" x="1025" y="15" width="320" height="496" frameX="0" frameY="0" frameWidth="325" frameHeight="496"/>
+	<SubTexture name="GF Death Continue0007" x="1025" y="15" width="320" height="496" frameX="0" frameY="0" frameWidth="325" frameHeight="496"/>
+	<SubTexture name="GF Death Continue0008" x="1360" y="15" width="320" height="496" frameX="0" frameY="0" frameWidth="325" frameHeight="496"/>
+	<SubTexture name="GF Death Continue0009" x="1360" y="15" width="320" height="496" frameX="0" frameY="0" frameWidth="325" frameHeight="496"/>
+	<SubTexture name="GF Death Continue0010" x="1360" y="15" width="320" height="496" frameX="0" frameY="0" frameWidth="325" frameHeight="496"/>
+	<SubTexture name="GF Death Continue0011" x="1360" y="15" width="320" height="496" frameX="0" frameY="0" frameWidth="325" frameHeight="496"/>
+	<SubTexture name="GF Death Continue0012" x="1360" y="15" width="320" height="496" frameX="0" frameY="0" frameWidth="325" frameHeight="496"/>
+	<SubTexture name="GF Death Continue0013" x="1360" y="15" width="320" height="496" frameX="0" frameY="0" frameWidth="325" frameHeight="496"/>
+	<SubTexture name="GF Death Continue0014" x="1360" y="15" width="320" height="496" frameX="0" frameY="0" frameWidth="325" frameHeight="496"/>
+	<SubTexture name="GF Death Continue0015" x="1360" y="15" width="320" height="496" frameX="0" frameY="0" frameWidth="325" frameHeight="496"/>
+	<SubTexture name="GF Death Loop0000" x="1695" y="15" width="320" height="496"/>
+	<SubTexture name="GF Death Loop0001" x="1695" y="15" width="320" height="496"/>
+	<SubTexture name="GF Death Loop0002" x="2030" y="15" width="320" height="496"/>
+	<SubTexture name="GF Death Loop0003" x="2030" y="15" width="320" height="496"/>
+	<SubTexture name="GF Death Loop0004" x="2030" y="15" width="320" height="496"/>
+	<SubTexture name="GF Death Loop0005" x="2030" y="15" width="320" height="496"/>
+	<SubTexture name="GF Death Loop0006" x="2365" y="15" width="320" height="496"/>
+	<SubTexture name="GF Death Loop0007" x="2365" y="15" width="320" height="496"/>
+	<SubTexture name="GF Death Loop0008" x="2365" y="15" width="320" height="496"/>
+	<SubTexture name="GF Death Loop0009" x="2365" y="15" width="320" height="496"/>
+	<SubTexture name="GF Death Loop0010" x="2365" y="15" width="320" height="496"/>
+	<SubTexture name="GF Death Loop0011" x="2365" y="15" width="320" height="496"/>
+	<SubTexture name="GF Death Loop0012" x="2365" y="15" width="320" height="496"/>
+	<SubTexture name="GF Death Loop0013" x="2365" y="15" width="320" height="496"/>
+	<SubTexture name="GF Death Loop0014" x="2365" y="15" width="320" height="496"/>
+	<SubTexture name="GF First Death0000" x="2700" y="15" width="315" height="507" frameX="-8" frameY="0" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0001" x="2700" y="15" width="315" height="507" frameX="-8" frameY="0" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0002" x="3030" y="15" width="327" height="491" frameX="-9" frameY="-16" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0003" x="3030" y="15" width="327" height="491" frameX="-9" frameY="-16" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0004" x="3372" y="15" width="330" height="496" frameX="0" frameY="-11" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0005" x="3372" y="15" width="330" height="496" frameX="0" frameY="-11" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0006" x="3717" y="15" width="321" height="497" frameX="-9" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0007" x="3717" y="15" width="321" height="497" frameX="-9" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0008" x="4053" y="15" width="320" height="497" frameX="-10" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0009" x="4053" y="15" width="320" height="497" frameX="-10" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0010" x="4388" y="15" width="315" height="497" frameX="-15" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0011" x="4388" y="15" width="315" height="497" frameX="-15" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0012" x="4718" y="15" width="308" height="497" frameX="-22" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0013" x="4718" y="15" width="308" height="497" frameX="-22" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0014" x="5041" y="15" width="320" height="497" frameX="-10" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0015" x="5041" y="15" width="320" height="497" frameX="-10" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0016" x="5376" y="15" width="320" height="497" frameX="-10" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0017" x="5376" y="15" width="320" height="497" frameX="-10" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0018" x="5711" y="15" width="320" height="497" frameX="-10" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0019" x="5711" y="15" width="320" height="497" frameX="-10" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0020" x="6046" y="15" width="320" height="497" frameX="-10" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0021" x="6046" y="15" width="320" height="497" frameX="-10" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0022" x="6381" y="15" width="320" height="497" frameX="-10" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0023" x="6381" y="15" width="320" height="497" frameX="-10" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0024" x="6716" y="15" width="320" height="497" frameX="-10" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0025" x="6716" y="15" width="320" height="497" frameX="-10" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0026" x="7051" y="15" width="320" height="497" frameX="-10" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0027" x="7051" y="15" width="320" height="497" frameX="-10" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0028" x="7386" y="15" width="320" height="497" frameX="-10" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0029" x="7386" y="15" width="320" height="497" frameX="-10" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0030" x="7386" y="15" width="320" height="497" frameX="-10" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0031" x="7386" y="15" width="320" height="497" frameX="-10" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0032" x="7386" y="15" width="320" height="497" frameX="-10" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0033" x="7386" y="15" width="320" height="497" frameX="-10" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0034" x="7386" y="15" width="320" height="497" frameX="-10" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF First Death0035" x="7386" y="15" width="320" height="497" frameX="-10" frameY="-10" frameWidth="336" frameHeight="507"/>
+	<SubTexture name="GF Skip0000" x="7721" y="15" width="319" height="496" frameX="-711" frameY="-4" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Skip0001" x="7721" y="15" width="319" height="496" frameX="-711" frameY="-4" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Skip0002" x="7721" y="15" width="319" height="496" frameX="-711" frameY="-4" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Skip0003" x="7721" y="15" width="319" height="496" frameX="-711" frameY="-4" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Skip0004" x="7721" y="15" width="319" height="496" frameX="-711" frameY="-4" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Skip0005" x="7721" y="15" width="319" height="496" frameX="-711" frameY="-4" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Skip0006" x="15" y="537" width="319" height="500" frameX="-711" frameY="0" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Skip0007" x="15" y="537" width="319" height="500" frameX="-711" frameY="0" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Skip0008" x="349" y="537" width="327" height="430" frameX="-676" frameY="-67" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Skip0009" x="349" y="537" width="327" height="430" frameX="-676" frameY="-67" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Skip0010" x="691" y="537" width="453" height="164" frameX="-485" frameY="-344" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Skip0011" x="1159" y="537" width="556" height="197" frameX="-382" frameY="-311" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Skip0012" x="1730" y="537" width="648" height="138" frameX="-287" frameY="-369" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Skip0013" x="1730" y="537" width="648" height="138" frameX="-287" frameY="-369" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Skip0014" x="2393" y="537" width="690" height="140" frameX="-245" frameY="-369" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Skip0015" x="3098" y="537" width="688" height="143" frameX="-245" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Skip0016" x="3801" y="537" width="728" height="141" frameX="-205" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Skip0017" x="4544" y="537" width="865" height="141" frameX="-67" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Skip0018" x="5424" y="537" width="900" height="159" frameX="-32" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Skip0019" x="6339" y="537" width="899" height="159" frameX="-32" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Skip0020" x="7253" y="537" width="914" height="161" frameX="-17" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Skip0021" x="15" y="1052" width="914" height="161" frameX="-17" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Skip0022" x="944" y="1052" width="920" height="160" frameX="-11" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Skip0023" x="944" y="1052" width="920" height="160" frameX="-11" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Skip0024" x="1879" y="1052" width="929" height="161" frameX="-2" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Skip0025" x="1879" y="1052" width="929" height="161" frameX="-2" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Skip0026" x="2823" y="1052" width="931" height="159" frameX="0" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Skip0027" x="2823" y="1052" width="931" height="159" frameX="0" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Skip0028" x="2823" y="1052" width="931" height="159" frameX="0" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Skip0029" x="2823" y="1052" width="931" height="159" frameX="0" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Skip0030" x="2823" y="1052" width="931" height="159" frameX="0" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Skip0031" x="2823" y="1052" width="931" height="159" frameX="0" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Skip0032" x="2823" y="1052" width="931" height="159" frameX="0" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Skip0033" x="2823" y="1052" width="931" height="159" frameX="0" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Skip0034" x="2823" y="1052" width="931" height="159" frameX="0" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Skip0035" x="2823" y="1052" width="931" height="159" frameX="0" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Skip0036" x="2823" y="1052" width="931" height="159" frameX="0" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Skip0037" x="2823" y="1052" width="931" height="159" frameX="0" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Skip0038" x="2823" y="1052" width="931" height="159" frameX="0" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Skip0039" x="2823" y="1052" width="931" height="159" frameX="0" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Skip0040" x="2823" y="1052" width="931" height="159" frameX="0" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Skip0041" x="2823" y="1052" width="931" height="159" frameX="0" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Skip0042" x="2823" y="1052" width="931" height="159" frameX="0" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Skip0043" x="2823" y="1052" width="931" height="159" frameX="0" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Skip0044" x="2823" y="1052" width="931" height="159" frameX="0" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Skip0045" x="2823" y="1052" width="931" height="159" frameX="0" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Skip0046" x="2823" y="1052" width="931" height="159" frameX="0" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Skip0047" x="2823" y="1052" width="931" height="159" frameX="0" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Skip0048" x="2823" y="1052" width="931" height="159" frameX="0" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF Skip0049" x="2823" y="1052" width="931" height="159" frameX="0" frameY="-366" frameWidth="1030" frameHeight="527"/>
+	<SubTexture name="GF maid death0000" x="3769" y="1052" width="358" height="514" frameX="-368" frameY="-139" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0001" x="3769" y="1052" width="358" height="514" frameX="-368" frameY="-139" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0002" x="4142" y="1052" width="361" height="507" frameX="-369" frameY="-146" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0003" x="4142" y="1052" width="361" height="507" frameX="-369" frameY="-146" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0004" x="4518" y="1052" width="369" height="515" frameX="-360" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0005" x="4518" y="1052" width="369" height="515" frameX="-360" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0006" x="4902" y="1052" width="360" height="515" frameX="-369" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0007" x="4902" y="1052" width="360" height="515" frameX="-369" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0008" x="5277" y="1052" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0009" x="5277" y="1052" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0010" x="5651" y="1052" width="501" height="548" frameX="-308" frameY="-105" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0011" x="5651" y="1052" width="501" height="548" frameX="-308" frameY="-105" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0012" x="6167" y="1052" width="907" height="696" frameX="0" frameY="0" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0013" x="6167" y="1052" width="907" height="696" frameX="0" frameY="0" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0014" x="7089" y="1052" width="597" height="581" frameX="-243" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0015" x="7089" y="1052" width="597" height="581" frameX="-243" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0016" x="15" y="1763" width="564" height="580" frameX="-271" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0017" x="15" y="1763" width="564" height="580" frameX="-271" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0018" x="594" y="1763" width="392" height="576" frameX="-337" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0019" x="594" y="1763" width="392" height="576" frameX="-337" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0020" x="1001" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0021" x="1001" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0022" x="1375" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0023" x="1375" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0024" x="1749" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0025" x="1749" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0026" x="2123" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0027" x="2123" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0028" x="2497" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0029" x="2497" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0030" x="2497" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0031" x="2497" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0032" x="2497" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0033" x="2497" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0034" x="2497" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0035" x="2497" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0036" x="2871" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0037" x="3245" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0038" x="3245" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0039" x="3619" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0040" x="2497" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0041" x="2497" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0042" x="2871" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0043" x="3245" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0044" x="3245" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0045" x="3619" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0046" x="2497" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0047" x="2497" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0048" x="2497" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0049" x="2497" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0050" x="2497" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0051" x="2497" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0052" x="2497" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0053" x="2497" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0054" x="2497" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0055" x="2497" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0056" x="2497" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0057" x="2497" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0058" x="2497" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0059" x="2497" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0060" x="2497" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0061" x="3993" y="1763" width="358" height="508" frameX="-371" frameY="-146" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0062" x="3993" y="1763" width="358" height="508" frameX="-371" frameY="-146" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0063" x="4366" y="1763" width="407" height="429" frameX="-360" frameY="-220" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0064" x="4788" y="1763" width="434" height="429" frameX="-289" frameY="-222" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0065" x="4788" y="1763" width="434" height="429" frameX="-289" frameY="-222" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0066" x="5237" y="1763" width="456" height="429" frameX="-278" frameY="-222" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0067" x="5237" y="1763" width="456" height="429" frameX="-278" frameY="-222" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0068" x="5237" y="1763" width="456" height="429" frameX="-278" frameY="-222" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0069" x="5237" y="1763" width="456" height="429" frameX="-278" frameY="-222" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0070" x="5708" y="1763" width="456" height="429" frameX="-278" frameY="-222" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0071" x="6179" y="1763" width="456" height="394" frameX="-278" frameY="-257" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0072" x="6650" y="1763" width="456" height="197" frameX="-278" frameY="-454" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0073" x="7121" y="1763" width="456" height="186" frameX="-278" frameY="-465" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0074" x="7592" y="1763" width="456" height="221" frameX="-278" frameY="-430" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0075" x="7592" y="1763" width="456" height="221" frameX="-278" frameY="-430" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0076" x="15" y="2358" width="456" height="217" frameX="-278" frameY="-434" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0077" x="15" y="2358" width="456" height="217" frameX="-278" frameY="-434" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0078" x="486" y="2358" width="456" height="217" frameX="-278" frameY="-434" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0079" x="486" y="2358" width="456" height="217" frameX="-278" frameY="-434" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0080" x="486" y="2358" width="456" height="217" frameX="-278" frameY="-434" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0081" x="486" y="2358" width="456" height="217" frameX="-278" frameY="-434" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0082" x="486" y="2358" width="456" height="217" frameX="-278" frameY="-434" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0083" x="486" y="2358" width="456" height="217" frameX="-278" frameY="-434" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0084" x="486" y="2358" width="456" height="217" frameX="-278" frameY="-434" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0085" x="486" y="2358" width="456" height="217" frameX="-278" frameY="-434" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0086" x="486" y="2358" width="456" height="217" frameX="-278" frameY="-434" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death0087" x="486" y="2358" width="456" height="217" frameX="-278" frameY="-434" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0000" x="3769" y="1052" width="358" height="514" frameX="-368" frameY="-139" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0001" x="3769" y="1052" width="358" height="514" frameX="-368" frameY="-139" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0002" x="4142" y="1052" width="361" height="507" frameX="-369" frameY="-146" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0003" x="4142" y="1052" width="361" height="507" frameX="-369" frameY="-146" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0004" x="4518" y="1052" width="369" height="515" frameX="-360" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0005" x="4518" y="1052" width="369" height="515" frameX="-360" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0006" x="4902" y="1052" width="360" height="515" frameX="-369" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0007" x="4902" y="1052" width="360" height="515" frameX="-369" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0008" x="5277" y="1052" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0009" x="5277" y="1052" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0010" x="5651" y="1052" width="501" height="548" frameX="-308" frameY="-105" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0011" x="5651" y="1052" width="501" height="548" frameX="-308" frameY="-105" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0012" x="6167" y="1052" width="907" height="696" frameX="0" frameY="0" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0013" x="6167" y="1052" width="907" height="696" frameX="0" frameY="0" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0014" x="7089" y="1052" width="597" height="581" frameX="-243" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0015" x="7089" y="1052" width="597" height="581" frameX="-243" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0016" x="15" y="1763" width="564" height="580" frameX="-271" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0017" x="15" y="1763" width="564" height="580" frameX="-271" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0018" x="594" y="1763" width="392" height="576" frameX="-337" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0019" x="594" y="1763" width="392" height="576" frameX="-337" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0020" x="1001" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0021" x="1001" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0022" x="1001" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0023" x="1001" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0024" x="1001" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0025" x="1001" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0026" x="1001" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0027" x="1001" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0028" x="1001" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0029" x="1001" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0030" x="1001" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0031" x="1001" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0032" x="1001" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0033" x="1001" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0034" x="1001" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0035" x="1001" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0036" x="957" y="2358" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0037" x="1331" y="2358" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0038" x="1331" y="2358" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0039" x="1705" y="2358" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0040" x="1001" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0041" x="1001" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0042" x="957" y="2358" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0043" x="1331" y="2358" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0044" x="1331" y="2358" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0045" x="1705" y="2358" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0046" x="1001" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0047" x="1001" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0048" x="1001" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0049" x="1001" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0050" x="1001" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0051" x="1001" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0052" x="1001" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0053" x="1001" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0054" x="1001" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0055" x="1001" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0056" x="1001" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0057" x="1001" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0058" x="1001" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0059" x="1001" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0060" x="1001" y="1763" width="359" height="515" frameX="-370" frameY="-138" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0061" x="2079" y="2358" width="358" height="508" frameX="-371" frameY="-146" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0062" x="2079" y="2358" width="358" height="508" frameX="-371" frameY="-146" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0063" x="2452" y="2358" width="407" height="429" frameX="-360" frameY="-220" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0064" x="2874" y="2358" width="434" height="376" frameX="-289" frameY="-275" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0065" x="2874" y="2358" width="434" height="376" frameX="-289" frameY="-275" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0066" x="3323" y="2358" width="456" height="376" frameX="-278" frameY="-275" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0067" x="3323" y="2358" width="456" height="376" frameX="-278" frameY="-275" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0068" x="3323" y="2358" width="456" height="376" frameX="-278" frameY="-275" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0069" x="3323" y="2358" width="456" height="376" frameX="-278" frameY="-275" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0070" x="3794" y="2358" width="456" height="346" frameX="-278" frameY="-305" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0071" x="4265" y="2358" width="456" height="197" frameX="-278" frameY="-454" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0072" x="4265" y="2358" width="456" height="197" frameX="-278" frameY="-454" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0073" x="4736" y="2358" width="456" height="186" frameX="-278" frameY="-465" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0074" x="5207" y="2358" width="456" height="185" frameX="-278" frameY="-466" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0075" x="5207" y="2358" width="456" height="185" frameX="-278" frameY="-466" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0076" x="5678" y="2358" width="456" height="185" frameX="-278" frameY="-466" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0077" x="5678" y="2358" width="456" height="185" frameX="-278" frameY="-466" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0078" x="6149" y="2358" width="456" height="185" frameX="-278" frameY="-466" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0079" x="6149" y="2358" width="456" height="185" frameX="-278" frameY="-466" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0080" x="6149" y="2358" width="456" height="185" frameX="-278" frameY="-466" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0081" x="6149" y="2358" width="456" height="185" frameX="-278" frameY="-466" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0082" x="6149" y="2358" width="456" height="185" frameX="-278" frameY="-466" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0083" x="6149" y="2358" width="456" height="185" frameX="-278" frameY="-466" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0084" x="6149" y="2358" width="456" height="185" frameX="-278" frameY="-466" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0085" x="6149" y="2358" width="456" height="185" frameX="-278" frameY="-466" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0086" x="6149" y="2358" width="456" height="185" frameX="-278" frameY="-466" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death NO CEREBRO0087" x="6149" y="2358" width="456" height="185" frameX="-278" frameY="-466" frameWidth="907" frameHeight="719"/>
+	<SubTexture name="GF maid death continue0000" x="6620" y="2358" width="456" height="271"/>
+	<SubTexture name="GF maid death continue0001" x="6620" y="2358" width="456" height="271"/>
+	<SubTexture name="GF maid death continue0002" x="7091" y="2358" width="456" height="222" frameX="0" frameY="-49" frameWidth="456" frameHeight="271"/>
+	<SubTexture name="GF maid death continue0003" x="7091" y="2358" width="456" height="222" frameX="0" frameY="-49" frameWidth="456" frameHeight="271"/>
+	<SubTexture name="GF maid death continue0004" x="7562" y="2358" width="456" height="216" frameX="0" frameY="-55" frameWidth="456" frameHeight="271"/>
+	<SubTexture name="GF maid death continue0005" x="7562" y="2358" width="456" height="216" frameX="0" frameY="-55" frameWidth="456" frameHeight="271"/>
+	<SubTexture name="GF maid death continue0006" x="15" y="2888" width="456" height="216" frameX="0" frameY="-55" frameWidth="456" frameHeight="271"/>
+	<SubTexture name="GF maid death continue0007" x="15" y="2888" width="456" height="216" frameX="0" frameY="-55" frameWidth="456" frameHeight="271"/>
+	<SubTexture name="GF maid death continue0008" x="486" y="2888" width="456" height="216" frameX="0" frameY="-55" frameWidth="456" frameHeight="271"/>
+	<SubTexture name="GF maid death continue0009" x="486" y="2888" width="456" height="216" frameX="0" frameY="-55" frameWidth="456" frameHeight="271"/>
+	<SubTexture name="GF maid death continue0010" x="486" y="2888" width="456" height="216" frameX="0" frameY="-55" frameWidth="456" frameHeight="271"/>
+	<SubTexture name="GF maid death continue0011" x="486" y="2888" width="456" height="216" frameX="0" frameY="-55" frameWidth="456" frameHeight="271"/>
+	<SubTexture name="GF maid death continue0012" x="486" y="2888" width="456" height="216" frameX="0" frameY="-55" frameWidth="456" frameHeight="271"/>
+	<SubTexture name="GF maid death continue0013" x="486" y="2888" width="456" height="216" frameX="0" frameY="-55" frameWidth="456" frameHeight="271"/>
+	<SubTexture name="GF maid death continue0014" x="486" y="2888" width="456" height="216" frameX="0" frameY="-55" frameWidth="456" frameHeight="271"/>
+	<SubTexture name="GF maid death continue NO CEREBRO0000" x="957" y="2888" width="456" height="184"/>
+	<SubTexture name="GF maid death continue NO CEREBRO0001" x="957" y="2888" width="456" height="184"/>
+	<SubTexture name="GF maid death continue NO CEREBRO0002" x="1428" y="2888" width="456" height="184"/>
+	<SubTexture name="GF maid death continue NO CEREBRO0003" x="1428" y="2888" width="456" height="184"/>
+	<SubTexture name="GF maid death continue NO CEREBRO0004" x="1428" y="2888" width="456" height="184"/>
+	<SubTexture name="GF maid death continue NO CEREBRO0005" x="1428" y="2888" width="456" height="184"/>
+	<SubTexture name="GF maid death continue NO CEREBRO0006" x="1428" y="2888" width="456" height="184"/>
+	<SubTexture name="GF maid death continue NO CEREBRO0007" x="1428" y="2888" width="456" height="184"/>
+	<SubTexture name="GF maid death continue NO CEREBRO0008" x="1428" y="2888" width="456" height="184"/>
+	<SubTexture name="GF maid death continue NO CEREBRO0009" x="1428" y="2888" width="456" height="184"/>
+	<SubTexture name="GF maid death continue NO CEREBRO0010" x="1428" y="2888" width="456" height="184"/>
+	<SubTexture name="GF maid death continue NO CEREBRO0011" x="1428" y="2888" width="456" height="184"/>
+	<SubTexture name="GF maid death continue NO CEREBRO0012" x="1428" y="2888" width="456" height="184"/>
+	<SubTexture name="GF maid death continue NO CEREBRO0013" x="1428" y="2888" width="456" height="184"/>
+	<SubTexture name="GF maid death continue NO CEREBRO0014" x="1428" y="2888" width="456" height="184"/>
+	<SubTexture name="GF maid death loop0000" x="1899" y="2888" width="456" height="245"/>
+	<SubTexture name="GF maid death loop0001" x="1899" y="2888" width="456" height="245"/>
+	<SubTexture name="GF maid death loop0002" x="2370" y="2888" width="456" height="228" frameX="0" frameY="-17" frameWidth="456" frameHeight="245"/>
+	<SubTexture name="GF maid death loop0003" x="2370" y="2888" width="456" height="228" frameX="0" frameY="-17" frameWidth="456" frameHeight="245"/>
+	<SubTexture name="GF maid death loop0004" x="2841" y="2888" width="456" height="222" frameX="0" frameY="-23" frameWidth="456" frameHeight="245"/>
+	<SubTexture name="GF maid death loop0005" x="2841" y="2888" width="456" height="222" frameX="0" frameY="-23" frameWidth="456" frameHeight="245"/>
+	<SubTexture name="GF maid death loop0006" x="3312" y="2888" width="456" height="218" frameX="0" frameY="-27" frameWidth="456" frameHeight="245"/>
+	<SubTexture name="GF maid death loop0007" x="3312" y="2888" width="456" height="218" frameX="0" frameY="-27" frameWidth="456" frameHeight="245"/>
+	<SubTexture name="GF maid death loop0008" x="3783" y="2888" width="456" height="216" frameX="0" frameY="-29" frameWidth="456" frameHeight="245"/>
+	<SubTexture name="GF maid death loop0009" x="3783" y="2888" width="456" height="216" frameX="0" frameY="-29" frameWidth="456" frameHeight="245"/>
+	<SubTexture name="GF maid death loop0010" x="3783" y="2888" width="456" height="216" frameX="0" frameY="-29" frameWidth="456" frameHeight="245"/>
+	<SubTexture name="GF maid death loop0011" x="3783" y="2888" width="456" height="216" frameX="0" frameY="-29" frameWidth="456" frameHeight="245"/>
+	<SubTexture name="GF maid death loop0012" x="3783" y="2888" width="456" height="216" frameX="0" frameY="-29" frameWidth="456" frameHeight="245"/>
+	<SubTexture name="GF maid death loop0013" x="3783" y="2888" width="456" height="216" frameX="0" frameY="-29" frameWidth="456" frameHeight="245"/>
+	<SubTexture name="GF maid death loop0014" x="3783" y="2888" width="456" height="216" frameX="0" frameY="-29" frameWidth="456" frameHeight="245"/>
+</TextureAtlas>

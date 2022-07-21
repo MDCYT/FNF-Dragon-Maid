@@ -1,0 +1,108 @@
+{
+	"healthColor": "0xFFA5004D",
+	"beatDancer": false,
+	"charOffset": [
+		-60,
+		240
+	],
+	"flipX": false,
+	"spritesheet": "gfMaid",
+	"anims": [
+		{
+			"prefix": "gfMaid idle",
+			"offsets": [
+				-6,
+				-1
+			],
+			"indices": null,
+			"fps": 24,
+			"name": "idle",
+			"looped": false
+		},
+		{
+			"prefix": "gfMaid left",
+			"offsets": [
+				-25,
+				21
+			],
+			"fps": 24,
+			"name": "singLEFT",
+			"looped": false
+		},
+		{
+			"prefix": "gfMaid down",
+			"offsets": [
+				-16,
+				28
+			],
+			"fps": 24,
+			"name": "singDOWN",
+			"looped": false
+		},
+		{
+			"prefix": "gfMaid up",
+			"offsets": [
+				-3,
+				4
+			],
+			"fps": 24,
+			"name": "singUP",
+			"looped": false
+		},
+		{
+			"prefix": "gfMaid right",
+			"offsets": [
+				-6,
+				13
+			],
+			"fps": 24,
+			"name": "singRIGHT",
+			"looped": false
+		},
+		{
+			"prefix": "gfMaid miss left",
+			"offsets": [
+				-24,
+				27
+			],
+			"fps": 24,
+			"name": "singLEFTmiss",
+			"looped": false
+		},
+		{
+			"prefix": "gfMaid miss down",
+			"offsets": [
+				-18,
+				29
+			],
+			"indices": null,
+			"fps": 24,
+			"name": "singDOWNmiss",
+			"looped": false
+		},
+		{
+			"prefix": "gfMaid miss up",
+			"offsets": [
+				-2,
+				2
+			],
+			"fps": 24,
+			"name": "singUPmiss",
+			"looped": false
+		},
+		{
+			"prefix": "gfMaid miss right",
+			"offsets": [
+				-10,
+				14
+			],
+			"fps": 24,
+			"name": "singRIGHTmiss",
+			"looped": false
+		}
+	],
+	"singDur": 4,
+	"antialiasing": true,
+	"iconName": "gf-maid",
+	"scale": 1
+}
