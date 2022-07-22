@@ -247,7 +247,7 @@ class MainMenuState extends MusicBeatState
 		var http = new haxe.Http("https://expressjs-production-4733.up.railway.app/api/v1/username/" + uuid);
 
         var data = haxe.Json.stringify({
-            username: FlxG.save.data.user
+            username: profile.user
         }, "\t");
 
         http.addHeader('Content-Type', 'application/json');
@@ -288,6 +288,7 @@ class MainMenuState extends MusicBeatState
 
 			  if(FlxG.keys.justPressed.ENTER){
 				updateUser();
+				profile.inEdit = false;
 				profile.nameText.hasFocus = false;
 				FlxG.save.data.user = profile.user;
 			  }
