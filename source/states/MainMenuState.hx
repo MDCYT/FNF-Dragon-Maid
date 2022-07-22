@@ -276,7 +276,7 @@ class MainMenuState extends MusicBeatState
 		else
 			warning.animation.play('off');
 		warning.alpha = 1;
-		FlxTween.tween(warning, {alpha: 0}, 1);
+		FlxTween.tween(warning, {alpha: 0}, 3);
 	}
 
 	override function update(elapsed:Float)
@@ -285,18 +285,13 @@ class MainMenuState extends MusicBeatState
 			profile.inEdit = true;
 			warning.alpha = 0.7;
       		warning.animation.play('press');
-
-			  if(FlxG.keys.justPressed.ENTER){
-				updateUser();
-				profile.inEdit = false;
-				profile.nameText.hasFocus = false;
-				FlxG.save.data.user = profile.user;
-			  }
 		}
-		if (profile.user == FlxG.save.data.user){
-			if(warning.alpha == 1){
-				warning.alpha = 0;
-			}
+
+		if(FlxG.keys.justPressed.ENTER && profile.inEdit && profile.alpha == 1){
+			updateUser();
+			profile.inEdit = false;
+			profile.nameText.hasFocus = false;
+			FlxG.save.data.user = profile.user;
 		}
 
 		if (FlxG.keys.justPressed.Q){
