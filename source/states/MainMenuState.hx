@@ -35,6 +35,7 @@ class MainMenuState extends MusicBeatState
 	var trans:MaidTransition;
 	var achievement:MaidAchievement;
 	var curSelected:Int = 0;
+	var change:Int = 2;
 	public var currentOptions:Options;
 
 	var menuItems:FlxTypedGroup<MainThing>;
@@ -59,6 +60,7 @@ class MainMenuState extends MusicBeatState
 	var selectedSomethin:Bool = true;
 	var rectangle:FlxSprite;
 	var time:Int = 0;
+	var warning:FlxSprite;
 
 	function accept(){
 
@@ -192,8 +194,20 @@ class MainMenuState extends MusicBeatState
 		profile.alpha = 0;
 		profile.screenCenter();
 		add(profile);
-
+		
 		profile.active = false;
+
+		warning = new FlxSprite(1030, 660);
+		warning.frames = Paths.getSparrowAtlas('profile/warning');
+		warning.animation.addByPrefix('on', 'GOOD');
+		warning.animation.addByPrefix('off', 'ERROR');
+    	warning.animation.addByPrefix('press', 'SAVE');
+		warning.updateHitbox();
+		warning.antialiasing = true;
+		warning.alpha = 0;
+
+		trace(warning.frames);
+		add(warning);
 
 		changeItem();
 
@@ -226,8 +240,59 @@ class MainMenuState extends MusicBeatState
 	}
 	var da:Int;
 
+	function updateUser(){
+
+		var uuid = FlxG.save.data.uuid;
+
+		var http = new haxe.Http("https://expressjs-production-4733.up.railway.app/api/v1/username/" + uuid);
+
+        var data = haxe.Json.stringify({
+            username: FlxG.save.data.user
+        }, "\t");
+
+        http.addHeader('Content-Type', 'application/json');
+        http.setPostData(data);
+
+        http.onStatus = function(status) {
+            if(status == 200)
+            {
+				checkChanges(true);
+                trace("Success!");
+            }
+            else
+            {
+				checkChanges(false);
+                trace("Error!");
+            }
+        }
+
+        http.request(true);
+
+	}
+
+	function checkChanges(ol:Bool){
+		if (ol)
+			warning.animation.play('on');
+		else
+			warning.animation.play('off');
+		warning.alpha = 1;
+		FlxTween.tween(warning, {alpha: 0}, 1);
+	}
+
 	override function update(elapsed:Float)
 	{
+		if (profile.user != FlxG.save.data.user && profile.alpha == 1){
+			profile.inEdit = true;
+			warning.alpha = 0.7;
+      		warning.animation.play('press');
+
+			  if(FlxG.keys.justPressed.ENTER){
+				updateUser();
+				profile.nameText.hasFocus = false;
+				FlxG.save.data.user = profile.user;
+			  }
+		}
+
 		if (FlxG.keys.justPressed.Q){
 			loadSong();
 		}
@@ -242,7 +307,7 @@ class MainMenuState extends MusicBeatState
 
 		if (FlxG.keys.justPressed.TAB)
 		{
-			if (profile.alpha == 1){
+			if (profile.alpha == 1 && !profile.inEdit && !profile.nameText.hasFocus){
 				FlxTween.tween(eventBlack, {alpha: 0}, 0.3);
 				profile.userOpen(false);
 			}

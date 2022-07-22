@@ -17,6 +17,7 @@ import flixel.util.FlxTimer;
 import flixel.text.FlxText;
 import flixel.addons.ui.FlxInputText;
 import states.*;
+import uuid.*;
 
 class Profile extends FlxSpriteGroup {
   public var coin:FlxSprite;
@@ -35,6 +36,8 @@ class Profile extends FlxSpriteGroup {
   public var bronze:FlxSprite;
   public var silver:FlxSprite;
   public var gold:FlxSprite;
+  public var inEdit:Bool = false;
+  
 
   var text = Paths.getSparrowAtlas('profile/userTrophies');
 
@@ -151,8 +154,6 @@ class Profile extends FlxSpriteGroup {
 
 		if (nameText.text == '')
 			  nameText.caretIndex = 0;
-		else
-				nameText.caretIndex = nameText.caretIndex;
   }
 
   public function discordChange(){
@@ -179,10 +180,11 @@ class Profile extends FlxSpriteGroup {
 			  #if desktop
 				  DiscordClient.changePresence("Main Menu", null);
 			  #end
-        FlxG.save.data.user = user;
+
+        nameText.hasFocus = false;
+        
 			  noSpam = true;
 			  isOpen = false;
-			  nameText.hasFocus = false;
 			  FlxTween.tween(this, {y: 500, alpha: 0}, 0.7, {ease: FlxEase.expoInOut, onComplete: function(twn:FlxTween){
 				  new FlxTimer().start(0.5, function(tmr:FlxTimer){
 					  noSpam = false;

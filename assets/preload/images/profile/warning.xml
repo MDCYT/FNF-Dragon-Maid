@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="warning.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="ERROR0000" x="0" y="0" width="164" height="23"/>
+	<SubTexture name="GOOD0000" x="0" y="23" width="164" height="23"/>
+	<SubTexture name="SAVE0000" x="0" y="46" width="233" height="23"/>
+</TextureAtlas>
