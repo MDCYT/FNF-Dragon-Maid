@@ -44,9 +44,14 @@ class Profile extends FlxSpriteGroup {
   public function new(x:Float, y:Float, daColor:Int = 0){
     super(x,y);
   
-    icon = new FlxSprite().loadGraphic(Paths.image('puta'));
+    icon = new FlxSprite(75, 115);
+    icon.frames = Paths.getSparrowAtlas('profile/pfp');
+    icon.animation.addByPrefix('bf', 'bf');
+    icon.animation.addByPrefix('red', 'gf');
+    trace(icon.frames);
     icon.setGraphicSize(183, 192);
     icon.antialiasing = true;
+    icon.animation.play(colors[daColor]);
     icon.updateHitbox();
 
     bar = new FlxSprite(0, 0);
@@ -116,8 +121,9 @@ class Profile extends FlxSpriteGroup {
 
     add(colision);
     add(bar);
-    add(pencil);
+    add(icon);
     add(coin);
+    add(pencil);
     add(coinTxt);
 
     add(box);

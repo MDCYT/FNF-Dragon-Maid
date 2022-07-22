@@ -190,7 +190,7 @@ class MainMenuState extends MusicBeatState
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
 
-		profile = new Profile(0, 500,  0);
+		profile = new Profile(0, 500, FlxG.save.data.userTheme);
 		profile.alpha = 0;
 		profile.screenCenter();
 		add(profile);

@@ -65,6 +65,8 @@ class EngineData {
     if (FlxG.save.data.user == null)
         FlxG.save.data.user = '';
 
+    if (FlxG.save.data.userTheme == null)
+        FlxG.save.data.userTheme = 0;
 
     //UNLOCKS WEEK
 		if (FlxG.save.data.maidSkin == null)
