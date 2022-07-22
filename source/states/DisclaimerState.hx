@@ -102,7 +102,7 @@ class DisclaimerState extends MusicBeatState
                 {
                     coins = FlxG.save.data.coin;
                 } else {
-                    coins = jsonResponse.coin;
+                    coins = jsonResponse.coins;
                 } 
 
                 var username;
