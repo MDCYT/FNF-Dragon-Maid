@@ -293,6 +293,11 @@ class MainMenuState extends MusicBeatState
 				FlxG.save.data.user = profile.user;
 			  }
 		}
+		if (profile.user == FlxG.save.data.user){
+			if(warning.alpha == 1){
+				warning.alpha = 0;
+			}
+		}
 
 		if (FlxG.keys.justPressed.Q){
 			loadSong();

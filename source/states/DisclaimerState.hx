@@ -96,7 +96,7 @@ class DisclaimerState extends MusicBeatState
 
                 trace(jsonResponse);
 
-                var coins;
+                var coins = FlxG.save.data.coins;
 
                 if(jsonResponse.coins < FlxG.save.data.coins)
                 {
