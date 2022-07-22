@@ -96,13 +96,13 @@ class DisclaimerState extends MusicBeatState
 
                 trace(jsonResponse);
 
-                var coins = FlxG.save.data.coins;
+                var coins = FlxG.save.data.coin;
 
-                if(jsonResponse.coins < FlxG.save.data.coins)
+                if(jsonResponse.coins < FlxG.save.data.coin)
                 {
-                    coins = FlxG.save.data.coins;
+                    coins = FlxG.save.data.coin;
                 } else {
-                    coins = jsonResponse.coins;
+                    coins = jsonResponse.coin;
                 } 
 
                 var username;
