@@ -40,7 +40,8 @@ class Profile extends FlxSpriteGroup {
   public var silver:FlxSprite;
   public var gold:FlxSprite;
   public var inEdit:Bool = false;
-  
+
+  var allColor:FlxColor;
   var text = Paths.getSparrowAtlas('profile/userTrophies');
 
   public function new(x:Float, y:Float, daColor:Int = 0){
@@ -122,9 +123,9 @@ class Profile extends FlxSpriteGroup {
     progress = new FlxBar(278, 272, LEFT_TO_RIGHT, 238, 28, this, 'intPro', 0, 100);
     progress.createFilledBar(0xFFFFFFFF, colorBar[daColor]);
 
-    proTxt = new FlxText(370, 275, FlxG.save.data.userProgress + '%', 15);
-    proTxt.setFormat(Paths.font('userFont.ttf'), 15, FlxColor.WHITE);
-    proTxt.alignment = CENTER;
+    proTxt = new FlxText(375, 275, FlxG.save.data.userProgress + '%', 15);
+    proTxt.setFormat(Paths.font('userFont.ttf'), 15, FlxColor.WHITE, CENTER);
+    allColor = colorBar[daColor];
 
     add(colision);
     add(bar);
@@ -212,12 +213,19 @@ class Profile extends FlxSpriteGroup {
 
   override function update(elapsed:Float){
 
+    //PROGRESS CHECK /////////////
+
     FlxG.save.data.userProgress = intPro;
 
     if (FlxG.save.data.userProgress > 100){
       FlxG.save.data.userProgress = 100;
     }
 
+    if (intPro < 50)
+      proTxt.color = allColor;
+    else
+      proTxt.color = FlxColor.WHITE;
+    
     if (intPro > 100){
       intPro = 100;
     }
@@ -227,6 +235,8 @@ class Profile extends FlxSpriteGroup {
     if (FlxG.keys.justPressed.L){
       intPro ++;
     }
+
+    //USER Y COIN /////////////
 
     if (FlxG.mouse.pressed && FlxG.keys.pressed.SHIFT){
       nameText.setPosition(FlxG.mouse.x, FlxG.mouse.y);
