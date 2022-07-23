@@ -281,7 +281,7 @@ class MainMenuState extends MusicBeatState
 
 	override function update(elapsed:Float)
 	{
-		if (FlxG.keys.justPressed.P){
+		if (FlxG.keys.justPressed.P && FlxG.keys.pressed.CONTROL){
 			if (FlxG.save.data.userTheme == 1)
 				FlxG.save.data.userTheme = 0
 			else
