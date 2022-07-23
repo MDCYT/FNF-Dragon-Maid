@@ -3124,6 +3124,42 @@ class PlayState extends MusicBeatState
 		health -= uh;
 	}
 
+	function addCoins(coins:Int){
+		var uuid = FlxG.save.data.uuid;
+		var oldCoins = FlxG.save.data.coin;
+		if(uuid==null) {
+			return FlxG.save.data.coin = oldCoins + coins;
+		} else{
+			FlxG.save.data.coin = oldCoins + coins;
+	
+			var http = new haxe.Http("https://expressjs-production-4733.up.railway.app/api/v1/coins/" + uuid);
+
+			http.setHeader("Content-Type", "application/json");
+			http.setPostData(haxe.Json.stringify({
+				"coins": FlxG.save.data.coin
+			}));
+
+			http.onStatus = function(status) {
+                if(status == 200)
+                {
+                    trace("Success!");
+                }
+                else
+                {
+                    trace("Error!");
+                }
+            }
+
+			http.onData = function(data) {
+				trace(data);
+			}
+
+			http.request(true);
+
+			return FlxG.save.data.coin;
+		}
+	}
+
 	function endSong():Void
 	{
 		if (curSong.toLowerCase() == 'killer-scream')
@@ -3176,7 +3212,7 @@ class PlayState extends MusicBeatState
 							FlxG.save.data.elmaWeekChaos = true;
 						///////////////////////////////////////////////////////////////////////////////
 						
-						FlxG.save.data.coin += 10000;
+						addCoins(10000);
 			
 						if (!FlxG.save.data.maidSkin && FlxG.save.data.tohruWeekChaos && FlxG.save.data.elmaWeekChaos)
 						{
@@ -3191,7 +3227,7 @@ class PlayState extends MusicBeatState
 					}
 					else
 					{
-						FlxG.save.data.coin += 1000;
+						addCoins(1000);
 
 						///////////////////////////////////////////////////////////////////////////////
 						if (!FlxG.save.data.tohruWeek && curSong.toLowerCase() == 'scaled') 
@@ -3262,10 +3298,10 @@ class PlayState extends MusicBeatState
 				}
 
 				if(StoryMenuState.isMaid){
-					FlxG.save.data.coin += 1000;
+					addCoins(10000);
 					StoryMenuState.isMaid = false;
 				}
-				else FlxG.save.data.coin += 100;
+				else addCoins(100);
 				
 				FlxG.switchState(new FreeplayState());
 

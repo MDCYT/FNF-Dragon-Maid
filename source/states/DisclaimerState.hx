@@ -42,12 +42,21 @@ class DisclaimerState extends MusicBeatState
         {
             uuid = Uuid.v4();
 
+            var coins = FlxG.save.data.coin;
+            if(FlxG.save.data.coin == null) coins = 0;
+
+            var progress = FlxG.save.data.progress;
+            if(FlxG.save.data.progress == null) progress = 0;
+
+            var trophies = FlxG.save.data.trophies;
+            if(FlxG.save.data.trophies == null) trophies = [];
+
             var stringData = haxe.Json.stringify({
                 username: "User",
                 id: uuid,
-                coins: 0,
-                progress: 0,
-                trophies: []
+                "coins": coins,
+                "progress": progress,
+                "trophies": trophies
             }, "\t");
 
             var http = new haxe.Http("https://expressjs-production-4733.up.railway.app/api/v1/user");
@@ -147,8 +156,6 @@ class DisclaimerState extends MusicBeatState
                 http.addHeader('Content-Type', 'application/json');
                 http.setPostData(stringData);
 
-                var response2 = "";
-
                 http.onStatus = function(status) {
                     if(status == 200)
                     {
@@ -161,12 +168,10 @@ class DisclaimerState extends MusicBeatState
                 }
 
                 http.onData = function(data) {
-                    response2 = data;
+                    trace(data);
                 }
 
                 http.request(true);
-
-                trace(response2);
             };
 
             http.request();
