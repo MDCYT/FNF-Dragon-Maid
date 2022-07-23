@@ -231,11 +231,7 @@ class Profile extends FlxSpriteGroup {
     }
 
     proTxt.text = FlxG.save.data.userProgress + '%';
-
-    if (FlxG.keys.justPressed.L){
-      intPro ++;
-    }
-
+    
     //USER Y COIN /////////////
 
     if (FlxG.mouse.pressed && FlxG.keys.pressed.SHIFT){

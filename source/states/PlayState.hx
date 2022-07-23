@@ -2597,12 +2597,12 @@ class PlayState extends MusicBeatState
 		FlxG.watch.addQuick("dad: ", dad.x + ' ' + dad.y);
 		FlxG.watch.addQuick("bf: ", boyfriend.x + ' ' + boyfriend.y);
 
-		if (FlxG.mouse.pressed){
+		/*if (FlxG.mouse.pressed){
 			boyfriend.setPosition(FlxG.mouse.x, FlxG.mouse.y);
 		}
 		if (FlxG.mouse.pressedRight){
 			dad.setPosition(FlxG.mouse.x, FlxG.mouse.y);
-		}
+		}*/
 		//FlxG.watch.addQuick("scale: ", pasture.scale);
 
 		if (curSong == 'Fresh')
