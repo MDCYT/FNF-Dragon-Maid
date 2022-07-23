@@ -25,12 +25,13 @@ class Profile extends FlxSpriteGroup {
   public var coinTxt:FlxText;
   public var initCoin:Bool = FlxG.save.data.instCoin;
   public var colors:Array<String> = ['bf', 'red', 'yellow', 'blue'];
-  public var colorBar:Array<FlxColor> = [0xFF318696, 0xFF783196, 0xFF963140, 0xFF4f9631];
+  public var colorBar:Array<FlxColor> = [0xFF318696, 0xFF963140,0xFF4f9631,0xFF783196];
   public var pencil:FlxSpriteGroup;
   public var isOpen:Bool = false;
   public var noSpam:Bool = false;
   public var colision:FlxSpriteGroup;
   public var nameText:FlxInputText;
+  public var proTxt:FlxText;
   public var user:String;
   public var icon:FlxSprite;
   public var progress:FlxBar;
@@ -117,10 +118,13 @@ class Profile extends FlxSpriteGroup {
     box.alignment = LEFT;
     nameText.setFormat(Paths.font('userFont.ttf'), 20, FlxColor.BLACK);
     nameText.setPosition(283, -384);
-    nameText.antialiasing = true;
 
     progress = new FlxBar(278, 272, LEFT_TO_RIGHT, 238, 28, this, 'intPro', 0, 100);
     progress.createFilledBar(0xFFFFFFFF, colorBar[daColor]);
+
+    proTxt = new FlxText(370, 275, FlxG.save.data.userProgress + '%', 15);
+    proTxt.setFormat(Paths.font('userFont.ttf'), 15, FlxColor.WHITE);
+    proTxt.alignment = CENTER;
 
     add(colision);
     add(bar);
@@ -129,6 +133,7 @@ class Profile extends FlxSpriteGroup {
     add(pencil);
     add(coinTxt);
     add(progress);
+    add(proTxt);
     add(box);
     add(nameText);
 
@@ -208,6 +213,16 @@ class Profile extends FlxSpriteGroup {
   override function update(elapsed:Float){
 
     FlxG.save.data.userProgress = intPro;
+
+    if (FlxG.save.data.userProgress > 100){
+      FlxG.save.data.userProgress = 100;
+    }
+
+    if (intPro > 100){
+      intPro = 100;
+    }
+
+    proTxt.text = FlxG.save.data.userProgress + '%';
 
     if (FlxG.keys.justPressed.L){
       intPro ++;

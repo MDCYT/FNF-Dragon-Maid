@@ -281,6 +281,12 @@ class MainMenuState extends MusicBeatState
 
 	override function update(elapsed:Float)
 	{
+		if (FlxG.keys.justPressed.P){
+			if (FlxG.save.data.userTheme == 1)
+				FlxG.save.data.userTheme = 0
+			else
+				FlxG.save.data.userTheme = 1;
+		}
 		if (profile.user != FlxG.save.data.user && profile.alpha == 1){
 			profile.inEdit = true;
 			warning.alpha = 0.7;
