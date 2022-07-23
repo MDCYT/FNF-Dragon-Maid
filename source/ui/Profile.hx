@@ -25,6 +25,7 @@ class Profile extends FlxSpriteGroup {
   public var coinTxt:FlxText;
   public var initCoin:Bool = FlxG.save.data.instCoin;
   public var colors:Array<String> = ['bf', 'red', 'yellow', 'blue'];
+  public var colorBar:Array<FlxColor> = [0xFF318696, 0xFF783196, 0xFF963140, 0xFF4f9631];
   public var pencil:FlxSpriteGroup;
   public var isOpen:Bool = false;
   public var noSpam:Bool = false;
@@ -32,13 +33,13 @@ class Profile extends FlxSpriteGroup {
   public var nameText:FlxInputText;
   public var user:String;
   public var icon:FlxSprite;
-
+  public var progress:FlxBar;
+  public var intPro:Int = FlxG.save.data.userProgress;
   public var bronze:FlxSprite;
   public var silver:FlxSprite;
   public var gold:FlxSprite;
   public var inEdit:Bool = false;
   
-
   var text = Paths.getSparrowAtlas('profile/userTrophies');
 
   public function new(x:Float, y:Float, daColor:Int = 0){
@@ -48,7 +49,6 @@ class Profile extends FlxSpriteGroup {
     icon.frames = Paths.getSparrowAtlas('profile/pfp');
     icon.animation.addByPrefix('bf', 'bf');
     icon.animation.addByPrefix('red', 'gf');
-    trace(icon.frames);
     icon.setGraphicSize(183, 192);
     icon.antialiasing = true;
     icon.animation.play(colors[daColor]);
@@ -119,13 +119,16 @@ class Profile extends FlxSpriteGroup {
     nameText.setPosition(283, -384);
     nameText.antialiasing = true;
 
+    progress = new FlxBar(278, 272, LEFT_TO_RIGHT, 238, 28, this, 'intPro', 0, 100);
+    progress.createFilledBar(0xFFFFFFFF, colorBar[daColor]);
+
     add(colision);
     add(bar);
     add(icon);
     add(coin);
     add(pencil);
     add(coinTxt);
-
+    add(progress);
     add(box);
     add(nameText);
 
@@ -203,6 +206,12 @@ class Profile extends FlxSpriteGroup {
   var pene:Int = 0;
 
   override function update(elapsed:Float){
+
+    FlxG.save.data.userProgress = intPro;
+
+    if (FlxG.keys.justPressed.L){
+      intPro ++;
+    }
 
     if (FlxG.mouse.pressed && FlxG.keys.pressed.SHIFT){
       nameText.setPosition(FlxG.mouse.x, FlxG.mouse.y);
