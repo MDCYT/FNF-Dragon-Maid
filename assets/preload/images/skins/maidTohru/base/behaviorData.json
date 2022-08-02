@@ -11,13 +11,13 @@
         "scale":1,
         "left":{
           "framerate": 30,
-          "offsetX": -80,
+          "offsetX": -83,
           "offsetY": -80,
           "prefix": "splash left0"
         },
         "up":{
           "framerate": 30,
-          "offsetX": -80,
+          "offsetX": -84,
           "offsetY": -80,
           "prefix": "splash up0"
         },
