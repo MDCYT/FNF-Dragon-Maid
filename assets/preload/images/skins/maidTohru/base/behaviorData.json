@@ -12,25 +12,25 @@
         "left":{
           "framerate": 30,
           "offsetX": -80,
-          "offsetY": -60,
+          "offsetY": -80,
           "prefix": "splash left0"
         },
         "up":{
           "framerate": 30,
           "offsetX": -80,
-          "offsetY": -60,
+          "offsetY": -80,
           "prefix": "splash up0"
         },
         "down":{
           "framerate": 30,
           "offsetX": -80,
-          "offsetY": -60,
+          "offsetY": -80,
           "prefix": "splash down0"
         },
         "right":{
           "framerate": 30,
           "offsetX": -80,
-          "offsetY": -60,
+          "offsetY": -80,
           "prefix": "splash right0"
         }
       },
