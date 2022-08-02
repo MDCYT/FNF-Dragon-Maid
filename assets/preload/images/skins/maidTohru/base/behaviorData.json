@@ -11,26 +11,26 @@
         "scale":1,
         "left":{
           "framerate": 30,
-          "offsetX": -35,
-          "offsetY": 25,
+          "offsetX": -80,
+          "offsetY": -60,
           "prefix": "splash left0"
         },
         "up":{
           "framerate": 30,
-          "offsetX": -5,
-          "offsetY": 25,
+          "offsetX": -80,
+          "offsetY": -60,
           "prefix": "splash up0"
         },
         "down":{
           "framerate": 30,
-          "offsetX": -5,
-          "offsetY": 25,
+          "offsetX": -80,
+          "offsetY": -60,
           "prefix": "splash down0"
         },
         "right":{
           "framerate": 30,
-          "offsetX": -3,
-          "offsetY": 25,
+          "offsetX": -80,
+          "offsetY": -60,
           "prefix": "splash right0"
         }
       },
