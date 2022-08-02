@@ -3,6 +3,7 @@
 		0,
 		0
 	],
+	"spritesheet": "BOYFRIEND",
 	"singDur": 4,
 	"camOffset": [
 		-30,
@@ -10,20 +11,20 @@
 	],
 	"anims": [
 		{
+			"prefix": "BF idle dance",
 			"offsets": [
 				-5,
 				0
 			],
 			"fps": 24,
-			"prefix": "BF idle dance",
 			"name": "idle",
 			"looped": false
 		},
 		{
 			"prefix": "BF NOTE UP0",
 			"offsets": [
-				-57,
-				47
+				-45,
+				25
 			],
 			"fps": 24,
 			"name": "singUP",
@@ -32,8 +33,8 @@
 		{
 			"prefix": "BF NOTE LEFT0",
 			"offsets": [
-				20,
-				-9
+				3,
+				-7
 			],
 			"fps": 24,
 			"name": "singLEFT",
@@ -42,8 +43,8 @@
 		{
 			"prefix": "BF NOTE RIGHT0",
 			"offsets": [
-				-54,
-				3
+				-45,
+				-5
 			],
 			"fps": 24,
 			"name": "singRIGHT",
@@ -52,8 +53,8 @@
 		{
 			"prefix": "BF NOTE DOWN0",
 			"offsets": [
-				-36,
-				-52
+				-23,
+				-51
 			],
 			"fps": 24,
 			"name": "singDOWN",
@@ -62,8 +63,8 @@
 		{
 			"prefix": "BF NOTE UP MISS",
 			"offsets": [
-				-51,
-				41
+				-45,
+				25
 			],
 			"fps": 24,
 			"name": "singUPmiss",
@@ -72,8 +73,8 @@
 		{
 			"prefix": "BF NOTE RIGHT MISS",
 			"offsets": [
-				-51,
-				23
+				-38,
+				21
 			],
 			"fps": 24,
 			"name": "singRIGHTmiss",
@@ -82,8 +83,8 @@
 		{
 			"prefix": "BF NOTE LEFT MISS",
 			"offsets": [
-				-7,
-				21
+				5,
+				19
 			],
 			"fps": 24,
 			"name": "singLEFTmiss",
@@ -92,8 +93,8 @@
 		{
 			"prefix": "BF NOTE DOWN MISS",
 			"offsets": [
-				-30,
-				-17
+				-29,
+				-19
 			],
 			"fps": 24,
 			"name": "singDOWNmiss",
@@ -102,7 +103,7 @@
 		{
 			"prefix": "BF HEY",
 			"offsets": [
-				-11,
+				-1,
 				5
 			],
 			"fps": 24,
@@ -110,21 +111,20 @@
 			"looped": false
 		},
 		{
-			"prefix": "",
 			"offsets": [
 				0,
 				0
 			],
 			"fps": null,
-			"name": "",
-			"looped": false
+			"prefix": "",
+			"looped": false,
+			"name": ""
 		}
 	],
-	"spritesheet": "BOYFRIEND",
 	"flipX": false,
 	"antialiasing": true,
 	"iconName": "bf",
 	"beatDancer": false,
-	"format": "andromeda",
-	"healthColor": "0xFF31B0D1"
+	"healthColor": "0xFF31B0D1",
+	"format": "andromeda"
 }

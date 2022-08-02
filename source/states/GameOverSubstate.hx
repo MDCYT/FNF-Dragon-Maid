@@ -76,7 +76,7 @@ class GameOverSubstate extends MusicBeatSubstate
 
 		if (daBf == 'GFDeath')
 		{
-			camFollow = new FlxObject(bf.getGraphicMidpoint().x - 300, bf.getGraphicMidpoint().y + 10, 1, 1);
+			camFollow = new FlxObject(bf.getGraphicMidpoint().x, bf.getGraphicMidpoint().y + 10, 1, 1);
 			lost = 'gf';
 		}
 		else if(daBf == 'GFMaidDeath'){

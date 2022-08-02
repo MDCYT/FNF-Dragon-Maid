@@ -1,67 +1,170 @@
 {
-	"animations": [
+	"charOffset": [
+		0,
+		0
+	],
+	"spritesheet": "gfPlayer",
+	"singDur": 4,
+	"camOffset": [
+		60,
+		100
+	],
+	"anims": [
 		{
+			"prefix": "GF IDLE",
 			"offsets": [
-				-27,
-				11
+				-5,
+				0
 			],
-			"loop": false,
 			"fps": 24,
-			"anim": "firstDeath",
-			"indices": [],
-			"name": "GF First Death"
+			"name": "idle",
+			"looped": false
+		},
+		{
+			"prefix": "GF Up0",
+			"offsets": [
+				-28,
+				18
+			],
+			"fps": 24,
+			"name": "singUP",
+			"looped": false
+		},
+		{
+			"prefix": "GF left0",
+			"offsets": [
+				48,
+				-4
+			],
+			"fps": 24,
+			"name": "singLEFT",
+			"looped": false
+		},
+		{
+			"prefix": "GF right0",
+			"offsets": [
+				-26,
+				-4
+			],
+			"fps": 24,
+			"name": "singRIGHT",
+			"looped": false
+		},
+		{
+			"prefix": "GF Down0",
+			"offsets": [
+				-18,
+				-82
+			],
+			"fps": 24,
+			"name": "singDOWN",
+			"looped": false
+		},
+		{
+			"prefix": "GF Up miss",
+			"offsets": [
+				-24,
+				21
+			],
+			"fps": 24,
+			"name": "singUPmiss",
+			"looped": false
+		},
+		{
+			"prefix": "GF right miss",
+			"offsets": [
+				-25,
+				8
+			],
+			"fps": 24,
+			"name": "singRIGHTmiss",
+			"looped": false
+		},
+		{
+			"prefix": "GF left miss",
+			"offsets": [
+				48,
+				-5
+			],
+			"fps": 24,
+			"name": "singLEFTmiss",
+			"looped": false
+		},
+		{
+			"prefix": "GF Down miss",
+			"offsets": [
+				-19,
+				-95
+			],
+			"fps": 24,
+			"name": "singDOWNmiss",
+			"looped": false
+		},
+		{
+			"prefix": "GF HEY",
+			"offsets": [
+				-4,
+				7
+			],
+			"fps": 24,
+			"name": "hey",
+			"looped": false
 		},
 		{
 			"offsets": [
-				-39,
-				-3
+				0,
+				0
 			],
-			"loop": true,
-			"fps": 24,
-			"anim": "deathLoop",
-			"indices": [],
-			"name": "GF Death Loop"
+			"fps": null,
+			"prefix": "",
+			"looped": false,
+			"name": ""
 		},
 		{
+			"prefix": "GF death 1",
 			"offsets": [
-				-33,
-				-2
+				163,
+				9
 			],
-			"loop": false,
 			"fps": 24,
-			"anim": "deathConfirm",
-			"indices": [],
-			"name": "GF Death Continue"
+			"name": "firstDeath",
+			"looped": false
 		},
 		{
+			"prefix": "GF death 2",
 			"offsets": [
-				671,
-				4
+				0,
+				1
 			],
-			"indices": [],
 			"fps": 24,
-			"anim": "deathSkip",
-			"loop": false,
-			"name": "GF Dead Skip"
+			"name": "deathLoop",
+			"looped": true
+		},
+		{
+			"prefix": "GF death 3",
+			"offsets": [
+				0,
+				14
+			],
+			"fps": 24,
+			"name": "deathConfirm",
+			"looped": false
+		},
+		{
+			"prefix": "GF death 4",
+			"offsets": [
+				353,
+				2
+			],
+			"fps": 24,
+			"name": "deathSkip",
+			"looped": false
 		}
 	],
-	"no_antialiasing": false,
-	"image": "characters/GFDeath",
-	"position": [
-		0,
-		290
-	],
-	"healthicon": "gf",
-	"flip_x": true,
-	"healthbar_colors": [
-		165,
-		0,
-		77
-	],
-	"camera_position": [
-		0,
-		30
-	],
-	"sing_duration": 4,
-	"scale": 1
+	"flipX": true,
+	"antialiasing": true,
+	"iconName": "gf",
+	"beatDancer": false,
+	"healthColor": "0xFFA5004D",
+	"format": "andromeda"
 }

@@ -145,9 +145,6 @@ class Character extends FlxSprite
 	public function setChar(newChar:String){
 		switch (curCharacter)
 		{
-			//case 'whatever':
-			// whatever hard-coded shit here
-
 			default:
 			{
 				curCharacter=newChar;

@@ -6,7 +6,7 @@
 	"spritesheet": "BOYFRIEND",
 	"singDur": 4,
 	"camOffset": [
-		0,
+		-30,
 		0
 	],
 	"anims": [
@@ -23,68 +23,68 @@
 		{
 			"prefix": "BF NOTE UP0",
 			"offsets": [
-				2,
-				46
+				-45,
+				25
 			],
 			"fps": 24,
 			"name": "singUP",
 			"looped": false
 		},
 		{
+			"prefix": "BF NOTE LEFT0",
+			"offsets": [
+				3,
+				-7
+			],
+			"fps": 24,
+			"name": "singLEFT",
+			"looped": false
+		},
+		{
+			"prefix": "BF NOTE RIGHT0",
+			"offsets": [
+				-45,
+				-5
+			],
+			"fps": 24,
+			"name": "singRIGHT",
+			"looped": false
+		},
+		{
+			"prefix": "BF NOTE DOWN0",
+			"offsets": [
+				-23,
+				-51
+			],
+			"fps": 24,
+			"name": "singDOWN",
+			"looped": false
+		},
+		{
+			"prefix": "BF NOTE UP MISS",
+			"offsets": [
+				-45,
+				25
+			],
+			"fps": 24,
+			"name": "singUPmiss",
+			"looped": false
+		},
+		{
+			"prefix": "BF NOTE RIGHT MISS",
 			"offsets": [
 				-38,
-				-12
+				21
 			],
 			"fps": 24,
-			"prefix": "BF NOTE LEFT0",
-			"looped": false,
-			"name": "singLEFT"
-		},
-		{
-			"offsets": [
-				43,
-				-2
-			],
-			"fps": 24,
-			"prefix": "BF NOTE RIGHT0",
-			"looped": false,
-			"name": "singRIGHT"
-		},
-		{
-			"offsets": [
-				-18,
-				-56
-			],
-			"fps": 24,
-			"prefix": "BF NOTE DOWN0",
-			"looped": false,
-			"name": "singDOWN"
-		},
-		{
-			"offsets": [
-				-1,
-				37
-			],
-			"fps": 24,
-			"prefix": "BF NOTE UP MISS",
-			"looped": false,
-			"name": "singUPmiss"
-		},
-		{
-			"offsets": [
-				36,
-				19
-			],
-			"fps": 24,
-			"prefix": "BF NOTE RIGHT MISS",
-			"looped": false,
-			"name": "singRIGHTmiss"
+			"name": "singRIGHTmiss",
+			"looped": false
 		},
 		{
 			"prefix": "BF NOTE LEFT MISS",
 			"offsets": [
-				-37,
-				16
+				5,
+				19
 			],
 			"fps": 24,
 			"name": "singLEFTmiss",
@@ -94,31 +94,21 @@
 			"prefix": "BF NOTE DOWN MISS",
 			"offsets": [
 				-29,
-				-25
+				-19
 			],
 			"fps": 24,
 			"name": "singDOWNmiss",
 			"looped": false
 		},
 		{
-			"offsets": [
-				-26,
-				4
-			],
-			"fps": 24,
 			"prefix": "BF HEY",
-			"looped": false,
-			"name": "hey"
-		},
-		{
 			"offsets": [
-				-4,
-				0
+				-1,
+				5
 			],
 			"fps": 24,
-			"prefix": "BF idle shaking",
-			"looped": true,
-			"name": "scared"
+			"name": "hey",
+			"looped": false
 		},
 		{
 			"offsets": [
@@ -131,7 +121,7 @@
 			"name": ""
 		}
 	],
-	"flipX": true,
+	"flipX": false,
 	"antialiasing": true,
 	"iconName": "bf",
 	"beatDancer": false,

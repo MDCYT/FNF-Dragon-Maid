@@ -3,133 +3,168 @@
 		0,
 		0
 	],
-	"scale": 1,
+	"spritesheet": "gfPlayer",
 	"singDur": 4,
+	"camOffset": [
+		60,
+		100
+	],
 	"anims": [
 		{
+			"prefix": "GF IDLE",
 			"offsets": [
-				-6,
-				-1
+				-5,
+				0
 			],
 			"fps": 24,
-			"prefix": "GF Idle dance",
-			"looped": false,
 			"name": "idle",
-			"indices": null
-		},
-		{
-			"prefix": "GF Left",
-			"offsets": [
-				-4,
-				-19
-			],
-			"fps": 24,
-			"name": "singLEFT",
 			"looped": false
 		},
 		{
+			"prefix": "GF Up0",
 			"offsets": [
-				-14,
-				-75
-			],
-			"fps": 24,
-			"prefix": "GF Down",
-			"looped": false,
-			"name": "singDOWN"
-		},
-		{
-			"prefix": "GF Up",
-			"offsets": [
-				-47,
-				9
+				-28,
+				18
 			],
 			"fps": 24,
 			"name": "singUP",
 			"looped": false
 		},
 		{
-			"prefix": "GF Right",
+			"prefix": "GF left0",
 			"offsets": [
-				-36,
-				-7
+				48,
+				-4
+			],
+			"fps": 24,
+			"name": "singLEFT",
+			"looped": false
+		},
+		{
+			"prefix": "GF right0",
+			"offsets": [
+				-26,
+				-4
 			],
 			"fps": 24,
 			"name": "singRIGHT",
 			"looped": false
 		},
 		{
-			"prefix": "GF Miss Left",
+			"prefix": "GF Down0",
 			"offsets": [
-				-16,
-				0
+				-18,
+				-82
 			],
 			"fps": 24,
-			"name": "singLEFTmiss",
+			"name": "singDOWN",
 			"looped": false
 		},
 		{
+			"prefix": "GF Up miss",
 			"offsets": [
-				-42,
-				-44
-			],
-			"fps": 24,
-			"prefix": "GF Miss Down",
-			"looped": false,
-			"name": "singDOWNmiss",
-			"indices": null
-		},
-		{
-			"prefix": "GF Miss Up",
-			"offsets": [
-				-46,
-				50
+				-24,
+				21
 			],
 			"fps": 24,
 			"name": "singUPmiss",
 			"looped": false
 		},
 		{
-			"prefix": "GF Miss Right",
+			"prefix": "GF right miss",
 			"offsets": [
-				-70,
-				24
+				-25,
+				8
 			],
 			"fps": 24,
 			"name": "singRIGHTmiss",
 			"looped": false
 		},
 		{
+			"prefix": "GF left miss",
 			"offsets": [
-				-36,
-				1
+				48,
+				-5
 			],
 			"fps": 24,
-			"prefix": "GF Hey",
-			"looped": false,
+			"name": "singLEFTmiss",
+			"looped": false
+		},
+		{
+			"prefix": "GF Down miss",
+			"offsets": [
+				-19,
+				-95
+			],
+			"fps": 24,
+			"name": "singDOWNmiss",
+			"looped": false
+		},
+		{
+			"prefix": "GF HEY",
+			"offsets": [
+				-4,
+				7
+			],
+			"fps": 24,
 			"name": "hey",
-			"indices": null
+			"looped": false
 		},
 		{
 			"offsets": [
-				-35,
-				-2
+				0,
+				0
+			],
+			"fps": null,
+			"prefix": "",
+			"looped": false,
+			"name": ""
+		},
+		{
+			"prefix": "GF death 1",
+			"offsets": [
+				163,
+				9
 			],
 			"fps": 24,
-			"prefix": "GF Scared",
-			"looped": true,
-			"name": "scared",
-			"indices": null
+			"name": "firstDeath",
+			"looped": false
+		},
+		{
+			"prefix": "GF death 2",
+			"offsets": [
+				0,
+				1
+			],
+			"fps": 24,
+			"name": "deathLoop",
+			"looped": true
+		},
+		{
+			"prefix": "GF death 3",
+			"offsets": [
+				0,
+				14
+			],
+			"fps": 24,
+			"name": "deathConfirm",
+			"looped": false
+		},
+		{
+			"prefix": "GF death 4",
+			"offsets": [
+				353,
+				2
+			],
+			"fps": 24,
+			"name": "deathSkip",
+			"looped": false
 		}
 	],
-	"spritesheet": "gfPlayer",
-	"camOffset": [
-		70,
-		-80
-	],
 	"flipX": false,
-	"iconName": "gf",
 	"antialiasing": true,
+	"iconName": "gf",
 	"beatDancer": false,
-	"format": "andromeda",
-	"healthColor": "0xFFA5004D"
+	"healthColor": "0xFFA5004D",
+	"format": "andromeda"
 }
