@@ -9,6 +9,8 @@ import flixel.util.FlxColor;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.FlxBasic;
 import flixel.group.FlxSpriteGroup;
+import flixel.FlxState;
+import flixel.FlxSubState;
 import flixel.math.FlxMath;
 import flixel.FlxG;
 import flixel.tweens.FlxEase;
@@ -40,12 +42,15 @@ class Profile extends FlxSpriteGroup {
   public var silver:FlxSprite;
   public var gold:FlxSprite;
   public var inEdit:Bool = false;
+  var numColor:Int = 0;
 
   var allColor:FlxColor;
   var text = Paths.getSparrowAtlas('profile/userTrophies');
 
   public function new(x:Float, y:Float, daColor:Int = 0){
     super(x,y);
+
+    numColor = daColor;
   
     icon = new FlxSprite(75, 115);
     icon.frames = Paths.getSparrowAtlas('profile/pfp');
@@ -162,6 +167,7 @@ class Profile extends FlxSpriteGroup {
 
       add(gold);
     }
+
   }
 
   public function editUser(){
@@ -175,6 +181,28 @@ class Profile extends FlxSpriteGroup {
     #if desktop
       DiscordClient.changePresence("Profile: " + FlxG.save.data.user, "Coins: " + FlxG.save.data.coin, null);
     #end
+  }
+
+  public function setNewPfp(color:Int){
+
+    pencil.members[0].animation.play(colors[color]);
+    pencil.members[1].animation.play(colors[color]);
+
+    allColor = colorBar[color];
+
+    proTxt.kill();
+    progress.kill();
+
+    progress = new FlxBar(278, 272, LEFT_TO_RIGHT, 238, 28, this, 'intPro', 0, 100);
+    progress.createFilledBar(0xFFFFFFFF, colorBar[color]);
+    add(progress);
+
+    proTxt = new FlxText(375, 275, FlxG.save.data.userProgress + '%', 15);
+    proTxt.setFormat(Paths.font('userFont.ttf'), 15, FlxColor.WHITE, CENTER);
+    add(proTxt);
+
+    icon.animation.play(colors[color]);
+    bar.animation.play(colors[color]);
   }
 
   public function userOpen(op:Bool){
@@ -256,13 +284,20 @@ class Profile extends FlxSpriteGroup {
     if (FlxG.mouse.justPressed && FlxG.mouse.overlaps(colision.members[0])){
       editUser();
     }
+    if (FlxG.mouse.justPressed && FlxG.mouse.overlaps(colision.members[0])){
+      numColor ++;
+      trace(numColor);
+      if (numColor > 3)
+        numColor = 0;
+      setNewPfp(numColor);
+    }
 
     if (FlxG.save.data.coin < 0)
     {
       FlxG.save.data.coin = 0;
     }
     coinTxt.text = '' + FlxG.save.data.coin;
-  
+
     super.update(elapsed);
   }
 }

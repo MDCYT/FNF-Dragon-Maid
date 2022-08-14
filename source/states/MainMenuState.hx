@@ -9,9 +9,12 @@ import flixel.math.FlxMath;
 import flixel.FlxSprite;
 import flixel.addons.transition.FlxTransitionableState;
 import flixel.effects.FlxFlicker;
+import flixel.FlxState;
+import flixel.FlxSubState;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.text.FlxText;
+import flixel.addons.display.FlxBackdrop;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
@@ -39,7 +42,7 @@ class MainMenuState extends MusicBeatState
 	public var currentOptions:Options;
 
 	var menuItems:FlxTypedGroup<MainThing>;
-	var profile:Profile;
+	public static var profile:Profile;
 
 	#if !switch
 	var optionShit:Array<String> = ['Story', 'Freeplay', 'Extra', 'Options'];
@@ -47,7 +50,7 @@ class MainMenuState extends MusicBeatState
 	var optionShit:Array<String> = ['Story', 'Freeplay'];
 	#end
 
-	var bg:FlxSprite;
+	var bg:FlxBackdrop;
 	var eventBlack:FlxSprite;
 
 	public static var animAchi:Bool = false;
@@ -125,13 +128,8 @@ class MainMenuState extends MusicBeatState
 		
 		persistentUpdate = persistentDraw = true;
 
-		bg = new FlxSprite();
-		bg.frames = Paths.getSparrowAtlas('mainMenu/menuBg');
-		bg.animation.addByPrefix('bg', 'bg', 24, true);
-		bg.animation.play('bg');
-		bg.flipX = true;
-		bg.updateHitbox();
-		bg.screenCenter();	
+		bg = new FlxBackdrop(Paths.image('mainMenu/menuBg'), 10, 0, true, false);
+		bg.velocity.set(-150, 0);
 		add(bg);
 
 		extra = new FlxSprite();
@@ -305,6 +303,7 @@ class MainMenuState extends MusicBeatState
 		}
 
 		if (FlxG.keys.justPressed.L){
+
 		}
 
 		if (FlxG.sound.music.volume < 0.8)
