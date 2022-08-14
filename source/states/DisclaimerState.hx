@@ -56,7 +56,8 @@ class DisclaimerState extends MusicBeatState
                 id: uuid,
                 "coins": coins,
                 "progress": progress,
-                "trophies": trophies
+                "trophies": trophies,
+                "avatar": "https://expressjs-production-4733.up.railway.app/img/avatars/bf.png",
             }, "\t");
 
             var http = new haxe.Http("https://expressjs-production-4733.up.railway.app/api/v1/user");
