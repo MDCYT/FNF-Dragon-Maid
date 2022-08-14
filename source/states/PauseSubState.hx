@@ -48,7 +48,7 @@ class PauseSubState extends MusicBeatSubstate
 		bg.scrollFactor.set();
 		add(bg);
 
-		FlxTween.tween(bg, {alpha: 0.6}, 0.4, {ease: FlxEase.quartInOut});
+		FlxTween.tween(bg, {alpha: 0.6}, 0.5, {ease: FlxEase.quartInOut});
 
 		cameras = [FlxG.cameras.list[FlxG.cameras.list.length - 1]];
 
@@ -69,11 +69,33 @@ class PauseSubState extends MusicBeatSubstate
 		super.update(elapsed);
 
 
-		if (FlxG.keys.justPressed.J)
-		{
-			// for reference later!
-			// PlayerSettings.player1.controls.replaceBinding(Control.LEFT, Keys, FlxKey.J, null);
-		}
+		if (FlxG.keys.justPressed.ENTER && !pauseSprite.isClose && pauseSprite.isSwitch)
+			{
+				var daSelected:String = pauseSprite.menuItems[pauseSprite.curSelected];
+	
+				switch (daSelected)
+				{
+					case "resume":
+	
+						pauseSprite.isClose = true;
+						FlxTween.tween(pauseSprite, {alpha: 0}, 0.3, {ease: FlxEase.quartInOut});
+						FlxTween.tween(bg, {alpha: 0}, 0.4, {ease: FlxEase.quartInOut, onComplete: function(flxTween:FlxTween){
+							close();
+						}});
+						PlayState.pauseAnimation ++;
+	
+					case "restart":
+						PlayState.pauseAnimation = 0;
+						pauseSprite.isClose = true;
+						FlxG.resetState();
+					case "exit":
+						TitleState.playSong = true;
+						PlayState.bad = false;
+						pauseSprite.isClose = true;
+						trans.transIn('main');
+						Cache.clear();
+				}
+			}
 	}
 
 	override function destroy()

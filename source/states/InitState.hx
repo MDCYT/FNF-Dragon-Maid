@@ -141,7 +141,7 @@ class InitState extends FlxUIState {
     var nextState:FlxUIState;
     //characters
     var hora:String = DateTools.format(Date.now(), "%H");
-    if(hora == '03'){
+    if(hora == '03' && !FlxG.save.data.bad){
       nextState = new BadDragonState();
       EngineData.initSave();
     }

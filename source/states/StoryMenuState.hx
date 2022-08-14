@@ -15,6 +15,7 @@ import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
 import flixel.FlxObject;
 import flixel.util.FlxColor;
+import flixel.addons.display.FlxBackdrop;
 import flixel.FlxCamera;
 import flixel.util.FlxTimer;
 import lime.net.curl.CURLCode;
@@ -28,6 +29,7 @@ using StringTools;
 
 class StoryMenuState extends MusicBeatState
 {
+	var bg:FlxBackdrop;
 	var trans:MaidTransition;
 	var scoreText:FlxText;
 
@@ -91,10 +93,9 @@ class StoryMenuState extends MusicBeatState
 		trans.screenCenter();
 		trans.scrollFactor.set();
 
-		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('storyMode/background'));
+		bg = new FlxBackdrop(Paths.image('storyMode/background'), 10, 0, true, false);
+		bg.velocity.set(-150, 0);
 		bg.scrollFactor.set();
-		bg.setGraphicSize(Std.int(bg.width * 1.1));
-		bg.screenCenter();
 		add(bg);
 
 		bgBlack = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);

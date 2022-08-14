@@ -249,11 +249,9 @@ class Dragon extends FlxSprite
 {
     var spawnX:Array<Int> = [-78, 1066, 1258, -223, 507, 504, -213, 1287];
     var spawnY:Array<Int> = [490, 515, -254, -305, 630, -287, 121, 139];
-    var moveX:Array<Int> = [474, -71, 1086, -77, 1083, 1083, -71];
-    var moveY:Array<Int> = [-50, -40, -30, -50, 100, 480, 461];
     var randomSpawn:Int;
     public var tween:FlxTween;
-    var randomMove:Int;
+    var randomMove:Float;
 	public function new(?x:Float, ?y:Float)
 	{
 		super(x, y);
@@ -269,25 +267,24 @@ class Dragon extends FlxSprite
        updateHitbox();
 	}
 
-  var beMove:Int = 0;
+  var beMove:Float = 0;
 
-    public function dragonMove(daSpawn:Int)
+    public function dragonMove(daSpawn:Float = 0)
         {
-            tween = FlxTween.tween(this, {x: moveX[randomMove], y: moveY[randomMove]}, 0.66, {ease:FlxEase.smootherStepInOut, onComplete: function (twn:FlxTween){
-                randomMove = Std.random(7);
-                //dragonMove(randomMove);
+            tween = FlxTween.tween(this, {x: daSpawn - 50, y: Std.random(FlxG.height) - 150}, 0.55, {ease:FlxEase.smootherStepInOut, onComplete: function (twn:FlxTween){
+                randomMove = Std.random(FlxG.width);
                 checkOffset(randomMove);
             }});
         }
 
-    public function checkOffset(offset:Int)
+    public function checkOffset(offset:Float)
     {
       if (offset == beMove){
-        randomMove = Std.random(7);
+        randomMove = Std.random(FlxG.width);
         checkOffset(randomMove);
       } 
       else{
-        if (moveX[beMove] < moveX[randomMove])
+        if (this.x < randomMove)
           flipX = false;
         else
           flipX = true;

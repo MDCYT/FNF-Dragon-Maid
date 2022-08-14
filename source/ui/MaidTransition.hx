@@ -16,8 +16,8 @@ class MaidTransition extends FlxSprite{
     super(x,y);
 
     frames = Paths.getSparrowAtlas('maidMenu/transition');
-    animation.addByPrefix('in', 'in', 24, false);
-    animation.addByPrefix('out', 'out', 24, false);
+    animation.addByPrefix('in', 'in', 35, false);
+    animation.addByPrefix('out', 'out', 35, false);
     setGraphicSize(Std.int(width * 1.35));
     alpha = 0;
     antialiasing = true;

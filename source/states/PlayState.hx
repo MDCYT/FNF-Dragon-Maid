@@ -101,6 +101,7 @@ class PlayState extends MusicBeatState
 	public static var isStoryMode:Bool = false;
 	public static var storyWeek:Int = 0;
 	public static var storyPlaylist:Array<String> = [];
+	public static var specialsPlayer:Array<String> = [];
 	public static var storyDifficulty:Int = 1;
 	public var scrollSpeed:Float = 1;
 	public var dontSync:Bool=false;

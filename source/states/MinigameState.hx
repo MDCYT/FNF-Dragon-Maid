@@ -37,6 +37,7 @@ import lime.utils.Assets;
 import openfl.display.StageQuality;
 import ui.MiniGameObjects.Dragon;
 import openfl.Lib;
+import CoinBar;
 
 #if desktop
 import Discord.DiscordClient;
@@ -224,33 +225,33 @@ class MinigameState extends MusicBeatState
         if (score == 3000)
         {
             daScore = 'perfect';
-            FlxG.save.data.coin += 1000;
+            CoinBar.addCoins(1000);
         }
         else if (score < 3000 && score >= 2000)
         {
             daScore = 'great';
-            FlxG.save.data.coin += 500;
+            CoinBar.addCoins(500);
         }
         else if (score < 2000 && score >= 1000)
         {
             daScore = 'good';
-            FlxG.save.data.coin += 100;
+            CoinBar.addCoins(100);
             score = 0;
         }
         else if (score < 1000 && score >= 500)
         {
             daScore = 'bad';
-            FlxG.save.data.coin += 10;
+            CoinBar.addCoins(10);
         }
         else if (score < 500)
         {
             daScore = 'shit';
-            FlxG.save.data.coin -= 50;
+            CoinBar.deletCoins(50);
         }
         if (score > 3000)
         {
             daScore = 'perfect';
-            FlxG.save.data.coin += 3000;
+            CoinBar.addCoins(3000);
         }
 
         coinEvent = true;

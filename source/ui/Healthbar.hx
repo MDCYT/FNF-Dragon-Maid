@@ -47,8 +47,8 @@ class Healthbar extends FlxSpriteGroup {
 
     iconP2 = new HealthIcon(player2, false);
     iconP2.y = bar.y - (iconP2.height / 2);
-    add(bg);
     add(bar);
+    add(bg);
     add(iconP1);
     add(iconP2);
   }

@@ -18,6 +18,7 @@ import Options;
 import flixel.FlxObject;
 import flixel.input.mouse.FlxMouseEventManager;
 import flash.events.MouseEvent;
+import flixel.addons.display.FlxBackdrop;
 import flixel.FlxState;
 import openfl.Lib;
 import EngineData.WeekData;
@@ -65,7 +66,7 @@ class FreeplayState extends MusicBeatState
 	var noise:FlxSound;
 	var pause:Bool = false;
 
-	var bg:FlxSprite;
+	var bg:FlxBackdrop;
 	var isSus:Bool = false;
 	var colorBg:Array<FlxColor> = [0xFFff334b, 0xFFffdb51, 0xFF87a6fa, 0xFFa34d9a ,0x000000];
 	//var songs:Array<String> = ['Tutorial', 'serva', 'scaled', 'electro_trid3nt', 'killer-scream'];
@@ -200,14 +201,17 @@ class FreeplayState extends MusicBeatState
 			noise.volume = 0;
 		}
 
-		bg = new FlxSprite().loadGraphic(Paths.image('maidMenu/freeplayBG'));
+		bg = new FlxBackdrop(Paths.image('maidMenu/freeplayBG'), 10, 0, true, false);
+		bg.velocity.set(-40, 0);
 		bg.scale.set(1.05, 1.05);
+		bg.antialiasing = true;
 		add(bg);
 
-		art= new FlxSprite().loadGraphic(Paths.image('maidMenu/freeplayArt0'));
+		art = new FlxSprite().loadGraphic(Paths.image('maidMenu/freeplayArt0'));
+		art.antialiasing = true;
 		add(art);
 
-		FlxTween.tween(bg, {x: bg.x + 10}, 1, {ease:FlxEase.expoInOut, type:PINGPONG});
+		FlxTween.tween(art, {x: art.x + 30}, 4, {ease:FlxEase.expoInOut, type:PINGPONG});
 
 		grpSongs = new FlxTypedGroup<FreePlayThing>();
 		add(grpSongs);

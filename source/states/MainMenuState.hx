@@ -102,6 +102,8 @@ class MainMenuState extends MusicBeatState
 		if (PlayState.bad)
 			PlayState.bad = false;
 
+		PlayState.pauseAnimation = 0;
+
 		if (Lib.current.stage.window.borderless){
 			Lib.current.stage.window.borderless = false;
 		}
@@ -152,6 +154,7 @@ class MainMenuState extends MusicBeatState
 			var menuItem:MainThing = new MainThing(0, 700, optionShit[i]);
 			menuItem.x = pos[i];
 			menuItem.ID = i;
+			menuItem.antialiasing = true;
 
 			menuItems.add(menuItem);
 			if (firstStart){

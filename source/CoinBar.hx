@@ -18,6 +18,78 @@ class CoinBar {
     }
   }
 
+  public static function addCoins(coins:Int){
+		var uuid = FlxG.save.data.uuid;
+		var oldCoins = FlxG.save.data.coin;
+		if(uuid==null) {
+			return FlxG.save.data.coin = oldCoins + coins;
+		} else{
+			FlxG.save.data.coin = oldCoins + coins;
+	
+			var http = new haxe.Http("https://expressjs-production-4733.up.railway.app/api/v1/coins/" + uuid);
+
+			http.setHeader("Content-Type", "application/json");
+			http.setPostData(haxe.Json.stringify({
+				"coins": FlxG.save.data.coin
+			}));
+
+			http.onStatus = function(status) {
+                if(status == 200)
+                {
+                    trace("Success!");
+                }
+                else
+                {
+                    trace("Error!");
+                }
+            }
+
+			http.onData = function(data) {
+				trace(data);
+			}
+
+			http.request(true);
+
+			return FlxG.save.data.coin;
+		}
+	}
+
+  public static function deletCoins(coins:Int){
+		var uuid = FlxG.save.data.uuid;
+		var oldCoins = FlxG.save.data.coin;
+		if(uuid==null) {
+			return FlxG.save.data.coin = oldCoins - coins;
+		} else{
+			FlxG.save.data.coin = oldCoins - coins;
+	
+			var http = new haxe.Http("https://expressjs-production-4733.up.railway.app/api/v1/coins/" + uuid);
+
+			http.setHeader("Content-Type", "application/json");
+			http.setPostData(haxe.Json.stringify({
+				"coins": FlxG.save.data.coin
+			}));
+
+			http.onStatus = function(status) {
+                if(status == 200)
+                {
+                    trace("Success!");
+                }
+                else
+                {
+                    trace("Error!");
+                }
+            }
+
+			http.onData = function(data) {
+				trace(data);
+			}
+
+			http.request(true);
+
+			return FlxG.save.data.coin;
+		}
+	}
+
   public static function checkOut(event:String){
 
     FlxG.camera.flash(FlxColor.WHITE, 1);

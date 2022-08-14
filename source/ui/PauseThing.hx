@@ -22,22 +22,23 @@ import states.PlayState;
 
 class PauseThing extends FlxSpriteGroup 
 {
-    var startTimer:FlxTimer;
-	var grpMenuShit:FlxSpriteGroup;
+	public var grpMenuShit:FlxSpriteGroup;
 
-	var menuItems:Array<String> = ['resume', 'restart', 'exit'];
-	var curSelected:Int = 0;
-	var daAnimation:Int = 0;
-	var characterPause:Int = 0;
+	public var menuItems:Array<String> = ['resume', 'restart', 'exit'];
+	public var curSelected:Int = 0;
+	public var daAnimation:Int = PlayState.pauseAnimation;
+	public var characterPause:Int = 0;
 	
-    var circle:FlxSprite;
-	var artWork:FlxSprite;
-	var xAnim:Int;
-	var isSwitch:Bool = false;
+    public var circle:FlxSprite;
+	public var artWork:FlxSprite;
+	public var xAnim:Int;
+	public var isSwitch:Bool = false;
+    public var levelDifficulty:FlxText;
+    public var levelInfo:FlxText;
 
-    var grpStars:FlxSpriteGroup;
+    public var grpStars:FlxSpriteGroup;
 
-	var isClose:Bool = false;
+	public var isClose:Bool = false;
     
     public function new(x:Float, y:Float, state:Int = 0)
     {
@@ -85,44 +86,38 @@ class PauseThing extends FlxSpriteGroup
 			starringStar.scale.set(0.6, 0.6);
 			starringStar.updateHitbox();
 			starringStar.animation.play('idle');
-			starringStar.alpha = 0;
+
+            if(daAnimation == 0) starringStar.alpha = 0;
+            else starringStar.alpha = 1;
+
 			grpStars.add(starringStar);
 		}
 
-        var levelInfo:FlxText = new FlxText(20, 15, 0, "", 32);
+        levelInfo = new FlxText(20, 15, 0, "", 32);
 		levelInfo.text += PlayState.SONG.song;
 		levelInfo.scrollFactor.set();
 		levelInfo.setFormat(Paths.font("Claphappy.ttf"), 32);
 		levelInfo.updateHitbox();
 		add(levelInfo);
 
-		var levelDifficulty:FlxText = new FlxText(20, 15 + 32, 0, "", 32);
+		levelDifficulty = new FlxText(20, 15 + 32, 0, "", 32);
 		levelDifficulty.text += CoolUtil.difficultyString();
 		levelDifficulty.scrollFactor.set();
 		levelDifficulty.setFormat(Paths.font('Claphappy.ttf'), 32);
 		levelDifficulty.updateHitbox();
 		add(levelDifficulty);
 
-		levelDifficulty.alpha = 0;
-		levelInfo.alpha = 0;
+        if(daAnimation == 0){
+            levelDifficulty.alpha = 0;
+            levelInfo.alpha = 0;
+        }
+        else{
+            levelDifficulty.alpha = 1;
+		    levelInfo.alpha = 1;
+        }
 
 		levelInfo.x = FlxG.width - (levelInfo.width + 20);
 		levelDifficulty.x = FlxG.width - (levelDifficulty.width + 20);
-
-		if (daAnimation == 0)
-		{
-			FlxTween.tween(circle, {x:circle.x + 700}, 0.2, {ease:FlxEase.expoInOut, onComplete: function(flxTween:FlxTween){	
-				FlxTween.tween(artWork, {x:artWork.x + 700}, 0.3, {ease:FlxEase.expoInOut, onComplete: function(flxTween:FlxTween){
-					FlxTween.tween(grpStars, {alpha: 1}, 0.3, {ease:FlxEase.quadInOut, onComplete: function(flxTween:FlxTween){
-						isSwitch = true;
-					}});
-						
-				}});
-			}});
-		}
-
-		FlxTween.tween(levelInfo, {alpha: 1, y: 20}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.3});
-		FlxTween.tween(levelDifficulty, {alpha: 1, y: levelDifficulty.y + 5}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.5});
 
 		grpMenuShit = new FlxSpriteGroup();
 		add(grpMenuShit);
@@ -151,20 +146,35 @@ class PauseThing extends FlxSpriteGroup
 			pauseItem.ID = i;
 			grpMenuShit.add(pauseItem);
 			
-			
-			FlxTween.tween(pauseItem,{y: 200 + (i * 150)}, 1 + (i * 0.25) ,{ease: FlxEase.expoInOut, onComplete: function(flxTween:FlxTween) 
-			{ 
-				if (PlayState.pauseAnimation == 0)
-				{
-					changeSelection();	
-				}
-				else if (PlayState.pauseAnimation >= 1)
-				{
-					changeSelection();
-					isSwitch = true;
-				}
-			}});
+			if (daAnimation == 0){
+                FlxTween.tween(pauseItem,{y: 200 + (i * 150)}, 0.5 + (i * 0.25) ,{ease: FlxEase.expoInOut, onComplete: function(flxTween:FlxTween) 
+                { 
+                    changeSelection();	
+                }});
+            }
+            else{
+                pauseItem.y = 200 + (i * 150);
+                changeSelection();	
+            }
 		}
+
+        if(daAnimation == 0)
+            pauseIntro();
+        else
+            isSwitch = true;
+    }
+
+    function pauseIntro() {
+        FlxTween.tween(circle, {x:circle.x + 700}, 0.7, {ease:FlxEase.expoInOut});	
+        FlxTween.tween(artWork, {x:artWork.x + 700}, 0.7, {ease:FlxEase.expoInOut, onComplete: function(flxTween:FlxTween){
+            FlxTween.tween(grpStars, {alpha: 1}, 0.3, {ease:FlxEase.quadInOut, onComplete: function(flxTween:FlxTween){
+                isSwitch = true;
+            }});
+                    
+        }});
+
+        FlxTween.tween(levelInfo, {alpha: 1, y: 20}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.3});
+		FlxTween.tween(levelDifficulty, {alpha: 1, y: levelDifficulty.y + 5}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.5});
     }
 
     function changeSelection(change:Int = 0):Void
@@ -193,42 +203,14 @@ class PauseThing extends FlxSpriteGroup
 
 		if (FlxG.keys.justPressed.UP && !isClose && isSwitch)
 		{
+            FlxG.sound.play(Paths.sound('scrollPause'));
 			changeSelection(-1);
-			FlxG.sound.play(Paths.sound('scrollPause'));
 		}
 		if (FlxG.keys.justPressed.DOWN && !isClose && isSwitch)
 		{
+            FlxG.sound.play(Paths.sound('scrollPause'));
 			changeSelection(1);
-			FlxG.sound.play(Paths.sound('scrollPause'));
 		}
-
-		/*if (accepted && !isClose && isSwitch)
-		{
-			var daSelected:String = menuItems[curSelected];
-
-			switch (daSelected)
-			{
-				case "resume":
-
-					isClose = true;
-					FlxTween.tween(bg, {alpha: 0}, 0.2, {ease: FlxEase.quartInOut});
-					FlxTween.tween(pauseCam, {alpha: 0}, 0.2, {onComplete: function(flxTween:FlxTween){
-						close();
-					}});
-					PlayState.pauseAnimation ++;
-
-				case "restart":
-					PlayState.pauseAnimation = 0;
-					isClose = true;
-					FlxG.resetState();
-				case "exit":
-					TitleState.playSong = true;
-					PlayState.bad = false;
-					isClose = true;
-					trans.transIn('main');
-					Cache.clear();
-			}
-		}*/
 
         super.update(elapsed);
     }
