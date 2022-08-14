@@ -21,6 +21,8 @@ class PauseSubState extends MusicBeatSubstate
 {
 	var trans:MaidTransition;
 	var pauseCam:FlxCamera;
+	var pauseSprite:PauseThing;
+	var characterPause:Int = PlayState.daCharacterPause;
 
 	public static var firstPlay:Bool = true;
 	public static var notAgainPLZ:Bool = false;
@@ -32,9 +34,6 @@ class PauseSubState extends MusicBeatSubstate
 
 	public function new(x:Float, y:Float)
 	{
-		pauseCam = new FlxCamera();
-		pauseCam.bgColor.alpha = 0;
-		FlxG.cameras.add(pauseCam);
 
 		super();
 
@@ -49,7 +48,12 @@ class PauseSubState extends MusicBeatSubstate
 		bg.scrollFactor.set();
 		add(bg);
 
+		FlxTween.tween(bg, {alpha: 0.6}, 0.4, {ease: FlxEase.quartInOut});
+
 		cameras = [FlxG.cameras.list[FlxG.cameras.list.length - 1]];
+
+		pauseSprite = new PauseThing(0, 0, characterPause);
+		add(pauseSprite);
 
 		trans = new MaidTransition(0, 0);
 		trans.screenCenter();

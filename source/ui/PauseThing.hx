@@ -1,15 +1,24 @@
 package ui;
 
+import Controls.Control;
+import flixel.FlxG;
 import flixel.FlxSprite;
+import flixel.FlxSubState;
+import flixel.group.FlxGroup.FlxTypedGroup;
+import flixel.input.keyboard.FlxKey;
+import flixel.system.FlxSound;
+import flixel.text.FlxText;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+import flixel.util.FlxColor;
+import flixel.util.FlxTimer;
 import flixel.ui.FlxBar;
 import flixel.util.FlxColor;
 import flixel.FlxBasic;
 import flixel.group.FlxSpriteGroup;
 import flixel.math.FlxMath;
 import flixel.FlxG;
-import flixel.tweens.FlxEase;
-import flixel.tweens.FlxTween;
-import flixel.util.FlxTimer;
+import states.PlayState;
 
 class PauseThing extends FlxSpriteGroup 
 {
@@ -18,8 +27,8 @@ class PauseThing extends FlxSpriteGroup
 
 	var menuItems:Array<String> = ['resume', 'restart', 'exit'];
 	var curSelected:Int = 0;
-	var animation:Int = PlayState.pauseAnimation;
-	var characterPause:Int = PlayState.daCharacterPause;
+	var daAnimation:Int = 0;
+	var characterPause:Int = 0;
 	
     var circle:FlxSprite;
 	var artWork:FlxSprite;
@@ -34,13 +43,15 @@ class PauseThing extends FlxSpriteGroup
     {
         super(x,y);
 
-        switch(animation)
+        switch(daAnimation)
 		{
 		    case 0:	
                 xAnim = -700;
             case 1 | 2:
                 xAnim = 0;
 		}
+
+        characterPause = state;
 
         circle = new FlxSprite(xAnim).loadGraphic(Paths.image('pauseState/circleLOL' + characterPause));
 		add(circle);
@@ -97,17 +108,12 @@ class PauseThing extends FlxSpriteGroup
 
 		levelInfo.x = FlxG.width - (levelInfo.width + 20);
 		levelDifficulty.x = FlxG.width - (levelDifficulty.width + 20);
-		
-		FlxTween.tween(bg, {alpha: 0.6}, 0.4, {ease: FlxEase.quartInOut});
 
-		if (animation == 0)
+		if (daAnimation == 0)
 		{
-			FlxTween.tween(circle, {x:circle.x + 700}, 0.8, {ease:FlxEase.expoInOut, onComplete: function(flxTween:FlxTween){	
-				FlxTween.tween(artWork, {x:artWork.x + 700}, 0.7, {ease:FlxEase.expoInOut, onComplete: function(flxTween:FlxTween){
-	
-					FlxTween.tween(grpStars.members[0], {alpha: 1}, 0.6, {ease:FlxEase.quadInOut});
-					FlxTween.tween(grpStars.members[1], {alpha: 1}, 0.6, {ease:FlxEase.quadInOut, onComplete: function(flxTween:FlxTween){
-	
+			FlxTween.tween(circle, {x:circle.x + 700}, 0.2, {ease:FlxEase.expoInOut, onComplete: function(flxTween:FlxTween){	
+				FlxTween.tween(artWork, {x:artWork.x + 700}, 0.3, {ease:FlxEase.expoInOut, onComplete: function(flxTween:FlxTween){
+					FlxTween.tween(grpStars, {alpha: 1}, 0.3, {ease:FlxEase.quadInOut, onComplete: function(flxTween:FlxTween){
 						isSwitch = true;
 					}});
 						
@@ -159,22 +165,6 @@ class PauseThing extends FlxSpriteGroup
 				}
 			}});
 		}
-
-		grpMenuShit.cameras = [pauseCam];
-		grpStars.cameras = [pauseCam];
-		circle.cameras = [pauseCam];
-		artWork.cameras = [pauseCam];
-
-		if (PlayState.pauseAnimation >= 1)
-		{
-			pauseCam.alpha = 0;
-			circle.alpha = 1;
-			artWork.alpha = 1;
-			grpStars.members[0].alpha = 1;
-			grpStars.members[1].alpha = 1;
-
-			FlxTween.tween(pauseCam, {alpha: 1}, 0.3);
-		}
     }
 
     function changeSelection(change:Int = 0):Void
@@ -198,22 +188,21 @@ class PauseThing extends FlxSpriteGroup
 		});
 	}
 
-    var upP = controls.UP_P;
-		var downP = controls.DOWN_P;
-		var accepted = controls.ACCEPT;
+    override function update(elapsed:Float)
+    {
 
-		if (upP && !isClose && isSwitch)
+		if (FlxG.keys.justPressed.UP && !isClose && isSwitch)
 		{
 			changeSelection(-1);
 			FlxG.sound.play(Paths.sound('scrollPause'));
 		}
-		if (downP && !isClose && isSwitch)
+		if (FlxG.keys.justPressed.DOWN && !isClose && isSwitch)
 		{
 			changeSelection(1);
 			FlxG.sound.play(Paths.sound('scrollPause'));
 		}
 
-		if (accepted && !isClose && isSwitch)
+		/*if (accepted && !isClose && isSwitch)
 		{
 			var daSelected:String = menuItems[curSelected];
 
@@ -239,37 +228,7 @@ class PauseThing extends FlxSpriteGroup
 					trans.transIn('main');
 					Cache.clear();
 			}
-		}
-
-    public function moveIn(initPos:Int, open:Int)
-    {
-        switch(open)
-        {
-            case 0:
-                overlap.x = altBar.x + initPos;
-                ind.x = altBar.x;
-                tween = FlxTween.tween(ind, {x: ind.x + altBar.width}, defaultTime, {type: PINGPONG});
-        
-            case 1:
-                overlap.x = altBar.x + initPos;
-                tween.active = true;
-            case 2:
-                defaultTime -= 0.005;
-
-                if(defaultTime <= 0.3)
-                    defaultTime = 0.35;
-
-                tween.duration = defaultTime;
-                overlap.scale.x -= 0.02;
-                PlayState.drownScale += 0.00001;
-                //tween = FlxTween.tween(ind, {x: ind.x + altBar.width}, defaultTime, {type: PINGPONG});
-
-        }
-    }
-
-
-    override function update(elapsed:Float)
-    {
+		}*/
 
         super.update(elapsed);
     }
