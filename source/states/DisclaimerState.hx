@@ -51,6 +51,9 @@ class DisclaimerState extends MusicBeatState
             var trophies = FlxG.save.data.trophies;
             if(FlxG.save.data.trophies == null) trophies = [];
 
+            var avatar = "https://expressjs-production-4733.up.railway.app/img/avatars/bf.png";
+            if (FlxG.save.data.trophies == null) avatar = "https://expressjs-production-4733.up.railway.app/img/avatars/bf.png";
+
             var stringData = haxe.Json.stringify({
                 username: "User",
                 id: uuid,
@@ -143,13 +146,21 @@ class DisclaimerState extends MusicBeatState
                     }
                 }
 
+                var avatar = FlxG.save.data.userTheme;
+                switch(FlxG.save.data.userTheme){
+                    case 0:
+                        "https://expressjs-production-4733.up.railway.app/img/avatars/bf.png";
+                    case 1:
+                        "https://expressjs-production-4733.up.railway.app/img/avatars/gf.png";
+                }
 
                 var stringData = haxe.Json.stringify({
                     username: username,
                     id: uuid,
                     coins: coins,
                     progress: progress,
-                    trophies: trophies
+                    trophies: trophies,
+                    avatar: avatar
                 }, "\t");
 
                 var http = new haxe.Http("https://expressjs-production-4733.up.railway.app/api/v1/user/update/" + uuid);
