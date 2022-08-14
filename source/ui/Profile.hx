@@ -185,6 +185,8 @@ class Profile extends FlxSpriteGroup {
 
   public function setNewPfp(color:Int){
 
+    FlxG.save.data.userTheme = color;
+    
     pencil.members[0].animation.play(colors[color]);
     pencil.members[1].animation.play(colors[color]);
 

@@ -34,13 +34,12 @@ class PauseThing extends FlxSpriteGroup
     {
         super(x,y);
 
-        if (animation == 0)
+        switch(animation)
 		{
-			xAnim = -700;
-		}
-		else if (animation >= 1)
-		{
-			xAnim = 0;
+		    case 0:	
+                xAnim = -700;
+            case 1 | 2:
+                xAnim = 0;
 		}
 
         circle = new FlxSprite(xAnim).loadGraphic(Paths.image('pauseState/circleLOL' + characterPause));
