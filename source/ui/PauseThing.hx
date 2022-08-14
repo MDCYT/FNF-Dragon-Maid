@@ -13,10 +13,28 @@ import flixel.util.FlxTimer;
 
 class PauseThing extends FlxSpriteGroup 
 {
+    var startTimer:FlxTimer;
+	var grpMenuShit:FlxTypedGroup<FlxSprite>;
 
+	var menuItems:Array<String> = ['resume', 'restart', 'exit'];
+	var curSelected:Int = 0;
+	var animation:Int = PlayState.pauseAnimation;
+	var characterPause:Int = PlayState.daCharacterPause;
+	
+    var circle:FlxSprite;
+	var artWork:FlxSprite;
+	var xAnim:Int;
+	var isSwitch:Bool = false;
+
+    var grpStars:FlxTypedGroup<FlxSprite>;
+
+	var isClose:Bool = false;
+    
     public function new(x:Float, y:Float, state:Int = 0)
     {
         super(x,y);
+
+
 
     }
 

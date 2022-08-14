@@ -20,26 +20,10 @@ using StringTools;
 class PauseSubState extends MusicBeatSubstate
 {
 	var trans:MaidTransition;
-	var startTimer:FlxTimer;
-	var grpMenuShit:FlxTypedGroup<FlxSprite>;
-
-	var menuItems:Array<String> = ['resume', 'restart', 'exit'];
-	var curSelected:Int = 0;
-	var animation:Int = PlayState.pauseAnimation;
-	var characterPause:Int = PlayState.daCharacterPause;
 	var pauseCam:FlxCamera;
 
 	public static var firstPlay:Bool = true;
 	public static var notAgainPLZ:Bool = false;
-
-	var circle:FlxSprite;
-	var artWork:FlxSprite;
-	var xAnim:Int;
-	var isSwitch:Bool = false;
-
-	var grpStars:FlxTypedGroup<FlxSprite>;
-
-	var isClose:Bool = false;
 
 	var bg:FlxSprite;
 
