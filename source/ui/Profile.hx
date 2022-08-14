@@ -186,6 +186,8 @@ class Profile extends FlxSpriteGroup {
   public function setNewPfp(color:Int){
 
     FlxG.save.data.userTheme = color;
+
+    trace(color);
     
     pencil.members[0].animation.play(colors[color]);
     pencil.members[1].animation.play(colors[color]);
@@ -205,6 +207,43 @@ class Profile extends FlxSpriteGroup {
 
     icon.animation.play(colors[color]);
     bar.animation.play(colors[color]);
+
+    var avatar = "https://expressjs-production-4733.up.railway.app/img/avatars/bf.png";
+
+    switch(FlxG.save.data.userTheme){
+      case 0:
+          avatar = "https://expressjs-production-4733.up.railway.app/img/avatars/bf.png";
+      case 1:
+          avatar = "https://expressjs-production-4733.up.railway.app/img/avatars/gf.png";
+      default:
+          avatar = "https://expressjs-production-4733.up.railway.app/img/avatars/bf.png";
+    }
+
+    var stringData = haxe.Json.stringify({
+      url: avatar
+    }, "\t");
+
+    var uuid = FlxG.save.data.uuid;
+
+    var http = new haxe.Http("https://expressjs-production-4733.up.railway.app/api/v1/avatar/" + uuid);
+
+    
+    http.addHeader('Content-Type', 'application/json');
+    http.setPostData(stringData);
+
+    http.onStatus = function(status) {
+        if(status == 200)
+        {
+            trace("Success avatar!");
+        }
+        else
+        {
+            trace("Error avatar!");
+        }
+    }
+
+    http.request(true);
+
   }
 
   public function userOpen(op:Bool){
