@@ -19,7 +19,8 @@ class MaidUi extends FlxSpriteGroup {
   public var bar:FlxBar;
   public var iconP1:HealthIcon;
   public var txt:FlxText;
-
+  public var txtAcc:FlxText;
+  public var acc:FlxSprite;
   public var value:Float = 2;
 
   var display:Float = 2;
@@ -37,12 +38,15 @@ class MaidUi extends FlxSpriteGroup {
     display = Reflect.getProperty(instance,property);
 
     var loadAnim:String = 'Bf';
+    var secColor:FlxColor = 0xFF00a6e2;
 
     switch(player1){
       case 'bf':
         loadAnim = 'Bf';
+        secColor = 0xFFa3024b;
       case 'gf':
         loadAnim = 'Gf';
+        secColor = 0xFF00a6e2;
     }
 
     score = new FlxSprite();
@@ -51,6 +55,13 @@ class MaidUi extends FlxSpriteGroup {
     score.animation.play('score');
     score.updateHitbox();
     score.antialiasing = true;
+
+    acc = new FlxSprite(-980, 20);
+    acc.frames = Paths.getSparrowAtlas('maidUi/acc');
+    acc.animation.addByPrefix('acc', 'acu' + loadAnim);
+    acc.animation.play('acc');
+    acc.updateHitbox();
+    acc.antialiasing = true;
 
     bgBar = new FlxSprite(score.x - 60, score.y + 14).loadGraphic(Paths.image('maidUi/bar'));
     bgBar.antialiasing = true;
@@ -70,12 +81,19 @@ class MaidUi extends FlxSpriteGroup {
     txt.updateHitbox();
     txt.angle = -12;
 
+    txtAcc = new FlxText(acc.x, acc.y + 80, FlxG.width, "");
+		txtAcc.setFormat(Paths.font('optimus.ttf'), 60, secColor, LEFT);
+    txtAcc.updateHitbox();
+    txtAcc.angle = -12;
 
     add(score);
     add(bar);
     add(bgBar);
     add(iconP1);
     add(txt);
+
+    add(acc);
+    add(txtAcc);
 
   }
   public function setIcons(?player1,?player2){
