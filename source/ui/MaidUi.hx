@@ -65,9 +65,11 @@ class MaidUi extends FlxSpriteGroup {
     iconP1.x = score.x + 308;
     iconP1.updateHitbox();
 
-    txt = new FlxText(score.x - 160, score.y + 110, FlxG.width, "");
+    txt = new FlxText(score.x - 160, score.y + 105, FlxG.width, "");
 		txt.setFormat(Paths.font('megaton.ttf'), 60, baseColor, LEFT);
-    txt.angle = -10;
+    txt.updateHitbox();
+    txt.angle = -12;
+
 
     add(score);
     add(bar);
@@ -120,6 +122,15 @@ class MaidUi extends FlxSpriteGroup {
       iconP1.animation.curAnim.curFrame = iconP1.winningIndex;
     else
       iconP1.animation.curAnim.curFrame = iconP1.neutralIndex;
+
+    if (FlxG.keys.justPressed.UP) {
+      txt.angle ++;
+      trace(txt.angle);
+    }
+    if (FlxG.keys.justPressed.DOWN) {
+      txt.angle --;
+      trace(txt.angle);
+    }
 
     super.update(elapsed);
 
