@@ -104,8 +104,6 @@ class DisclaimerState extends MusicBeatState
             http.onData = function(data) {
                 jsonResponse = haxe.Json.parse(data);
 
-                trace(jsonResponse);
-
                 var coins = FlxG.save.data.coin;
 
                 if(jsonResponse.coins < FlxG.save.data.coin)
@@ -149,6 +147,10 @@ class DisclaimerState extends MusicBeatState
                         avatar = "https://expressjs-production-4733.up.railway.app/img/avatars/bf.png";
                     case 1:
                         avatar = "https://expressjs-production-4733.up.railway.app/img/avatars/gf.png";
+                    case 2:
+                        avatar = "https://expressjs-production-4733.up.railway.app/img/avatars/elma.png";
+                    default:
+                        avatar = "https://expressjs-production-4733.up.railway.app/img/avatars/bf.png";
                 }
 
                 var stringData = haxe.Json.stringify({
