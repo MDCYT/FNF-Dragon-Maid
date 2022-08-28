@@ -2,6 +2,6 @@
 <TextureAtlas imagePath="acc.png">
 	<!-- Created with Adobe Animate version 19.2.1.408 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="acuBf instancia 10000" x="0" y="0" width="600" height="291"/>
-	<SubTexture name="acuGf instancia 10000" x="0" y="291" width="601" height="291"/>
+	<SubTexture name="acuBf0000" x="0" y="0" width="600" height="290"/>
+	<SubTexture name="acuGf0000" x="0" y="290" width="600" height="290"/>
 </TextureAtlas>
