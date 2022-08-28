@@ -65,7 +65,7 @@ class MaidUi extends FlxSpriteGroup {
     iconP1.x = score.x + 308;
     iconP1.updateHitbox();
 
-    txt = new FlxText(score.x - 160, score.y + 95, FlxG.width, "");
+    txt = new FlxText(score.x - 160, score.y + 101, FlxG.width, "");
 		txt.setFormat(Paths.font('megaton.ttf'), 60, baseColor, LEFT);
     txt.updateHitbox();
     txt.angle = -12;
