@@ -66,8 +66,8 @@ class MaidUi extends FlxSpriteGroup {
     iconP1.updateHitbox();
 
     txt = new FlxText(score.x + 206, score.y + 153, 0, "");
-		txt.setFormat(Paths.font('megaton.ttf'), 60, baseColor, LEFT);
-    txt.angle = -11;
+		txt.setFormat(Paths.font('megaton.ttf'), 60, baseColor, RIGHT);
+    txt.angle = -10;
 
     add(score);
     add(bar);
@@ -87,7 +87,7 @@ class MaidUi extends FlxSpriteGroup {
   }
   
   public function setScore(score:Int){
-    txt.text =  ${score};
+    txt.text =  Std.string(score);
   }
   public function setIconSize(iconP1Size:Int){
     iconP1.setGraphicSize(Std.int(iconP1Size));
