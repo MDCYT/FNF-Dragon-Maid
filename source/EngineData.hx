@@ -71,6 +71,12 @@ class EngineData {
     if (FlxG.save.data.userProgress == null)
       FlxG.save.data.userProgress = 0;
 
+    if (FlxG.save.data.customPfp == null)
+        FlxG.save.data.customPfp = false;
+
+    if (FlxG.save.data.customPfpPath == null)
+        FlxG.save.data.customPfpPath = '';
+
     //UNLOCKS WEEK
 		if (FlxG.save.data.maidSkin == null)
         FlxG.save.data.maidSkin = false;

@@ -18,6 +18,10 @@ class Healthbar extends FlxSpriteGroup {
   public var iconP1:HealthIcon;
   public var iconP2:HealthIcon;
   public var smooth:Bool = false;
+  public var colorDad:Array<FlxColor> = [];
+  public var colorBf:Array<FlxColor> = [];
+  public var seconColorBf:FlxColor;
+  public var seconColorDad:FlxColor;
 
   public var value:Float = 1;
 
@@ -37,16 +41,33 @@ class Healthbar extends FlxSpriteGroup {
 
     bg = new FlxSprite(0, 0).loadGraphic(Paths.image('healthBar','shared'));
 
-    bar = new FlxBar(bg.x + 4, bg.y + 4, RIGHT_TO_LEFT, Std.int(bg.width - 8), Std.int(bg.height - 8), this, 'display', min, max);
-    bar.createFilledBar(baseColor,secondaryColor);
+    bar = new FlxBar(bg.x + 4, bg.y + 4, RIGHT_TO_LEFT, Std.int(bg.width - 8), Std.int(bg.height - 7), this, 'display', min, max);
+    //bar.createFilledBar(baseColor,secondaryColor);
 
+    switch(player1){
+      case 'bf' | 'bf-maid':
+        seconColorBf = 0xFF428EFF;
+      case 'gf' | 'gf-maid':
+        seconColorBf = 0xfff835ff;
+
+    }
+
+    switch(player2){
+      case 'tohru':
+        seconColorDad = 0xffffdf88;
+      case 'elma':
+        seconColorDad = 0xff5542ff;
+
+    }
 
     iconP1 = new HealthIcon(player1, true);
     iconP1.y = bar.y - (iconP1.height / 2);
-
+    iconP1.x = bar.x + bar.width - 55;
 
     iconP2 = new HealthIcon(player2, false);
     iconP2.y = bar.y - (iconP2.height / 2);
+    iconP2.x = bar.x - 20;
+
     add(bar);
     add(bg);
     add(iconP1);
@@ -60,7 +81,13 @@ class Healthbar extends FlxSpriteGroup {
   }
 
   public function setColors(baseColor:FlxColor,secondaryColor:FlxColor){
-    bar.createFilledBar(baseColor,secondaryColor);
+    colorDad.push(baseColor);
+    colorDad.push(seconColorDad);
+
+    colorBf.push(seconColorBf);
+    colorBf.push(secondaryColor);
+
+    bar.createGradientBar(colorDad, colorBf, 1);
   }
   public function setIconSize(iconP1Size:Int,iconP2Size:Int){
     iconP1.setGraphicSize(Std.int(iconP1Size));
@@ -73,6 +100,7 @@ class Healthbar extends FlxSpriteGroup {
     setIconSize(Std.int(iconP1.width+15),Std.int(iconP2.width+15));
   }
 
+  var caca:Int = 1;
   override function update(elapsed:Float){
     var num = Reflect.getProperty(instance,property);
     if(smooth){
@@ -88,8 +116,6 @@ class Healthbar extends FlxSpriteGroup {
     var opponentPercent = 100-bar.percent;
     setIconSize(Std.int(FlxMath.lerp(iconP1.width, 150, Main.adjustFPS(0.1))),Std.int(FlxMath.lerp(iconP2.width, 150, Main.adjustFPS(0.1))));
     var iconOffset:Int = 26;
-    iconP1.x = bar.x + (bar.width * (FlxMath.remapToRange(percent, 0, 100, 100, 0) * 0.01) - iconOffset);
-    iconP2.x = bar.x + (bar.width * (FlxMath.remapToRange(percent, 0, 100, 100, 0) * 0.01)) - (iconP2.width - iconOffset);
 
     if (percent < 20 && iconP1.lossIndex!=-1)
       iconP1.animation.curAnim.curFrame = iconP1.lossIndex;

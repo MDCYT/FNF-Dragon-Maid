@@ -12,28 +12,27 @@ import flixel.tweens.FlxTween;
 import flixel.util.FlxTimer;
 import states.*;
 
-class MaidSpecials extends FlxSpriteGroup {
+class MaidSpecials extends FlxSprite {
 
-    var obj:FlxSprite;
-    var special:String = '';
+    var daSpecial:String = '';
 
   public function new(x:Float, y:Float, special:String = 'bfIdle'){
 
     super(x,y);
 
-    special = special;
+    daSpecial = special;
 
-    obj = new FlxSprite();
-    obj.frames = Paths.getSparrowAtlas('mainMenu/specialsObjects');
-    obj.animation.addByPrefix('obj', special, 24, false);
-    obj.animation.play('obj');
-    add(obj);
+    frames = Paths.getSparrowAtlas('mainMenu/specialsObjectsPlayer');
+    animation.addByPrefix('obj', special, 24, false);
+    animation.play('obj');
+    antialiasing = true;
+    updateHitbox();
  
   }
 
-  function goSpecial(obj:String = special) {
+  function goSpecial(obj:String) {
 
-    switch(special){
+    switch(obj){
         
         case 'bfIdle':
             

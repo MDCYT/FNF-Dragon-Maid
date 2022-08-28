@@ -156,6 +156,8 @@ class MainMenuState extends MusicBeatState
 			menuItem.ID = i;
 			menuItem.antialiasing = true;
 
+			trace(menuItem.color);
+
 			menuItems.add(menuItem);
 			if (firstStart){
 				FlxTween.tween(menuItem,{y: 77.55}, 1.5 + (i * 0.25) ,{ease: FlxEase.expoInOut, onComplete: function(flxTween:FlxTween) 

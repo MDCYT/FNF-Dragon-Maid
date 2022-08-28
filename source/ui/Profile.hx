@@ -3,7 +3,13 @@ package ui;
 #if desktop
 import Discord.DiscordClient;
 #end
+import flixel.graphics.FlxGraphic;
+import flash.display.Bitmap;
+import flash.display.BitmapData;
+import flash.events.Event;
+import flash.geom.Matrix;
 import flixel.FlxSprite;
+import lime.ui.FileDialog;
 import flixel.ui.FlxBar;
 import flixel.util.FlxColor;
 import flixel.graphics.frames.FlxAtlasFrames;
@@ -42,6 +48,10 @@ class Profile extends FlxSpriteGroup {
   public var silver:FlxSprite;
   public var gold:FlxSprite;
   public var inEdit:Bool = false;
+  public var themeColor:FlxColor;
+
+  public var isCustom:Bool = FlxG.save.data.customPfp; //CARGO LAS PFP :V
+
   var numColor:Int = 0;
 
   var allColor:FlxColor;
@@ -51,15 +61,7 @@ class Profile extends FlxSpriteGroup {
     super(x,y);
 
     numColor = daColor;
-  
-    icon = new FlxSprite(75, 115);
-    icon.frames = Paths.getSparrowAtlas('profile/pfp');
-    icon.animation.addByPrefix('bf', 'bf');
-    icon.animation.addByPrefix('red', 'gf');
-    icon.setGraphicSize(183, 192);
-    icon.antialiasing = true;
-    icon.animation.play(colors[daColor]);
-    icon.updateHitbox();
+    themeColor = daColor;
 
     bar = new FlxSprite(0, 0);
     bar.frames = Paths.getSparrowAtlas('profile/rectangleProfile');
@@ -134,7 +136,14 @@ class Profile extends FlxSpriteGroup {
 
     add(colision);
     add(bar);
-    add(icon);
+
+    switch(isCustom){
+      case true:
+        loadPfp(FlxG.save.data.customPfpPath);
+      case false:
+        loadIcon();
+    }
+    
     add(coin);
     add(pencil);
     add(coinTxt);
@@ -279,6 +288,104 @@ class Profile extends FlxSpriteGroup {
 
   var daObject:Int = 0;
   var pene:Int = 0;
+  var newPfp:FlxSprite;
+  var bitmap:BitmapData;
+  var ifLoaded:Bool = false;
+
+  function loadPfp(path:String = '') {
+    ifLoaded = true;
+    FlxG.save.data.customPfp = true;
+
+    newPfp = new FlxSprite(0, 0);
+		newPfp.makeGraphic(0, 0, FlxColor.BLACK);
+		newPfp.antialiasing = true;
+
+		add(newPfp);
+
+    bitmap = BitmapData.fromFile(path);
+    _showImage(bitmap);
+  }
+
+  function loadIcon() {
+    FlxG.save.data.customPfp = false;
+
+    icon = new FlxSprite(75, 115);
+    icon.frames = Paths.getSparrowAtlas('profile/pfp');
+    icon.animation.addByPrefix('bf', 'bf');
+    icon.animation.addByPrefix('red', 'gf');
+    icon.animation.addByPrefix('blue', 'elma');
+    icon.setGraphicSize(183, 192);
+    icon.animation.play(colors[themeColor]);
+    icon.updateHitbox();
+    icon.antialiasing = true;
+    add(icon);
+  }
+
+  private function selecPfp():Void {
+    trace('hola');
+    
+    var vent = new FileDialog();
+    vent.onSelect.add(function(str) {
+      ifLoaded = false;
+      newPfp = new FlxSprite(0, 0);
+		  newPfp.makeGraphic(0, 0, FlxColor.BLACK);
+		  newPfp.antialiasing = true;
+
+
+		  add(newPfp);
+
+      FlxG.save.data.customPfp = true;
+
+      FlxG.save.data.customPfpPath = str;
+      bitmap = BitmapData.fromFile(str);
+      _showImage(bitmap);
+      trace(str);
+    });
+    vent.browse();
+  }
+
+	
+	var _displayWidth:Float;
+	var _displayHeight:Float;
+
+  function _showImage(Data:BitmapData):Void
+    {  
+      newPfp.scale.set(1, 1);
+
+      var imgWidth:Float = FlxG.width / Data.width;
+      var imgHeight:Float = FlxG.height / Data.height;
+  
+      var scale:Float = imgWidth <= imgHeight ? imgWidth : imgHeight;
+
+      _displayWidth = Data.width * scale;
+      _displayHeight = Data.height * scale;
+      newPfp.makeGraphic(Std.int(_displayWidth), Std.int(_displayHeight), FlxColor.BLACK);
+  
+      var data2:BitmapData = newPfp.pixels.clone();
+      var matrix:Matrix = new Matrix();
+      matrix.identity();
+      matrix.scale(scale, scale);
+      data2.fillRect(data2.rect, FlxColor.BLACK);
+      data2.draw(Data, matrix, null, null, null, true);
+      newPfp.pixels = data2;
+      newPfp.setGraphicSize(183, 194);
+      newPfp.updateHitbox();
+  
+      if (!ifLoaded){
+        newPfp.x += 75;
+        newPfp.y += 113;
+        trace(newPfp.x + ' ' + newPfp.y);
+      }
+      else{
+        newPfp.x += 75;
+        newPfp.y += 113;
+        trace(newPfp.x + ' ' + newPfp.y);
+      }
+
+      trace(newPfp.color);
+
+
+    }
 
   override function update(elapsed:Float){
 
@@ -325,12 +432,16 @@ class Profile extends FlxSpriteGroup {
     if (FlxG.mouse.justPressed && FlxG.mouse.overlaps(colision.members[0])){
       editUser();
     }
-    if (FlxG.mouse.justPressed && FlxG.mouse.overlaps(colision.members[0])){
+    if (FlxG.mouse.justPressedRight && FlxG.mouse.overlaps(colision.members[0])){
       numColor ++;
       trace(numColor);
       if (numColor > 3)
         numColor = 0;
       setNewPfp(numColor);
+    }
+
+    if (FlxG.mouse.justPressed && FlxG.mouse.overlaps(colision.members[0])){
+      selecPfp();
     }
 
     if (FlxG.save.data.coin < 0)

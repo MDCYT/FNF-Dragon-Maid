@@ -101,7 +101,7 @@ class PlayState extends MusicBeatState
 	public static var isStoryMode:Bool = false;
 	public static var storyWeek:Int = 0;
 	public static var storyPlaylist:Array<String> = [];
-	public static var specialsPlayer:Array<String> = [];
+	public static var specialsPlayer:Array<String> = ['bfIdle', 'coinPlus', 'arrowKey'];
 	public static var storyDifficulty:Int = 1;
 	public var scrollSpeed:Float = 1;
 	public var dontSync:Bool=false;
@@ -116,6 +116,7 @@ class PlayState extends MusicBeatState
 	var zoomCamBf:Bool = false;
 	var dadShake:Bool = false;
 	var dadDrown:Bool = false;
+	var maidSpecial:FlxSpriteGroup;
 
 	public var dad:Character;
 	public var opponent:Character;
@@ -176,13 +177,13 @@ class PlayState extends MusicBeatState
 	private var curSong:String = "";
 
 	private var gfSpeed:Int = 1;
-	private var health:Float = 1;
+	private var health:Float = 2;
 	private var healthb:Float = 1;
 	private var live:Float = 1;
 	private var previousHealth:Float = 1;
 	private var combo:Int = 0;
 	private var highestCombo:Int = 0;
-	private var healthBar:Healthbar;
+	private var healthBar:MaidUi;
 	private var bfBar:BfBar;
 	private var dragonBar:DragonBar;
 	private var killBar:KillBar;
@@ -421,7 +422,7 @@ class PlayState extends MusicBeatState
 			dadLua = new LuaCharacter(dad,"dad",true);
 
 			var bfIcon = new LuaSprite(healthBar.iconP1,"iconP1",true);
-			var dadIcon = new LuaSprite(healthBar.iconP2,"iconP2",true);
+			var dadIcon = new LuaSprite(healthBar.iconP1,"iconP2",true);
 
 			var window = new LuaWindow();
 
@@ -889,7 +890,6 @@ class PlayState extends MusicBeatState
 		songNa.antialiasing = true;
 		songNa.animation.addByPrefix('song', '' + SONG.song, 24);
 		songNa.animation.play('song');
-		add(songNa);
 
 		fireSound = new FlxSound().loadEmbedded(Paths.sound('fire'));
 
@@ -965,19 +965,20 @@ class PlayState extends MusicBeatState
 		FlxG.worldBounds.set(0, 0, FlxG.width, FlxG.height);
 
 		if (!bad){
-			healthBar = new Healthbar(0,FlxG.height*.9,boyfriend.iconName,dad.iconName,this,'health',0,2);
-			healthBar.smooth = currentOptions.smoothHPBar;
+			healthBar = new MaidUi(830, 455, boyfriend.iconName, this, 'health', 0, 2);
+			//healthBar.smooth = currentOptions.smoothHPBar;
 			healthBar.scrollFactor.set();
-			healthBar.screenCenter(X);
 			if(currentOptions.healthBarColors)
-				healthBar.setColors(dad.iconColor,boyfriend.iconColor);
+				healthBar.setColors(boyfriend.iconColor);
+			healthBar.scale.set(0.4, 0.4);
 
 			if(currentOptions.downScroll){
 				healthBar.y = FlxG.height*.1;
 			}
 
-			scoreTxt = new FlxText(healthBar.bg.x + healthBar.bg.width / 2 - 150, healthBar.bg.y + 25, 0, "", 20);
-			scoreTxt.setFormat(maidFont, 16, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+			scoreTxt = new FlxText(healthBar.x + healthBar.width / 2 - 150, healthBar.y + 25, 0, "", 20);
+			scoreTxt.setFormat(maidFont, 16, FlxColor.WHITE, CENTER);
+			scoreTxt.setBorderStyle(OUTLINE, FlxColor.BLACK, 1.5);
 			scoreTxt.scrollFactor.set();
 		}
 		else{
@@ -1063,6 +1064,18 @@ class PlayState extends MusicBeatState
 		add(scoreTxt);
 		add(ratingCountersUI);
 		updateJudgementCounters();
+
+		add(songNa);
+
+		if (StoryMenuState.isMaid){
+			maidSpecial = new FlxSpriteGroup();
+			for (i in 0...3){
+				var special = new MaidSpecials(680 + (i * 56), 607, specialsPlayer[i]);
+				maidSpecial.add(special);
+			}
+			add(maidSpecial);
+			maidSpecial.cameras = [camHUD];
+		}
 
 		songNa.cameras = [camHUD];
 		redScreen.cameras = [camHUD];
@@ -1312,7 +1325,7 @@ class PlayState extends MusicBeatState
 			}
 			healthBar.setIcons(boyfriend.iconName,dad.iconName);
 			if(currentOptions.healthBarColors)
-				healthBar.setColors(dad.iconColor,boyfriend.iconColor);
+				healthBar.setColors(boyfriend.iconColor);
 
 			luaSprites[spriteName]=newSprite;
 			add(newSprite);
@@ -2232,6 +2245,9 @@ class PlayState extends MusicBeatState
 
 	override public function update(elapsed:Float)
 	{	
+
+		healthBar.setScore(songScore);
+		
 		if (bad){
 			fx.update(elapsed);
 		}
@@ -2248,7 +2264,6 @@ class PlayState extends MusicBeatState
 				int == 0;
 			}
 		}
-
 
 		if (curSong.toLowerCase() == 'killer-scream') //killer scream events
 		{
@@ -4070,6 +4085,7 @@ class PlayState extends MusicBeatState
 			}
 		}
 
+
 		if (curSong.toLowerCase() == 'serva' && isStoryMode)
 		{
 			switch (curStep)
@@ -4130,6 +4146,7 @@ class PlayState extends MusicBeatState
 		}
 	}
 
+	var forBeat:Bool = true;
 	override function beatHit()
 	{
 		super.beatHit();
@@ -4162,7 +4179,6 @@ class PlayState extends MusicBeatState
 				}
 			}
 
-
 		}
 		// FlxG.log.add('change bpm' + SONG.notes[Std.int(curStep / 16)].changeBPM
 
@@ -4174,13 +4190,22 @@ class PlayState extends MusicBeatState
 				camHUD.zoom += 0.03;
 		}
 
-		if (camZooming && FlxG.camera.zoom < 1.35 && curBeat % 4 == 0)
+		if (camZooming && FlxG.camera.zoom < 1.35 && curBeat % 4 == 0 && forBeat)
 		{
 			//FlxG.camera.zoom += 0.015;
-			//camHUD.zoom += 0.03;
+			camHUD.zoom += 0.03;
 			FlxG.camera.zoom += 0.025;
 			if(lifes != 0)
 				camHUD.zoom += 0.05;
+		}
+
+		if (camZooming && FlxG.camera.zoom < 1.35 && curBeat % 1 == 0 && !forBeat)
+		{
+			//FlxG.camera.zoom += 0.015;
+			camHUD.zoom += 0.010;
+			FlxG.camera.zoom += 0.010;
+			if(lifes != 0)
+				camHUD.zoom += 0.02;
 		}
 
 		if(!bad)
@@ -4214,12 +4239,14 @@ class PlayState extends MusicBeatState
 		{
 			switch (curBeat)
 			{
-				case 256:
+				case 288:
+					forBeat = false;
 					killBar.moveIn(Std.random(Std.int(killBar.altBar.width)), 0);
 					FlxTween.tween(killBar, {alpha: 1}, 0.5, {onComplete: function(twn:FlxTween){
 						killerDrown = true;
-						healthBar.setColors(FlxColor.RED, boyfriend.iconColor);
 					}});
+				case 544:
+					forBeat = true;
 			}
 		}
 		if (curSong.toLowerCase() == 'burn-it-all')

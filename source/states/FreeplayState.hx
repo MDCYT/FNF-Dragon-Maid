@@ -75,6 +75,7 @@ class FreeplayState extends MusicBeatState
 	var playSong:Bool = false;
 	var framework:FlxSprite;
 	var art:FlxSprite;
+	var circle:FlxSprite;
 	var weeks:Int = 1;
 	var unlock:Bool = FlxG.save.data.bad;
 
@@ -206,6 +207,11 @@ class FreeplayState extends MusicBeatState
 		bg.scale.set(1.05, 1.05);
 		bg.antialiasing = true;
 		add(bg);
+
+		circle = new FlxSprite().loadGraphic(Paths.image('maidMenu/circle'));
+		circle.antialiasing = true;
+		circle.alpha = 0;
+		add(circle);
 
 		art = new FlxSprite().loadGraphic(Paths.image('maidMenu/freeplayArt0'));
 		art.antialiasing = true;
@@ -558,6 +564,7 @@ class FreeplayState extends MusicBeatState
 
 		FlxTween.color(bg, 0.3, bg.color, colorBg[theColor], {ease:FlxEase.expoInOut});
 		FlxTween.color(art, 0.3, bg.color, colorBg[theColor], {ease:FlxEase.expoInOut});
+		FlxTween.color(circle, 0.3, circle.color, colorBg[theColor], {ease:FlxEase.expoInOut});
 
 		disco.animation.play('art' + theColor);
 	}

@@ -6,6 +6,7 @@ import openfl.utils.AssetType;
 import openfl.utils.Assets as OpenFlAssets;
 import sys.io.File;
 import flash.display.BitmapData;
+import flixel.graphics.FlxGraphic;
 import Sys;
 import sys.FileSystem;
 import haxe.Json;
@@ -159,6 +160,19 @@ class Paths
 			return path;
 		}
 	}
+
+	public static function getGraphic(file):Any{
+        var bit:BitmapData = BitmapData.fromFile(file);
+        var graphic:Dynamic = null;
+        if(bit != null){
+            graphic = FlxGraphic.fromBitmapData(bit, false, file);
+            graphic.persist = true;
+        }else{
+            graphic = file;
+        }
+
+        return graphic;
+    }
 
 	public static function noteSkinImage(key:String, ?library:String='skins', ?skin:String='default', modifier:String='base', noteType:String='', ?useOpenFLAssetSystem:Bool=true):FlxGraphicAsset{
 		if(useOpenFLAssetSystem){
