@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="warningBtn.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="infoOff0000" x="0" y="0" width="200" height="72"/>
+	<SubTexture name="infoOn0000" x="200" y="0" width="228" height="101"/>
+	<SubTexture name="introOff0000" x="0" y="101" width="200" height="72"/>
+	<SubTexture name="introOn0000" x="200" y="101" width="228" height="101"/>
+	<SubTexture name="tutoOff0000" x="0" y="202" width="200" height="72"/>
+	<SubTexture name="tutoOn0000" x="200" y="202" width="228" height="101"/>
+	<SubTexture name="warningOff0000" x="0" y="303" width="200" height="72"/>
+	<SubTexture name="warningOn0000" x="200" y="303" width="228" height="101"/>
+</TextureAtlas>

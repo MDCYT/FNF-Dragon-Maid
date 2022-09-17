@@ -52,7 +52,7 @@ class Profile extends FlxSpriteGroup {
 
   public var isCustom:Bool = FlxG.save.data.customPfp; //CARGO LAS PFP :V
 
-  var numColor:Int = 0;
+  public var numColor:Int = 0;
 
   var allColor:FlxColor;
   var text = Paths.getSparrowAtlas('profile/userTrophies');
@@ -186,15 +186,14 @@ class Profile extends FlxSpriteGroup {
 			  nameText.caretIndex = 0;
   }
 
-  public function discordChange(){
-    #if desktop
-      DiscordClient.changePresence("Profile: " + FlxG.save.data.user, "Coins: " + FlxG.save.data.coin, null);
-    #end
+  public function discordChange(?pfp:String){
+    DiscordClient.changePresence("Profile: " + FlxG.save.data.user, "Coins: " + FlxG.save.data.coin, null, null, null, pfp);
   }
 
   public function setNewPfp(color:Int){
 
     FlxG.save.data.userTheme = color;
+    discordChange(colors[color]);
 
     trace(color);
     
@@ -214,7 +213,8 @@ class Profile extends FlxSpriteGroup {
     proTxt.setFormat(Paths.font('userFont.ttf'), 15, FlxColor.WHITE, CENTER);
     add(proTxt);
 
-    icon.animation.play(colors[color]);
+    if (!isCustom)
+      icon.animation.play(colors[color]);
     bar.animation.play(colors[color]);
 
     var avatar = "https://expressjs-production-4733.up.railway.app/img/avatars/bf.png";

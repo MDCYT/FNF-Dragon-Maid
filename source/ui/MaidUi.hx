@@ -22,7 +22,32 @@ class MaidUi extends FlxSpriteGroup {
   public var txtAcc:FlxText;
   public var acc:FlxSprite;
   public var value:Float = 2;
+  public var accSpr:FlxSprite;
 
+  ///group
+  public var scoreGrp:FlxSpriteGroup;
+  public var accGrp:FlxSpriteGroup;
+
+  var rank:Array<String> = ["FC",
+  "FC",
+  "FC",
+  "FC",
+  "S+",
+  "S",
+  "S-",
+  "A+",
+  "A",
+  "A-",
+  "B+",
+  "B",
+  "B-",
+  "C+",
+  "C",
+  "C-",
+  "D+",
+  "D"
+  ];
+  var accString:String = '';
   var display:Float = 2;
   var instance:FlxBasic;
   var property:String;
@@ -48,6 +73,9 @@ class MaidUi extends FlxSpriteGroup {
         loadAnim = 'Gf';
         secColor = 0xFF00a6e2;
     }
+
+    scoreGrp = new FlxSpriteGroup();
+    accGrp = new FlxSpriteGroup();
 
     score = new FlxSprite();
     score.frames = Paths.getSparrowAtlas('maidUi/Score');
@@ -76,24 +104,37 @@ class MaidUi extends FlxSpriteGroup {
     iconP1.x = score.x + 308;
     iconP1.updateHitbox();
 
-    txt = new FlxText(score.x - 160, score.y + 101, FlxG.width, "");
+    txt = new FlxText(score.x - 160, score.y + 100.2, FlxG.width, "");
 		txt.setFormat(Paths.font('megaton.ttf'), 60, baseColor, LEFT);
     txt.updateHitbox();
-    txt.angle = -12;
+    txt.angle = -12.5;
 
-    txtAcc = new FlxText(acc.x, acc.y + 80, FlxG.width, "");
-		txtAcc.setFormat(Paths.font('optimus.ttf'), 60, secColor, LEFT);
+    txtAcc = new FlxText(acc.x - 140, acc.y + 91, FlxG.width, "");
+		txtAcc.setFormat(Paths.font('optimus.ttf'), 62, secColor, LEFT);
     txtAcc.updateHitbox();
     txtAcc.angle = -12;
 
-    add(score);
-    add(bar);
-    add(bgBar);
-    add(iconP1);
-    add(txt);
+    accSpr = new FlxSprite(-666, 123);
+    accSpr.frames = Paths.getSparrowAtlas('maidUi/acc' + loadAnim);
+    for (i in 0...rank.length){
+      accSpr.animation.addByPrefix(rank[i], rank[i] + '0', 24, false);
+    }
+    accSpr.updateHitbox();
+    accSpr.antialiasing = true;
+    accSpr.scrollFactor.set();
 
-    add(acc);
-    add(txtAcc);
+    scoreGrp.add(score);
+    scoreGrp.add(bar);
+    scoreGrp.add(bgBar);
+    scoreGrp.add(iconP1);
+    scoreGrp.add(txt);
+
+    accGrp.add(acc);
+    accGrp.add(txtAcc);
+    accGrp.add(accSpr);
+
+    add(accGrp);
+    add(scoreGrp);
 
   }
   public function setIcons(?player1,?player2){
@@ -106,16 +147,29 @@ class MaidUi extends FlxSpriteGroup {
     bar.createFilledBar(FlxColor.WHITE, baseColor);
   }
   
-  public function setScore(score:Int){
+  public function setScore(score:Int, acc:Float, grade:String){
+    var anim:String = 'FC';
+    switch (grade){
+      case '☆☆☆☆' | "☆☆☆" | "": 
+        anim = 'FC';
+      case "☆" | "☆☆":
+        anim = 'S+';
+      default:
+        anim = grade;
+    }
     txt.text =  Std.string(score);
+    txtAcc.text = Std.string(FlxMath.roundDecimal(acc, 1) + '%');
+    accSpr.animation.play(anim);
   }
   public function setIconSize(iconP1Size:Int){
     iconP1.setGraphicSize(Std.int(iconP1Size));
 
     iconP1.updateHitbox();
   }
+
   public function beatHit(curBeat:Float){
     setIconSize(Std.int(iconP1.width+15));
+
   }
 
   override function update(elapsed:Float){
@@ -142,12 +196,17 @@ class MaidUi extends FlxSpriteGroup {
       iconP1.animation.curAnim.curFrame = iconP1.neutralIndex;
 
     if (FlxG.keys.justPressed.UP) {
-      txt.angle ++;
-      trace(txt.angle);
+      txtAcc.angle ++;
+      trace(txtAcc.angle);
     }
     if (FlxG.keys.justPressed.DOWN) {
-      txt.angle --;
-      trace(txt.angle);
+      txtAcc.angle --;
+      trace(txtAcc.angle);
+    }
+
+    if(FlxG.mouse.pressed){
+      accSpr.setPosition(FlxG.mouse.x, FlxG.mouse.y);
+      trace(accSpr.x + ' ' + accSpr.y);
     }
 
     super.update(elapsed);

@@ -3,6 +3,7 @@ package states;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.util.FlxTimer;
+import flixel.util.FlxColor;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.FlxObject;
@@ -28,12 +29,81 @@ class DisclaimerState extends MusicBeatState
 
     var tohru:FlxSprite;
     var isStart:Bool = false;
+    var cartel:Warning;
+    var inWarn:Bool = false;
+    var loading:FlxSprite;
 
 	override function create()
 	{	
         super.create();
         trace('ITS MAID TIME!');
 
+        cartel = new Warning(0, 0, false, true);
+		cartel.antialiasing = true;
+
+        loading = new FlxSprite();
+        loading.frames = Paths.getSparrowAtlas('maidMenu/loading');
+        loading.animation.addByPrefix('load', 'Loadin_shit');
+        loading.antialiasing = true;
+        loading.screenCenter();
+        loading.animation.play('load');
+        loading.alpha = 0;
+        
+
+        add(loading);
+        add(cartel);
+
+        loadFalse();
+	}
+
+    function initState() {
+        var disclaimer:FlxSprite = new FlxSprite(-20, 0).loadGraphic(Paths.image('maidMenu/disclaimer'));
+        disclaimer.alpha = 0;
+
+        var pressEnter:FlxSprite = new FlxSprite(0, 650).loadGraphic(Paths.image('maidMenu/press_enter'));
+        pressEnter.alpha = 0;
+
+        var tohru_frames = Paths.getSparrowAtlas('maidMenu/tohru_point');
+
+		tohru = new FlxSprite(900 + 500, 410);
+		tohru.frames = tohru_frames;
+        tohru.scale.set(0.4, 0.4);
+        tohru.updateHitbox();
+		tohru.animation.addByPrefix('point', 'point', 7, true);
+		
+        add(disclaimer);
+        add(pressEnter);
+        add(tohru);
+
+        FlxTween.tween(tohru, {x: tohru.x - 500}, 0.8, {ease: FlxEase.quadInOut, type: ONESHOT, onComplete: function(tween:FlxTween)
+            {
+                tohru.animation.play('point');
+            }
+        });	
+
+        new FlxTimer().start(1, function(tmr:FlxTimer)
+		{
+			FlxTween.tween(disclaimer, {alpha: 1}, 2.0, {onComplete: function(tween:FlxTween)
+                {
+                    FlxTween.tween(pressEnter, {alpha: 1}, 0.5, {ease: FlxEase.quadInOut, type: PINGPONG});
+                        isStart = true;
+                }
+            });
+
+		});
+    }
+
+    function loadFalse() {
+        loading.alpha = 1;
+
+        new FlxTimer().start(1, function(tmr:FlxTimer)
+        {
+            loading.alpha = 0;
+            checkInternet();
+        });
+    }
+
+    function checkInternet() {
         var uuid = FlxG.save.data.uuid;
 
         trace('uuid: ' + uuid);
@@ -72,12 +142,19 @@ class DisclaimerState extends MusicBeatState
                 {
                     trace("Success!");
                     FlxG.save.data.uuid = uuid;
+                    initState();
                 }
                 else
                 {
+                    createWarn();
                     trace("Error!");
                 }
             }
+
+            http.onError = function(status) {
+                createWarn();
+                trace("Error!");
+            };
     
             http.onData = function(data) {
                 response = data;
@@ -97,9 +174,15 @@ class DisclaimerState extends MusicBeatState
                 }
                 else
                 {
+                    createWarn();
                     trace("Error!");
                 }
             }
+
+            http.onError = function(status) {
+                createWarn();
+                trace("Error!");
+            };
     
             http.onData = function(data) {
                 jsonResponse = haxe.Json.parse(data);
@@ -168,13 +251,21 @@ class DisclaimerState extends MusicBeatState
                 http.onStatus = function(status) {
                     if(status == 200)
                     {
+                        initState();
                         trace("Success!");
                     }
                     else
                     {
+                        createWarn();
+                        inWarn = true;
                         trace("Error!");
                     }
                 }
+
+                http.onError = function(status) {
+                    createWarn();
+                    trace("Error!");
+                };
 
                 http.onData = function(data) {
                     trace(data);
@@ -185,44 +276,13 @@ class DisclaimerState extends MusicBeatState
 
             http.request();
         }
+    }
 
-
-
-        var disclaimer:FlxSprite = new FlxSprite(-20, 0).loadGraphic(Paths.image('maidMenu/disclaimer'));
-        disclaimer.alpha = 0;
-
-        var pressEnter:FlxSprite = new FlxSprite(0, 650).loadGraphic(Paths.image('maidMenu/press_enter'));
-        pressEnter.alpha = 0;
-
-        var tohru_frames = Paths.getSparrowAtlas('maidMenu/tohru_point');
-
-		tohru = new FlxSprite(900 + 500, 410);
-		tohru.frames = tohru_frames;
-        tohru.scale.set(0.4, 0.4);
-        tohru.updateHitbox();
-		tohru.animation.addByPrefix('point', 'point', 7, true);
-		
-        add(disclaimer);
-        add(pressEnter);
-        add(tohru);
-
-        FlxTween.tween(tohru, {x: tohru.x - 500}, 0.8, {ease: FlxEase.quadInOut, type: ONESHOT, onComplete: function(tween:FlxTween)
-            {
-                tohru.animation.play('point');
-            }
-        });	
-
-        new FlxTimer().start(1, function(tmr:FlxTimer)
-		{
-			FlxTween.tween(disclaimer, {alpha: 1}, 2.0, {onComplete: function(tween:FlxTween)
-                {
-                    FlxTween.tween(pressEnter, {alpha: 1}, 0.5, {ease: FlxEase.quadInOut, type: PINGPONG});
-                        isStart = true;
-                }
-            });
-
-		});
-	}
+    function createWarn() {
+        if(!inWarn) cartel.setWarn(1, 'warning', null, 2);
+        cartel.popUp();
+        inWarn = true;
+    }
 
 	override function update(elapsed:Float)
 	{
@@ -230,6 +290,22 @@ class DisclaimerState extends MusicBeatState
         {
             if (FlxG.keys.justPressed.ENTER)
                 FlxG.switchState(new LogoState());
+        }
+
+        if (inWarn){
+            if (FlxG.keys.justPressed.ENTER){
+                switch(cartel.btn.curSelected){
+                    case 0:
+                        FlxG.sound.play(Paths.sound('ann'));
+                        cartel.popOut();
+                        loadFalse();
+                    case 1:
+                        FlxG.sound.play(Paths.sound('ann'));
+                        cartel.popOut();
+                        initState();
+                        inWarn = false;
+                }
+            }
         }
     
 		

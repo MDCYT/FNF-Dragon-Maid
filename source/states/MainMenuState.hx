@@ -36,6 +36,7 @@ import sys.io.File;
 class MainMenuState extends MusicBeatState
 {
 	var trans:MaidTransition;
+	var cartel:Warning;
 	var achievement:MaidAchievement;
 	var curSelected:Int = 0;
 	var change:Int = 2;
@@ -64,6 +65,8 @@ class MainMenuState extends MusicBeatState
 	var rectangle:FlxSprite;
 	var time:Int = 0;
 	var warning:FlxSprite;
+
+	var inWarn:Bool = false;
 
 	function accept(){
 
@@ -196,10 +199,11 @@ class MainMenuState extends MusicBeatState
 		profile = new Profile(0, 500, FlxG.save.data.userTheme);
 		profile.alpha = 0;
 		profile.screenCenter();
+		profile.antialiasing = true;
 		add(profile);
 		
 		profile.active = false;
-
+	
 		warning = new FlxSprite(1030, 660);
 		warning.frames = Paths.getSparrowAtlas('profile/warning');
 		warning.animation.addByPrefix('on', 'GOOD');
@@ -212,6 +216,10 @@ class MainMenuState extends MusicBeatState
 		trace(warning.frames);
 		add(warning);
 
+		cartel = new Warning(0, 0, false, true);
+		cartel.antialiasing = true;
+		add(cartel);
+
 		changeItem();
 
 		trace(profile.x + ' ' + profile.y);
@@ -221,6 +229,12 @@ class MainMenuState extends MusicBeatState
 		add(trans);
 		trans.transOut();
 	}
+
+	function createWarn(dialog:Int = 0, type:String = 'warning', ?gfAnim:String = 'smile', ?typeBtn:Int) {
+        if(!inWarn) cartel.setWarn(dialog, type, gfAnim, typeBtn);
+        cartel.popUp();
+        inWarn = true;
+    }
 
 	function loadSong() {
 		FlxG.sound.pause();
@@ -265,9 +279,15 @@ class MainMenuState extends MusicBeatState
             else
             {
 				checkChanges(false);
+				createWarn(2, 'warning', null, 3);
                 trace("Error!");
             }
         }
+
+		http.onError = function(status) {
+			createWarn(2, 'warning', null, 3);
+			trace("Error!");
+		};
 
         http.request(true);
 
@@ -290,25 +310,27 @@ class MainMenuState extends MusicBeatState
 			else
 				FlxG.save.data.userTheme = 1;
 		}
-		if (profile.user != FlxG.save.data.user && profile.alpha == 1){
-			profile.inEdit = true;
-			warning.alpha = 0.7;
-      		warning.animation.play('press');
-		}
-
-		if(FlxG.keys.justPressed.ENTER && profile.inEdit && profile.alpha == 1){
-			updateUser();
-			profile.inEdit = false;
-			profile.nameText.hasFocus = false;
-			FlxG.save.data.user = profile.user;
-		}
-
-		if (FlxG.keys.justPressed.Q){
-			loadSong();
+		if (!inWarn){
+			if (profile.user != FlxG.save.data.user && profile.alpha == 1){
+				profile.inEdit = true;
+				warning.alpha = 0.7;
+				  warning.animation.play('press');
+			}
+	
+			if(FlxG.keys.justPressed.ENTER && profile.inEdit && profile.alpha == 1){
+				updateUser();
+				profile.inEdit = false;
+				profile.nameText.hasFocus = false;
+				FlxG.save.data.user = profile.user;
+			}
+	
+			if (FlxG.keys.justPressed.Q){
+				loadSong();
+			}
 		}
 
 		if (FlxG.keys.justPressed.L){
-
+			createWarn(2, 'warning', null, 3);
 		}
 
 		if (FlxG.sound.music.volume < 0.8)
@@ -325,6 +347,7 @@ class MainMenuState extends MusicBeatState
 			if (profile.alpha == 0){
 				FlxTween.tween(eventBlack, {alpha: 0.5}, 0.3);
 				profile.userOpen(true);
+				profile.discordChange(profile.colors[profile.numColor]);
 			}
 		} 
 
@@ -349,7 +372,7 @@ class MainMenuState extends MusicBeatState
 
 		//FlxG.mouse.visible=true;
 
-		if (!selectedSomethin)
+		if (!selectedSomethin || !inWarn)
 		{
 			if (controls.LEFT_P && !profile.isOpen)
 			{

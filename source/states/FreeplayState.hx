@@ -7,6 +7,7 @@ import flash.text.TextField;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.addons.display.FlxGridOverlay;
+import flixel.addons.transition.FlxTransitionableState;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.math.FlxMath;
 import flixel.text.FlxText;
@@ -217,6 +218,7 @@ class FreeplayState extends MusicBeatState
 		art.antialiasing = true;
 		add(art);
 
+
 		FlxTween.tween(art, {x: art.x + 30}, 4, {ease:FlxEase.expoInOut, type:PINGPONG});
 
 		grpSongs = new FlxTypedGroup<FreePlayThing>();
@@ -323,6 +325,8 @@ class FreeplayState extends MusicBeatState
 		}
 	}
 	function selectSong(){
+
+		FlxTransitionableState.skipNextTransOut = true;
 		
 		if (songs[curSelected].displayName == 'killer-scream' && FlxG.save.data.killer){
 			StoryMenuState.isMaid = false;

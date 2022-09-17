@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="accBf.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="A0000" x="0" y="0" width="89" height="106"/>
+	<SubTexture name="A+0000" x="89" y="0" width="140" height="106"/>
+	<SubTexture name="A-0000" x="229" y="0" width="140" height="106"/>
+	<SubTexture name="B0000" x="369" y="0" width="89" height="106"/>
+	<SubTexture name="B+0000" x="458" y="0" width="140" height="106"/>
+	<SubTexture name="B-0000" x="0" y="106" width="140" height="106"/>
+	<SubTexture name="C0000" x="140" y="106" width="89" height="106"/>
+	<SubTexture name="C+0000" x="229" y="106" width="140" height="106"/>
+	<SubTexture name="C-0000" x="369" y="106" width="140" height="106"/>
+	<SubTexture name="D0000" x="509" y="106" width="86" height="102"/>
+	<SubTexture name="D+0000" x="0" y="212" width="140" height="102"/>
+	<SubTexture name="FC0000" x="140" y="212" width="165" height="122"/>
+	<SubTexture name="S0000" x="305" y="212" width="89" height="106"/>
+	<SubTexture name="S+0000" x="394" y="212" width="140" height="106"/>
+	<SubTexture name="S-0000" x="0" y="334" width="140" height="106"/>
+</TextureAtlas>

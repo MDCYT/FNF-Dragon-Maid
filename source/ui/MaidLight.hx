@@ -22,7 +22,6 @@ class MaidLight extends FlxSprite{
     alpha = 0;
 
     updateHitbox();
-    screenCenter();
   }
 
   public function daEffect(arrow:String){
