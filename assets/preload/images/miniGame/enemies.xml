@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="enemies.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="blue0000" x="0" y="0" width="30" height="32"/>
+	<SubTexture name="gold0000" x="40" y="0" width="83" height="36"/>
+	<SubTexture name="red0000" x="0" y="46" width="109" height="64"/>
+</TextureAtlas>
