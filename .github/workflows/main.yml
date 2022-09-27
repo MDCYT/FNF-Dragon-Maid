@@ -46,6 +46,7 @@ jobs:
           haxelib install tjson
           haxelib install hxjsonast
           haxelib install hxCodec
+          haxelib install newgrounds
           haxelib install uuid
           haxelib git hxvm-luajit https://github.com/nebulazorua/hxvm-luajit
           haxelib git linc_luajit https://github.com/nebulazorua/linc_luajit
@@ -89,6 +90,7 @@ jobs:
           haxelib install tjson
           haxelib install hxjsonast
           haxelib install hxCodec
+          haxelib install newgrounds
           haxelib install uuid
           haxelib git hxvm-luajit https://github.com/nebulazorua/hxvm-luajit
           haxelib git linc_luajit https://github.com/nebulazorua/linc_luajit
@@ -133,6 +135,7 @@ jobs:
           haxelib install tjson
           haxelib install hxjsonast
           haxelib install hxCodec
+          haxelib install newgrounds
           haxelib install uuid
           haxelib git hxvm-luajit https://github.com/nebulazorua/hxvm-luajit
           haxelib git linc_luajit https://github.com/nebulazorua/linc_luajit
