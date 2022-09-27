@@ -109,6 +109,7 @@ class PlayState extends MusicBeatState
 	public var currentVisPos:Float = 0;
 	var halloweenLevel:Bool = false;
 	public var stage:Stage;
+	var scoreTxt:FlxText;
 
 	private var vocals:FlxSound;
 
@@ -177,13 +178,13 @@ class PlayState extends MusicBeatState
 	private var curSong:String = "";
 
 	private var gfSpeed:Int = 1;
-	private var health:Float = 2;
+	private var health:Float = 1;
 	private var healthb:Float = 1;
 	private var live:Float = 1;
 	private var previousHealth:Float = 1;
 	private var combo:Int = 0;
 	private var highestCombo:Int = 0;
-	private var healthBar:MaidUi;
+	private var healthBar:Healthbar;
 	private var bfBar:BfBar;
 	private var dragonBar:DragonBar;
 	private var killBar:KillBar;
@@ -960,19 +961,16 @@ class PlayState extends MusicBeatState
 		FlxG.worldBounds.set(0, 0, FlxG.width, FlxG.height);
 
 		if (!bad){
-			healthBar = new MaidUi(830, 455, boyfriend.iconName, this, 'health', 0, 2);
-			//healthBar.smooth = currentOptions.smoothHPBar;
+			healthBar = new Healthbar(0,FlxG.height*.9,boyfriend.iconName,dad.iconName,this,'health',0,2);
+			healthBar.smooth = currentOptions.smoothHPBar;
 			healthBar.scrollFactor.set();
+			healthBar.screenCenter(X);
 			if(currentOptions.healthBarColors)
-				healthBar.setColors(boyfriend.iconColor);
-			healthBar.scale.set(0.4, 0.4);
+				healthBar.setColors(dad.iconColor,boyfriend.iconColor);
 
 			if(currentOptions.downScroll){
-				healthBar.y = 30;
+				healthBar.y = FlxG.height*.1;
 			}
-
-			healthBar.scoreGrp.x += 400;
-			healthBar.accGrp.x -= 400;
 		}
 		else{
 			bfBar = new BfBar(800, 570 ,this, 'health',0,2);
@@ -995,6 +993,10 @@ class PlayState extends MusicBeatState
 
 			camHUD.alpha = 0;
 		}
+
+		scoreTxt = new FlxText(healthBar.bg.x + healthBar.bg.width / 2 - 150, healthBar.bg.y + 25, 0, "", 20);
+		scoreTxt.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		scoreTxt.scrollFactor.set();
 
 		botplayTxt = new FlxText(0, 80, 0, "[BOTPLAY]", 30);
 		botplayTxt.visible = ScoreUtils.botPlay;
@@ -1034,6 +1036,8 @@ class PlayState extends MusicBeatState
 
 		highComboTxt.text = "Highest Combo: " + highestCombo;
 
+		add(scoreTxt);
+
 		if (!bad){
 			add(healthBar);
 			healthBar.cameras = [camHUD];
@@ -1064,6 +1068,7 @@ class PlayState extends MusicBeatState
 		songNa.cameras = [camHUD];
 		redScreen.cameras = [camHUD];
 		kanna.cameras = [camHUD];
+		scoreTxt.cameras = [camHUD];
 		strumLineNotes.cameras = [camReceptor];
 		renderedNotes.cameras = [camNotes];
 		//judgeBin.cameras = [camRating];
@@ -1159,15 +1164,6 @@ class PlayState extends MusicBeatState
 
 	}
 
-	function introHud() {
-		FlxTween.tween(healthBar.scoreGrp, {x: healthBar.scoreGrp.x - 400}, 2, {ease: FlxEase.cubeInOut});
-		FlxTween.tween(healthBar.accGrp, {x: healthBar.accGrp.x + 400}, 2, {ease: FlxEase.cubeInOut, 
-			onComplete:function(_) {
-				FlxTween.tween(camGame, {height: camGame.height - 100, y: camGame.y + 50}, 1, {ease: FlxEase.cubeInOut});
-				startCountdown();
-		}});
-	}
-
 	function daNameSong(pos:Bool)
 	{
 		if (!pos)
@@ -1204,6 +1200,13 @@ class PlayState extends MusicBeatState
 	}
 
 	var musicDialogue:FlxSound;
+
+	function introHud() {
+		FlxTween.tween(camGame, {height: camGame.height - 100, y: camGame.y + 50}, 1, {ease: FlxEase.cubeInOut, onComplete: function (_) {
+			startCountdown();
+		}});
+			
+	}
 
 	function startDialogue(?dialog:Array<String>){	
 		musicDialogue = new FlxSound();
@@ -1254,6 +1257,7 @@ class PlayState extends MusicBeatState
 					introHud();
 				default:
 					introHud();
+
 			}
 			//startCountdown();
         }
@@ -1318,7 +1322,7 @@ class PlayState extends MusicBeatState
 			}
 			healthBar.setIcons(boyfriend.iconName,dad.iconName);
 			if(currentOptions.healthBarColors)
-				healthBar.setColors(boyfriend.iconColor);
+				healthBar.setColors(dad.iconColor,boyfriend.iconColor);
 
 			luaSprites[spriteName]=newSprite;
 			add(newSprite);
@@ -2172,7 +2176,25 @@ class PlayState extends MusicBeatState
 	// https://github.com/Quaver/Quaver
 
 	function updateScoreText(){
-		////
+		if(currentOptions.onlyScore){
+			if(botplayScore!=0){
+				if(songScore==0)
+					scoreTxt.text = 'Bot Score: ${botplayScore}';
+				else
+					scoreTxt.text = 'Score: ${songScore} | Bot Score: ${botplayScore}';
+			}else{
+				scoreTxt.text = 'Score: ${songScore}';
+			}
+		}else{
+			if(botplayScore!=0){
+				if(songScore==0)
+					scoreTxt.text = 'Bot Score: ${botplayScore} | ${accuracyName}: ${shownAccuracy}% | ${grade}';
+				else
+					scoreTxt.text = 'Score: ${songScore} | Bot Score: ${botplayScore} | ${accuracyName}: ${shownAccuracy}% | ${grade}';
+			}else{
+				scoreTxt.text = 'Score: ${songScore} | ${accuracyName}: ${shownAccuracy}% | ${grade}';
+			}
+		}
 	}
 	var la:Int;
 	function lockNote(dir:Int)
@@ -2244,9 +2266,6 @@ class PlayState extends MusicBeatState
 
 	override public function update(elapsed:Float)
 	{	
-
-		healthBar.setScore(songScore, shownAccuracy, Std.string(grade));
-		trace(grade);
 
 		if (bad){
 			fx.update(elapsed);
@@ -2411,13 +2430,14 @@ class PlayState extends MusicBeatState
 		if(presetTxt!=null)
 			presetTxt.visible = ScoreUtils.botPlay?false:modchart.hudVisible;
 
-
+		scoreTxt.visible = modchart.hudVisible;
 		shownAccuracy = truncateFloat(FlxMath.lerp(shownAccuracy,accuracy*100, Main.adjustFPS(0.2)),2);
 
 		if(Math.abs((accuracy*100)-shownAccuracy) <= 0.1)
 			shownAccuracy=truncateFloat(accuracy*100,2);
 		
 		updateScoreText();
+		scoreTxt.screenCenter(X);
 		botplayTxt.screenCenter(X);
 		botplayTxt.visible = ScoreUtils.botPlay;
 

@@ -20,27 +20,11 @@ import flixel.math.FlxMath;
 import flixel.FlxG;
 import states.PlayState;
 
-class PauseThing extends FlxSpriteGroup 
+class ScoreResults extends FlxSpriteGroup 
 {
 	public var grpMenuShit:FlxSpriteGroup;
-
-	public var menuItems:Array<String> = ['resume', 'restart', 'exit'];
-	public var curSelected:Int = 0;
-	public var daAnimation:Int = PlayState.pauseAnimation;
-	public var characterPause:Int = 0;
-	
-    public var circle:FlxSprite;
-	public var artWork:FlxSprite;
-	public var xAnim:Int;
-	public var isSwitch:Bool = false;
-    public var levelDifficulty:FlxText;
-    public var levelInfo:FlxText;
-
-    public var grpStars:FlxSpriteGroup;
-
-	public var isClose:Bool = false;
     
-    public function new(x:Float, y:Float, state:Int = 0)
+    public function new(x:Float, y:Float, score:Int, accuracy:Float, sick:Int, song:String)
     {
         super(x,y);
 
@@ -164,53 +148,9 @@ class PauseThing extends FlxSpriteGroup
             isSwitch = true;
     }
 
-    function pauseIntro() {
-        FlxTween.tween(circle, {x:circle.x + 700}, 0.7, {ease:FlxEase.expoInOut});	
-        FlxTween.tween(artWork, {x:artWork.x + 700}, 0.7, {ease:FlxEase.expoInOut, onComplete: function(flxTween:FlxTween){
-            FlxTween.tween(grpStars, {alpha: 1}, 0.3, {ease:FlxEase.quadInOut, onComplete: function(flxTween:FlxTween){
-                isSwitch = true;
-            }});
-                    
-        }});
-
-        FlxTween.tween(levelInfo, {alpha: 1, y: 20}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.3});
-		FlxTween.tween(levelDifficulty, {alpha: 1, y: levelDifficulty.y + 5}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.5});
-    }
-
-    function changeSelection(change:Int = 0):Void
-	{
-		curSelected += change;
-
-		if (curSelected < 0)
-			curSelected = menuItems.length - 1;
-		if (curSelected >= menuItems.length)
-			curSelected = 0;
-
-		grpMenuShit.forEach(function(spr:FlxSprite)
-		{
-			spr.animation.play('idle');
-	
-			if (spr.ID == curSelected)
-			{
-				spr.animation.play('selected');
-			}
-			spr.updateHitbox();
-		});
-	}
 
     override function update(elapsed:Float)
     {
-
-		if (FlxG.keys.justPressed.UP && !isClose && isSwitch)
-		{
-            FlxG.sound.play(Paths.sound('scrollPause'));
-			changeSelection(-1);
-		}
-		if (FlxG.keys.justPressed.DOWN && !isClose && isSwitch)
-		{
-            FlxG.sound.play(Paths.sound('scrollPause'));
-			changeSelection(1);
-		}
 
         super.update(elapsed);
     }

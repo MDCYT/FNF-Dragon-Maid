@@ -31,6 +31,7 @@ import flixel.input.mouse.FlxMouseEventManager;
 import flash.system.System;
 import ui.*;
 import sys.io.File;
+import openfl.display.BlendMode;
 
 
 class MainMenuState extends MusicBeatState
@@ -160,6 +161,8 @@ class MainMenuState extends MusicBeatState
 			menuItem.antialiasing = true;
 
 			trace(menuItem.color);
+
+			//menuItem.blend = BlendMode.SUBTRACT;
 
 			menuItems.add(menuItem);
 			if (firstStart){
