@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="scoreButtons.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="accuracy0000" x="0" y="0" width="426" height="70"/>
+	<SubTexture name="score0000" x="0" y="80" width="426" height="70"/>
+	<SubTexture name="sick0000" x="0" y="160" width="330" height="70"/>
+</TextureAtlas>

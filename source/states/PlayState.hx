@@ -2252,6 +2252,14 @@ class PlayState extends MusicBeatState
 		openSubState(new PlayStateWarning(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y, charterPos==0?inst.time:charterPos));
 	}
 
+	function finalScore(){
+		persistentUpdate = false;
+		persistentDraw = true;
+		paused = true;
+	
+		openSubState(new FinalScoreSubState(0, 0, songScore, truncateFloat(accuracy*100,2), 0));
+	}
+
 	public function openCharting() {
 		inst.pause();
 		vocals.pause();
@@ -3285,8 +3293,11 @@ class PlayState extends MusicBeatState
 					{
 						FlxG.switchState(new BadDragonState());
 					}
-					else
-						trans.transIn('main');
+					else{
+						finalScore();
+						//trans.transIn('main');
+					}
+						
 
 					// if ()
 					StoryMenuState.weekUnlocked[Std.int(Math.min(storyWeek + 1, StoryMenuState.weekUnlocked.length - 1))] = true;
@@ -3330,9 +3341,10 @@ class PlayState extends MusicBeatState
 				}
 				else addCoins(100);
 				
-				FlxG.switchState(new FreeplayState());
+				//FlxG.switchState(new FreeplayState());
+				finalScore();
 
-				FlxG.sound.playMusic(Paths.musicRandom('maidTheme', 1, 4), 1, true);
+				//FlxG.sound.playMusic(Paths.musicRandom('maidTheme', 1, 4), 1, true);
 				TitleState.playSong = false;
 			}
 		}

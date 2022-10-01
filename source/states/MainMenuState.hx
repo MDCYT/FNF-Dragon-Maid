@@ -103,6 +103,8 @@ class MainMenuState extends MusicBeatState
 
 		PlayState.lifes = 3;
 
+		
+
 		if (PlayState.bad)
 			PlayState.bad = false;
 
@@ -333,7 +335,6 @@ class MainMenuState extends MusicBeatState
 		}
 
 		if (FlxG.keys.justPressed.L){
-			createWarn(2, 'warning', null, 3);
 		}
 
 		if (FlxG.sound.music.volume < 0.8)
