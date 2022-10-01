@@ -1,78 +1,71 @@
 {
-	"animations": [
+	"charOffset": [
+		15,
+		45
+	],
+	"scale": 0.88,
+	"singDur": 6.1,
+	"anims": [
 		{
 			"offsets": [
 				0,
 				0
 			],
-			"loop": true,
 			"fps": 24,
-			"anim": "idle",
-			"indices": [],
-			"name": "tohru_idle"
+			"prefix": "IDLE",
+			"looped": false,
+			"name": "idle"
 		},
 		{
-			"loop": true,
+			"prefix": "LEFT",
 			"offsets": [
-				58,
-				-27
+				57,
+				57
 			],
-			"anim": "singLEFT",
 			"fps": 24,
-			"name": "tohru_left",
-			"indices": []
+			"name": "singLEFT",
+			"looped": false
 		},
 		{
-			"loop": true,
+			"prefix": "DOWN",
 			"offsets": [
-				55,
-				-42
+				-57,
+				-123
 			],
-			"anim": "singDOWN",
 			"fps": 24,
-			"name": "tohru_down",
-			"indices": []
+			"name": "singDOWN",
+			"looped": false
 		},
 		{
-			"loop": true,
+			"prefix": "RIGHT",
 			"offsets": [
-				-68,
-				0
+				-3,
+				-21
 			],
-			"anim": "singRIGHT",
 			"fps": 24,
-			"name": "tohru_right",
-			"indices": []
+			"name": "singRIGHT",
+			"looped": false
 		},
 		{
-			"loop": true,
+			"prefix": "UP",
 			"offsets": [
-				-7,
-				22
+				-54,
+				36
 			],
-			"anim": "singUP",
 			"fps": 24,
-			"name": "tohru_up",
-			"indices": []
+			"name": "singUP",
+			"looped": false
 		}
 	],
-	"no_antialiasing": false,
-	"image": "characters/Tohru_happy",
-	"position": [
+	"spritesheet": "tohruSprites",
+	"camOffset": [
 		100,
-		100
+		90
 	],
-	"healthicon": "tohru",
-	"flip_x": false,
-	"healthbar_colors": [
-		255,
-		221,
-		153
-	],
-	"camera_position": [
-		320,
-		460
-	],
-	"sing_duration": 6.1,
-	"scale": 0.5
+	"flipX": false,
+	"iconName": "tohru",
+	"antialiasing": true,
+	"beatDancer": false,
+	"format": "andromeda",
+	"healthColor": "0xFFFFDD99"
 }

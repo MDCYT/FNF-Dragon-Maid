@@ -757,19 +757,10 @@ class PlayState extends MusicBeatState
 
 				add(dad);
 				add(stage.layers.get("dad"));
-
-				dad.x = -198;
-        		dad.y = -192;
 				
 				add(boyfriend);
 				add(stage.layers.get("boyfriend"));
 
-				if (dad.curCharacter == 'tohru_furious')
-				{
-					tohruTween = FlxTween.tween(dad, {y: dad.y + 25, x: dad.x + 5}, 1, {ease:FlxEase.elasticInOut, type: PINGPONG});
-					daChair = 'chairc';
-				}
-				
 				chair = new FlxSprite(-800, -200).loadGraphic(Paths.image('maidDragon/house/' + daChair));
 				chair.scale.set(0.8, 0.8);
 				chair.updateHitbox();
@@ -971,6 +962,10 @@ class PlayState extends MusicBeatState
 			if(currentOptions.downScroll){
 				healthBar.y = FlxG.height*.1;
 			}
+
+			scoreTxt = new FlxText(healthBar.bg.x + healthBar.bg.width / 2 - 150, healthBar.bg.y + 25, 0, "", 20);
+			scoreTxt.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+			scoreTxt.scrollFactor.set();
 		}
 		else{
 			bfBar = new BfBar(800, 570 ,this, 'health',0,2);
@@ -991,12 +986,14 @@ class PlayState extends MusicBeatState
 				dragonBar.y = 605;
 			}
 
+			scoreTxt = new FlxText(bfBar.bg.x + bfBar.bg.width / 2 - 150, bfBar.bg.y + 25, 0, "", 20);
+			scoreTxt.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+			scoreTxt.scrollFactor.set();
+
 			camHUD.alpha = 0;
 		}
 
-		scoreTxt = new FlxText(healthBar.bg.x + healthBar.bg.width / 2 - 150, healthBar.bg.y + 25, 0, "", 20);
-		scoreTxt.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		scoreTxt.scrollFactor.set();
+		
 
 		botplayTxt = new FlxText(0, 80, 0, "[BOTPLAY]", 30);
 		botplayTxt.visible = ScoreUtils.botPlay;

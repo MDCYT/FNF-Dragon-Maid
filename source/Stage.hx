@@ -113,9 +113,6 @@ class Stage extends FlxTypedGroup<FlxBasic> {
             p2.setPosition(gf.x, gf.y);
             gf.visible = false;
           }
-          case 'tohru' | 'tohru_angry':
-            camPos.x += 180;
-            camPos.y -= 300;
     
             PlayState.daCharacterPause = 0;
           case 'tohru_furious':
