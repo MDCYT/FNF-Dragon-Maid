@@ -1,16 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
 <TextureAtlas imagePath="tohru.png">
 	<!-- Created with Adobe Animate version 19.2.1.408 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="fire0000" x="0" y="0" width="51" height="40"/>
-	<SubTexture name="fly0000" x="61" y="0" width="53" height="40"/>
-	<SubTexture name="fly0001" x="61" y="0" width="53" height="40"/>
-	<SubTexture name="fly0002" x="61" y="0" width="53" height="40"/>
-	<SubTexture name="fly0003" x="61" y="0" width="53" height="40"/>
-	<SubTexture name="fly0004" x="61" y="0" width="53" height="40"/>
-	<SubTexture name="fly0005" x="0" y="50" width="53" height="40"/>
-	<SubTexture name="fly0006" x="0" y="50" width="53" height="40"/>
-	<SubTexture name="fly0007" x="0" y="50" width="53" height="40"/>
-	<SubTexture name="fly0008" x="0" y="50" width="53" height="40"/>
-	<SubTexture name="fly0009" x="0" y="50" width="53" height="40"/>
+	<SubTexture x="0" frameWidth="95" y="0" frameX="0" name="fire0000" frameHeight="57" frameY="0" width="51" height="40"/>
+	<SubTexture x="61" frameWidth="95" y="0" frameX="0" name="fly0000" frameHeight="57" frameY="0" width="53" height="40"/>
+	<SubTexture x="61" frameWidth="95" y="0" frameX="0" name="fly0001" frameHeight="57" frameY="0" width="53" height="40"/>
+	<SubTexture x="61" frameWidth="95" y="0" frameX="0" name="fly0002" frameHeight="57" frameY="0" width="53" height="40"/>
+	<SubTexture x="61" frameWidth="95" y="0" frameX="0" name="fly0003" frameHeight="57" frameY="0" width="53" height="40"/>
+	<SubTexture x="61" frameWidth="95" y="0" frameX="0" name="fly0004" frameHeight="57" frameY="0" width="53" height="40"/>
+	<SubTexture x="0" frameWidth="95" y="50" frameX="0" name="fly0005" frameHeight="57" frameY="0" width="53" height="40"/>
+	<SubTexture x="0" frameWidth="95" y="50" frameX="0" name="fly0006" frameHeight="57" frameY="0" width="53" height="40"/>
+	<SubTexture x="0" frameWidth="95" y="50" frameX="0" name="fly0007" frameHeight="57" frameY="0" width="53" height="40"/>
+	<SubTexture x="0" frameWidth="95" y="50" frameX="0" name="fly0008" frameHeight="57" frameY="0" width="53" height="40"/>
+	<SubTexture x="0" frameWidth="95" y="50" frameX="0" name="fly0009" frameHeight="57" frameY="0" width="53" height="40"/>
 </TextureAtlas>
