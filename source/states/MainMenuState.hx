@@ -319,7 +319,7 @@ class MainMenuState extends MusicBeatState
 			if (profile.user != FlxG.save.data.user && profile.alpha == 1){
 				profile.inEdit = true;
 				warning.alpha = 0.7;
-				  warning.animation.play('press');
+				warning.animation.play('press');
 			}
 	
 			if(FlxG.keys.justPressed.ENTER && profile.inEdit && profile.alpha == 1){
@@ -331,6 +331,16 @@ class MainMenuState extends MusicBeatState
 	
 			if (FlxG.keys.justPressed.Q){
 				loadSong();
+			}
+		}
+		else{
+			if (FlxG.keys.justPressed.ENTER) {
+				FlxG.sound.play(Paths.sound('ann'));
+                cartel.popOut();
+				profile.userOpen(false);
+				FlxTween.tween(eventBlack, {alpha: 0}, 0.3, {onComplete: function (_) {
+					inWarn = false;
+				}});
 			}
 		}
 
@@ -376,7 +386,7 @@ class MainMenuState extends MusicBeatState
 
 		//FlxG.mouse.visible=true;
 
-		if (!selectedSomethin || !inWarn)
+		if (!selectedSomethin && !inWarn|| !inWarn)
 		{
 			if (controls.LEFT_P && !profile.isOpen)
 			{

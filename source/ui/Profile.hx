@@ -314,6 +314,7 @@ class Profile extends FlxSpriteGroup {
     icon.animation.addByPrefix('bf', 'bf');
     icon.animation.addByPrefix('red', 'gf');
     icon.animation.addByPrefix('blue', 'elma');
+    icon.animation.addByPrefix('yellow', 'tohru');
     icon.setGraphicSize(183, 192);
     icon.animation.play(colors[themeColor]);
     icon.updateHitbox();

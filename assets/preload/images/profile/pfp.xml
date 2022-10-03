@@ -3,6 +3,7 @@
 	<!-- Created with Adobe Animate version 19.2.1.408 -->
 	<!-- http://www.adobe.com/products/animate.html -->
 	<SubTexture name="bf0000" x="0" y="0" width="800" height="800"/>
-	<SubTexture name="elma0000" x="800" y="0" width="800" height="800"/>
-	<SubTexture name="gf0000" x="0" y="800" width="800" height="800"/>
+	<SubTexture name="elma0000" x="810" y="0" width="800" height="800"/>
+	<SubTexture name="gf0000" x="0" y="810" width="800" height="800"/>
+	<SubTexture name="tohru0000" x="810" y="810" width="800" height="800"/>
 </TextureAtlas>

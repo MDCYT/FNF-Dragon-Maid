@@ -761,25 +761,12 @@ class PlayState extends MusicBeatState
 				add(boyfriend);
 				add(stage.layers.get("boyfriend"));
 
-				chair = new FlxSprite(-800, -200).loadGraphic(Paths.image('maidDragon/house/' + daChair));
-				chair.scale.set(0.8, 0.8);
+				chair = new FlxSprite(0, 0).loadGraphic(Paths.image('maidDragon/house/chair'));
+				chair.scale.set(1.15, 1.15);
+				chair.screenCenter();
+				chair.y -= 60;
 				chair.updateHitbox();
 				add(chair);	
-
-				if (SONG.song.toLowerCase() == 'chaos-dragon')
-				{
-					smoke = new FlxSprite(-80, 660);
-					smoke.frames = Paths.getSparrowAtlas('maidDragon/smoke');
-					smoke.animation.addByPrefix('smoke', 'Humo', 24, true);
-					smoke.alpha = 0.3;
-					//smoke.scale.set(0.9, 0.9);
-					smoke.antialiasing = true;
-					smoke.updateHitbox();
-					add(smoke);
-			
-					smoke.animation.play('smoke');
-				}
-
 			case 'forest':
 				add(dad);
 				add(stage.layers.get("dad"));
@@ -2254,7 +2241,8 @@ class PlayState extends MusicBeatState
 		persistentDraw = true;
 		paused = true;
 	
-		openSubState(new FinalScoreSubState(0, 0, songScore, truncateFloat(accuracy*100,2), 0));
+		FinalScoreSubState.isStory = isStoryMode;
+		openSubState(new FinalScoreSubState(0, 0, songScore, truncateFloat(accuracy*100,2), 0, grade));
 	}
 
 	public function openCharting() {

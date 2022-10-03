@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="results.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="A0000" x="0" y="0" width="600" height="600"/>
+	<SubTexture name="A+0000" x="610" y="0" width="600" height="600"/>
+	<SubTexture name="A-0000" x="1220" y="0" width="600" height="600"/>
+	<SubTexture name="B0000" x="0" y="610" width="600" height="600"/>
+	<SubTexture name="B+0000" x="610" y="610" width="600" height="600"/>
+	<SubTexture name="B-0000" x="1220" y="610" width="600" height="600"/>
+	<SubTexture name="C0000" x="0" y="1220" width="600" height="600"/>
+	<SubTexture name="C+0000" x="610" y="1220" width="600" height="600"/>
+	<SubTexture name="C-0000" x="1220" y="1220" width="600" height="600"/>
+	<SubTexture name="D0000" x="0" y="1830" width="600" height="600"/>
+	<SubTexture name="D+0000" x="610" y="1830" width="600" height="600"/>
+	<SubTexture name="S0000" x="1220" y="1830" width="600" height="600"/>
+	<SubTexture name="S+0000" x="0" y="2440" width="600" height="600"/>
+	<SubTexture name="S-0000" x="610" y="2440" width="600" height="600"/>
+</TextureAtlas>

@@ -34,6 +34,8 @@ class FinalScoreSubState extends MusicBeatSubstate
     var overlay1:FlxSprite;
     var overlay2:FlxSprite;
 
+    var resultSpr:FlxSprite;
+
     var counter:Int = 0;
 
     var btn:Array<String> = ['score', 'accuracy', 'sick'];
@@ -53,10 +55,20 @@ class FinalScoreSubState extends MusicBeatSubstate
 	var scorex:Int = 0;
 	var accuracyx:Float = 0;
 	var sickx:Int = 0;
+    var anim:String = '';
 
-	public function new(x:Float, y:Float, score:Int = 0, accuracy:Float, sick:Int)
+    public static var isStory:Bool = false;
+
+	public function new(x:Float, y:Float, score:Int = 0, accuracy:Float, sick:Int, grade:String)
 	{
 		super();
+
+        switch (grade){
+            case "☆" | "☆☆" | '☆☆☆☆' | "☆☆☆" | "": 
+              anim = 'S+';
+            default:
+              anim = grade;
+        }
 
 		scorex = score;
 		accuracyx = accuracy;
@@ -79,8 +91,6 @@ class FinalScoreSubState extends MusicBeatSubstate
         introHUD();
 
 		cameras = [FlxG.cameras.list[FlxG.cameras.list.length - 1]];
-
-		
 
 		add(trans);
 	}
@@ -134,8 +144,17 @@ class FinalScoreSubState extends MusicBeatSubstate
         scoreOverlay.x += 500;
         add(scoreOverlay);
 
+        resultSpr = new FlxSprite(scoreOverlay.x + 150, scoreOverlay.y + 42);
+        resultSpr.frames = Paths.getSparrowAtlas('resultScore/results');
+        resultSpr.animation.addByPrefix(anim, anim + '0');
+        resultSpr.animation.play(anim);
+        resultSpr.scale.set(0.35, 0.35);
+        resultSpr.antialiasing = true;
+        resultSpr.updateHitbox();
+
         add(btnGrp);
 		add(txtGrp);
+        add(resultSpr);
 
         intro(counter);
     }
@@ -188,6 +207,7 @@ class FinalScoreSubState extends MusicBeatSubstate
     function setResult() {
 		FlxG.sound.play(Paths.sound('score3'));
 		counter ++;
+        FlxTween.tween(resultSpr, {x: resultSpr.x - 500}, 1, {ease:FlxEase.expoInOut});
         FlxTween.tween(scoreOverlay, {x: scoreOverlay.x - 500}, 1, {ease:FlxEase.expoInOut, onComplete:function (_) {
             new FlxTimer().start(1, function(tmr:FlxTimer)
             {
@@ -206,7 +226,9 @@ class FinalScoreSubState extends MusicBeatSubstate
 			FlxG.sound.play(Paths.sound('pressEnter'));
 			FlxG.camera.fade(FlxColor.WHITE, 2, true, function() {
 				FlxG.sound.playMusic(Paths.musicRandom('maidTheme', 1, 4), 1, true);
-				trans.transIn('free');
+
+                if(!isStory) trans.transIn('free');
+                else trans.transIn('main');
 			});
 		}
 

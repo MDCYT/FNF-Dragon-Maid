@@ -6,7 +6,7 @@
 	"spritesheet": "BOYFRIEND",
 	"singDur": 4,
 	"camOffset": [
-		-30,
+		-80,
 		0
 	],
 	"anims": [
