@@ -334,6 +334,8 @@ class MainMenuState extends MusicBeatState
 			}
 		}
 
+		if(FlxG.keys.justPressed.ONE){FlxG.switchState(new NESState());}
+
 		if (FlxG.keys.justPressed.L){
 		}
 
