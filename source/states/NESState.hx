@@ -10,6 +10,7 @@ import flixel.addons.transition.FlxTransitionableState;
 import flixel.addons.transition.TransitionData;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.addons.display.FlxGridOverlay;
+import flixel.addons.display.FlxBackdrop;
 import flixel.input.gamepad.FlxGamepad;
 import flixel.system.ui.FlxSoundTray;
 import flixel.input.keyboard.FlxKey;
@@ -46,7 +47,19 @@ class NESState extends MusicBeatState {
 	override public function create():Void {
 		super.create();
 
-        spawn_timer = new Timer(2000);
+        var bg1 = new FlxBackdrop(Paths.image('miniGame/Sky'), 10, 0, true, false);
+		bg1.velocity.set(-30, 0);
+		add(bg1);
+
+        var bg2 = new FlxBackdrop(Paths.image('miniGame/Mountains'), 10, 0, true, false);
+		bg2.velocity.set(-50, 0);
+		add(bg2);
+
+        var bg3 = new FlxBackdrop(Paths.image('miniGame/Floors'), 10, 0, true, false);
+		bg3.velocity.set(-60, 0);
+		add(bg3);
+
+        spawn_timer = new Timer(1500);
         spawn_timer.run = function(){
             if(FlxG.random.bool(40)){_characters.add(new NESCharacter(FlxG.width+10,FlxG.random.float(50,FlxG.height-50),"Blue",cast _characters,cast _bullets));}
             if(FlxG.random.bool(20)){_characters.add(new NESCharacter(FlxG.width+10,FlxG.random.float(50,FlxG.height-50),"Red",cast _characters,cast _bullets));}
@@ -130,7 +143,7 @@ class NESCharacter extends FlxSprite {
             case "Blue":{
                 frames = Paths.getSparrowAtlas('miniGame/enemies');
                 animation.addByPrefix('idle','blue', 12, true);
-
+                scale.add(1, 1);
                 acceleration.x = -300;
 
                 type = "Enemy";
@@ -157,6 +170,7 @@ class NESCharacter extends FlxSprite {
         }
 
         animation.play(lastAnim);
+        updateHitbox();
     }
 
 	override function update(elapsed:Float):Void{
@@ -181,17 +195,17 @@ class NESCharacter extends FlxSprite {
 
         if(FlxG.keys.justPressed.SPACE){shoot();}
 
-        if(controls.LEFT && !controls.RIGHT){
+        if(FlxG.keys.pressed.LEFT && !FlxG.keys.pressed.RIGHT){
             this.acceleration.x = -infoChar['acc'];
-        }else if(controls.RIGHT && !controls.LEFT){
+        }else if(FlxG.keys.pressed.RIGHT && !FlxG.keys.pressed.LEFT){
             this.acceleration.x = infoChar['acc'];
         }else{
             this.acceleration.x = 0;
         }
 
-        if(controls.UP && !controls.DOWN){
+        if(FlxG.keys.pressed.UP && !FlxG.keys.pressed.DOWN){
             this.acceleration.y = -infoChar['acc'];
-        }else if(controls.DOWN && !controls.UP){
+        }else if(FlxG.keys.pressed.DOWN && !FlxG.keys.pressed.UP){
             this.acceleration.y = infoChar['acc'];
         }else{
             this.acceleration.y = 0;
