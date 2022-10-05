@@ -77,6 +77,16 @@ class NESState extends MusicBeatState {
         reScale(2);
 	}
 
+    override function onFocus():Void {
+        spawn_timer = new Timer(1500);
+        spawn_timer.run = function(){
+            if(FlxG.random.bool(40)){_characters.add(new NESCharacter(FlxG.width+10,FlxG.random.float(50,FlxG.height-50),"Blue",cast _characters,cast _bullets));}
+            if(FlxG.random.bool(20)){_characters.add(new NESCharacter(FlxG.width+10,FlxG.random.float(50,FlxG.height-50),"Red",cast _characters,cast _bullets));}
+            if(FlxG.random.bool(0.1)){_characters.add(new NESCharacter(FlxG.width+10,FlxG.random.float(50,FlxG.height-50),"Gold",cast _characters,cast _bullets));}
+        }
+    }
+    override function onFocusLost():Void {spawn_timer.stop();}
+
 	override function update(elapsed:Float){
 		super.update(elapsed);
 
@@ -90,20 +100,33 @@ class NESState extends MusicBeatState {
         if(grp == null){grp = this;}
 
         for(i in grp.members){
-            if((i is FlxSprite)){(cast(i, FlxSprite)).scale.set(_scale,_scale); continue;}
-            if((i is FlxTypedGroup) || (i is FlxGroup)){reScale(_scale, cast i); continue;}
+            if((i is FlxSprite)){
+                var _sprt:FlxSprite = cast(i, FlxSprite);
+                _sprt.scale.x *= _scale;
+                _sprt.scale.y *= _scale;
+                continue;
+            }
+            if((i is FlxTypedGroup) || (i is FlxGroup)){
+                reScale(_scale, cast i);
+                continue;
+            }
         }
     }
 }
 
 class NESCharacter extends FlxSprite {
     private var rec_bullets:FlxTypedGroup<NESShoot> = new FlxTypedGroup<NESShoot>();
+    
+    public var _htext:FlxText;
+    private var txtTween:FlxTween;
 
-    public static final infoChar:Map<Dynamic, Float> = [
+    public static final infoChar:Map<String, Float> = [
         'inmunity' => 3,
         'maxVel' => 300,
         'acc' => 3000
     ];
+
+    public var points:Int = 0;
 
     public var targets:FlxGroup;
     public var bullets:FlxGroup;
@@ -121,6 +144,10 @@ class NESCharacter extends FlxSprite {
         this.bullets = _bullets;
         this.type = _type;
         super(X,Y);
+
+        _htext = new FlxText(-100,-100,0,"-1",8);
+        _htext.setFormat(Paths.font("8-bit-hud.ttf"), 8, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+        bullets.add(_htext);
 
         rec_bullets.add(new NESShoot());
 
@@ -143,17 +170,20 @@ class NESCharacter extends FlxSprite {
             case "Blue":{
                 frames = Paths.getSparrowAtlas('miniGame/enemies');
                 animation.addByPrefix('idle','blue', 12, true);
-                scale.add(1, 1);
+                scale.set(1.5,1.5);
                 acceleration.x = -300;
 
+                points = 100;
+                
                 type = "Enemy";
                 health_points = 1;
             }
             case "Red":{
                 frames = Paths.getSparrowAtlas('miniGame/enemies');
                 animation.addByPrefix('idle','red', 12, true);
-
                 acceleration.x = -200;
+                
+                points = 300;
 
                 type = "Enemy";                
                 health_points = 2;
@@ -161,8 +191,9 @@ class NESCharacter extends FlxSprite {
             case "Gold":{
                 frames = Paths.getSparrowAtlas('miniGame/enemies');
                 animation.addByPrefix('idle','gold', 12, true);
-
                 acceleration.x = -500;
+                
+                points = 500;
                 
                 type = "Enemy";                
                 health_points = 3;
@@ -192,7 +223,6 @@ class NESCharacter extends FlxSprite {
     }
 
     public function keyShit():Void {
-
         if(FlxG.keys.justPressed.SPACE){shoot();}
 
         if(FlxG.keys.pressed.LEFT && !FlxG.keys.pressed.RIGHT){
@@ -234,10 +264,17 @@ class NESCharacter extends FlxSprite {
             var _tim:Timer = new Timer(250);
             _tim.run = function(){this.alpha = this.alpha >= 1 ? 0 : 1 ;};
             new FlxTimer().start(infoChar['inmunity'], function(tmr:FlxTimer){this.alpha = 1; inmunity = false; _tim.stop();});
+        }else{
+            if(txtTween != null){txtTween.cancel();}
+
+            _htext.text = '${this.points}';
+            _htext.setPosition(this.getMidpoint().x, this.getMidpoint().y);
+            _htext.alpha = 1;
+
+            txtTween = FlxTween.tween(_htext, {y: _htext.y-50, alpha: 0}, 0.4, {onComplete: function(tween:FlxTween){_htext.kill();}});
         }
 
-        if(health_points <= 0){this.kill(); this.destroy();}
-        onDeath();
+        if(health_points <= 0){this.kill(); this.destroy(); onDeath();}
     }
 }
 
