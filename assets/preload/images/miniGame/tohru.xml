@@ -1,15 +1,15 @@
 <TextureAtlas imagePath="tohru.png">
 	<!-- Created with Adobe Animate version 19.2.1.408 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture x="0" frameWidth="95" y="0" frameX="0" name="fire0000" frameHeight="57" frameY="0" width="51" height="40"/>
-	<SubTexture x="61" frameWidth="95" y="0" frameX="0" name="fly0000" frameHeight="57" frameY="0" width="53" height="40"/>
-	<SubTexture x="61" frameWidth="95" y="0" frameX="0" name="fly0001" frameHeight="57" frameY="0" width="53" height="40"/>
-	<SubTexture x="61" frameWidth="95" y="0" frameX="0" name="fly0002" frameHeight="57" frameY="0" width="53" height="40"/>
-	<SubTexture x="61" frameWidth="95" y="0" frameX="0" name="fly0003" frameHeight="57" frameY="0" width="53" height="40"/>
-	<SubTexture x="61" frameWidth="95" y="0" frameX="0" name="fly0004" frameHeight="57" frameY="0" width="53" height="40"/>
-	<SubTexture x="0" frameWidth="95" y="50" frameX="0" name="fly0005" frameHeight="57" frameY="0" width="53" height="40"/>
-	<SubTexture x="0" frameWidth="95" y="50" frameX="0" name="fly0006" frameHeight="57" frameY="0" width="53" height="40"/>
-	<SubTexture x="0" frameWidth="95" y="50" frameX="0" name="fly0007" frameHeight="57" frameY="0" width="53" height="40"/>
-	<SubTexture x="0" frameWidth="95" y="50" frameX="0" name="fly0008" frameHeight="57" frameY="0" width="53" height="40"/>
-	<SubTexture x="0" frameWidth="95" y="50" frameX="0" name="fly0009" frameHeight="57" frameY="0" width="53" height="40"/>
+	<SubTexture x="0" y="0" frameWidth="53" name="fire0000" frameX="0" frameHeight="40" frameY="0" width="51" height="40"/>
+	<SubTexture x="61" y="0" frameWidth="53" name="fly0000" frameX="0" frameHeight="40" frameY="0" width="53" height="40"/>
+	<SubTexture x="61" y="0" frameWidth="53" name="fly0001" frameX="0" frameHeight="40" frameY="0" width="53" height="40"/>
+	<SubTexture x="61" y="0" frameWidth="53" name="fly0002" frameX="0" frameHeight="40" frameY="0" width="53" height="40"/>
+	<SubTexture x="61" y="0" frameWidth="53" name="fly0003" frameX="0" frameHeight="40" frameY="0" width="53" height="40"/>
+	<SubTexture x="61" y="0" frameWidth="53" name="fly0004" frameX="0" frameHeight="40" frameY="0" width="53" height="40"/>
+	<SubTexture x="0" y="50" frameWidth="53" name="fly0005" frameX="0" frameHeight="40" frameY="0" width="53" height="40"/>
+	<SubTexture x="0" y="50" frameWidth="53" name="fly0006" frameX="0" frameHeight="40" frameY="0" width="53" height="40"/>
+	<SubTexture x="0" y="50" frameWidth="53" name="fly0007" frameX="0" frameHeight="40" frameY="0" width="53" height="40"/>
+	<SubTexture x="0" y="50" frameWidth="53" name="fly0008" frameX="0" frameHeight="40" frameY="0" width="53" height="40"/>
+	<SubTexture x="0" y="50" frameWidth="53" name="fly0009" frameX="0" frameHeight="40" frameY="0" width="53" height="40"/>
 </TextureAtlas>
