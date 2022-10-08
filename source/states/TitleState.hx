@@ -239,6 +239,9 @@ class TitleState extends MusicBeatState
 
 		// credGroup.add(credTextShit);
 
+		FlxTransitionableState.skipNextTransIn = true;
+		FlxTransitionableState.skipNextTransOut = true;
+
 		add(trans);
 	}
 
