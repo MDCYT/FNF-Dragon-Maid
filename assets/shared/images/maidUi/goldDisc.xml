@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="goldDisc.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="hudGold0000" x="0" y="0" width="328" height="321"/>
+	<SubTexture name="hudGold0001" x="328" y="0" width="328" height="321"/>
+	<SubTexture name="hudGold0002" x="656" y="0" width="328" height="321"/>
+	<SubTexture name="hudGold0003" x="984" y="0" width="328" height="321"/>
+	<SubTexture name="hudGold0004" x="1312" y="0" width="328" height="321"/>
+	<SubTexture name="hudGold0005" x="1640" y="0" width="328" height="321"/>
+	<SubTexture name="hudGold0006" x="0" y="321" width="328" height="321"/>
+	<SubTexture name="hudGold0007" x="328" y="321" width="328" height="321"/>
+	<SubTexture name="hudGold0008" x="656" y="321" width="328" height="321"/>
+	<SubTexture name="hudGold0009" x="984" y="321" width="328" height="321"/>
+	<SubTexture name="hudGold0010" x="1312" y="321" width="328" height="321"/>
+	<SubTexture name="hudGold0011" x="1640" y="321" width="328" height="321"/>
+	<SubTexture name="hudGold0012" x="0" y="642" width="328" height="321"/>
+	<SubTexture name="hudGold0013" x="328" y="642" width="328" height="321"/>
+	<SubTexture name="hudGold0014" x="656" y="642" width="328" height="321"/>
+	<SubTexture name="hudGold0015" x="984" y="642" width="328" height="321"/>
+	<SubTexture name="hudGold0016" x="1312" y="642" width="328" height="321"/>
+	<SubTexture name="hudGold0017" x="1640" y="642" width="328" height="321"/>
+	<SubTexture name="hudGold0018" x="0" y="963" width="328" height="321"/>
+	<SubTexture name="hudGold0019" x="328" y="963" width="328" height="321"/>
+	<SubTexture name="hudGold0020" x="656" y="963" width="328" height="321"/>
+	<SubTexture name="hudGold0021" x="984" y="963" width="328" height="321"/>
+	<SubTexture name="hudGold0022" x="1312" y="963" width="328" height="321"/>
+	<SubTexture name="hudGold0023" x="0" y="0" width="328" height="321"/>
+	<SubTexture name="hudGold0024" x="328" y="0" width="328" height="321"/>
+	<SubTexture name="hudGold0025" x="656" y="0" width="328" height="321"/>
+	<SubTexture name="hudGold0026" x="984" y="0" width="328" height="321"/>
+	<SubTexture name="hudGold0027" x="1312" y="0" width="328" height="321"/>
+	<SubTexture name="hudGold0028" x="1640" y="0" width="328" height="321"/>
+	<SubTexture name="hudGold0029" x="0" y="321" width="328" height="321"/>
+	<SubTexture name="hudGold0030" x="328" y="321" width="328" height="321"/>
+	<SubTexture name="hudGold0031" x="656" y="321" width="328" height="321"/>
+	<SubTexture name="hudGold0032" x="984" y="321" width="328" height="321"/>
+	<SubTexture name="hudGold0033" x="1312" y="321" width="328" height="321"/>
+	<SubTexture name="hudGold0034" x="1640" y="321" width="328" height="321"/>
+	<SubTexture name="hudGold0035" x="0" y="642" width="328" height="321"/>
+	<SubTexture name="hudGold0036" x="328" y="642" width="328" height="321"/>
+	<SubTexture name="hudGold0037" x="656" y="642" width="328" height="321"/>
+	<SubTexture name="hudGold0038" x="984" y="642" width="328" height="321"/>
+	<SubTexture name="hudGold0039" x="1312" y="642" width="328" height="321"/>
+</TextureAtlas>

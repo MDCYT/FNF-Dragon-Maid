@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="discChar.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="discBf0000" x="0" y="0" width="297" height="308"/>
+	<SubTexture name="discBf0001" x="297" y="0" width="297" height="308"/>
+	<SubTexture name="discBf0002" x="594" y="0" width="297" height="308"/>
+	<SubTexture name="discBf0003" x="891" y="0" width="297" height="308"/>
+	<SubTexture name="discBf0004" x="1188" y="0" width="297" height="308"/>
+	<SubTexture name="discBf0005" x="1485" y="0" width="297" height="308"/>
+	<SubTexture name="discBf0006" x="0" y="308" width="297" height="308"/>
+	<SubTexture name="discBf0007" x="297" y="308" width="297" height="308"/>
+	<SubTexture name="discBf0008" x="594" y="308" width="297" height="308"/>
+	<SubTexture name="discBf0009" x="891" y="308" width="297" height="308"/>
+	<SubTexture name="discBf0010" x="1188" y="308" width="297" height="308"/>
+	<SubTexture name="discBf0011" x="1485" y="308" width="297" height="308"/>
+	<SubTexture name="discBf0012" x="0" y="616" width="297" height="308"/>
+	<SubTexture name="discBf0013" x="297" y="616" width="297" height="308"/>
+	<SubTexture name="discBf0014" x="594" y="616" width="297" height="308"/>
+	<SubTexture name="discBf0015" x="891" y="616" width="297" height="308"/>
+	<SubTexture name="discBf0016" x="1188" y="616" width="297" height="308"/>
+	<SubTexture name="discBf0017" x="1485" y="616" width="297" height="308"/>
+	<SubTexture name="discBf0018" x="0" y="924" width="297" height="308"/>
+	<SubTexture name="discBf0019" x="297" y="924" width="297" height="308"/>
+	<SubTexture name="discBf0020" x="594" y="924" width="297" height="308"/>
+	<SubTexture name="discBf0021" x="891" y="924" width="297" height="308"/>
+	<SubTexture name="discBf0022" x="1188" y="924" width="297" height="308"/>
+	<SubTexture name="discGf0000" x="1485" y="924" width="297" height="308"/>
+	<SubTexture name="discGf0001" x="0" y="1232" width="297" height="308"/>
+	<SubTexture name="discGf0002" x="297" y="1232" width="297" height="308"/>
+	<SubTexture name="discGf0003" x="594" y="1232" width="297" height="308"/>
+	<SubTexture name="discGf0004" x="891" y="1232" width="297" height="308"/>
+	<SubTexture name="discGf0005" x="1188" y="1232" width="297" height="308"/>
+	<SubTexture name="discGf0006" x="1485" y="1232" width="297" height="308"/>
+	<SubTexture name="discGf0007" x="0" y="1540" width="297" height="308"/>
+	<SubTexture name="discGf0008" x="297" y="1540" width="297" height="308"/>
+	<SubTexture name="discGf0009" x="594" y="1540" width="297" height="308"/>
+	<SubTexture name="discGf0010" x="891" y="1540" width="297" height="308"/>
+	<SubTexture name="discGf0011" x="1188" y="1540" width="297" height="308"/>
+	<SubTexture name="discGf0012" x="1485" y="1540" width="297" height="308"/>
+	<SubTexture name="discGf0013" x="0" y="1848" width="297" height="308"/>
+	<SubTexture name="discGf0014" x="297" y="1848" width="297" height="308"/>
+	<SubTexture name="discGf0015" x="594" y="1848" width="297" height="308"/>
+	<SubTexture name="discGf0016" x="891" y="1848" width="297" height="308"/>
+	<SubTexture name="discGf0017" x="1188" y="1848" width="297" height="308"/>
+	<SubTexture name="discGf0018" x="1485" y="1848" width="297" height="308"/>
+	<SubTexture name="discGf0019" x="0" y="2156" width="297" height="308"/>
+	<SubTexture name="discGf0020" x="297" y="2156" width="297" height="308"/>
+	<SubTexture name="discGf0021" x="594" y="2156" width="297" height="308"/>
+	<SubTexture name="discGf0022" x="891" y="2156" width="297" height="308"/>
+</TextureAtlas>

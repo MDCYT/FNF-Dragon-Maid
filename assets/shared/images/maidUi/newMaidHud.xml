@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="newMaidHud.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="hudBf0000" x="0" y="0" width="625" height="194"/>
+	<SubTexture name="hudBf0001" x="625" y="0" width="625" height="194"/>
+	<SubTexture name="hudBf0002" x="1250" y="0" width="625" height="194"/>
+	<SubTexture name="hudBf0003" x="0" y="194" width="625" height="194"/>
+	<SubTexture name="hudBf0004" x="625" y="194" width="625" height="194"/>
+	<SubTexture name="hudBf0005" x="1250" y="194" width="625" height="194"/>
+	<SubTexture name="hudBf0006" x="0" y="388" width="625" height="194"/>
+	<SubTexture name="hudBf0007" x="625" y="388" width="625" height="194"/>
+	<SubTexture name="hudBf0008" x="1250" y="388" width="625" height="194"/>
+	<SubTexture name="hudBf0009" x="0" y="582" width="625" height="194"/>
+	<SubTexture name="hudBf0010" x="625" y="582" width="625" height="194"/>
+	<SubTexture name="hudBf0011" x="1250" y="582" width="625" height="194"/>
+	<SubTexture name="hudBf0012" x="0" y="776" width="625" height="194"/>
+	<SubTexture name="hudBf0013" x="625" y="776" width="625" height="194"/>
+	<SubTexture name="hudBf0014" x="1250" y="776" width="625" height="194"/>
+	<SubTexture name="hudBf0015" x="0" y="970" width="625" height="194"/>
+	<SubTexture name="hudBf0016" x="625" y="970" width="625" height="194"/>
+	<SubTexture name="hudBf0017" x="1250" y="970" width="625" height="194"/>
+	<SubTexture name="hudBf0018" x="0" y="1164" width="625" height="194"/>
+	<SubTexture name="hudBf0019" x="625" y="1164" width="625" height="194"/>
+	<SubTexture name="hudBf0020" x="1250" y="1164" width="625" height="194"/>
+	<SubTexture name="hudBf0021" x="0" y="1358" width="625" height="194"/>
+	<SubTexture name="hudBf0022" x="625" y="1358" width="625" height="194"/>
+	<SubTexture name="hudGf0000" x="1250" y="1358" width="625" height="194"/>
+	<SubTexture name="hudGf0001" x="0" y="1552" width="625" height="194"/>
+	<SubTexture name="hudGf0002" x="625" y="1552" width="625" height="194"/>
+	<SubTexture name="hudGf0003" x="1250" y="1552" width="625" height="194"/>
+	<SubTexture name="hudGf0004" x="0" y="1746" width="625" height="194"/>
+	<SubTexture name="hudGf0005" x="625" y="1746" width="625" height="194"/>
+	<SubTexture name="hudGf0006" x="1250" y="1746" width="625" height="194"/>
+	<SubTexture name="hudGf0007" x="0" y="1940" width="625" height="194"/>
+	<SubTexture name="hudGf0008" x="625" y="1940" width="625" height="194"/>
+	<SubTexture name="hudGf0009" x="1250" y="1940" width="625" height="194"/>
+	<SubTexture name="hudGf0010" x="0" y="2134" width="625" height="194"/>
+	<SubTexture name="hudGf0011" x="625" y="2134" width="625" height="194"/>
+	<SubTexture name="hudGf0012" x="1250" y="2134" width="625" height="194"/>
+	<SubTexture name="hudGf0013" x="0" y="2328" width="625" height="194"/>
+	<SubTexture name="hudGf0014" x="625" y="2328" width="625" height="194"/>
+	<SubTexture name="hudGf0015" x="1250" y="2328" width="625" height="194"/>
+	<SubTexture name="hudGf0016" x="0" y="2522" width="625" height="194"/>
+	<SubTexture name="hudGf0017" x="625" y="2522" width="625" height="194"/>
+	<SubTexture name="hudGf0018" x="1250" y="2522" width="625" height="194"/>
+	<SubTexture name="hudGf0019" x="0" y="2716" width="625" height="194"/>
+	<SubTexture name="hudGf0020" x="625" y="2716" width="625" height="194"/>
+	<SubTexture name="hudGf0021" x="1250" y="2716" width="625" height="194"/>
+	<SubTexture name="hudGf0022" x="0" y="2910" width="625" height="194"/>
+</TextureAtlas>
