@@ -24,34 +24,23 @@ class MaidUi extends FlxSpriteGroup {
   public var value:Float = 2;
   public var accSpr:FlxSprite;
   public var disc:FlxSprite;
+  public var goldenDisc:FlxSprite;
 
   ///group
+  public var plusGrp:FlxSpriteGroup;
   public var scoreGrp:FlxSpriteGroup;
   public var accGrp:FlxSpriteGroup;
 
-  var rank:Array<String> = ["S+",
-  "S+",
-  "S+",
-  "S+",
-  "S+",
-  "S",
-  "S-",
-  "A+",
-  "A",
-  "A-",
-  "B+",
-  "B",
-  "B-",
-  "C+",
-  "C",
-  "C-",
-  "D+",
-  "D"
-  ];
+  var rank:Array<String> = ["S+","S+","S+","S+","S+","S","S-","A+","A","A-","B+","B","B-","C+","C","C-","D+","D"];
   var accString:String = '';
   var display:Float = 2;
   var instance:FlxBasic;
   var property:String;
+  
+  public var pointCombo = 0;
+  public var tempCombo = 0;
+  private var tmrCombo:FlxTimer;
+
   public function new(x:Float, y:Float, player1:String, ?instance:FlxBasic, ?property:String, min:Float=0, max:Float=2, baseColor:FlxColor=0xFFFF0000){
     super(x,y);
     if(property==null || instance==null){
@@ -77,6 +66,7 @@ class MaidUi extends FlxSpriteGroup {
 
     scoreGrp = new FlxSpriteGroup();
     accGrp = new FlxSpriteGroup();
+    plusGrp = new FlxSpriteGroup();
 
     score = new FlxSprite(849, 568);
     score.frames = Paths.getSparrowAtlas('maidUi/newMaidHud');
@@ -102,6 +92,15 @@ class MaidUi extends FlxSpriteGroup {
     disc.updateHitbox();
     disc.antialiasing = true;
 
+    goldenDisc = new FlxSprite(1100, 530);
+    goldenDisc.frames = Paths.getSparrowAtlas('maidUi/goldDisc');
+    goldenDisc.animation.addByPrefix('disc', 'hudGold', 24, true);
+    goldenDisc.animation.play('disc');
+    goldenDisc.scale.set(0.53, 0.53);
+    goldenDisc.updateHitbox();
+    goldenDisc.antialiasing = true;
+    goldenDisc.alpha = 0;
+
     bar = new FlxBar(871, 622, RIGHT_TO_LEFT, 300, 15, this, 'display', min, max);
     bar.angle = 3.5;
     bar.antialiasing = true;
@@ -118,27 +117,40 @@ class MaidUi extends FlxSpriteGroup {
     txt.antialiasing = true;
     txt.angle = 4.2;
 
+    for(i in 0...4){
+      var _pt:FlxSprite = new FlxSprite(i * 30,i * 2);
+      _pt.frames = Paths.getSparrowAtlas('maidUi/plus');
+      _pt.animation.addByPrefix("idle","circle", 30, false);
+      _pt.animation.play("idle");
+      _pt.setGraphicSize(25,25);
+      _pt.antialiasing = true;
+      _pt.alpha = 0;
+      plusGrp.add(_pt);
+    }
+    plusGrp.setPosition(700, 260);
+    CoolUtil.getSound(Paths.sound("combo"));
+    tmrCombo = new FlxTimer().start(1, function(tmr){});
+
     accSpr = new FlxSprite(4, 568);
     accSpr.frames = Paths.getSparrowAtlas('maidUi/results');
-    for (i in 0...rank.length){
-      accSpr.animation.addByPrefix(rank[i], rank[i] + '0', 24, false);
-    }
+    for(i in 0...rank.length){accSpr.animation.addByPrefix(rank[i], rank[i] + '0', 24, false);}
     accSpr.scale.set(0.2, 0.2);
     accSpr.updateHitbox();
     accSpr.antialiasing = true;
     accSpr.scrollFactor.set();
 
     scoreGrp.add(disc);
+    scoreGrp.add(goldenDisc);
     scoreGrp.add(bar);
     scoreGrp.add(score);
     scoreGrp.add(iconP1);
     scoreGrp.add(txt);
+    scoreGrp.add(plusGrp);
     accGrp.add(acc);
     accGrp.add(accSpr);
 
     add(accGrp);
     add(scoreGrp);
-
   }
   public function setIcons(?player1){
     player1=player1==null?iconP1.animation.curAnim.name:player1;
@@ -149,7 +161,29 @@ class MaidUi extends FlxSpriteGroup {
     txt.color = baseColor;
     bar.createFilledBar(FlxColor.WHITE, baseColor);
   }
-  
+
+  public function plusCombo():Void {
+    tempCombo++;
+
+    if(tmrCombo != null){tmrCombo.active = false;}
+    tmrCombo = new FlxTimer().start(((Conductor.stepCrochet / 1000)*16), function(tmr){tempCombo = 0;});
+
+    if(tempCombo >= 16){
+      tempCombo = 0;
+      pointCombo++;
+
+      var _curPoint:FlxSprite = plusGrp.members[plusGrp.members.length - (pointCombo-1)];
+      if(_curPoint != null){
+        _curPoint.alpha = 1;
+        _curPoint.animation.play("idle", true);
+        FlxG.sound.play(CoolUtil.getSound(Paths.sound("combo")));
+        if(pointCombo == 5){goldenDisc.alpha = 1;}
+      }      
+    }
+  }
+
+  var lerpScore:Int = 0;
+  var curScore:Int = 0;
   public function setScore(score:Int, grade:String){
     var anim:String = 'FC';
     switch (grade){
@@ -160,7 +194,7 @@ class MaidUi extends FlxSpriteGroup {
       default:
         anim = grade;
     }
-    txt.text =  Std.string(score);
+    curScore = score;
     accSpr.animation.play(anim);
   }
   public function setIconSize(iconP1Size:Int){
@@ -179,7 +213,6 @@ class MaidUi extends FlxSpriteGroup {
     setIconSize(Std.int(iconP1.width+15));
     setGradeSize(Std.int(accSpr.width+15));
     acc.animation.play('acc');
-
   }
 
   override function update(elapsed:Float){
@@ -214,13 +247,11 @@ class MaidUi extends FlxSpriteGroup {
       txt.angle -= 0.1;
       trace(txt.angle);
     }
-
-    if(FlxG.mouse.pressed){
-      txt.setPosition(FlxG.mouse.x, FlxG.mouse.y);
-      trace(txt.x + ' ' + txt.y);
-    }
+    
+    lerpScore = Std.int(FlxMath.lerp(lerpScore, curScore, 0.1));
 
     super.update(elapsed);
-
+    
+    txt.text =  Std.string(lerpScore);
   }
 }

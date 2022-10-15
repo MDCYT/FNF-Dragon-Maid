@@ -2168,7 +2168,6 @@ class PlayState extends MusicBeatState
 	// https://github.com/Quaver/Quaver
 
 	function updateScoreText(){
-
 		healthBar.setScore(${songScore}, ${grade});
 		if(currentOptions.onlyScore){
 			if(botplayScore!=0){
@@ -3852,6 +3851,7 @@ class PlayState extends MusicBeatState
 			gf.playAnim('sad');
 		}
 		combo = 0;
+		healthBar.tempCombo = 0;
 		showCombo();
 	
 		songScore += judgeMan.getJudgementScore('miss');
@@ -3953,6 +3953,7 @@ class PlayState extends MusicBeatState
 			gf.playAnim('sad');
 		}
 		combo = 0;
+		healthBar.tempCombo = 0;
 		showCombo();
 
 		songScore -= 600;
@@ -4030,6 +4031,7 @@ class PlayState extends MusicBeatState
 
 		if(!note.isSustainNote){
 			health += judgeMan.getJudgementHealth(judgement);
+			healthBar.plusCombo();
 		}
 
 		if(health>2)
@@ -4082,7 +4084,6 @@ class PlayState extends MusicBeatState
 		//}
 		vocals.volume = 1;
 		updateAccuracy();
-
 	}
 
 	var fastCarCanDrive:Bool = true;
