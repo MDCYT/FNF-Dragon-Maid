@@ -239,7 +239,7 @@ class MaidUi extends FlxSpriteGroup {
     else
       iconP1.animation.curAnim.curFrame = iconP1.neutralIndex;
 
-    if (FlxG.keys.justPressed.UP) {
+    /*if (FlxG.keys.justPressed.UP) {
       txt.angle += 0.1;
       trace(txt.angle);
     }
@@ -249,6 +249,11 @@ class MaidUi extends FlxSpriteGroup {
     }
     
     lerpScore = Std.int(FlxMath.lerp(lerpScore, curScore, 0.1));
+
+    if(FlxG.mouse.pressed){
+      txt.setPosition(FlxG.mouse.x, FlxG.mouse.y);
+      trace(txt.x + ' ' + txt.y);
+    }*/
 
     super.update(elapsed);
     

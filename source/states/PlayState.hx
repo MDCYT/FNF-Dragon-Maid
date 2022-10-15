@@ -761,6 +761,9 @@ class PlayState extends MusicBeatState
 				add(boyfriend);
 				add(stage.layers.get("boyfriend"));
 
+				gf.setPosition(689, 192);
+				stage.table.setPosition(490, 443);
+
 				chair = new FlxSprite(0, 0).loadGraphic(Paths.image('maidDragon/house/chair'));
 				chair.scale.set(1.15, 1.15);
 				chair.screenCenter();
@@ -774,24 +777,10 @@ class PlayState extends MusicBeatState
 				add(boyfriend);
 				add(stage.layers.get("boyfriend"));
 
-				if (StoryMenuState.isMaid)
-					boyfriend.setPosition(994, 372);
-				else
-					boyfriend.setPosition(1000, 399);
-
-
-				var pasture:FlxSprite = new FlxSprite().loadGraphic(Paths.image('maidDragon/forest/bgPasture'));
-				pasture.screenCenter();
-				pasture.scrollFactor.set();
-
-				pasture.scale.set(0.77, 0.77);
-				add(pasture);
 				overlap = new FlxSprite(140, 326).makeGraphic(200, 50, FlxColor.BLACK);
 				overlap.alpha = 0;
 				add(overlap);
 
-				//Upasture.cameras = [camHUD];
-				
 			default:
 				add(dad);
 				add(stage.layers.get("dad"));
@@ -1981,7 +1970,7 @@ class PlayState extends MusicBeatState
 		}
 
 
-		grade = died?"F":ScoreUtils.AccuracyToGrade(accuracy) + fcType;
+		grade = died?"F":ScoreUtils.AccuracyToGrade(accuracy);
 	}
 	override function openSubState(SubState:FlxSubState)
 	{
@@ -2353,7 +2342,7 @@ class PlayState extends MusicBeatState
 					}
 				}
 		}
-		else if (curStage == 'forest')
+		/*else if (curStage == 'forest')
 		{
 			if (FlxG.mouse.overlaps(overlap))
 				{
@@ -2372,43 +2361,30 @@ class PlayState extends MusicBeatState
 						FlxG.switchState(new YankenState());
 					}
 				}
-		}
+		}*/
 
 		if (FlxG.keys.justPressed.Q)
 			endSong();
 
-		/*if (FlxG.keys.pressed.RIGHT)
-			{
-				boyfriend.x += 1;
-				trace('x:' + boyfriend.x + ' y:' + boyfriend.y);
-			}
-			if (FlxG.keys.pressed.LEFT)
-			{
-				boyfriend.x -= 1;
-				trace('x:' + boyfriend.x + ' y:' + boyfriend.y);
-			}
-			if (FlxG.keys.pressed.UP)
-			{
-				boyfriend.y -= 1;
-				trace('x:' + boyfriend.x + ' y:' + boyfriend.y);
-			}
-			if (FlxG.keys.pressed.DOWN)
-			{
-				boyfriend.y += 1;
-				trace('x:' + boyfriend.x + ' y:' + boyfriend.y);
-			}
-			*/
+		
 
 		if (FlxG.keys.justPressed.ESCAPE && inDialogue)
 		{
 			nextDialogue(dialogue.length);
 		}
+
 		/*if (FlxG.mouse.pressed)
 		{
-			boyfriend.setPosition(FlxG.mouse.x, FlxG.mouse.y);
-			boyfriend.updateHitbox();
-			trace('x:' + boyfriend.x + ' y:' + boyfriend.y);
+			gf.setPosition(FlxG.mouse.x, FlxG.mouse.y);
+			gf.updateHitbox();
+			trace('x:' + gf.x + ' y:' + gf.y);
+		}
+		if (FlxG.mouse.pressedRight){
+			stage.table.setPosition(FlxG.mouse.x, FlxG.mouse.y);
+			stage.table.updateHitbox();
+			trace('x:' + stage.table.x + ' y:' + stage.table.y);
 		}*/
+
 		if (FlxG.keys.justPressed.M)
 		{
 			if (FlxG.mouse.visible)
@@ -2623,15 +2599,39 @@ class PlayState extends MusicBeatState
 
 		FlxG.watch.addQuick("beatShit", curBeat);
 		FlxG.watch.addQuick("stepShit", curStep);
-		FlxG.watch.addQuick("dad: ", dad.x + ' ' + dad.y);
-		FlxG.watch.addQuick("bf: ", boyfriend.x + ' ' + boyfriend.y);
+		FlxG.watch.addQuick("dad", 'x:' + dad.x + 'y:' + dad.y);
+		FlxG.watch.addQuick("dbf", 'x:' + boyfriend.x + 'y:' + boyfriend.y);
+		FlxG.watch.addQuick("bg: ", stage.bg.x + ' ' + stage.bg.y);
+		FlxG.watch.addQuick("cloud: ", stage.cloud.x + ' ' + stage.cloud.y);
+		FlxG.watch.addQuick("mountains: ", stage.moun.x + ' ' + stage.moun.y);
+		FlxG.watch.addQuick("base: ", stage.base.x + ' ' + stage.base.y);
 
-		/*if (FlxG.mouse.pressed){
-			boyfriend.setPosition(FlxG.mouse.x, FlxG.mouse.y);
+
+		if(FlxG.keys.pressed.CONTROL){
+			if (FlxG.mouse.pressed){
+				stage.bg.setPosition(FlxG.mouse.x, FlxG.mouse.y);
+			}
+			if (FlxG.mouse.pressedRight){
+				stage.cloud.setPosition(FlxG.mouse.x, FlxG.mouse.y);
+			}
 		}
-		if (FlxG.mouse.pressedRight){
-			dad.setPosition(FlxG.mouse.x, FlxG.mouse.y);
-		}*/
+		else if (FlxG.keys.pressed.SHIFT){
+			if (FlxG.mouse.pressed){
+				boyfriend.setPosition(FlxG.mouse.x, FlxG.mouse.y);
+			}
+			if (FlxG.mouse.pressedRight){
+				dad.setPosition(FlxG.mouse.x, FlxG.mouse.y);
+			}
+		}
+		else{
+			if (FlxG.mouse.pressed){
+				stage.base.setPosition(FlxG.mouse.x, FlxG.mouse.y);
+			}
+			if (FlxG.mouse.pressedRight){
+				stage.moun.setPosition(FlxG.mouse.x, FlxG.mouse.y);
+			}
+		}
+		
 		//FlxG.watch.addQuick("scale: ", pasture.scale);
 
 		if (curSong == 'Fresh')
