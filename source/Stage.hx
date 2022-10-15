@@ -129,8 +129,8 @@ class Stage extends FlxTypedGroup<FlxBasic> {
     
             PlayState.daCharacterPause = 0;
           case 'elma':
-            camPos.x += 200;
-            camPos.y -= 100;
+            camPos.x += 280;
+            camPos.y += 60;
             PlayState.daCharacterPause = 1;
       }
     }
@@ -204,10 +204,10 @@ class Stage extends FlxTypedGroup<FlxBasic> {
         bfPosition.x = 882;
         bfPosition.y = 823;
         
-        gfPosition.x -= 170;
-        gfPosition.y += 400;
+        gfPosition.x -= 175;
+        gfPosition.y += 408;
 			
-			  bg = new FlxSprite(-1287, 0).loadGraphic(Paths.image('maidDragon/forest/bgForest'));
+			  bg = new FlxSprite(-1230, 0).loadGraphic(Paths.image('maidDragon/forest/bgForest'));
         bg.scale.set(1.2, 1.1);
         bg.scrollFactor.set(0.95, 0.95);
         bg.antialiasing = true;

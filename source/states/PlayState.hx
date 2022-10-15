@@ -2601,13 +2601,9 @@ class PlayState extends MusicBeatState
 		FlxG.watch.addQuick("stepShit", curStep);
 		FlxG.watch.addQuick("dad", 'x:' + dad.x + 'y:' + dad.y);
 		FlxG.watch.addQuick("dbf", 'x:' + boyfriend.x + 'y:' + boyfriend.y);
-		FlxG.watch.addQuick("bg: ", stage.bg.x + ' ' + stage.bg.y);
-		FlxG.watch.addQuick("cloud: ", stage.cloud.x + ' ' + stage.cloud.y);
-		FlxG.watch.addQuick("mountains: ", stage.moun.x + ' ' + stage.moun.y);
-		FlxG.watch.addQuick("base: ", stage.base.x + ' ' + stage.base.y);
 
 
-		if(FlxG.keys.pressed.CONTROL){
+		/*if(FlxG.keys.pressed.CONTROL){
 			if (FlxG.mouse.pressed){
 				stage.bg.setPosition(FlxG.mouse.x, FlxG.mouse.y);
 			}
@@ -2630,7 +2626,7 @@ class PlayState extends MusicBeatState
 			if (FlxG.mouse.pressedRight){
 				stage.moun.setPosition(FlxG.mouse.x, FlxG.mouse.y);
 			}
-		}
+		}*/
 		
 		//FlxG.watch.addQuick("scale: ", pasture.scale);
 
