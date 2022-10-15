@@ -246,11 +246,11 @@ class MaidUi extends FlxSpriteGroup {
     if (FlxG.keys.justPressed.DOWN) {
       txt.angle -= 0.1;
       trace(txt.angle);
-    }
+    }*/
     
     lerpScore = Std.int(FlxMath.lerp(lerpScore, curScore, 0.1));
 
-    if(FlxG.mouse.pressed){
+    /*if(FlxG.mouse.pressed){
       txt.setPosition(FlxG.mouse.x, FlxG.mouse.y);
       trace(txt.x + ' ' + txt.y);
     }*/
