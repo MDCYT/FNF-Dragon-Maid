@@ -16,6 +16,7 @@ import flixel.system.ui.FlxSoundTray;
 import flixel.input.keyboard.FlxKey;
 import openfl.events.KeyboardEvent;
 import flixel.graphics.FlxGraphic;
+import flixel.effects.FlxFlicker;
 import flixel.tweens.FlxTween;
 import flixel.system.FlxSound;
 import flixel.tweens.FlxEase;
@@ -39,10 +40,14 @@ import ui.*;
 using StringTools;
 
 class NESState extends MusicBeatState {
+    private var _player:NESCharacter;
     private var _characters:FlxTypedGroup<NESCharacter>;
     private var _bullets:FlxTypedGroup<NESShoot>;
 
     private var spawn_timer:Timer;
+    private var _hud:FlxSprite;
+    private var _score:FlxText;
+    private var _kill:FlxText;
 
 	override public function create():Void {
 		super.create();
@@ -69,12 +74,30 @@ class NESState extends MusicBeatState {
         _characters = new FlxTypedGroup<NESCharacter>();
         _bullets = new FlxTypedGroup<NESShoot>();
        
-        _characters.add(new NESCharacter(100,100,"Player",cast _characters,cast _bullets,controls));
+        _player = new NESCharacter(100,100,"Player",cast _characters,cast _bullets,controls);
+        _characters.add(_player);
         
         add(_bullets);
         add(_characters);
-
+        
         reScale(2);
+
+        _hud = new FlxSprite(60,10);
+        _hud.frames = Paths.getSparrowAtlas("miniGame/Hud");
+        _hud.animation.addByPrefix("1", "x1", 12, false);
+        _hud.animation.addByPrefix("2", "x2", 12, false);
+        _hud.animation.addByPrefix("3", "x3", 12, false);
+        _hud.animation.play('${_player.health_points}');
+        _hud.updateHitbox();
+        add(_hud);
+
+        _score = new FlxText(_hud.x, _hud.y + _hud.height - 70, 0, "00000");
+        _score.setFormat(Paths.font("Diary of an 8-bit mage.otf"), 20, FlxColor.RED, CENTER);
+        add(_score);
+
+        _kill = new FlxText(_hud.x + _hud.width - 80, _hud.y + _hud.height - 80, 0, "00000");
+        _kill.setFormat(Paths.font("Diary of an 8-bit mage.otf"), 20, FlxColor.RED, CENTER);
+        add(_kill);
 	}
 
     override function onFocus():Void {
@@ -90,6 +113,11 @@ class NESState extends MusicBeatState {
 	override function update(elapsed:Float){
 		super.update(elapsed);
 
+        if(_player != null && _player.exists){
+            if(_player.points != Std.parseInt(_score.text)){_score.text = '${_player.points}';}
+            if(_player.kills != Std.parseInt(_kill.text)){_kill.text = '${_player.kills}';}
+            if(_player.health_points != Std.parseInt(_hud.animation.curAnim.name)){_hud.animation.play('${_player.health_points}');}
+        }
 	}
 
 	override function beatHit(){
@@ -126,7 +154,9 @@ class NESCharacter extends FlxSprite {
         'acc' => 3000
     ];
 
+    public var kills:Int = 0;
     public var points:Int = 0;
+    public var shootPoint:FlxPoint = new FlxPoint(0,0);
 
     public var targets:FlxGroup;
     public var bullets:FlxGroup;
@@ -135,7 +165,7 @@ class NESCharacter extends FlxSprite {
 
     public var inmunity:Bool = false;
     public var type:String = "";
-    public var health_points:Int = 5;
+    public var health_points:Int = 3;
     public var onDeath:Void->Void = function(){};
 
     public function new(X:Float, Y:Float, _type:String, _targets:FlxGroup, _bullets:FlxGroup, _controls:Controls = null){
@@ -166,6 +196,7 @@ class NESCharacter extends FlxSprite {
                 frames = Paths.getSparrowAtlas('miniGame/tohru');
                 animation.addByPrefix('idle','fly', 12, true);
                 animation.addByPrefix('shoot','fire', 12, false);
+                shootPoint.set(36.6,36.6);
             }
             case "Blue":{
                 frames = Paths.getSparrowAtlas('miniGame/enemies');
@@ -206,19 +237,15 @@ class NESCharacter extends FlxSprite {
 
 	override function update(elapsed:Float):Void{
 		super.update(elapsed);
-
         if(type == "Player"){
             if(this.animation.finished && this.animation != null && this.animation.curAnim != null && this.animation.curAnim.name == "shoot"){animation.play('idle');}
 
             keyShit();
 
-            if(FlxG.overlap(this, targets)){
-                for(t in targets){
-                    if(t != this && FlxG.overlap(this, t)){
-                        checkHit();
-                    }
-                }
-            }
+            if(FlxG.overlap(this, targets)){for(t in targets){if(t != this && FlxG.overlap(this, t)){checkHit();}}}
+            
+            if(this.x <= 0){this.x = 0;} if(this.x + this.width >= FlxG.width){this.x = FlxG.width - this.width;}
+            if(this.y <= 0){this.y = 0;} if(this.y + this.height >= FlxG.height){this.y = FlxG.height - this.height;}
         }
     }
 
@@ -245,8 +272,10 @@ class NESCharacter extends FlxSprite {
     public function shoot():Void {
         animation.play("shoot", true);
 
+        FlxG.sound.play(Paths.sound('fireDragon'));
+
         var _bullet:NESShoot = rec_bullets.recycle(NESShoot);
-        _bullet.setPosition(this.getGraphicMidpoint().x, this.getGraphicMidpoint().y);
+        _bullet.setPosition(this.x + shootPoint.x, this.y + shootPoint.y);
         _bullet.shooter = this;
         _bullet.targets = targets;
         _bullet.flipX = this.flipX;
@@ -254,27 +283,34 @@ class NESCharacter extends FlxSprite {
         bullets.add(_bullet);
     }
 
-    public function checkHit():Void {
+    public function checkHit(?bullet:NESShoot):Void {
         if(inmunity){return;}
 
         health_points--;
 
         if(type == "Player"){
+            FlxG.sound.play(Paths.sound('dragonPunch2'));
             inmunity = true;
-            var _tim:Timer = new Timer(250);
-            _tim.run = function(){this.alpha = this.alpha >= 1 ? 0 : 1 ;};
-            new FlxTimer().start(infoChar['inmunity'], function(tmr:FlxTimer){this.alpha = 1; inmunity = false; _tim.stop();});
+            FlxFlicker.flicker(this, infoChar['inmunity'],0.04,true,true,function(flk){ inmunity = false;});
         }else{
             if(txtTween != null){txtTween.cancel();}
+            FlxG.sound.play(Paths.sound('dragonPunch'));
 
+            this.color = FlxColor.RED;
             _htext.text = '${this.points}';
             _htext.setPosition(this.getMidpoint().x, this.getMidpoint().y);
             _htext.alpha = 1;
 
-            txtTween = FlxTween.tween(_htext, {y: _htext.y-50, alpha: 0}, 0.4, {onComplete: function(tween:FlxTween){_htext.kill();}});
+            if(bullet != null && bullet.shooter.type == "Player"){bullet.shooter.points += this.points;}
+
+            new FlxTimer().start(0.05, function(tmr){this.color = 0xffffff;});
+            txtTween = FlxTween.tween(_htext, {y: _htext.y-50, alpha: 0}, 0.4);
         }
 
-        if(health_points <= 0){this.kill(); this.destroy(); onDeath();}
+        if(health_points <= 0){
+            FlxG.sound.play(Paths.sound('dragonKill')); this.kill(); this.destroy(); onDeath();
+            if(bullet != null && bullet.shooter.type == "Player"){bullet.shooter.kills++;}
+        }
     }
 }
 
@@ -296,7 +332,7 @@ class NESShoot extends FlxSprite {
         for(t in targets){
             if(t != shooter && FlxG.overlap(this, t)){
                 this.kill();
-                if((t is NESCharacter)){(cast(t, NESCharacter)).checkHit();}
+                if((t is NESCharacter)){(cast(t, NESCharacter)).checkHit(this);}
             }
         }
     }
