@@ -1,70 +1,71 @@
 {
-	"camOffset": [
-		300,
-		250
-	],
-	"healthColor": "0xFF649BEF",
-	"beatDancer": false,
 	"charOffset": [
-		-470,
-		-350
+		15,
+		45
 	],
-	"flipX": false,
-	"spritesheet": "Elma_ASSETS",
+	"camOffset": [
+		380,
+		20
+	],
+	"spritesheet": "ElmaSprites",
+	"scale": 0.88,
+	"singDur": 6.1,
 	"anims": [
 		{
-			"prefix": "elmaIdle",
+			"prefix": "IDLE",
 			"offsets": [
 				0,
 				0
 			],
 			"fps": 24,
 			"name": "idle",
-			"looped": true
+			"looped": false
 		},
 		{
-			"prefix": "elmaDown",
+			"prefix": "LEFT",
 			"offsets": [
-				80,
-				-80
-			],
-			"fps": 24,
-			"name": "singDOWN",
-			"looped": true
-		},
-		{
-			"prefix": "elmaLeft",
-			"offsets": [
-				143,
-				-56
+				-33,
+				-3
 			],
 			"fps": 24,
 			"name": "singLEFT",
-			"looped": true
+			"looped": false
 		},
 		{
-			"prefix": "elmaUp",
+			"prefix": "DOWN",
 			"offsets": [
-				-2,
-				4
+				-171,
+				-54
 			],
 			"fps": 24,
-			"name": "singUP",
-			"looped": true
+			"name": "singDOWN",
+			"looped": false
 		},
 		{
-			"prefix": "elmaRight",
+			"prefix": "RIGHT",
 			"offsets": [
-				40,
-				10
+				-255,
+				-70
 			],
 			"fps": 24,
 			"name": "singRIGHT",
-			"looped": true
+			"looped": false
+		},
+		{
+			"prefix": "UP",
+			"offsets": [
+				-258,
+				84
+			],
+			"fps": 24,
+			"name": "singUP",
+			"looped": false
 		}
 	],
-	"singDur": 6.1,
+	"flipX": false,
 	"antialiasing": true,
 	"iconName": "elma",
-	"scale": 0.55
+	"beatDancer": false,
+	"healthColor": "0xFFFFDD90",
+	"format": "andromeda"
 }

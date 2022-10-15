@@ -1,108 +1,130 @@
 {
-	"healthColor": "0xFFA5004D",
-	"beatDancer": false,
 	"charOffset": [
-		-60,
-		240
+		0,
+		0
 	],
-	"flipX": false,
-	"spritesheet": "gfMaid",
 	"anims": [
 		{
-			"prefix": "gfMaid idle",
+			"prefix": "GF IDLE MAID",
 			"offsets": [
-				-6,
-				-1
+				0,
+				0
 			],
-			"indices": null,
 			"fps": 24,
 			"name": "idle",
 			"looped": false
 		},
 		{
-			"prefix": "gfMaid left",
+			"prefix": "GF UP MAID",
 			"offsets": [
-				-25,
-				21
-			],
-			"fps": 24,
-			"name": "singLEFT",
-			"looped": false
-		},
-		{
-			"prefix": "gfMaid down",
-			"offsets": [
-				-16,
-				28
-			],
-			"fps": 24,
-			"name": "singDOWN",
-			"looped": false
-		},
-		{
-			"prefix": "gfMaid up",
-			"offsets": [
-				-3,
-				4
+				-36,
+				30
 			],
 			"fps": 24,
 			"name": "singUP",
 			"looped": false
 		},
 		{
-			"prefix": "gfMaid right",
+			"prefix": "GF LEFT MAID",
 			"offsets": [
-				-6,
-				13
+				67,
+				-14
+			],
+			"fps": 24,
+			"name": "singLEFT",
+			"looped": false
+		},
+		{
+			"prefix": "GF RIGHT MAID",
+			"offsets": [
+				-3,
+				16
 			],
 			"fps": 24,
 			"name": "singRIGHT",
 			"looped": false
 		},
 		{
-			"prefix": "gfMaid miss left",
+			"prefix": "GF DOWN MAID",
 			"offsets": [
-				-24,
-				27
+				-1,
+				-73
 			],
 			"fps": 24,
-			"name": "singLEFTmiss",
+			"name": "singDOWN",
 			"looped": false
 		},
 		{
-			"prefix": "gfMaid miss down",
+			"prefix": "GF UP MISS MAID",
 			"offsets": [
-				-18,
+				-38,
 				29
-			],
-			"indices": null,
-			"fps": 24,
-			"name": "singDOWNmiss",
-			"looped": false
-		},
-		{
-			"prefix": "gfMaid miss up",
-			"offsets": [
-				-2,
-				2
 			],
 			"fps": 24,
 			"name": "singUPmiss",
 			"looped": false
 		},
 		{
-			"prefix": "gfMaid miss right",
+			"prefix": "GF RIGHT MISS MAID",
 			"offsets": [
-				-10,
-				14
+				-2,
+				17
 			],
 			"fps": 24,
 			"name": "singRIGHTmiss",
 			"looped": false
+		},
+		{
+			"prefix": "GF LEFT MISS MAID",
+			"offsets": [
+				69,
+				-17
+			],
+			"fps": 24,
+			"name": "singLEFTmiss",
+			"looped": false
+		},
+		{
+			"prefix": "GF DOWN MISS MAID",
+			"offsets": [
+				2,
+				-80
+			],
+			"fps": 24,
+			"name": "singDOWNmiss",
+			"looped": false
+		},
+		{
+			"prefix": "GF HEY MAID",
+			"offsets": [
+				-11,
+				9
+			],
+			"fps": 24,
+			"name": "hey",
+			"looped": false
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"fps": null,
+			"prefix": "",
+			"name": "",
+			"looped": false
 		}
 	],
+	"spritesheet": "gfMaid",
 	"singDur": 4,
+	"camOffset": [
+		-60,
+		50
+	],
+	"flipX": false,
 	"antialiasing": true,
 	"iconName": "gf-maid",
-	"scale": 1
+	"beatDancer": false,
+	"format": "andromeda",
+	"healthColor": "0xFF31B0D1"
 }

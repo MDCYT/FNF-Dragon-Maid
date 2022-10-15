@@ -70,6 +70,14 @@ class Stage extends FlxTypedGroup<FlxBasic> {
   public var smoke:FlxSprite;
   public var chair:FlxSprite;
   public var black:FlxSprite;
+  public var table:FlxSprite;
+
+  //Elma var
+
+  public var base:FlxSprite;
+  public var moun:FlxSprite;
+  public var cloud:FlxSprite;
+  public var bg:FlxSprite;
 
 
   // other vars
@@ -159,7 +167,9 @@ class Stage extends FlxTypedGroup<FlxBasic> {
           else
           {
             bfPosition.x += 330;
-            bfPosition.y += 74;
+            bfPosition.y += 115;
+            dadPosition.y += 30;
+            dadPosition.x -= 5;
             gfVersion = 'gf-house';
   
           }
@@ -173,32 +183,55 @@ class Stage extends FlxTypedGroup<FlxBasic> {
 			  house.updateHitbox();
 			  add(house);
 
+        table = new FlxSprite().loadGraphic(Paths.image('maidDragon/house/table'));
+        table.antialiasing = true;
+        table.updateHitbox();
+        add(table);
+
 			  dragontendo = new FlxSprite(1760, 260).makeGraphic(185, 261, FlxColor.TRANSPARENT);
 			  dragontendo.updateHitbox();
 
 			  add(dragontendo);
       case 'forest':
         gfVersion = 'bfBeat';
-        defaultCamZoom = 0.65;
+        defaultCamZoom = 0.47;
 
-        dadPosition.y = 121;
-			  dadPosition.x = 40;
+        dadPosition.x = -726;
+        dadPosition.y = 520;
 
-        bfPosition.x += 300;
-				bfPosition.y += 20;
-				gfPosition.x -= 50;
-				gfPosition.y -= 50;
+        bfPosition.x = 882;
+        bfPosition.y = 823;
+        
+        gfPosition.x -= 150;
+        gfPosition.y += 400;
 			
-			  var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('maidDragon/forest/bgForest'));
-        bg.scrollFactor.set();
-			  bg.screenCenter();
+			  bg = new FlxSprite(-1287, 0).loadGraphic(Paths.image('maidDragon/forest/bgForest'));
+        bg.scale.set(1.2, 1.1);
+        bg.scrollFactor.set(0.95, 0.95);
+        bg.antialiasing = true;
+			  bg.updateHitbox();
+        trace(bg);
 
-			  var base:FlxSprite = new FlxSprite(0, -400).loadGraphic(Paths.image('maidDragon/forest/bgBase'));
-        base.setGraphicSize(Std.int(base.width * 1.3));
+			  cloud = new FlxSprite(-777, -430).loadGraphic(Paths.image('maidDragon/forest/cloud'));
+        cloud.scale.set(1.1, 1.1);
+        cloud.scrollFactor.set(0.95, 0.95);
+        cloud.antialiasing = true;
+        cloud.updateHitbox();
+
+        moun = new FlxSprite(-1426, -120).loadGraphic(Paths.image('maidDragon/forest/mountains'));
+        moun.scale.set(1.3, 1.3);
+        moun.antialiasing = true;
+        moun.updateHitbox();
+
+        base = new FlxSprite(-1365, -220).loadGraphic(Paths.image('maidDragon/forest/bgBase'));
+        base.scale.set(1.5, 1.5);
+        base.antialiasing = true;
         base.updateHitbox();
-			  base.screenCenter(X);
+
 		  	add(bg);
-			  add(base);
+        add(cloud);
+        add(moun);
+        add(base);
       
       case 'bad':
         defaultCamZoom = 0.80;
