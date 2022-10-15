@@ -86,7 +86,7 @@
 			"looped": false
 		}
 	],
-	"spritesheet": "GF_ass_sets_mesa",
+	"spritesheet": "GFSprites",
 	"singDur": 4,
 	"flipX": false,
 	"healthColor": "0xFFA5004D"

@@ -177,67 +177,6 @@ class Stage extends FlxTypedGroup<FlxBasic> {
 			  dragontendo.updateHitbox();
 
 			  add(dragontendo);
-
-      case 'kobayashi-house-b':
-
-        defaultCamZoom = 0.65;
-
-        if (StoryMenuState.isMaid)
-          {
-            bfPosition.x += 330;
-            bfPosition.y -= 20;
-            gfVersion = 'gf-scaredmaid';
-          }
-          else
-          {
-            bfPosition.x += 330;
-            bfPosition.y += 78;
-            gfVersion = 'gf-scared';
-  
-          }
-
-        gfPosition.y += 25;
-				gfPosition.x -= 95;
-
-       // dadPosition.x -= 540;
-        //dadPosition.y -= 680;
-
-			  house = new FlxSprite(-800, -200).loadGraphic(Paths.image('maidDragon/house/bgc'));
-			  house.scale.set(0.8, 0.8);
-			  house.updateHitbox();
-			  add(house);
-
-			  dragontendo = new FlxSprite(1780, 400).loadGraphic(Paths.image('maidDragon/house/dragontendo'));
-			  dragontendo.alpha = 0;
-			  dragontendo.scale.set(0.8, 0.8);
-			  dragontendo.updateHitbox();
-
-			  var daBump:String;
-			  var daX:Int;
-			  var daY:Int;
-
-			  switch (PlayState.SONG.song.toLowerCase())
-			  {
-				  case "chaos-dragon":
-					  daBump = 'phase3';
-				  	daX = 35;
-					  daY = 220;
-				  default: 
-					  daBump = 'phase4';
-					  daX = 35;
-					  daY = 220;
-		  	}
-
-			  houseBump = new FlxSprite(daX, daY);
-			  houseBump.frames = Paths.getSparrowAtlas('maidDragon/house/' + daBump);
-			  houseBump.animation.addByPrefix('bump', 'bumpinkanna', 24, false);
-			  houseBump.scale.set(0.7, 0.7);
-			  houseBump.antialiasing = true;
-			  houseBump.updateHitbox();
-			  add(houseBump);
-
-			  add(dragontendo);
-      
       case 'forest':
         gfVersion = 'bfBeat';
         defaultCamZoom = 0.65;

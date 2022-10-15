@@ -58,7 +58,6 @@ class MainMenuState extends MusicBeatState
 	public static var animAchi:Bool = false;
 	public static var daAchi:Int = 0;
 	public static var firstStart:Bool = true;
-	public static var finishedFunnyMove:Bool = false;
 
 	var hora:String;
 	var extra:FlxSprite;
@@ -168,12 +167,13 @@ class MainMenuState extends MusicBeatState
 
 			menuItems.add(menuItem);
 			if (firstStart){
-				FlxTween.tween(menuItem,{y: 77.55}, 1.5 + (i * 0.25) ,{ease: FlxEase.expoInOut, onComplete: function(flxTween:FlxTween) 
+				FlxTween.tween(menuItem,{y: 77.55}, 1 + (i * 0.25) ,{ease: FlxEase.expoInOut, onComplete: function(flxTween:FlxTween) 
 					{ 
 						FlxTween.tween(menuItem, {y: menuItem.y + 10}, 5, {ease: FlxEase.expoInOut, type: PINGPONG});
-						changeItem();
-						finishedFunnyMove = true; 
-						selectedSomethin = false;
+						if (i == 0) changeItem();
+						if (i == optionShit.length - 1){
+							selectedSomethin = false;
+						}
 					}});
 			}
 		}
@@ -424,18 +424,15 @@ class MainMenuState extends MusicBeatState
 
 	function changeItem(huh:Int = 0,force:Bool=false)
 	{
-		if (finishedFunnyMove)
-		{
-			if(force){
-				curSelected=huh;
-			}else{
-				curSelected += huh;
+		if(force){
+			curSelected=huh;
+		}else{
+			curSelected += huh;
 	
-				if (curSelected >= menuItems.length)
-					curSelected = 0;
-				if (curSelected < 0)
-					curSelected = menuItems.length - 1;
-			}
+			if (curSelected >= menuItems.length)
+				curSelected = 0;
+			if (curSelected < 0)
+				curSelected = menuItems.length - 1;
 		}
 
 		switch (curSelected){
@@ -450,7 +447,7 @@ class MainMenuState extends MusicBeatState
 			spr.animation.play('off');
 			spr.alpha = 0.7;
 
-			if (spr.ID == curSelected && finishedFunnyMove)
+			if (spr.ID == curSelected)
 			{
 				spr.animation.play('on');
 				spr.alpha = 1;

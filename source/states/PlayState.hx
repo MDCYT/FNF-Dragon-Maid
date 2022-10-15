@@ -178,13 +178,13 @@ class PlayState extends MusicBeatState
 	private var curSong:String = "";
 
 	private var gfSpeed:Int = 1;
-	private var health:Float = 1;
-	private var healthb:Float = 1;
+	private var health:Float = 2;
+	private var healthb:Float = 2;
 	private var live:Float = 1;
 	private var previousHealth:Float = 1;
 	private var combo:Int = 0;
 	private var highestCombo:Int = 0;
-	private var healthBar:Healthbar;
+	private var healthBar:MaidUi;
 	private var bfBar:BfBar;
 	private var dragonBar:DragonBar;
 	private var killBar:KillBar;
@@ -557,12 +557,12 @@ class PlayState extends MusicBeatState
 		FlxG.cameras.reset(camGame);
 		if(!currentOptions.ratingInHUD)
 			FlxG.cameras.add(camRating);
+		FlxG.cameras.add(camLight);
 		FlxG.cameras.add(camReceptor);
 		if(currentOptions.ratingInHUD)
 			FlxG.cameras.add(camRating);
 		FlxG.cameras.add(camSus);
 		FlxG.cameras.add(camNotes);
-		FlxG.cameras.add(camLight);
 		FlxG.cameras.add(camHUD);
 		FlxG.cameras.add(pauseHUD);
 
@@ -939,20 +939,22 @@ class PlayState extends MusicBeatState
 		FlxG.worldBounds.set(0, 0, FlxG.width, FlxG.height);
 
 		if (!bad){
-			healthBar = new Healthbar(0,FlxG.height*.9,boyfriend.iconName,dad.iconName,this,'health',0,2);
-			healthBar.smooth = currentOptions.smoothHPBar;
+			healthBar = new MaidUi(0, 0, boyfriend.iconName,this,'health',0,2);
+			healthBar.visible = false;
+			//healthBar.smooth = currentOptions.smoothHPBar;
 			healthBar.scrollFactor.set();
-			healthBar.screenCenter(X);
-			if(currentOptions.healthBarColors)
-				healthBar.setColors(dad.iconColor,boyfriend.iconColor);
+			//if(currentOptions.healthBarColors)
+				//healthBar.setColors(boyfriend.iconColor);
 
 			if(currentOptions.downScroll){
 				healthBar.y = FlxG.height*.1;
 			}
 
-			scoreTxt = new FlxText(healthBar.bg.x + healthBar.bg.width / 2 - 150, healthBar.bg.y + 25, 0, "", 20);
+			healthBar.cameras = [camLight];
+			scoreTxt = new FlxText(healthBar.score.x + healthBar.score.width / 2 - 150, healthBar.score.y + 25, 0, "", 20);
 			scoreTxt.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 			scoreTxt.scrollFactor.set();
+			scoreTxt.alpha = 0;
 		}
 		else{
 			bfBar = new BfBar(800, 570 ,this, 'health',0,2);
@@ -1024,7 +1026,6 @@ class PlayState extends MusicBeatState
 
 		if (!bad){
 			add(healthBar);
-			healthBar.cameras = [camHUD];
 		}
 		else{
 			add(bfBar);
@@ -1125,7 +1126,7 @@ class PlayState extends MusicBeatState
 					startDialogue(dialogue);
 					nextDialogue();
 				default:
-					introHud();
+					startCountdown();
 			}
 		}
 		else
@@ -1138,7 +1139,7 @@ class PlayState extends MusicBeatState
 					});
 				default:
 					FlxG.camera.fade(FlxColor.WHITE, 0.5, true, function() {
-						introHud();
+						startCountdown();
 					});
 			}
 		}
@@ -1159,6 +1160,7 @@ class PlayState extends MusicBeatState
 						FlxTween.tween(songNa, {y: songNa.y + 100, alpha: 0}, 0.5, {ease: FlxEase.elasticInOut, onComplete: function(twn:FlxTween)
 							{
 								songNa.kill();
+								FlxTween.tween(healthBar.accGrp, {x: healthBar.accGrp.x + 400}, 0.6, {ease:FlxEase.expoOut});
 							}
 						});
 					});
@@ -1186,8 +1188,11 @@ class PlayState extends MusicBeatState
 	var musicDialogue:FlxSound;
 
 	function introHud() {
+		healthBar.y += 200;
+		healthBar.accGrp.x -= 400;
+		healthBar.visible = true;
 		FlxTween.tween(camGame, {height: camGame.height - 100, y: camGame.y + 50}, 1, {ease: FlxEase.cubeInOut, onComplete: function (_) {
-			startCountdown();
+			FlxTween.tween(healthBar, {y: healthBar.y - 253}, 1.5, {ease:FlxEase.expoInOut});
 		}});
 			
 	}
@@ -1238,9 +1243,9 @@ class PlayState extends MusicBeatState
 			switch (curSong.toLowerCase())
 			{
 				case 'serva':
-					introHud();
+					startCountdown();
 				default:
-					introHud();
+					startCountdown();
 
 			}
 			//startCountdown();
@@ -1304,9 +1309,9 @@ class PlayState extends MusicBeatState
 			}else{
 				newSprite = new Character(spriteX,spriteY,newCharacter);
 			}
-			healthBar.setIcons(boyfriend.iconName,dad.iconName);
+			healthBar.setIcons(boyfriend.iconName);
 			if(currentOptions.healthBarColors)
-				healthBar.setColors(dad.iconColor,boyfriend.iconColor);
+				//healthBar.setColors(dad.iconColor,boyfriend.iconColor);
 
 			luaSprites[spriteName]=newSprite;
 			add(newSprite);
@@ -1337,7 +1342,6 @@ class PlayState extends MusicBeatState
 
 	function startCountdown(animation:Bool = true):Void
 	{
-		daNameSong(currentOptions.downScroll);
 
 		FlxG.stage.addEventListener(KeyboardEvent.KEY_DOWN,keyPress);
 		FlxG.stage.addEventListener(KeyboardEvent.KEY_UP,keyRelease);
@@ -1430,6 +1434,8 @@ class PlayState extends MusicBeatState
 						countDownTween(ready);
 
 						FlxG.sound.play(Paths.sound('intro2${altSuffix}'), 0.6);
+
+						introHud();
 					case 2:
 						var set:FlxSprite = new FlxSprite().loadGraphic(Paths.image(introAlts[1]));
 						set.scrollFactor.set();
@@ -1444,6 +1450,8 @@ class PlayState extends MusicBeatState
 
 						countDownTween(set);
 						FlxG.sound.play(Paths.sound('intro1${altSuffix}'), 0.6);
+
+						daNameSong(currentOptions.downScroll);
 					case 3:
 						var go:FlxSprite = new FlxSprite().loadGraphic(Paths.image(introAlts[2]));
 						go.scrollFactor.set();
@@ -2160,6 +2168,8 @@ class PlayState extends MusicBeatState
 	// https://github.com/Quaver/Quaver
 
 	function updateScoreText(){
+
+		healthBar.setScore(${songScore}, ${grade});
 		if(currentOptions.onlyScore){
 			if(botplayScore!=0){
 				if(songScore==0)
@@ -2418,10 +2428,10 @@ class PlayState extends MusicBeatState
 
 		//modchart.update(elapsed);
 
-		if (!bad)
+		/*if (!bad)
 			healthBar.visible = ScoreUtils.botPlay?false:modchart.hudVisible;
 		if(presetTxt!=null)
-			presetTxt.visible = ScoreUtils.botPlay?false:modchart.hudVisible;
+			presetTxt.visible = ScoreUtils.botPlay?false:modchart.hudVisible;*/
 
 		scoreTxt.visible = modchart.hudVisible;
 		shownAccuracy = truncateFloat(FlxMath.lerp(shownAccuracy,accuracy*100, Main.adjustFPS(0.2)),2);

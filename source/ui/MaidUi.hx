@@ -23,15 +23,16 @@ class MaidUi extends FlxSpriteGroup {
   public var acc:FlxSprite;
   public var value:Float = 2;
   public var accSpr:FlxSprite;
+  public var disc:FlxSprite;
 
   ///group
   public var scoreGrp:FlxSpriteGroup;
   public var accGrp:FlxSpriteGroup;
 
-  var rank:Array<String> = ["FC",
-  "FC",
-  "FC",
-  "FC",
+  var rank:Array<String> = ["S+",
+  "S+",
+  "S+",
+  "S+",
   "S+",
   "S",
   "S-",
@@ -63,81 +64,83 @@ class MaidUi extends FlxSpriteGroup {
     display = Reflect.getProperty(instance,property);
 
     var loadAnim:String = 'Bf';
-    var secColor:FlxColor = 0xFF00a6e2;
+    var barColor:FlxColor = 0xFF00a6e2;
 
     switch(player1){
       case 'bf':
         loadAnim = 'Bf';
-        secColor = 0xFFa3024b;
+        barColor = 0xFF00a6e2;
       case 'gf':
         loadAnim = 'Gf';
-        secColor = 0xFF00a6e2;
+        barColor = 0xFFa3024b;
     }
 
     scoreGrp = new FlxSpriteGroup();
     accGrp = new FlxSpriteGroup();
 
-    score = new FlxSprite();
-    score.frames = Paths.getSparrowAtlas('maidUi/Score');
-    score.animation.addByPrefix('score', 'scoreUi' + loadAnim);
+    score = new FlxSprite(849, 568);
+    score.frames = Paths.getSparrowAtlas('maidUi/newMaidHud');
+    score.animation.addByPrefix('score', 'hudBf');
     score.animation.play('score');
+    score.scale.set(0.7, 0.7);
     score.updateHitbox();
     score.antialiasing = true;
 
-    acc = new FlxSprite(-980, 20);
-    acc.frames = Paths.getSparrowAtlas('maidUi/acc');
-    acc.animation.addByPrefix('acc', 'acu' + loadAnim);
+    acc = new FlxSprite(-1, 537);
+    acc.frames = Paths.getSparrowAtlas('maidUi/scoreChar');
+    acc.animation.addByPrefix('acc', 'score' + loadAnim, 24, false);
     acc.animation.play('acc');
+    acc.scale.set(0.6, 0.6);
     acc.updateHitbox();
     acc.antialiasing = true;
 
-    bgBar = new FlxSprite(score.x - 60, score.y + 14).loadGraphic(Paths.image('maidUi/bar'));
-    bgBar.antialiasing = true;
-    bgBar.updateHitbox();
+    disc = new FlxSprite(1120, 539);
+    disc.frames = Paths.getSparrowAtlas('maidUi/discChar');
+    disc.animation.addByPrefix('disc', 'disc' + loadAnim, 24, true);
+    disc.animation.play('disc');
+    disc.scale.set(0.53, 0.53);
+    disc.updateHitbox();
+    disc.antialiasing = true;
 
-    bar = new FlxBar(bgBar.x + 20, bgBar.y + 86, RIGHT_TO_LEFT, 572, 21, this, 'display', min, max);
-    bar.angle = -15;
-    bar.createFilledBar(baseColor,FlxColor.WHITE);
+    bar = new FlxBar(871, 622, RIGHT_TO_LEFT, 300, 15, this, 'display', min, max);
+    bar.angle = 3.5;
+    bar.antialiasing = true;
+    bar.createFilledBar(FlxColor.WHITE, barColor);
 
     iconP1 = new HealthIcon(player1, true);
-    iconP1.y = score.y + 78;
-    iconP1.x = score.x + 308;
+    iconP1.y = score.y - 10;
+    iconP1.x = score.x + 285;
     iconP1.updateHitbox();
 
-    txt = new FlxText(score.x - 160, score.y + 100.2, FlxG.width, "");
-		txt.setFormat(Paths.font('megaton.ttf'), 60, baseColor, LEFT);
+    txt = new FlxText(915, 688, FlxG.width, "");
+		txt.setFormat(Paths.font('scoreFont.ttf'), 24, FlxColor.WHITE, LEFT);
     txt.updateHitbox();
-    txt.angle = -12.5;
+    txt.antialiasing = true;
+    txt.angle = 4.2;
 
-    txtAcc = new FlxText(acc.x - 140, acc.y + 91, FlxG.width, "");
-		txtAcc.setFormat(Paths.font('optimus.ttf'), 62, secColor, LEFT);
-    txtAcc.updateHitbox();
-    txtAcc.angle = -12;
-
-    accSpr = new FlxSprite(-666, 123);
-    accSpr.frames = Paths.getSparrowAtlas('maidUi/acc' + loadAnim);
+    accSpr = new FlxSprite(4, 568);
+    accSpr.frames = Paths.getSparrowAtlas('maidUi/results');
     for (i in 0...rank.length){
       accSpr.animation.addByPrefix(rank[i], rank[i] + '0', 24, false);
     }
+    accSpr.scale.set(0.2, 0.2);
     accSpr.updateHitbox();
     accSpr.antialiasing = true;
     accSpr.scrollFactor.set();
 
-    scoreGrp.add(score);
+    scoreGrp.add(disc);
     scoreGrp.add(bar);
-    scoreGrp.add(bgBar);
+    scoreGrp.add(score);
     scoreGrp.add(iconP1);
     scoreGrp.add(txt);
-
     accGrp.add(acc);
-    accGrp.add(txtAcc);
     accGrp.add(accSpr);
 
     add(accGrp);
     add(scoreGrp);
 
   }
-  public function setIcons(?player1,?player2){
+  public function setIcons(?player1){
     player1=player1==null?iconP1.animation.curAnim.name:player1;
     iconP1.changeCharacter(player1);
   }
@@ -147,18 +150,17 @@ class MaidUi extends FlxSpriteGroup {
     bar.createFilledBar(FlxColor.WHITE, baseColor);
   }
   
-  public function setScore(score:Int, acc:Float, grade:String){
+  public function setScore(score:Int, grade:String){
     var anim:String = 'FC';
     switch (grade){
       case '☆☆☆☆' | "☆☆☆" | "": 
-        anim = 'FC';
+        anim = 'S+';
       case "☆" | "☆☆":
         anim = 'S+';
       default:
         anim = grade;
     }
     txt.text =  Std.string(score);
-    txtAcc.text = Std.string(FlxMath.roundDecimal(acc, 1) + '%');
     accSpr.animation.play(anim);
   }
   public function setIconSize(iconP1Size:Int){
@@ -167,8 +169,16 @@ class MaidUi extends FlxSpriteGroup {
     iconP1.updateHitbox();
   }
 
+  public function setGradeSize(gradeSize:Int){
+    accSpr.setGraphicSize(Std.int(gradeSize));
+
+    accSpr.updateHitbox();
+  }
+
   public function beatHit(curBeat:Float){
     setIconSize(Std.int(iconP1.width+15));
+    setGradeSize(Std.int(accSpr.width+15));
+    acc.animation.play('acc');
 
   }
 
@@ -185,7 +195,8 @@ class MaidUi extends FlxSpriteGroup {
 
     var percent = bar.percent;
     var opponentPercent = 100-bar.percent;
-    setIconSize(Std.int(FlxMath.lerp(iconP1.width, 100, Main.adjustFPS(0.1))));
+    setIconSize(Std.int(FlxMath.lerp(iconP1.width, 140, Main.adjustFPS(0.1))));
+    setGradeSize(Std.int(FlxMath.lerp(accSpr.width, 110, Main.adjustFPS(0.1))));
     var iconOffset:Int = 26;
 
     if (percent < 20 && iconP1.lossIndex!=-1)
@@ -196,17 +207,17 @@ class MaidUi extends FlxSpriteGroup {
       iconP1.animation.curAnim.curFrame = iconP1.neutralIndex;
 
     if (FlxG.keys.justPressed.UP) {
-      txtAcc.angle ++;
-      trace(txtAcc.angle);
+      txt.angle += 0.1;
+      trace(txt.angle);
     }
     if (FlxG.keys.justPressed.DOWN) {
-      txtAcc.angle --;
-      trace(txtAcc.angle);
+      txt.angle -= 0.1;
+      trace(txt.angle);
     }
 
     if(FlxG.mouse.pressed){
-      accSpr.setPosition(FlxG.mouse.x, FlxG.mouse.y);
-      trace(accSpr.x + ' ' + accSpr.y);
+      txt.setPosition(FlxG.mouse.x, FlxG.mouse.y);
+      trace(txt.x + ' ' + txt.y);
     }
 
     super.update(elapsed);
