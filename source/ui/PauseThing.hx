@@ -72,12 +72,10 @@ class PauseThing extends FlxSpriteGroup
 			switch (i)
 			{
 				case 0:
-					starringStar.x = 320;
-					starringStar.y = 505;
+					starringStar.setPosition(-29, -109);
 					starringStar.angle = 190;
 				case 1:
-					starringStar.x = 320;
-					starringStar.y = 505;
+					starringStar.setPosition(320, 505);
 					starringStar.angle = 190;
 			}
 
@@ -86,11 +84,12 @@ class PauseThing extends FlxSpriteGroup
 			starringStar.scale.set(0.6, 0.6);
 			starringStar.updateHitbox();
 			starringStar.animation.play('idle');
-
-            if(daAnimation == 0) starringStar.alpha = 0;
-            else starringStar.alpha = 1;
-
+            
 			grpStars.add(starringStar);
+
+			if(daAnimation == 0) grpStars.alpha = 0;
+            else grpStars.alpha = 1;
+
 		}
 
         levelInfo = new FlxText(20, 15, 0, "", 32);
@@ -169,8 +168,7 @@ class PauseThing extends FlxSpriteGroup
         FlxTween.tween(artWork, {x:artWork.x + 700}, 0.7, {ease:FlxEase.expoInOut, onComplete: function(flxTween:FlxTween){
             FlxTween.tween(grpStars, {alpha: 1}, 0.3, {ease:FlxEase.quadInOut, onComplete: function(flxTween:FlxTween){
                 isSwitch = true;
-            }});
-                    
+            }});     
         }});
 
         FlxTween.tween(levelInfo, {alpha: 1, y: 20}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.3});
@@ -200,7 +198,6 @@ class PauseThing extends FlxSpriteGroup
 
     override function update(elapsed:Float)
     {
-
 		if (FlxG.keys.justPressed.UP && !isClose && isSwitch)
 		{
             FlxG.sound.play(Paths.sound('scrollPause'));

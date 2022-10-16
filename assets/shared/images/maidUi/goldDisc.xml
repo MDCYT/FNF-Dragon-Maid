@@ -2,44 +2,44 @@
 <TextureAtlas imagePath="goldDisc.png">
 	<!-- Created with Adobe Animate version 19.2.1.408 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="hudGold0000" x="0" y="0" width="328" height="321"/>
-	<SubTexture name="hudGold0001" x="328" y="0" width="328" height="321"/>
-	<SubTexture name="hudGold0002" x="656" y="0" width="328" height="321"/>
-	<SubTexture name="hudGold0003" x="984" y="0" width="328" height="321"/>
-	<SubTexture name="hudGold0004" x="1312" y="0" width="328" height="321"/>
-	<SubTexture name="hudGold0005" x="1640" y="0" width="328" height="321"/>
-	<SubTexture name="hudGold0006" x="0" y="321" width="328" height="321"/>
-	<SubTexture name="hudGold0007" x="328" y="321" width="328" height="321"/>
-	<SubTexture name="hudGold0008" x="656" y="321" width="328" height="321"/>
-	<SubTexture name="hudGold0009" x="984" y="321" width="328" height="321"/>
-	<SubTexture name="hudGold0010" x="1312" y="321" width="328" height="321"/>
-	<SubTexture name="hudGold0011" x="1640" y="321" width="328" height="321"/>
-	<SubTexture name="hudGold0012" x="0" y="642" width="328" height="321"/>
-	<SubTexture name="hudGold0013" x="328" y="642" width="328" height="321"/>
-	<SubTexture name="hudGold0014" x="656" y="642" width="328" height="321"/>
-	<SubTexture name="hudGold0015" x="984" y="642" width="328" height="321"/>
-	<SubTexture name="hudGold0016" x="1312" y="642" width="328" height="321"/>
-	<SubTexture name="hudGold0017" x="1640" y="642" width="328" height="321"/>
-	<SubTexture name="hudGold0018" x="0" y="963" width="328" height="321"/>
-	<SubTexture name="hudGold0019" x="328" y="963" width="328" height="321"/>
-	<SubTexture name="hudGold0020" x="656" y="963" width="328" height="321"/>
-	<SubTexture name="hudGold0021" x="984" y="963" width="328" height="321"/>
-	<SubTexture name="hudGold0022" x="1312" y="963" width="328" height="321"/>
-	<SubTexture name="hudGold0023" x="0" y="0" width="328" height="321"/>
-	<SubTexture name="hudGold0024" x="328" y="0" width="328" height="321"/>
-	<SubTexture name="hudGold0025" x="656" y="0" width="328" height="321"/>
-	<SubTexture name="hudGold0026" x="984" y="0" width="328" height="321"/>
-	<SubTexture name="hudGold0027" x="1312" y="0" width="328" height="321"/>
-	<SubTexture name="hudGold0028" x="1640" y="0" width="328" height="321"/>
-	<SubTexture name="hudGold0029" x="0" y="321" width="328" height="321"/>
-	<SubTexture name="hudGold0030" x="328" y="321" width="328" height="321"/>
-	<SubTexture name="hudGold0031" x="656" y="321" width="328" height="321"/>
-	<SubTexture name="hudGold0032" x="984" y="321" width="328" height="321"/>
-	<SubTexture name="hudGold0033" x="1312" y="321" width="328" height="321"/>
-	<SubTexture name="hudGold0034" x="1640" y="321" width="328" height="321"/>
-	<SubTexture name="hudGold0035" x="0" y="642" width="328" height="321"/>
-	<SubTexture name="hudGold0036" x="328" y="642" width="328" height="321"/>
-	<SubTexture name="hudGold0037" x="656" y="642" width="328" height="321"/>
-	<SubTexture name="hudGold0038" x="984" y="642" width="328" height="321"/>
-	<SubTexture name="hudGold0039" x="1312" y="642" width="328" height="321"/>
+	<SubTexture name="hudGold instancia 10000" x="0" y="0" width="328" height="321"/>
+	<SubTexture name="hudGold instancia 10001" x="428" y="0" width="328" height="321"/>
+	<SubTexture name="hudGold instancia 10002" x="856" y="0" width="328" height="321"/>
+	<SubTexture name="hudGold instancia 10003" x="1284" y="0" width="328" height="321"/>
+	<SubTexture name="hudGold instancia 10004" x="1712" y="0" width="328" height="321"/>
+	<SubTexture name="hudGold instancia 10005" x="0" y="421" width="328" height="321"/>
+	<SubTexture name="hudGold instancia 10006" x="428" y="421" width="328" height="321"/>
+	<SubTexture name="hudGold instancia 10007" x="856" y="421" width="328" height="321"/>
+	<SubTexture name="hudGold instancia 10008" x="1284" y="421" width="328" height="321"/>
+	<SubTexture name="hudGold instancia 10009" x="1712" y="421" width="328" height="321"/>
+	<SubTexture name="hudGold instancia 10010" x="0" y="842" width="328" height="321"/>
+	<SubTexture name="hudGold instancia 10011" x="428" y="842" width="328" height="321"/>
+	<SubTexture name="hudGold instancia 10012" x="856" y="842" width="328" height="321"/>
+	<SubTexture name="hudGold instancia 10013" x="1284" y="842" width="328" height="321"/>
+	<SubTexture name="hudGold instancia 10014" x="1712" y="842" width="328" height="321"/>
+	<SubTexture name="hudGold instancia 10015" x="0" y="1263" width="328" height="321"/>
+	<SubTexture name="hudGold instancia 10016" x="428" y="1263" width="328" height="321"/>
+	<SubTexture name="hudGold instancia 10017" x="856" y="1263" width="328" height="321"/>
+	<SubTexture name="hudGold instancia 10018" x="1284" y="1263" width="328" height="321"/>
+	<SubTexture name="hudGold instancia 10019" x="1712" y="1263" width="328" height="321"/>
+	<SubTexture name="hudGold instancia 10020" x="0" y="1684" width="328" height="321"/>
+	<SubTexture name="hudGold instancia 10021" x="428" y="1684" width="328" height="321"/>
+	<SubTexture name="hudGold instancia 10022" x="856" y="1684" width="328" height="321"/>
+	<SubTexture name="hudGold instancia 10023" x="0" y="0" width="328" height="321"/>
+	<SubTexture name="hudGold instancia 10024" x="428" y="0" width="328" height="321"/>
+	<SubTexture name="hudGold instancia 10025" x="856" y="0" width="328" height="321"/>
+	<SubTexture name="hudGold instancia 10026" x="1284" y="0" width="328" height="321"/>
+	<SubTexture name="hudGold instancia 10027" x="1712" y="0" width="328" height="321"/>
+	<SubTexture name="hudGold instancia 10028" x="0" y="421" width="328" height="321"/>
+	<SubTexture name="hudGold instancia 10029" x="428" y="421" width="328" height="321"/>
+	<SubTexture name="hudGold instancia 10030" x="856" y="421" width="328" height="321"/>
+	<SubTexture name="hudGold instancia 10031" x="1284" y="421" width="328" height="321"/>
+	<SubTexture name="hudGold instancia 10032" x="1712" y="421" width="328" height="321"/>
+	<SubTexture name="hudGold instancia 10033" x="0" y="842" width="328" height="321"/>
+	<SubTexture name="hudGold instancia 10034" x="428" y="842" width="328" height="321"/>
+	<SubTexture name="hudGold instancia 10035" x="856" y="842" width="328" height="321"/>
+	<SubTexture name="hudGold instancia 10036" x="1284" y="842" width="328" height="321"/>
+	<SubTexture name="hudGold instancia 10037" x="1712" y="842" width="328" height="321"/>
+	<SubTexture name="hudGold instancia 10038" x="0" y="1263" width="328" height="321"/>
+	<SubTexture name="hudGold instancia 10039" x="428" y="1263" width="328" height="321"/>
 </TextureAtlas>

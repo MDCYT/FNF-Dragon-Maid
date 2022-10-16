@@ -55,11 +55,13 @@ class MaidUi extends FlxSpriteGroup {
     var loadAnim:String = 'Bf';
     var barColor:FlxColor = 0xFF00a6e2;
 
+    trace(player1);
+
     switch(player1){
-      case 'bf':
+      case 'bf' | 'bfMaid-player':
         loadAnim = 'Bf';
         barColor = 0xFF00a6e2;
-      case 'gf':
+      case 'gf' | 'gf-maid':
         loadAnim = 'Gf';
         barColor = 0xFFa3024b;
     }
@@ -92,7 +94,7 @@ class MaidUi extends FlxSpriteGroup {
     disc.updateHitbox();
     disc.antialiasing = true;
 
-    goldenDisc = new FlxSprite(1100, 530);
+    goldenDisc = new FlxSprite(1103.5, 533);
     goldenDisc.frames = Paths.getSparrowAtlas('maidUi/goldDisc');
     goldenDisc.animation.addByPrefix('disc', 'hudGold', 24, true);
     goldenDisc.animation.play('disc');
@@ -101,7 +103,7 @@ class MaidUi extends FlxSpriteGroup {
     goldenDisc.antialiasing = true;
     goldenDisc.alpha = 0;
 
-    bar = new FlxBar(871, 622, RIGHT_TO_LEFT, 300, 15, this, 'display', min, max);
+    bar = new FlxBar(872.5, 622, RIGHT_TO_LEFT, 300, 16, this, 'display', min, max);
     bar.angle = 3.5;
     bar.antialiasing = true;
     bar.createFilledBar(FlxColor.WHITE, barColor);
@@ -177,7 +179,7 @@ class MaidUi extends FlxSpriteGroup {
         _curPoint.alpha = 1;
         _curPoint.animation.play("idle", true);
         FlxG.sound.play(CoolUtil.getSound(Paths.sound("combo")));
-        if(pointCombo == 5){goldenDisc.alpha = 1;}
+        if(pointCombo == 5){FlxTween.tween(goldenDisc, {alpha: 1}, 1);}
       }      
     }
   }

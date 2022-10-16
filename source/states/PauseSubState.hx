@@ -80,10 +80,9 @@ class PauseSubState extends MusicBeatSubstate
 						pauseSprite.isClose = true;
 						FlxTween.tween(pauseSprite, {alpha: 0}, 0.3, {ease: FlxEase.quartInOut});
 						FlxTween.tween(bg, {alpha: 0}, 0.4, {ease: FlxEase.quartInOut, onComplete: function(flxTween:FlxTween){
+							PlayState.pauseAnimation ++;
 							close();
 						}});
-						PlayState.pauseAnimation ++;
-	
 					case "restart":
 						PlayState.pauseAnimation = 0;
 						pauseSprite.isClose = true;

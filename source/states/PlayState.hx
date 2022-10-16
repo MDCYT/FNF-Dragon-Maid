@@ -289,6 +289,7 @@ class PlayState extends MusicBeatState
 	var perfect:Bool = false;
 	var maidFont = Paths.font("Claphappy.ttf");
 	var mode:String = '';
+	var skin:String = '';
 
 	public static var drownScale:Float = 0.001;
 	public static var killerDrown:Bool = false; //Killer Scream Mecanics
@@ -770,6 +771,8 @@ class PlayState extends MusicBeatState
 				chair.y -= 60;
 				chair.updateHitbox();
 				add(chair);	
+
+				skin = 'maidTohru';
 			case 'forest':
 				add(dad);
 				add(stage.layers.get("dad"));
@@ -780,6 +783,8 @@ class PlayState extends MusicBeatState
 				overlap = new FlxSprite(140, 326).makeGraphic(200, 50, FlxColor.BLACK);
 				overlap.alpha = 0;
 				add(overlap);
+
+				skin = 'maidElma';
 
 			default:
 				add(dad);
@@ -1028,16 +1033,6 @@ class PlayState extends MusicBeatState
 		updateJudgementCounters();
 
 		add(songNa);
-
-		if (StoryMenuState.isMaid){
-			maidSpecial = new FlxSpriteGroup();
-			for (i in 0...3){
-				var special = new MaidSpecials(680 + (i * 56), 607, specialsPlayer[i]);
-				maidSpecial.add(special);
-			}
-			add(maidSpecial);
-			maidSpecial.cameras = [camHUD];
-		}
 
 		songNa.cameras = [camHUD];
 		redScreen.cameras = [camHUD];
@@ -1639,7 +1634,7 @@ class PlayState extends MusicBeatState
 		// STUPID AMERICANS I WANNA NAME THE FILE BEHAVIOUR BUT I CANT
 		// DUMB FUCKING AMERICANS CANT JUST ADD A 'U' >:(
 
-		Note.noteBehaviour = Json.parse(Paths.noteSkinText("behaviorData.json",'skins','maidTohru',noteModifier));
+		Note.noteBehaviour = Json.parse(Paths.noteSkinText("behaviorData.json",'skins',skin,noteModifier));
 
 		var dynamicColouring:Null<Bool> = Note.noteBehaviour.receptorAutoColor;
 		if(dynamicColouring==null)dynamicColouring=false;
@@ -1726,7 +1721,7 @@ class PlayState extends MusicBeatState
 				else
 					oldNote = null;
 
-				var swagNote:Note = new Note(daStrumTime, daNoteData, 'maidTohru', noteModifier, EngineData.noteTypes[songNotes[3]], oldNote, false, getPosFromTime(daStrumTime));
+				var swagNote:Note = new Note(daStrumTime, daNoteData, skin , noteModifier, EngineData.noteTypes[songNotes[3]], oldNote, false, getPosFromTime(daStrumTime));
 				swagNote.sustainLength = songNotes[2];
 				swagNote.scrollFactor.set(0, 0);
 				swagNote.cameras = [camNotes];
@@ -1767,7 +1762,7 @@ class PlayState extends MusicBeatState
 					{
 						oldNote = unspawnNotes[Std.int(unspawnNotes.length - 1)];
 						var sussy = daStrumTime + (Conductor.stepCrochet * susNote) + Conductor.stepCrochet;
-						var sustainNote:Note = new Note(sussy, daNoteData, 'maidTohru', noteModifier, EngineData.noteTypes[songNotes[3]], oldNote, true, getPosFromTime(sussy));
+						var sustainNote:Note = new Note(sussy, daNoteData, skin, noteModifier, EngineData.noteTypes[songNotes[3]], oldNote, true, getPosFromTime(sussy));
 						sustainNote.cameras = [camSus];
 						sustainNote.scrollFactor.set();
 						unspawnNotes.push(sustainNote);
@@ -1871,7 +1866,7 @@ class PlayState extends MusicBeatState
 			var dirs = ["left","down","up","right"];
 			var clrs = ["purple","blue","green","red"];
 
-			var babyArrow:Receptor = new Receptor(0, center.y, i, 'maidTohru', noteModifier, Note.noteBehaviour);
+			var babyArrow:Receptor = new Receptor(0, center.y, i, skin, noteModifier, Note.noteBehaviour);
 			if(player==1)
 				noteSplashes.add(babyArrow.noteSplash);
 
@@ -3393,7 +3388,7 @@ class PlayState extends MusicBeatState
 					numScore.number = i;
 					numScore.screenCenter(XY);
 					numScore.x = coolText.x + (43 * daLoop) - 90;
-					numScore.y += 25;
+					numScore.y = gf.y + 25;
 
 					if(currentOptions.fcBasedComboColor){
 						if(judgeMan.judgementCounter.get("miss")==0 && judgeMan.judgementCounter.get("bad")==0 && judgeMan.judgementCounter.get("shit")==0){
@@ -3495,7 +3490,7 @@ class PlayState extends MusicBeatState
 			rating.judgement = daRating;
 			rating.screenCenter();
 			rating.x = coolText.x - 40;
-			rating.y -= 60;
+			rating.y = gf.y - 60;
 			add(rating);
 
 

@@ -3,14 +3,14 @@
 	<!-- Created with Adobe Animate version 19.2.1.408 -->
 	<!-- http://www.adobe.com/products/animate.html -->
 	<SubTexture name="circle0000" x="0" y="0" width="614" height="683"/>
-	<SubTexture name="circle0001" x="614" y="0" width="614" height="683"/>
-	<SubTexture name="circle0002" x="1228" y="0" width="614" height="683"/>
-	<SubTexture name="circle0003" x="0" y="683" width="614" height="683"/>
-	<SubTexture name="circle0004" x="614" y="683" width="614" height="683"/>
-	<SubTexture name="circle0005" x="1228" y="683" width="614" height="683"/>
-	<SubTexture name="circle0006" x="0" y="1366" width="614" height="683"/>
-	<SubTexture name="circle0007" x="614" y="1366" width="614" height="683"/>
-	<SubTexture name="circle0008" x="1228" y="1366" width="614" height="683"/>
-	<SubTexture name="circle0009" x="1228" y="1366" width="614" height="683"/>
-	<SubTexture name="circle0010" x="0" y="2049" width="614" height="683"/>
+	<SubTexture name="circle0001" x="714" y="0" width="614" height="683"/>
+	<SubTexture name="circle0002" x="1428" y="0" width="614" height="683"/>
+	<SubTexture name="circle0003" x="0" y="783" width="614" height="683"/>
+	<SubTexture name="circle0004" x="714" y="783" width="614" height="683"/>
+	<SubTexture name="circle0005" x="1428" y="783" width="614" height="683"/>
+	<SubTexture name="circle0006" x="0" y="1566" width="614" height="683"/>
+	<SubTexture name="circle0007" x="714" y="1566" width="614" height="683"/>
+	<SubTexture name="circle0008" x="1428" y="1566" width="614" height="683"/>
+	<SubTexture name="circle0009" x="1428" y="1566" width="614" height="683"/>
+	<SubTexture name="circle0010" x="0" y="2349" width="614" height="683"/>
 </TextureAtlas>

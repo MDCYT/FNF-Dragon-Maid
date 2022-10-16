@@ -129,9 +129,11 @@ class Stage extends FlxTypedGroup<FlxBasic> {
     
             PlayState.daCharacterPause = 0;
           case 'elma':
-            camPos.x += 280;
+            camPos.x += 300;
             camPos.y += 60;
             PlayState.daCharacterPause = 1;
+          default:
+            PlayState.daCharacterPause = 0;
       }
     }
 
