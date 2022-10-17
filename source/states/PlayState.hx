@@ -240,6 +240,7 @@ class PlayState extends MusicBeatState
 
 	var turn:String='';
 	var focus:String='';
+	var burstAnim = '';
 
 	var talking:Bool = true;
 	var songScore:Int = 0;
@@ -2910,11 +2911,15 @@ class PlayState extends MusicBeatState
 					healthBar.tempCombo = 0;
 					burst = false;
 					charZoom(true, 0.75, 'all');
+					burstAnim = '-burst';
 
 					camHUD.flash();
 					bfTrail.visible = true;
 
 					var _loop:Int = 0;
+
+					FlxTween.tween(healthBar.goldenDisc, {alpha: 0}, (Conductor.stepCrochet/1000)*128);
+
 					new FlxTimer().start((Conductor.stepCrochet/1000)*32, function(trm){
 						_loop++;
 						var _curPoint:FlxSprite = healthBar.plusGrp.members[_loop - 1];
@@ -2925,10 +2930,10 @@ class PlayState extends MusicBeatState
 
 						if(_loop == 4){
 							healthBar.canPoint = true;
-							healthBar.goldenDisc.alpha = 0;
-
+							burstAnim = '';
 							camHUD.flash();
 							bfTrail.visible = false;
+							charZoom(false, defaultCamZoom, 'all');
 						}
 					},4);
 				}
@@ -3236,7 +3241,7 @@ class PlayState extends MusicBeatState
 		{
 			noSpam = false;
 			killerDrown = false;
-			drownScale = 0.001;
+			drownScale = 0;
 		}
 
 		canPause = false;
@@ -4103,6 +4108,7 @@ class PlayState extends MusicBeatState
 			if(altAnim && boyfriend.animation.getByName(anim+"-alt")!=null){
 				anim+='-alt';
 			}
+			if(bfTrail.visible && curStage == 'kobayashi-house') anim+=burstAnim;
 			if(boyfriend.animation.curAnim!=null){
 				var canHold = note.isSustainNote && boyfriend.animation.getByName(anim+"Hold")!=null;
 				if(canHold && !boyfriend.animation.curAnim.name.startsWith(anim)){

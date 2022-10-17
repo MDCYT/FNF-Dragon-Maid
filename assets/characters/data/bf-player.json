@@ -3,27 +3,21 @@
 		0,
 		0
 	],
-	"spritesheet": "BOYFRIEND",
-	"singDur": 4,
-	"camOffset": [
-		-80,
-		0
-	],
 	"anims": [
 		{
-			"prefix": "BF idle dance",
 			"offsets": [
 				-5,
 				0
 			],
 			"fps": 24,
-			"name": "idle",
-			"looped": false
+			"prefix": "BF idle dance",
+			"looped": false,
+			"name": "idle"
 		},
 		{
 			"prefix": "BF NOTE UP0",
 			"offsets": [
-				-45,
+				-30,
 				25
 			],
 			"fps": 24,
@@ -33,8 +27,8 @@
 		{
 			"prefix": "BF NOTE LEFT0",
 			"offsets": [
-				3,
-				-7
+				1,
+				-9
 			],
 			"fps": 24,
 			"name": "singLEFT",
@@ -44,7 +38,7 @@
 			"prefix": "BF NOTE RIGHT0",
 			"offsets": [
 				-45,
-				-5
+				-6
 			],
 			"fps": 24,
 			"name": "singRIGHT",
@@ -63,7 +57,7 @@
 		{
 			"prefix": "BF NOTE UP MISS",
 			"offsets": [
-				-45,
+				-32,
 				25
 			],
 			"fps": 24,
@@ -73,7 +67,7 @@
 		{
 			"prefix": "BF NOTE RIGHT MISS",
 			"offsets": [
-				-38,
+				-39,
 				21
 			],
 			"fps": 24,
@@ -83,8 +77,8 @@
 		{
 			"prefix": "BF NOTE LEFT MISS",
 			"offsets": [
-				5,
-				19
+				2,
+				16
 			],
 			"fps": 24,
 			"name": "singLEFTmiss",
@@ -93,8 +87,8 @@
 		{
 			"prefix": "BF NOTE DOWN MISS",
 			"offsets": [
-				-29,
-				-19
+				-19,
+				-21
 			],
 			"fps": 24,
 			"name": "singDOWNmiss",
@@ -103,7 +97,7 @@
 		{
 			"prefix": "BF HEY",
 			"offsets": [
-				-1,
+				-3,
 				5
 			],
 			"fps": 24,
@@ -117,14 +111,70 @@
 			],
 			"fps": null,
 			"prefix": "",
-			"looped": false,
-			"name": ""
+			"name": "",
+			"looped": false
+		},
+		{
+			"prefix": "BFCOOLIDLE",
+			"offsets": [
+				-41,
+				0
+			],
+			"fps": null,
+			"name": "idle-burst",
+			"looped": false
+		},
+		{
+			"prefix": "BFCOOLUP",
+			"offsets": [
+				-32,
+				43
+			],
+			"fps": 24,
+			"name": "singUP-burst",
+			"looped": false
+		},
+		{
+			"prefix": "BFCOOLLEFT",
+			"offsets": [
+				33,
+				-23
+			],
+			"fps": 24,
+			"name": "singLEFT-burst",
+			"looped": false
+		},
+		{
+			"prefix": "BFCOOLRIGHT",
+			"offsets": [
+				-33,
+				-1
+			],
+			"fps": 24,
+			"name": "singRIGHT-burst",
+			"looped": false
+		},
+		{
+			"prefix": "BFCOOLDOWN",
+			"offsets": [
+				-35,
+				-57
+			],
+			"fps": 24,
+			"name": "singDOWN-burst",
+			"looped": false
 		}
+	],
+	"spritesheet": "coolbf",
+	"singDur": 4,
+	"camOffset": [
+		0,
+		0
 	],
 	"flipX": false,
 	"antialiasing": true,
 	"iconName": "bf",
 	"beatDancer": false,
-	"healthColor": "0xFF31B0D1",
-	"format": "andromeda"
+	"format": "andromeda",
+	"healthColor": "0xFF31B0D1"
 }

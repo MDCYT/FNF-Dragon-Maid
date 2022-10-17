@@ -124,7 +124,7 @@ class MaidUi extends FlxSpriteGroup {
     for(i in 0...4){
       var _pt:FlxSprite = new FlxSprite(i * 30,i * 2);
       _pt.frames = Paths.getSparrowAtlas('maidUi/plus');
-      _pt.animation.addByPrefix("idle","circle", 30, false);
+      _pt.animation.addByPrefix("idle","circle", 25, false);
       _pt.animation.play("idle");
       _pt.setGraphicSize(25,25);
       _pt.antialiasing = true;
@@ -180,6 +180,7 @@ class MaidUi extends FlxSpriteGroup {
 
       var _curPoint:FlxSprite = plusGrp.members[plusGrp.members.length - (pointCombo-1)];
       if(_curPoint != null){
+        trace('ola');
         _curPoint.alpha = 1;
         _curPoint.animation.play("idle", true);
         FlxG.sound.play(CoolUtil.getSound(Paths.sound("combo")));

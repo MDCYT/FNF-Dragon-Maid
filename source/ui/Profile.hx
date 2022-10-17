@@ -157,22 +157,25 @@ class Profile extends FlxSpriteGroup {
       bronze.frames = text;
       bronze.animation.addByPrefix('bronze', 'bronze');
       bronze.animation.play('bronze');
+      trace(bronze.getPosition());
 
       add(bronze);
     }
     if(FlxG.save.data.silver){
-      silver = new FlxSprite(274 + bronze.height + 1, 171);
+      silver = new FlxSprite(357, 171);
       silver.frames = text;
       silver.animation.addByPrefix('silver', 'silver');
       silver.animation.play('silver');
+      trace(silver.getPosition());
 
       add(silver);
     }
     if (FlxG.save.data.gold){
-      gold = new FlxSprite(silver.x + silver.height + 1, 171);
+      gold = new FlxSprite(440, 171);
       gold.frames = text;
       gold.animation.addByPrefix('gold', 'gold');
       gold.animation.play('gold');
+      trace(gold.getPosition());
 
       add(gold);
     }

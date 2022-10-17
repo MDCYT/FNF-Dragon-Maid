@@ -273,6 +273,11 @@ class TitleState extends MusicBeatState
 			FlxG.fullscreen = !FlxG.fullscreen;
 		}
 
+		if (FlxG.keys.justPressed.ONE)
+		{
+			FlxG.save.data.silver = true;
+		}
+
 		var pressedEnter:Bool = FlxG.keys.justPressed.ENTER;
 
 		#if mobile
