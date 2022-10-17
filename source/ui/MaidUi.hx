@@ -31,6 +31,8 @@ class MaidUi extends FlxSpriteGroup {
   public var scoreGrp:FlxSpriteGroup;
   public var accGrp:FlxSpriteGroup;
 
+  public var barColor:FlxColor = 0xFF00a6e2;
+
   var rank:Array<String> = ["S+","S+","S+","S+","S+","S","S-","A+","A","A-","B+","B","B-","C+","C","C-","D+","D"];
   var accString:String = '';
   var display:Float = 2;
@@ -53,7 +55,6 @@ class MaidUi extends FlxSpriteGroup {
     display = Reflect.getProperty(instance,property);
 
     var loadAnim:String = 'Bf';
-    var barColor:FlxColor = 0xFF00a6e2;
 
     trace(player1);
 
@@ -170,7 +171,7 @@ class MaidUi extends FlxSpriteGroup {
     if(tmrCombo != null){tmrCombo.active = false;}
     tmrCombo = new FlxTimer().start(((Conductor.stepCrochet / 1000)*16), function(tmr){tempCombo = 0;});
 
-    if(tempCombo >= 16){
+    if(tempCombo >= 16 && pointCombo <= 5){
       tempCombo = 0;
       pointCombo++;
 

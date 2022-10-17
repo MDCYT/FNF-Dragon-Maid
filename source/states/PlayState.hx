@@ -236,6 +236,7 @@ class PlayState extends MusicBeatState
 	var light:MaidLight;
 
 	var curDialogue:Int = 0;
+	var zoomValue:Float = 1.15;
 
 	var turn:String='';
 	var focus:String='';
@@ -722,8 +723,8 @@ class PlayState extends MusicBeatState
 
 		defaultCamZoom=stage.defaultCamZoom;
 
-		bfTrail = new FlxTrail(boyfriend);
-		bfTrail.alpha = 0;
+		bfTrail = new FlxTrail(boyfriend, null, 20, 0.2, 0.015);
+		bfTrail.visible = false;
 
 		if (!bad){
 			add(gf);
@@ -943,10 +944,8 @@ class PlayState extends MusicBeatState
 		if (!bad){
 			healthBar = new MaidUi(0, 0, boyfriend.iconName,this,'health',0,2);
 			healthBar.visible = false;
-			//healthBar.smooth = currentOptions.smoothHPBar;
 			healthBar.scrollFactor.set();
-			//if(currentOptions.healthBarColors)
-				//healthBar.setColors(boyfriend.iconColor);
+			bfTrail.color = healthBar.barColor;
 
 			if(currentOptions.downScroll){
 				healthBar.y = FlxG.height*.1;
@@ -1937,8 +1936,9 @@ class PlayState extends MusicBeatState
 			{
 				babyArrow.desiredY -= 10;
 				babyArrow.alpha = 0;
-				FlxTween.tween(babyArrow,{desiredY: babyArrow.desiredY + 10, alpha:1}, 1, {ease: FlxEase.circOut, startDelay: 0.5 + (0.2 * i)});
+				FlxTween.tween(babyArrow,{desiredY: babyArrow.desiredY + 10, alpha:0.8}, 1, {ease: FlxEase.circOut, startDelay: 0.5 + (0.2 * i)});
 			}
+			else babyArrow.alpha = 0.8;
 
 			strumLineNotes.add(babyArrow);
 		}
@@ -1949,6 +1949,20 @@ class PlayState extends MusicBeatState
 		FlxTween.tween(FlxG.camera, {zoom: value}, (Conductor.stepCrochet * 4 / 1000), {ease: FlxEase.elasticInOut});
 	}
 
+	function charZoom(set:Bool = true, value:Float = 1, setting:String = 'bf') {
+		switch(setting){
+			case 'bf':
+				zoomCamBf = set;
+			case 'dad':
+				zoomCamDad = set;
+			case 'all':
+				zoomCamBf = set;
+				zoomCamDad = set;
+		}
+		
+		zoomValue = value;
+	}
+	
 	function updateAccuracy():Void
 	{
 		if(hitNotes==0 && totalNotes==0)
@@ -2559,7 +2573,7 @@ class PlayState extends MusicBeatState
 							if (curSong.toLowerCase() == 'burn-it-all')
 								tweenCamIn(1);
 							else
-								tweenCamIn();
+								tweenCamIn(zoomValue);
 						}
 						focusedChar=opponent;
 						camFollow.setPosition(dadMid.x + opponent.camOffset.x, dadMid.y + opponent.camOffset.y);
@@ -2568,7 +2582,7 @@ class PlayState extends MusicBeatState
 							if (curSong.toLowerCase() == 'burn-it-all')
 								tweenCamIn(1);
 							else
-								tweenCamIn();
+								tweenCamIn(zoomValue);
 						}
 						focusedChar=boyfriend;
 						camFollow.setPosition(bfMid.x - stage.camOffset.x  + boyfriend.camOffset.x, bfMid.y - stage.camOffset.y + boyfriend.camOffset.y);
@@ -2894,9 +2908,10 @@ class PlayState extends MusicBeatState
 					healthBar.pointCombo = 0;
 					healthBar.tempCombo = 0;
 					burst = false;
+					charZoom(true, 0.75, 'all');
 
 					camHUD.flash();
-					bfTrail.alpha = 1;
+					bfTrail.visible = true;
 				}
 
 				if(currentOptions.allowOrderSorting)
