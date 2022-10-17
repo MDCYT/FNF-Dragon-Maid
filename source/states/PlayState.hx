@@ -2905,6 +2905,7 @@ class PlayState extends MusicBeatState
 		{
 			if(startedCountdown){
 				if(burst && controls.BURST){
+					healthBar.canPoint = false;
 					healthBar.pointCombo = 0;
 					healthBar.tempCombo = 0;
 					burst = false;
@@ -2912,6 +2913,24 @@ class PlayState extends MusicBeatState
 
 					camHUD.flash();
 					bfTrail.visible = true;
+
+					var _loop:Int = 0;
+					new FlxTimer().start((Conductor.stepCrochet/1000)*32, function(trm){
+						_loop++;
+						var _curPoint:FlxSprite = healthBar.plusGrp.members[_loop - 1];
+						if(_curPoint != null){
+							_curPoint.animation.play("idle",true,true);
+							new FlxTimer().start(1, function(tmrr){_curPoint.alpha = 0;});
+						}
+
+						if(_loop == 4){
+							healthBar.canPoint = true;
+							healthBar.goldenDisc.alpha = 0;
+
+							camHUD.flash();
+							bfTrail.visible = false;
+						}
+					},4);
 				}
 
 				if(currentOptions.allowOrderSorting)
