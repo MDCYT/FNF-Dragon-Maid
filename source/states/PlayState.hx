@@ -123,6 +123,7 @@ class PlayState extends MusicBeatState
 	public var opponent:Character;
 	public var gf:Character;
 	public var boyfriend:Boyfriend;
+	public var bfTrail:FlxTrail;
 	public static var judgeMan:JudgementManager;
 	public static var startPos:Float = 0;
 	public static var charterPos:Float = 0;
@@ -179,6 +180,7 @@ class PlayState extends MusicBeatState
 
 	private var gfSpeed:Int = 1;
 	private var health:Float = 2;
+	public var burst:Bool = false;
 	private var healthb:Float = 2;
 	private var live:Float = 1;
 	private var previousHealth:Float = 1;
@@ -720,6 +722,9 @@ class PlayState extends MusicBeatState
 
 		defaultCamZoom=stage.defaultCamZoom;
 
+		bfTrail = new FlxTrail(boyfriend);
+		bfTrail.alpha = 0;
+
 		if (!bad){
 			add(gf);
 			add(stage.layers.get("gf"));
@@ -759,6 +764,7 @@ class PlayState extends MusicBeatState
 				add(dad);
 				add(stage.layers.get("dad"));
 				
+				add(bfTrail);
 				add(boyfriend);
 				add(stage.layers.get("boyfriend"));
 
@@ -777,6 +783,7 @@ class PlayState extends MusicBeatState
 				add(dad);
 				add(stage.layers.get("dad"));
 
+				add(bfTrail);
 				add(boyfriend);
 				add(stage.layers.get("boyfriend"));
 
@@ -790,6 +797,7 @@ class PlayState extends MusicBeatState
 				add(dad);
 				add(stage.layers.get("dad"));
 
+				add(bfTrail);
 				add(boyfriend);
 				add(stage.layers.get("boyfriend"));
 		}
@@ -2461,12 +2469,11 @@ class PlayState extends MusicBeatState
 			FlxG.switchState(new Charting()); */
 
 		#if !DISABLE_CHARACTER_EDITOR
-		if (FlxG.keys.justPressed.EIGHT){
-			FlxG.switchState(new CharacterEditorState(SONG.player2,new PlayState()));
-		}
+		if (FlxG.keys.justPressed.EIGHT){FlxG.switchState(new CharacterEditorState(SONG.player2,new PlayState()));}
 		#end
 
 		super.update(elapsed);
+
 		if (startingSong)
 		{
 			if (startedCountdown)
@@ -2883,6 +2890,15 @@ class PlayState extends MusicBeatState
 		if (generatedMusic)
 		{
 			if(startedCountdown){
+				if(burst && controls.BURST){
+					healthBar.pointCombo = 0;
+					healthBar.tempCombo = 0;
+					burst = false;
+
+					camHUD.flash();
+					bfTrail.alpha = 1;
+				}
+
 				if(currentOptions.allowOrderSorting)
 					renderedNotes.sort(sortByOrder);
 				renderedNotes.forEachAlive(function(daNote:Note)

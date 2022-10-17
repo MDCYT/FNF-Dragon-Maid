@@ -32,6 +32,7 @@ enum abstract Action(String) to String from String
 	var PAUSE = "pause";
 	var RESET = "reset";
 	var CHEAT = "cheat";
+	var BURST = "burst";
 }
 #else
 @:enum
@@ -54,6 +55,7 @@ abstract Action(String) to String from String
 	var PAUSE = "pause";
 	var RESET = "reset";
 	var CHEAT = "cheat";
+	var BURST = "burst";
 }
 #end
 
@@ -79,6 +81,7 @@ enum Control
 	BACK;
 	PAUSE;
 	CHEAT;
+	BURST;
 }
 
 enum KeyboardScheme
@@ -112,6 +115,7 @@ class Controls extends FlxActionSet
 	var _pause = new FlxActionDigital(Action.PAUSE);
 	var _reset = new FlxActionDigital(Action.RESET);
 	var _cheat = new FlxActionDigital(Action.CHEAT);
+	var _burst = new FlxActionDigital(Action.BURST);
 
 	#if (haxe >= "4.0.0")
 	var byName:Map<String, FlxActionDigital> = [];
@@ -201,11 +205,16 @@ class Controls extends FlxActionSet
 
 	inline function get_RESET()
 		return _reset.check();
-
+	
 	public var CHEAT(get, never):Bool;
 
 	inline function get_CHEAT()
 		return _cheat.check();
+	
+	public var BURST(get, never):Bool;
+
+	inline function get_BURST()
+		return _burst.check();
 
 	#if (haxe >= "4.0.0")
 	public function new(name, scheme = None)
@@ -229,6 +238,7 @@ class Controls extends FlxActionSet
 		add(_pause);
 		add(_reset);
 		add(_cheat);
+		add(_burst);
 
 		for (action in digitalActions)
 			byName[action.name] = action;
@@ -257,6 +267,7 @@ class Controls extends FlxActionSet
 		add(_pause);
 		add(_reset);
 		add(_cheat);
+		add(_burst);
 
 		for (action in digitalActions)
 			byName[action.name] = action;
@@ -311,6 +322,7 @@ class Controls extends FlxActionSet
 			case PAUSE: _pause;
 			case RESET: _reset;
 			case CHEAT: _cheat;
+			case BURST: _burst;
 		}
 	}
 
@@ -356,6 +368,8 @@ class Controls extends FlxActionSet
 				func(_reset, JUST_PRESSED);
 			case CHEAT:
 				func(_cheat, JUST_PRESSED);
+			case BURST:
+				func(_burst, JUST_PRESSED);
 		}
 	}
 
@@ -506,6 +520,7 @@ class Controls extends FlxActionSet
 				inline bindKeys(Control.BACK, [BACKSPACE, ESCAPE]);
 				inline bindKeys(Control.PAUSE, [P, ENTER, ESCAPE]);
 				inline bindKeys(Control.RESET, [R]);
+				inline bindKeys(Control.BURST, [SPACE]);
 			case Duo(true): // nothing
 			case Duo(false): // nothing
 			case None: // nothing
@@ -521,6 +536,7 @@ class Controls extends FlxActionSet
 				inline bindKeys(Control.ACCEPT, [Z, SPACE, ENTER]);
 				inline bindKeys(Control.BACK, [BACKSPACE, ESCAPE]);
 				inline bindKeys(Control.RESET, [R]);
+				inline bindKeys(Control.BURST, [SPACE]);
 		}
 	}
 
@@ -591,7 +607,8 @@ class Controls extends FlxActionSet
 			Control.LEFT => [DPAD_LEFT, LEFT_STICK_DIGITAL_LEFT],
 			Control.RIGHT => [DPAD_RIGHT, LEFT_STICK_DIGITAL_RIGHT],
 			Control.PAUSE => [START],
-			Control.RESET => [Y]
+			Control.RESET => [Y],
+			Control.BURST => [LEFT_SHOULDER]
 		]);
 		#else
 		addGamepadLiteral(id, [
@@ -605,7 +622,8 @@ class Controls extends FlxActionSet
 			Control.PAUSE => [START],
 			//Swap Y and X for switch
 			Control.RESET => [Y],
-			Control.CHEAT => [X]
+			Control.CHEAT => [X],
+			Control.BURST => [SPACE]
 		]);
 		#end
 	}

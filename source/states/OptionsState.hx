@@ -42,6 +42,7 @@ class OptionsState extends MusicBeatState
 					new ControlOption(controls,Control.RIGHT),
 					new ControlOption(controls,Control.PAUSE),
 					new ControlOption(controls,Control.RESET),
+					new ControlOption(controls,Control.BURST),
 				]),
 				new ToggleOption("resetKey","Reset key","Toggle pressing the bound key to instantly die"),
 				#if !FORCE_LUA_MODCHARTS new ToggleOption("loadModcharts","Load Lua modcharts","Toggles lua modcharts"), #end
@@ -81,7 +82,7 @@ class OptionsState extends MusicBeatState
 				new ToggleOption("onlyScore","Minimal Information","Only shows your score below the hp bar"),
 				new ToggleOption("smoothHPBar","Smooth Healthbar","Makes the HP Bar smoother"),
 				new ToggleOption("fcBasedComboColor","FC Combo Colouring","Makes the combo's colour changes with type of FC you have"),
-				new NoteskinOption("noteSkin","NoteSkin","The noteskin to use"),
+				//new NoteskinOption("noteSkin","NoteSkin","The noteskin to use"),
 				new OptionCategory("Effects",[
 					new ToggleOption("picoCamshake","Train camera shake","Whether the train in week 3's background shakes the camera"),
 					//new ToggleOption("senpaiShaders","Week 6 shaders","Is the CRT effect active in week 6"),

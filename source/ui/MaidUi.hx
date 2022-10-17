@@ -179,7 +179,7 @@ class MaidUi extends FlxSpriteGroup {
         _curPoint.alpha = 1;
         _curPoint.animation.play("idle", true);
         FlxG.sound.play(CoolUtil.getSound(Paths.sound("combo")));
-        if(pointCombo == 5){FlxTween.tween(goldenDisc, {alpha: 1}, 1);}
+        if(pointCombo == 5){FlxTween.tween(goldenDisc, {alpha: 1}, 1); cast(instance,PlayState).burst = true;}
       }      
     }
   }
