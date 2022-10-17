@@ -722,9 +722,9 @@ class PlayState extends MusicBeatState
 
 		defaultCamZoom=stage.defaultCamZoom;
 
-		bfTrail = new FlxTrail(boyfriend);
-		bfTrail.alpha = 0;
-
+		bfTrail = new FlxTrail(boyfriend, null, 12, 2, 0.4, 0.05);
+		bfTrail.visible = false;
+		
 		if (!bad){
 			add(gf);
 			add(stage.layers.get("gf"));
@@ -2891,12 +2891,31 @@ class PlayState extends MusicBeatState
 		{
 			if(startedCountdown){
 				if(burst && controls.BURST){
+					healthBar.canPoint = false;
 					healthBar.pointCombo = 0;
 					healthBar.tempCombo = 0;
 					burst = false;
 
 					camHUD.flash();
-					bfTrail.alpha = 1;
+					bfTrail.visible = true;
+
+					var _loop:Int = 0;
+					new FlxTimer().start((Conductor.stepCrochet/1000)*32, function(trm){
+						_loop++;
+						var _curPoint:FlxSprite = healthBar.plusGrp.members[_loop - 1];
+						if(_curPoint != null){
+							_curPoint.animation.play("idle",true,true);
+							new FlxTimer().start(1, function(tmrr){_curPoint.alpha = 0;});
+						}
+
+						if(_loop == 4){
+							healthBar.canPoint = true;
+							healthBar.goldenDisc.alpha = 0;
+
+							camHUD.flash();
+							bfTrail.visible = false;
+						}
+					},4);
 				}
 
 				if(currentOptions.allowOrderSorting)

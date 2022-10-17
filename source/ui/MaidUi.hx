@@ -37,6 +37,7 @@ class MaidUi extends FlxSpriteGroup {
   var instance:FlxBasic;
   var property:String;
   
+  public var canPoint = true;
   public var pointCombo = 0;
   public var tempCombo = 0;
   private var tmrCombo:FlxTimer;
@@ -165,6 +166,8 @@ class MaidUi extends FlxSpriteGroup {
   }
 
   public function plusCombo():Void {
+    if(!canPoint){return;}
+
     tempCombo++;
 
     if(tmrCombo != null){tmrCombo.active = false;}
