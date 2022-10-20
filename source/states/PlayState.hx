@@ -1947,7 +1947,7 @@ class PlayState extends MusicBeatState
 
 	function tweenCamIn(value:Float = 1.15):Void
 	{
-		FlxTween.tween(FlxG.camera, {zoom: value}, (Conductor.stepCrochet * 4 / 1000), {ease: FlxEase.elasticInOut});
+		FlxTween.tween(FlxG.camera, {zoom: value}, (Conductor.stepCrochet * 4 / 1000), {ease: FlxEase.expoInOut});
 	}
 
 	function charZoom(set:Bool = true, value:Float = 1, setting:String = 'bf') {
