@@ -39,10 +39,10 @@ class ComboSprite extends FNFSprite {
       currentStyle=style;
       switch(style){
         case 'pixel':
-          loadGraphic(Paths.image('pixelUI/numbers'), true, 10, 12);
+          loadGraphic(CoolUtil.getBitmap(Paths.image('pixelUI/numbers')), true, 10, 12);
           setGraphicSize(Std.int(width*PlayState.daPixelZoom));
         default:
-          loadGraphic(Paths.image('numbers'), true, 91, 135);
+          loadGraphic(CoolUtil.getBitmap(Paths.image('numbers')), true, 91, 135);
       }
       var numbers = ["negative","0","1","2","3","4","5","6","7","8","9","point"];
 

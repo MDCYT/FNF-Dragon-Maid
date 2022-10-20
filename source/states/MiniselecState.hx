@@ -72,10 +72,10 @@ class MiniselecState extends MusicBeatState
             miniGrp.add(mini);
         }
 
-        frame = new FlxSprite().loadGraphic(Paths.image('miniSelec/marco'));
+        frame = new FlxSprite().loadGraphic(CoolUtil.getBitmap(Paths.image('miniSelec/marco')));
         frame.screenCenter();
 
-        selector = new FlxSprite(233, 213).loadGraphic(Paths.image('miniSelec/da'));
+        selector = new FlxSprite(233, 213).loadGraphic(CoolUtil.getBitmap(Paths.image('miniSelec/da')));
         selector.setGraphicSize(Std.int(selector.width * 6));
         selector.updateHitbox();
 
@@ -94,7 +94,7 @@ class MiniselecState extends MusicBeatState
 
         if (FlxG.save.data.goldDragon){
 
-            gold = new FlxSprite().loadGraphic(Paths.image('miniSelec/goldDragon'));
+            gold = new FlxSprite().loadGraphic(CoolUtil.getBitmap(Paths.image('miniSelec/goldDragon')));
             gold.setGraphicSize(Std.int(gold.width / 4.5));
             gold.updateHitbox();
             gold.antialiasing = false;

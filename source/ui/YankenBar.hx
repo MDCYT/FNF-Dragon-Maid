@@ -26,10 +26,10 @@ class YankenBar extends FlxSpriteGroup {
   {
     super(x,y);
 
-    bgs = new FlxSprite().loadGraphic(Paths.image('yankenPo/black'));
+    bgs = new FlxSprite().loadGraphic(CoolUtil.getBitmap(Paths.image('yankenPo/black')));
     bgs.screenCenter();
 
-    bgBar = new FlxSprite(0, 40).loadGraphic(Paths.image('yankenPo/barra'));
+    bgBar = new FlxSprite(0, 40).loadGraphic(CoolUtil.getBitmap(Paths.image('yankenPo/barra')));
     bgBar.screenCenter(X);
 
     bar = new FlxBar(0, 50, RIGHT_TO_LEFT, Std.int(bgBar.width - 20), Std.int(bgBar.height - 20), this, 'time', 0, 1);

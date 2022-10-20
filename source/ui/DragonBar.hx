@@ -34,7 +34,7 @@ class DragonBar extends FlxSpriteGroup {
     this.property=property;
     display = Reflect.getProperty(instance,property);
 
-    bg2 = new FlxSprite(0, 0).loadGraphic(Paths.image('bad/dragonBar','shared'));
+    bg2 = new FlxSprite(0, 0).loadGraphic(CoolUtil.getBitmap(Paths.image('bad/dragonBar','shared')));
 
     bar2 = new FlxBar(bg2.x + 8, bg2.y + 7, RIGHT_TO_LEFT, 564, 19, this, 'display', min, max);
 		bar2.createFilledBar(0xFFFF2900, 0xFFFFFFFF);

@@ -203,18 +203,18 @@ class FreeplayState extends MusicBeatState
 			noise.volume = 0;
 		}
 
-		bg = new FlxBackdrop(Paths.image('maidMenu/freeplayBG'), 10, 0, true, false);
+		bg = new FlxBackdrop(CoolUtil.getBitmap(Paths.image('maidMenu/freeplayBG')), 10, 0, true, false);
 		bg.velocity.set(-40, 0);
 		bg.scale.set(1.05, 1.05);
 		bg.antialiasing = true;
 		add(bg);
 
-		circle = new FlxSprite().loadGraphic(Paths.image('maidMenu/circle'));
+		circle = new FlxSprite().loadGraphic(CoolUtil.getBitmap(Paths.image('maidMenu/circle')));
 		circle.antialiasing = true;
 		circle.alpha = 0;
 		add(circle);
 
-		art = new FlxSprite().loadGraphic(Paths.image('maidMenu/freeplayArt0'));
+		art = new FlxSprite().loadGraphic(CoolUtil.getBitmap(Paths.image('maidMenu/freeplayArt0')));
 		art.antialiasing = true;
 		add(art);
 
@@ -242,7 +242,7 @@ class FreeplayState extends MusicBeatState
 		diffText = new FlxText(10, 0 + 36, 0, "", 35);
 		diffText.font = scoreText.font;
 
-		framework = new FlxSprite().loadGraphic(Paths.image('maidMenu/freeplay_framwork'));
+		framework = new FlxSprite().loadGraphic(CoolUtil.getBitmap(Paths.image('maidMenu/freeplay_framwork')));
 
 		disco = new FlxSprite(960, 443);
 		disco.frames = Paths.getSparrowAtlas('maidMenu/freeplayArt');

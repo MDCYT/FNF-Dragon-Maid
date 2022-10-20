@@ -79,7 +79,7 @@ class OptionsMenu extends MusicBeatState
 		DiscordClient.changePresence("Changing options", null);
 		#end
 		category=defCat;
-		var menuBG:FlxSprite = new FlxSprite().loadGraphic(Paths.image("menuBG"));
+		var menuBG:FlxSprite = new FlxSprite().loadGraphic(CoolUtil.getBitmap(Paths.image("menuBG")));
 
 		menuBG.color = 0xFFA271DE;
 		menuBG.setGraphicSize(Std.int(menuBG.width * 1.1));

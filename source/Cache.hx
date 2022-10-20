@@ -23,11 +23,13 @@ class Cache {
   public static var textCache = new Map<String,String>();
   public static var pathCache = new Map<String,String>();
   public static var soundCache = new Map<String,Sound>();
+  public static var bitmapCache = new Map<String,BitmapData>();
 
   public static function wipe(){ // a COMPLETE cache clear
     pathCache.clear();
     xmlData.clear();
     soundCache.clear();
+    bitmapCache.clear();
     clear();
     clearImages();
 
@@ -56,6 +58,7 @@ class Cache {
       // TRY OUT FOREVER ENGINE!
       // NO, LIKE, SERIOUSLY.
       // https://github.com/Yoshubs/Forever-Engine-Legacy
+
       var l:Int = 0;
       @:privateAccess
       for (key in FlxG.bitmap._cache.keys())

@@ -39,7 +39,7 @@ class Healthbar extends FlxSpriteGroup {
     this.property=property;
     display = Reflect.getProperty(instance,property);
 
-    bg = new FlxSprite(0, 0).loadGraphic(Paths.image('healthBar','shared'));
+    bg = new FlxSprite(0, 0).loadGraphic(CoolUtil.getBitmap(Paths.image('healthBar','shared')));
 
     bar = new FlxBar(bg.x + 4, bg.y + 4, RIGHT_TO_LEFT, Std.int(bg.width - 8), Std.int(bg.height - 7), this, 'display', min, max);
     //bar.createFilledBar(baseColor,secondaryColor);

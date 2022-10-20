@@ -181,13 +181,13 @@ class Stage extends FlxTypedGroup<FlxBasic> {
         gfPosition.y += 45;
         gfPosition.x += 50;
 
-			  house = new FlxSprite(-1000, -235).loadGraphic(Paths.image('maidDragon/house/bg'));
+			  house = new FlxSprite(-1000, -235).loadGraphic(CoolUtil.getBitmap(Paths.image('maidDragon/house/bg')));
         house.scale.set(1.15, 1.15);
         house.antialiasing = true;
 			  house.updateHitbox();
 			  add(house);
 
-        table = new FlxSprite().loadGraphic(Paths.image('maidDragon/house/table'));
+        table = new FlxSprite().loadGraphic(CoolUtil.getBitmap(Paths.image('maidDragon/house/table')));
         table.antialiasing = true;
         table.updateHitbox();
         add(table);
@@ -209,25 +209,25 @@ class Stage extends FlxTypedGroup<FlxBasic> {
         gfPosition.x -= 175;
         gfPosition.y += 408;
 			
-			  bg = new FlxSprite(-1230, 0).loadGraphic(Paths.image('maidDragon/forest/bgForest'));
+			  bg = new FlxSprite(-1230, 0).loadGraphic(CoolUtil.getBitmap(Paths.image('maidDragon/forest/bgForest')));
         bg.scale.set(1.2, 1.1);
         bg.scrollFactor.set(0.95, 0.95);
         bg.antialiasing = true;
 			  bg.updateHitbox();
         trace(bg);
 
-			  cloud = new FlxSprite(-100, -25).loadGraphic(Paths.image('maidDragon/forest/cloud'));
+			  cloud = new FlxSprite(-100, -25).loadGraphic(CoolUtil.getBitmap(Paths.image('maidDragon/forest/cloud')));
         cloud.scale.set(1.1, 1.1);
         cloud.scrollFactor.set(0.95, 0.95);
         cloud.antialiasing = true;
         cloud.updateHitbox();
 
-        moun = new FlxSprite(-1426, -120).loadGraphic(Paths.image('maidDragon/forest/mountains'));
+        moun = new FlxSprite(-1426, -120).loadGraphic(CoolUtil.getBitmap(Paths.image('maidDragon/forest/mountains')));
         moun.scale.set(1.3, 1.3);
         moun.antialiasing = true;
         moun.updateHitbox();
 
-        base = new FlxSprite(-1365, -220).loadGraphic(Paths.image('maidDragon/forest/bgBase'));
+        base = new FlxSprite(-1365, -220).loadGraphic(CoolUtil.getBitmap(Paths.image('maidDragon/forest/bgBase')));
         base.scale.set(1.5, 1.5);
         base.antialiasing = true;
         base.updateHitbox();
@@ -250,13 +250,13 @@ class Stage extends FlxTypedGroup<FlxBasic> {
       default:
         defaultCamZoom = 1;
         curStage = 'stage';
-        var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('stageback','shared'));
+        var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(CoolUtil.getBitmap(Paths.image('stageback','shared')));
         bg.antialiasing = true;
         bg.scrollFactor.set(0.9, 0.9);
         bg.active = false;
         add(bg);
 
-        var stageFront:FlxSprite = new FlxSprite(-650, 600).loadGraphic(Paths.image('stagefront','shared'));
+        var stageFront:FlxSprite = new FlxSprite(-650, 600).loadGraphic(CoolUtil.getBitmap(Paths.image('stagefront','shared')));
         stageFront.setGraphicSize(Std.int(stageFront.width * 1.1));
         stageFront.updateHitbox();
         stageFront.antialiasing = true;
@@ -264,7 +264,7 @@ class Stage extends FlxTypedGroup<FlxBasic> {
         stageFront.active = false;
         add(stageFront);
 
-        var stageCurtains:FlxSprite = new FlxSprite(-500, -300).loadGraphic(Paths.image('stagecurtains','shared'));
+        var stageCurtains:FlxSprite = new FlxSprite(-500, -300).loadGraphic(CoolUtil.getBitmap(Paths.image('stagecurtains','shared')));
         stageCurtains.setGraphicSize(Std.int(stageCurtains.width * 0.9));
         stageCurtains.updateHitbox();
         stageCurtains.antialiasing = true;

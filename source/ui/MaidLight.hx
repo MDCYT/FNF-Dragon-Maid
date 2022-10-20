@@ -41,6 +41,7 @@ class MaidLight extends FlxSprite{
   }
 
   public function outFx(){
+    if(tween != null){tween.active = false;}
       tween = FlxTween.tween(this, {alpha: 0}, 0.5, {ease: FlxEase.expoInOut, onComplete: function(twn:FlxTween){
         isActive = false;
       }});

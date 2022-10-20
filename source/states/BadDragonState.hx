@@ -81,13 +81,13 @@ class BadDragonState extends MusicBeatState
         bg.screenCenter(X);
         add(bg);
 
-        fire = new FlxSprite().loadGraphic(Paths.image('bad/fire'));
+        fire = new FlxSprite().loadGraphic(CoolUtil.getBitmap(Paths.image('bad/fire')));
         fire.setGraphicSize(Std.int(fire.width / 3.4));
         fire.antialiasing = false;
         fire.updateHitbox();
         add(fire);
 
-        dragon = new FlxSprite(10, bg.y - 160).loadGraphic(Paths.image('bad/bad'));
+        dragon = new FlxSprite(10, bg.y - 160).loadGraphic(CoolUtil.getBitmap(Paths.image('bad/bad')));
         dragon.setGraphicSize(Std.int(dragon.width / 3));
         dragon.updateHitbox();
         dragon.antialiasing = false;
@@ -99,7 +99,7 @@ class BadDragonState extends MusicBeatState
         bf = new BadBoyfriend(720, bg.y - bg.width);
         add(bf);
 
-        screamer = new FlxSprite().loadGraphic(Paths.image('bad/scream'));
+        screamer = new FlxSprite().loadGraphic(CoolUtil.getBitmap(Paths.image('bad/scream')));
         screamer.screenCenter();
         screamer.alpha= 0;
         add(screamer);

@@ -344,16 +344,16 @@ class Paths
 
 	inline static public function characterSparrow(key:String, ?library:String)
 	{
-		return FlxAtlasFrames.fromSparrow(getPath('characters/images/$key.png', IMAGE, library), file('characters/images/$key.xml', library));
+		return FlxAtlasFrames.fromSparrow(CoolUtil.getBitmap(getPath('characters/images/$key.png', IMAGE, library)), file('characters/images/$key.xml', library));
 	}
 
 	inline static public function getSparrowAtlas(key:String, ?library:String)
 	{
-		return FlxAtlasFrames.fromSparrow(image(key, library), file('images/$key.xml', library));
+		return FlxAtlasFrames.fromSparrow(CoolUtil.getBitmap(image(key, library)), file('images/$key.xml', library));
 	}
 
 	inline static public function getPackerAtlas(key:String, ?library:String)
 	{
-		return FlxAtlasFrames.fromSpriteSheetPacker(image(key, library), file('images/$key.txt', library));
+		return FlxAtlasFrames.fromSpriteSheetPacker(CoolUtil.getBitmap(image(key, library)), file('images/$key.txt', library));
 	}
 }

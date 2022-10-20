@@ -44,7 +44,7 @@ class JudgeCustomizationState extends MusicBeatState {
 		coolText.x = FlxG.width * 0.55;
 
     judge = new FlxSprite();
-		judge.loadGraphic(Paths.image('sick','shared'));
+		judge.loadGraphic(CoolUtil.getBitmap(Paths.image('sick','shared')));
     judge.screenCenter();
     judge.antialiasing=true;
     judge.x = coolText.x - 40;
@@ -112,7 +112,7 @@ class JudgeCustomizationState extends MusicBeatState {
       if(i=='-'){
         i='Negative';
       }
-      var numScore:FlxSprite = new FlxSprite().loadGraphic(Paths.image('num' + i));
+      var numScore:FlxSprite = new FlxSprite().loadGraphic(CoolUtil.getBitmap(Paths.image('num' + i)));
       numScore.screenCenter(XY);
       numScore.x = coolText.x + (43 * daLoop) - 90;
       numScore.y += 25;

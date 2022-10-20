@@ -17,7 +17,7 @@ class StoryMenuItem extends FlxSpriteGroup
 	public function new(x:Float, y:Float, path:String)
 	{
 		super(x, y);
-		week = new FlxSprite().loadGraphic(Paths.image('storymenu/${path}'));
+		week = new FlxSprite().loadGraphic(CoolUtil.getBitmap(Paths.image('storymenu/${path}')));
 		add(week);
 	}
 

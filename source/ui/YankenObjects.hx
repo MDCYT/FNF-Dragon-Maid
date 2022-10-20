@@ -45,7 +45,7 @@ class YankenObjects extends FlxTypedGroup<FlxBasic>
         switch(curLevel)
         {
             case 1:
-                bg = new FlxSprite().loadGraphic(Paths.image('yankenPo/bg'));
+                bg = new FlxSprite().loadGraphic(CoolUtil.getBitmap(Paths.image('yankenPo/bg')));
                 bg.setGraphicSize(1280, 720);
                 bg.antialiasing = false;
                 bg.screenCenter();

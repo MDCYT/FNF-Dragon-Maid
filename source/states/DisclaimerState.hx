@@ -57,10 +57,10 @@ class DisclaimerState extends MusicBeatState
 	}
 
     function initState() {
-        var disclaimer:FlxSprite = new FlxSprite(-20, 0).loadGraphic(Paths.image('maidMenu/disclaimer'));
+        var disclaimer:FlxSprite = new FlxSprite(-20, 0).loadGraphic(CoolUtil.getBitmap(Paths.image('maidMenu/disclaimer')));
         disclaimer.alpha = 0;
 
-        var pressEnter:FlxSprite = new FlxSprite(0, 650).loadGraphic(Paths.image('maidMenu/press_enter'));
+        var pressEnter:FlxSprite = new FlxSprite(0, 650).loadGraphic(CoolUtil.getBitmap(Paths.image('maidMenu/press_enter')));
         pressEnter.alpha = 0;
 
         var tohru_frames = Paths.getSparrowAtlas('maidMenu/tohru_point');

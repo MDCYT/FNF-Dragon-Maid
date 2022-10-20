@@ -57,14 +57,14 @@ class CachingState extends FlxUIState {
   override function create(){
     super.create();
     FlxG.autoPause=false;
-    bg = new FlxSprite().loadGraphic(Paths.image("loadingBG","preload"));
+    bg = new FlxSprite().loadGraphic(CoolUtil.getBitmap(Paths.image("loadingBG","preload")));
     bg.setGraphicSize(Std.int(bg.width*.85));
     bg.updateHitbox();
     bg.screenCenter(XY);
     bg.antialiasing=true;
     add(bg);
 
-    barBG = new FlxSprite().loadGraphic(Paths.image("barBackground","preload"));
+    barBG = new FlxSprite().loadGraphic(CoolUtil.getBitmap(Paths.image("barBackground","preload")));
     barBG.setGraphicSize(Std.int(barBG.width));
     barBG.updateHitbox();
     barBG.screenCenter(XY);
