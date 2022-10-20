@@ -39,7 +39,7 @@ class JudgeSprite extends FNFSprite {
       currentStyle=style;
       switch(style){
         case 'pixel':
-          loadGraphic(Paths.image('pixelUI/judgements'), true, 54, 20);
+          loadGraphic(CoolUtil.getBitmap(Paths.image('pixelUI/judgements')), true, 54, 20);
           animation.add('epic', [0], 0, false);
           animation.add('sick', [1], 0, false);
           animation.add('good', [2], 0, false);
@@ -47,7 +47,7 @@ class JudgeSprite extends FNFSprite {
           animation.add('shit', [4], 0, false);
           setGraphicSize(Std.int(width*PlayState.daPixelZoom));
         default:
-          loadGraphic(Paths.image('judgements'), true, 403, 150);
+          loadGraphic(CoolUtil.getBitmap(Paths.image('judgements')), true, 403, 150);
           animation.add('epic', [0], 0, false);
           animation.add('sick', [1], 0, false);
           animation.add('good', [2], 0, false);

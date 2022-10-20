@@ -41,10 +41,10 @@ class PlayListState extends MusicBeatState
     {
         super.create();  
 
-        bg = new FlxSprite().loadGraphic(Paths.image('playList/bg'));
+        bg = new FlxSprite().loadGraphic(CoolUtil.getBitmap(Paths.image('playList/bg')));
         add(bg);
 
-        listBg = new FlxSprite(-500).loadGraphic(Paths.image('playList/listBg'));
+        listBg = new FlxSprite(-500).loadGraphic(CoolUtil.getBitmap(Paths.image('playList/listBg')));
         add(listBg);
 
         FlxTween.tween(listBg, {x: listBg.x + 500}, 1, {ease:FlxEase.expoInOut, onComplete: function(flxTween:FlxTween)

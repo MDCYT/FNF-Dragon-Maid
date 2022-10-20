@@ -135,7 +135,7 @@ class MainMenuState extends MusicBeatState
 		
 		persistentUpdate = persistentDraw = true;
 
-		bg = new FlxBackdrop(Paths.image('mainMenu/menuBg'), 10, 0, true, false);
+		bg = new FlxBackdrop(CoolUtil.getBitmap(Paths.image('mainMenu/menuBg')), 10, 0, true, false);
 		bg.velocity.set(-150, 0);
 		add(bg);
 
@@ -178,7 +178,7 @@ class MainMenuState extends MusicBeatState
 			}
 		}
 
-		rectangle =  new FlxSprite().loadGraphic(Paths.image('mainMenu/rectangle'));
+		rectangle =  new FlxSprite().loadGraphic(CoolUtil.getBitmap(Paths.image('mainMenu/rectangle')));
 		rectangle.screenCenter();
 		add(rectangle);
 

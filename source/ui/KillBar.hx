@@ -25,14 +25,14 @@ class KillBar extends FlxSpriteGroup
     {
         super(x,y);
 
-        altBar = new FlxSprite().loadGraphic(Paths.image('maidDragon/utils/altBar', 'shared'));
+        altBar = new FlxSprite().loadGraphic(CoolUtil.getBitmap(Paths.image('maidDragon/utils/altBar', 'shared')));
         altBar.updateHitbox();
 
-        overlap = new FlxSprite(altBar.x, altBar.y).loadGraphic(Paths.image('maidDragon/utils/overlap', 'shared'));
+        overlap = new FlxSprite(altBar.x, altBar.y).loadGraphic(CoolUtil.getBitmap(Paths.image('maidDragon/utils/overlap', 'shared')));
         overlap.scale.x += 1.7;
         overlap.updateHitbox();
 
-        ind = new FlxSprite(altBar.x, altBar.y - altBar.height).loadGraphic(Paths.image('maidDragon/utils/ind', 'shared'));
+        ind = new FlxSprite(altBar.x, altBar.y - altBar.height).loadGraphic(CoolUtil.getBitmap(Paths.image('maidDragon/utils/ind', 'shared')));
         ind.updateHitbox();
 
         add(altBar);

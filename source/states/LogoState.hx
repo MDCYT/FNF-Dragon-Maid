@@ -43,7 +43,7 @@ class LogoState extends MusicBeatState
         art += 1;
         if (daLogo < 3)
         {
-            logo = new FlxSprite().loadGraphic(Paths.image('logo' + daLogo));
+            logo = new FlxSprite().loadGraphic(CoolUtil.getBitmap(Paths.image('logo' + daLogo)));
             logo.screenCenter();
             logo.antialiasing = true;
             logo.alpha = 0;

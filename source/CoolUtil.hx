@@ -11,12 +11,20 @@ import openfl.utils.AssetType;
 import states.*;
 import ui.*;
 import flixel.math.FlxPoint;
+import openfl.display.BitmapData;
 import math.Vector3;
 using StringTools;
 
 class CoolUtil
 {
 	public static var difficultyArray:Array<String> = ['EASY', "NORMAL", "HARD", "MAID"];
+
+	public static function cacheBitmap(key:String,bitMap:BitmapData){
+		trace(key);
+		if(!Cache.bitmapCache.exists(key)){
+			Cache.bitmapCache.set(key,bitMap);
+		}
+	}
 
 	public static function cacheSound(key:String,sound:Sound){
 		trace(key);
@@ -34,8 +42,19 @@ class CoolUtil
 		return p;
 	}
 
+	public static function getBitmap(path:String):BitmapData{
+		if(Cache.bitmapCache.get(path)!=null)
+			return Cache.bitmapCache.get(path);
+
+		if(Assets.exists(path, AssetType.IMAGE))
+			return Assets.getBitmapData(path);
+
+		var bitmap = BitmapData.fromFile(path);
+		cacheBitmap(path,bitmap);
+		return bitmap;
+	}
+
 	public static function getSound(path:String):Sound{
-		trace(path);
 		if(Cache.soundCache.get(path)!=null)
 			return Cache.soundCache.get(path);
 

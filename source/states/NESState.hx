@@ -52,15 +52,15 @@ class NESState extends MusicBeatState {
 	override public function create():Void {
 		super.create();
 
-        var bg1 = new FlxBackdrop(Paths.image('miniGame/Sky'), 10, 0, true, false);
+        var bg1 = new FlxBackdrop(CoolUtil.getBitmap(Paths.image('miniGame/Sky')), 10, 0, true, false);
 		bg1.velocity.set(-30, 0);
 		add(bg1);
 
-        var bg2 = new FlxBackdrop(Paths.image('miniGame/Mountains'), 10, 0, true, false);
+        var bg2 = new FlxBackdrop(CoolUtil.getBitmap(Paths.image('miniGame/Mountains')), 10, 0, true, false);
 		bg2.velocity.set(-50, 0);
 		add(bg2);
 
-        var bg3 = new FlxBackdrop(Paths.image('miniGame/Floors'), 10, 0, true, false);
+        var bg3 = new FlxBackdrop(CoolUtil.getBitmap(Paths.image('miniGame/Floors')), 10, 0, true, false);
 		bg3.velocity.set(-60, 0);
 		add(bg3);
 
@@ -320,7 +320,7 @@ class NESShoot extends FlxSprite {
 
     public function new(){
         super();
-        loadGraphic(Paths.image("miniGame/fuego"));
+        loadGraphic(CoolUtil.getBitmap(Paths.image("miniGame/fuego")));
     }
 
     override function update(elapsed:Float):Void{

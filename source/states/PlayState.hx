@@ -750,7 +750,7 @@ class PlayState extends MusicBeatState
 					blackIntro.scrollFactor.set();
 					blackIntro.alpha = 0;
 		
-					logoIntro = new FlxSprite().loadGraphic(Paths.image('introLogo'));
+					logoIntro = new FlxSprite().loadGraphic(CoolUtil.getBitmap(Paths.image('introLogo')));
 					logoIntro.screenCenter();
 					logoIntro.scrollFactor.set();
 					logoIntro.scale.set(0.5, 0.5);
@@ -773,7 +773,7 @@ class PlayState extends MusicBeatState
 				gf.setPosition(689, 192);
 				stage.table.setPosition(490, 443);
 
-				chair = new FlxSprite(0, 0).loadGraphic(Paths.image('maidDragon/house/chair'));
+				chair = new FlxSprite(0, 0).loadGraphic(CoolUtil.getBitmap(Paths.image('maidDragon/house/chair')));
 				chair.scale.set(1.15, 1.15);
 				chair.screenCenter();
 				chair.y -= 60;
@@ -1412,7 +1412,7 @@ class PlayState extends MusicBeatState
 					case 0:
 						FlxG.sound.play(Paths.sound('intro3${altSuffix}'), 0.6);
 					case 1:
-						var ready:FlxSprite = new FlxSprite().loadGraphic(Paths.image(introAlts[0]));
+						var ready:FlxSprite = new FlxSprite().loadGraphic(CoolUtil.getBitmap(Paths.image(introAlts[0])));
 						ready.cameras=[camHUD];
 						ready.scrollFactor.set();
 						ready.updateHitbox();
@@ -1429,7 +1429,7 @@ class PlayState extends MusicBeatState
 
 						introHud();
 					case 2:
-						var set:FlxSprite = new FlxSprite().loadGraphic(Paths.image(introAlts[1]));
+						var set:FlxSprite = new FlxSprite().loadGraphic(CoolUtil.getBitmap(Paths.image(introAlts[1])));
 						set.scrollFactor.set();
 
 						if (altSuffix=='-pixel')
@@ -1445,7 +1445,7 @@ class PlayState extends MusicBeatState
 
 						daNameSong(currentOptions.downScroll);
 					case 3:
-						var go:FlxSprite = new FlxSprite().loadGraphic(Paths.image(introAlts[2]));
+						var go:FlxSprite = new FlxSprite().loadGraphic(CoolUtil.getBitmap(Paths.image(introAlts[2])));
 						go.scrollFactor.set();
 
 						if (altSuffix=='-pixel')
@@ -1520,7 +1520,7 @@ class PlayState extends MusicBeatState
 				case 0:
 					FlxG.sound.play(Paths.sound('intro3${altSuffix}'), 0.6);
 				case 1:
-					var ready:FlxSprite = new FlxSprite().loadGraphic(Paths.image(introAlts[0]));
+					var ready:FlxSprite = new FlxSprite().loadGraphic(CoolUtil.getBitmap(Paths.image(introAlts[0])));
 					ready.cameras=[camHUD];
 					ready.scrollFactor.set();
 					ready.updateHitbox();
@@ -1539,7 +1539,7 @@ class PlayState extends MusicBeatState
 					});
 					FlxG.sound.play(Paths.sound('intro2${altSuffix}'), 0.6);
 				case 2:
-					var set:FlxSprite = new FlxSprite().loadGraphic(Paths.image(introAlts[1]));
+					var set:FlxSprite = new FlxSprite().loadGraphic(CoolUtil.getBitmap(Paths.image(introAlts[1])));
 					set.scrollFactor.set();
 
 					if (altSuffix=='-pixel')
@@ -1557,7 +1557,7 @@ class PlayState extends MusicBeatState
 					});
 					FlxG.sound.play(Paths.sound('intro1${altSuffix}'), 0.6);
 				case 3:
-					var go:FlxSprite = new FlxSprite().loadGraphic(Paths.image(introAlts[2]));
+					var go:FlxSprite = new FlxSprite().loadGraphic(CoolUtil.getBitmap(Paths.image(introAlts[2])));
 					go.scrollFactor.set();
 
 					if (altSuffix=='-pixel')
@@ -1648,12 +1648,23 @@ class PlayState extends MusicBeatState
 		if(dynamicColouring==null)dynamicColouring=false;
 		Receptor.dynamicColouring=dynamicColouring;
 
-
-
 		var songData = SONG;
 		Conductor.changeBPM(SONG.bpm);
 
 		curSong = SONG.song;
+
+		// CACHING TODOOOOOOOOO
+		PauseThing.cachePause(daCharacterPause);
+
+		CoolUtil.getSound(Paths.sound('missnote1'));
+		CoolUtil.getSound(Paths.sound('missnote2'));
+		CoolUtil.getSound(Paths.sound('missnote3'));
+		
+		CoolUtil.getBitmap(Paths.image('judgements'));
+		
+		CoolUtil.getBitmap(Paths.image('numbers','shared'));
+		CoolUtil.getBitmap(Paths.image('light','shared'));
+		//
 
 		if (SONG.needsVoices){
 			vocals = new FlxSound().loadEmbedded(CoolUtil.getSound('${Paths.voices(SONG.song)}'));
@@ -2749,7 +2760,7 @@ class PlayState extends MusicBeatState
 						vocals.stop();
 						inst.stop();
 
-						var screamer:FlxSprite = new FlxSprite().loadGraphic(Paths.image('bad/scream'));
+						var screamer:FlxSprite = new FlxSprite().loadGraphic(CoolUtil.getBitmap(Paths.image('bad/scream')));
 						screamer.screenCenter();
 						camHUD.alpha = 1;
 						screamer.cameras = [camHUD];
@@ -3432,7 +3443,7 @@ class PlayState extends MusicBeatState
 					if(i=='-'){
 						i='negative';
 					}
-					//var numScore:FlxSprite = new FlxSprite().loadGraphic(Paths.image(pixelShitPart1 + 'num' + i + pixelShitPart2));
+					//var numScore:FlxSprite = new FlxSprite().loadGraphic(CoolUtil.getBitmap(Paths.image(pixelShitPart1 + 'num' + i + pixelShitPart2));
 					var numScore:Null<ComboSprite> = null;
 					if(currentOptions.recycleComboJudges){
 						numScore = comboBin.recycle(ComboSprite);
@@ -3647,7 +3658,7 @@ class PlayState extends MusicBeatState
 					daLoop--;
 				}
 
-			//	var numScore:FlxSprite = new FlxSprite().loadGraphic(Paths.image(pixelShitPart1 + 'num' + i + pixelShitPart2));
+			//	var numScore:FlxSprite = new FlxSprite().loadGraphic(CoolUtil.getBitmap(Paths.image(pixelShitPart1 + 'num' + i + pixelShitPart2));
 				var numScore:Null<ComboSprite> = null;
 				if(currentOptions.recycleComboJudges){
 					numScore = comboBin.recycle(ComboSprite);

@@ -136,14 +136,14 @@ class TitleState extends MusicBeatState
 		}
 		else
 		{
-			bg = new FlxSprite(FlxG.width, FlxG.height).loadGraphic(Paths.image('titleBG'));
+			bg = new FlxSprite(FlxG.width, FlxG.height).loadGraphic(CoolUtil.getBitmap(Paths.image('titleBG')));
 			bg.updateHitbox();
 			bg.screenCenter();
 			bg.antialiasing = true;
 			add(bg);
 			bg.visible = true;
 
-			bgLit = new FlxSprite(FlxG.width, FlxG.height).loadGraphic(Paths.image('titleBGLit'));
+			bgLit = new FlxSprite(FlxG.width, FlxG.height).loadGraphic(CoolUtil.getBitmap(Paths.image('titleBGLit')));
 			bgLit.updateHitbox();
 			bgLit.screenCenter();
 			bgLit.antialiasing = true;
@@ -195,7 +195,7 @@ class TitleState extends MusicBeatState
 		// titleText.screenCenter(X);
 		add(titleText);
 
-		var logo:FlxSprite = new FlxSprite().loadGraphic(Paths.image('logo'));
+		var logo:FlxSprite = new FlxSprite().loadGraphic(CoolUtil.getBitmap(Paths.image('logo')));
 		logo.screenCenter();
 		logo.antialiasing = true;
 		// add(logo);
@@ -217,7 +217,7 @@ class TitleState extends MusicBeatState
 
 		credTextShit.visible = false;
 
-		ngSpr = new FlxSprite(0, FlxG.height * 0.52).loadGraphic(Paths.image('newgrounds_logo'));
+		ngSpr = new FlxSprite(0, FlxG.height * 0.52).loadGraphic(CoolUtil.getBitmap(Paths.image('newgrounds_logo')));
 		add(ngSpr);
 		ngSpr.visible = false;
 		ngSpr.setGraphicSize(Std.int(ngSpr.width * 0.8));

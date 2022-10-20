@@ -15,7 +15,7 @@ class FreePlayThing extends FlxSpriteGroup
 	{
 		super(x, y);
 		if (songNum != 'killer-scream'){
-			song = new FlxSprite().loadGraphic(Paths.image('freeTitle/' + songNum));
+			song = new FlxSprite().loadGraphic(CoolUtil.getBitmap(Paths.image('freeTitle/' + songNum)));
 	    	song.y = -300;
         	song.x += 780;
 			add(song);

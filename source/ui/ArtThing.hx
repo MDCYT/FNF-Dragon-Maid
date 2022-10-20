@@ -13,7 +13,7 @@ class ArtThing extends FlxSpriteGroup
 	public function new(x:Float, y:Float, artNum:Int = 0)
 	{
         super(x, y);
-		arts = new FlxSprite().loadGraphic(Paths.image('artBook/art' + artNum)); //recopila las imagenes
+		arts = new FlxSprite().loadGraphic(CoolUtil.getBitmap(Paths.image('artBook/art' + artNum))); //recopila las imagenes
 		add(arts);
 	}
 

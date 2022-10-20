@@ -93,7 +93,7 @@ class StoryMenuState extends MusicBeatState
 		trans.screenCenter();
 		trans.scrollFactor.set();
 
-		bg = new FlxBackdrop(Paths.image('storyMode/background'), 10, 0, true, false);
+		bg = new FlxBackdrop(CoolUtil.getBitmap(Paths.image('storyMode/background')), 10, 0, true, false);
 		bg.velocity.set(-150, 0);
 		bg.scrollFactor.set();
 		add(bg);
@@ -102,7 +102,7 @@ class StoryMenuState extends MusicBeatState
 		bgBlack.alpha = 0;
 		bgBlack.scrollFactor.set();
 
-		diffThing = new FlxSprite(0, 0).loadGraphic(Paths.image('storyMode/diffThing'));
+		diffThing = new FlxSprite(0, 0).loadGraphic(CoolUtil.getBitmap(Paths.image('storyMode/diffThing')));
 		diffThing.screenCenter(X);
 		diffThing.scrollFactor.set();
 				

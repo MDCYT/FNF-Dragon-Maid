@@ -256,7 +256,7 @@ class MinigameState extends MusicBeatState
 
         coinEvent = true;
 
-        var coolScore:FlxSprite = new FlxSprite(0, 80).loadGraphic(Paths.image('miniDragon/hud/' + daScore));
+        var coolScore:FlxSprite = new FlxSprite(0, 80).loadGraphic(CoolUtil.getBitmap(Paths.image('miniDragon/hud/' + daScore)));
         coolScore.screenCenter(X);
         coolScore.scale.set(1.3, 1.3);
         add(coolScore);

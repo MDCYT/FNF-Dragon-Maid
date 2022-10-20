@@ -39,6 +39,13 @@ class PauseThing extends FlxSpriteGroup
     public var grpStars:FlxSpriteGroup;
 
 	public var isClose:Bool = false;
+
+	public static function cachePause(state:Int = 0):Void {
+		CoolUtil.getBitmap(Paths.image('pauseState/circleLOL' + state));
+		CoolUtil.getBitmap(Paths.image('pauseState/artWork' + state));
+		CoolUtil.getBitmap(Paths.image('pauseState/stars' + state));
+		CoolUtil.getBitmap(Paths.image('pauseState/optionsPause' + state));
+	}
     
     public function new(x:Float, y:Float, state:Int = 0)
     {
@@ -54,10 +61,10 @@ class PauseThing extends FlxSpriteGroup
 
         characterPause = state;
 
-        circle = new FlxSprite(xAnim).loadGraphic(Paths.image('pauseState/circleLOL' + characterPause));
+        circle = new FlxSprite(xAnim).loadGraphic(CoolUtil.getBitmap(Paths.image('pauseState/circleLOL' + characterPause)));
 		add(circle);
 
-		artWork = new FlxSprite(xAnim).loadGraphic(Paths.image('pauseState/artWork' + characterPause));
+		artWork = new FlxSprite(xAnim).loadGraphic(CoolUtil.getBitmap(Paths.image('pauseState/artWork' + characterPause)));
 		add(artWork);
 
 		var tex = Paths.getSparrowAtlas('pauseState/stars' + characterPause);

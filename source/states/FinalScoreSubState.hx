@@ -79,12 +79,12 @@ class FinalScoreSubState extends MusicBeatSubstate
 		trans = new MaidTransition(0, 0);
 		trans.screenCenter();
 
-		bg = new FlxBackdrop(Paths.image('resultScore/bg'), 10, 0, true, false);
+		bg = new FlxBackdrop(CoolUtil.getBitmap(Paths.image('resultScore/bg')), 10, 0, true, false);
         bg.antialiasing = true;
 		bg.velocity.set(-70, 0);
 		add(bg);
 
-        overlay1 = new FlxSprite().loadGraphic(Paths.image('resultScore/overlay1'));
+        overlay1 = new FlxSprite().loadGraphic(CoolUtil.getBitmap(Paths.image('resultScore/overlay1')));
         overlay1.antialiasing = true;
         add(overlay1);
 
@@ -139,7 +139,7 @@ class FinalScoreSubState extends MusicBeatSubstate
 			txtGrp.add(txt);
         }
 
-        scoreOverlay = new FlxSprite(920, 90).loadGraphic(Paths.image('resultScore/scoreOverlay'));
+        scoreOverlay = new FlxSprite(920, 90).loadGraphic(CoolUtil.getBitmap(Paths.image('resultScore/scoreOverlay')));
         scoreOverlay.antialiasing = true;
         scoreOverlay.x += 500;
         add(scoreOverlay);

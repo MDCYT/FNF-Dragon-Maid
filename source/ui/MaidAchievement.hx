@@ -32,7 +32,7 @@ class MaidAchievement extends FlxSpriteGroup {
 
     var name:Array<String> = achievements[num];
 
-    rectangle = new FlxSprite().loadGraphic(Paths.image('achievement/' + name[2]));
+    rectangle = new FlxSprite().loadGraphic(CoolUtil.getBitmap(Paths.image('achievement/' + name[2])));
     rectangle.updateHitbox();
     rectangle.antialiasing = true;
     add(rectangle);

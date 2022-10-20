@@ -29,7 +29,7 @@ class DialogueChat extends FlxSpriteGroup
     public function new(char:String, face:String, dialogue:String, flip:String){
         super();
 
-        box = new FlxSprite().loadGraphic(Paths.image('chatBox/box'));
+        box = new FlxSprite().loadGraphic(CoolUtil.getBitmap(Paths.image('chatBox/box')));
         box.antialiasing = true;
         
         add(box);

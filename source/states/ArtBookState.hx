@@ -92,11 +92,11 @@ class ArtBookState extends MusicBeatState
 		bg.screenCenter();
         add(bg);
 
-        var shape:FlxSprite = new FlxSprite().loadGraphic(Paths.image('artMenu/shapes'));
+        var shape:FlxSprite = new FlxSprite().loadGraphic(CoolUtil.getBitmap(Paths.image('artMenu/shapes')));
         shape.antialiasing = true;
         shape.screenCenter();
 
-        var hud:FlxSprite = new FlxSprite().loadGraphic(Paths.image('artMenu/Hud'));
+        var hud:FlxSprite = new FlxSprite().loadGraphic(CoolUtil.getBitmap(Paths.image('artMenu/Hud')));
         hud.antialiasing = true;
         hud.screenCenter();
 

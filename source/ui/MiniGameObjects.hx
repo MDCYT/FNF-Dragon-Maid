@@ -71,7 +71,7 @@ class MiniGameObjects extends FlxTypedGroup<FlxBasic>
         switch(curLevel)
         {
           case 1:
-            wall = new FlxSprite().loadGraphic(Paths.image('miniDragon/Fondo'));
+            wall = new FlxSprite().loadGraphic(CoolUtil.getBitmap(Paths.image('miniDragon/Fondo')));
             wall.setGraphicSize(1280, 720);
             wall.screenCenter();
     
@@ -81,14 +81,14 @@ class MiniGameObjects extends FlxTypedGroup<FlxBasic>
             nube.animation.play('nube');
             nube.updateHitbox(); 
     
-            arboles = new FlxSprite().loadGraphic(Paths.image('miniDragon/Arboles'));
+            arboles = new FlxSprite().loadGraphic(CoolUtil.getBitmap(Paths.image('miniDragon/Arboles')));
             arboles.setGraphicSize(1280, 720);
             arboles.screenCenter();
 
-            arbustos = new FlxSprite(420, 227).loadGraphic(Paths.image('miniDragon/Arbusto'));
+            arbustos = new FlxSprite(420, 227).loadGraphic(CoolUtil.getBitmap(Paths.image('miniDragon/Arbusto')));
             arbustos.setGraphicSize(1280, 720);
     
-            barHud = new FlxSprite(0, 575).loadGraphic(Paths.image('miniDragon/hud/Hud'));
+            barHud = new FlxSprite(0, 575).loadGraphic(CoolUtil.getBitmap(Paths.image('miniDragon/hud/Hud')));
             barHud.screenCenter(X);
     
             pointText = new FlxText(0, 0, '100', 15);
@@ -137,7 +137,7 @@ class MiniGameObjects extends FlxTypedGroup<FlxBasic>
     
             dragonHud.animation.play('10');
     
-            title = new FlxSprite().loadGraphic(Paths.image('miniDragon/title'));
+            title = new FlxSprite().loadGraphic(CoolUtil.getBitmap(Paths.image('miniDragon/title')));
             title.screenCenter();
     
             dragon = new Dragon();
@@ -157,21 +157,21 @@ class MiniGameObjects extends FlxTypedGroup<FlxBasic>
             mouse.scale.set(0.1, 0.1);
             mouse.updateHitbox();
     
-            ready = new FlxSprite().loadGraphic(Paths.image('miniDragon/hud/READY'));
+            ready = new FlxSprite().loadGraphic(CoolUtil.getBitmap(Paths.image('miniDragon/hud/READY')));
             ready.setGraphicSize(Std.int(ready.width * 4));
             ready.updateHitbox();
             ready.screenCenter();
             ready.antialiasing = false;
             ready.alpha = 0;
 
-            set = new FlxSprite().loadGraphic(Paths.image('miniDragon/hud/SET'));
+            set = new FlxSprite().loadGraphic(CoolUtil.getBitmap(Paths.image('miniDragon/hud/SET')));
             set.setGraphicSize(Std.int(set.width * 4));
             set.updateHitbox();
             set.screenCenter();
             set.antialiasing = false;
             set.alpha = 0;
     
-            go = new FlxSprite().loadGraphic(Paths.image('miniDragon/hud/GO'));
+            go = new FlxSprite().loadGraphic(CoolUtil.getBitmap(Paths.image('miniDragon/hud/GO')));
             go.setGraphicSize(Std.int(go.width * 4));
             go.updateHitbox();
             go.screenCenter();
