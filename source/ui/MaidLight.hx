@@ -48,7 +48,6 @@ class MaidLight extends FlxSprite{
   }
 
   override function update(elapsed:Float){
-
     super.update(elapsed);
   }
 }

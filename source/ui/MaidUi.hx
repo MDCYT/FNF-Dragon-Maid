@@ -180,7 +180,6 @@ class MaidUi extends FlxSpriteGroup {
 
       var _curPoint:FlxSprite = plusGrp.members[plusGrp.members.length - (pointCombo-1)];
       if(_curPoint != null){
-        trace('ola');
         _curPoint.alpha = 1;
         _curPoint.animation.play("idle", true);
         FlxG.sound.play(CoolUtil.getSound(Paths.sound("combo")));

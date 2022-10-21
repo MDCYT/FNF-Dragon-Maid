@@ -2927,10 +2927,9 @@ class PlayState extends MusicBeatState
 					camHUD.flash();
 					bfTrail.visible = true;
 
-					var _loop:Int = 0;
-
 					FlxTween.tween(healthBar.goldenDisc, {alpha: 0}, (Conductor.stepCrochet/1000)*128);
 
+					var _loop:Int = 0;
 					new FlxTimer().start((Conductor.stepCrochet/1000)*32, function(trm){
 						_loop++;
 						var _curPoint:FlxSprite = healthBar.plusGrp.members[_loop - 1];
