@@ -19,6 +19,7 @@ class NoteSplash extends FlxSprite{
   var splashOffset:Array<Null<Float>>=[];
   var splashAngle:Float = 0;
   var loadedSplashData:Dynamic;
+  
   public function setTextures(note:Note){
     var behaviour = note.behaviour;
     // TODO: quants

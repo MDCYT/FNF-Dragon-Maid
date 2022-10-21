@@ -21,6 +21,8 @@ class ShopState extends MusicBeatState
 {
 	var curSelected:Int = 0;
 
+	var lblmoney:FlxText;
+
 	var cat:FlxSprite;
 	var info:FlxTypeText;
 	var fafnir:FlxSprite;
@@ -44,12 +46,13 @@ class ShopState extends MusicBeatState
 		['key', '"Killer-Scream" Extra song available in Freeplay.'],
 		['key', 'BF and GF "Maid" skin, available for use on any difficulty.']
 	];
-	override function create()
-	{
+
+	override function create(){
 		super.create();
-		#if desktop
-		DiscordClient.changePresence("Shop", null);
-		#end
+
+		if(FlxG.save.data.coin == null){FlxG.save.data.coin = 0;}
+
+		#if desktop DiscordClient.changePresence("Shop", null); #end
 
 		var bg:FlxBackdrop = new FlxBackdrop(CoolUtil.getBitmap(Paths.image('shopState/bg')), 10, 0, true, false);
 		bg.antialiasing = true;
@@ -97,8 +100,7 @@ class ShopState extends MusicBeatState
 		obj = new FlxSpriteGroup();
 		add(obj);
 
-		for (i in 0...item.length)
-		{
+		for(i in 0...item.length){
 			var it:FlxSprite = new FlxSprite(337, 153).loadGraphic(CoolUtil.getBitmap(Paths.image('shopState/catalogue/${i}')));
 			it.scale.set(0.6, 0.6);
 			it.updateHitbox();
@@ -111,10 +113,19 @@ class ShopState extends MusicBeatState
 		bar = new FlxSprite(0, 60).loadGraphic(CoolUtil.getBitmap(Paths.image('shopState/barCoin')));
 		bar.antialiasing = true;
 		add(bar);
+
+		lblmoney = new FlxText(bar.x + 10, bar.y + 15, '${FlxG.save.data.coin}', 32);
+		lblmoney.font = Paths.font('scoreFont.ttf');
+		lblmoney.color = FlxColor.PURPLE;
+		add(lblmoney);
 		
 		ind = new FlxSprite(435, 30).loadGraphic(CoolUtil.getBitmap(Paths.image('shopState/ind')));
 		ind.antialiasing = true;
+		FlxTween.tween(ind, {y: ind.y + 10}, 10, {type:FlxTween.PINGPONG, ease:FlxEase.backInOut});
 		add(ind);
+
+		var blackUpFront = new FlxSprite().makeGraphic(FlxG.width, 40, FlxColor.BLACK); add(blackUpFront);
+		var blackDownFront = new FlxSprite(0, FlxG.height - 40).makeGraphic(FlxG.width, 40, FlxColor.BLACK); add(blackDownFront);
 
 		changeItem();
 	}
