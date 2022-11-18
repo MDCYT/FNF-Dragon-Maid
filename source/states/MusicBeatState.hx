@@ -50,6 +50,10 @@ class MusicBeatState extends FlxUIState
 
 	override function update(elapsed:Float)
 	{
+		for(shader in SugarShader.shaders){
+            if(shader == null){SugarShader.shaders.remove(shader); continue;}
+            shader.update(elapsed);
+        }
 		//everyStep();
 		var oldStep:Int = curStep;
 

@@ -3,7 +3,9 @@ package states;
 import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.FlxSubState;
+import sys.io.File;
 import flixel.math.FlxPoint;
+import openfl.filters.ShaderFilter;
 import flixel.util.FlxColor;
 import flixel.FlxCamera;
 import flixel.util.FlxTimer;
@@ -16,6 +18,8 @@ class GameOverSubstate extends MusicBeatSubstate
 	var trans:MaidTransition;
 	var defCam:FlxCamera;
 	var camTran:FlxCamera;
+	var shad:SugarShader;
+	var daSONG = PlayState.SONG.song;
 
 	public function new(x:Float, y:Float)
 	{
@@ -31,8 +35,7 @@ class GameOverSubstate extends MusicBeatSubstate
         FlxCamera.defaultCameras = [defCam];
 
 		defCam.zoom = 0.65;
-		
-		var daSONG = PlayState.SONG.song;
+	
 		var daBf:String = '';
 
 		switch (daSONG)
@@ -60,6 +63,8 @@ class GameOverSubstate extends MusicBeatSubstate
 			case 'burn-it-all':
 				daBf = 'bfDragon';
 				daTheme = 'bad';
+				shad = new SugarShader(null, {fragmentsrc: File.getContent(Paths.shader('TvShader'))});
+				FlxG.camera.setFilters([new ShaderFilter(shad)]);
 			default:
 				daBf = 'BF_Death';
 				daTheme = 'game';
@@ -112,7 +117,6 @@ class GameOverSubstate extends MusicBeatSubstate
 	override function update(elapsed:Float)
 	{
 		super.update(elapsed);
-
 		if (controls.ACCEPT)
 		{
 			endBullshit();

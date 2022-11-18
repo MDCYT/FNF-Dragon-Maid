@@ -19,7 +19,6 @@ using StringTools;
 import flixel.FlxCamera;
 import openfl.Lib;
 import openfl.Assets;
-import ShaderManager;
 import Shaders;
 import flash.display.BitmapData;
 import flash.display.Bitmap;

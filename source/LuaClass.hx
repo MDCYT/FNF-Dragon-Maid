@@ -1315,7 +1315,6 @@ class LuaCharacter extends LuaSprite {
     var char = LuaL.checkstring(state,2);
     Lua.getfield(state,1,"spriteName");
     var spriteName = Lua.tostring(state,-1);
-    PlayState.currentPState.swapCharacterByLuaName(spriteName,char);
 
     return 0;
   }

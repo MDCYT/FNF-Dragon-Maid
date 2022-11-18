@@ -15,6 +15,7 @@ import flixel.FlxG;
 import flixel.FlxGame;
 import flixel.FlxObject;
 import flixel.util.FlxSpriteUtil;
+import openfl.filters.ShaderFilter;
 import flixel.FlxSprite;
 import flixel.FlxState;
 import openfl.Lib;
@@ -48,7 +49,6 @@ import openfl.Lib;
 import openfl.display.BlendMode;
 import openfl.display.StageQuality;
 import openfl.filters.ShaderFilter;
-import LuaClass;
 import flash.display.BitmapData;
 import flash.display.Bitmap;
 import Shaders;
@@ -76,7 +76,6 @@ import openfl.filters.ShaderFilter;
 import Shaders;
 import EngineData.WeekData;
 import EngineData.SongData;
-import ShaderManager;
 import flash.system.System;
 
 using StringTools;
@@ -85,7 +84,11 @@ using flixel.util.FlxSpriteUtil;
 class PlayState extends MusicBeatState
 {
 	var trans:MaidTransition;
-	var fx:VCRDistortionEffect;
+
+	//shaders
+	var t:SugarShader;
+	var b:SugarShader;
+	var g:SugarShader;
 
 	public static var noteCounter:Map<String,Int> = [];
 	public static var inst:FlxSound;
@@ -134,6 +137,8 @@ class PlayState extends MusicBeatState
 	private var noteSplashes:FlxTypedGroup<NoteSplash>;
 	private var playerNotes:Array<Note> = [];
 	private var unspawnNotes:Array<Note> = [];
+	
+	public var vel:Int = 0;
 
 	private var strumLine:FlxSprite;
 	private var curSection:Int = 0;
@@ -162,9 +167,6 @@ class PlayState extends MusicBeatState
 	public var luaObjects:Map<String, Dynamic>;
 	public var unnamedLuaSprites:Int=0;
 	public var unnamedLuaShaders:Int=0;
-	public var dadLua:LuaCharacter;
-	public var gfLua:LuaCharacter;
-	public var bfLua:LuaCharacter;
 	public var gameCam3D:RaymarchEffect;
 	public var hudCam3D:RaymarchEffect;
 	public var noteCam3D:RaymarchEffect;
@@ -320,144 +322,6 @@ class PlayState extends MusicBeatState
 	var detailsPausedText:String = "";
 	#end
 
-	function setupLuaSystem(){
-		if(luaModchartExists){
-			lua = new LuaVM();
-			lua.setGlobalVar("storyDifficulty",storyDifficulty);
-			lua.setGlobalVar("chartName",songData.chartName);
-			lua.setGlobalVar("songName",SONG.song);
-			lua.setGlobalVar("displayName",songData.displayName);
-			lua.setGlobalVar("curBeat",0);
-			lua.setGlobalVar("curStep",0);
-			lua.setGlobalVar("curDecBeat",0);
-			lua.setGlobalVar("curDecStep",0);
-			lua.setGlobalVar("songPosition",Conductor.songPosition);
-			lua.setGlobalVar("bpm",Conductor.bpm);
-			lua.setGlobalVar("XY","XY");
-			lua.setGlobalVar("X","X");
-			lua.setGlobalVar("Y","Y");
-			lua.setGlobalVar("width",FlxG.width);
-			lua.setGlobalVar("height",FlxG.height);
-
-			Lua_helper.add_callback(lua.state,"log", function(string:String){
-				FlxG.log.add(string);
-			});
-
-			Lua_helper.add_callback(lua.state,"playSound", function(sound:String,volume:Float=1,looped:Bool=false){
-				FlxG.sound.play(sound,volume,looped);
-			});
-
-			Lua_helper.add_callback(lua.state,"setVar", function(variable:String,val:Any){
-				Reflect.setField(this,variable,val);
-			});
-
-			Lua_helper.add_callback(lua.state,"getVar", function(variable:String){
-				return Reflect.field(this,variable);
-			});
-
-			Lua_helper.add_callback(lua.state,"setJudge", function(variable:String,val:Any){
-				judgeMan.judgementCounter.set(variable,val);
-			});
-
-			Lua_helper.add_callback(lua.state,"getJudge", function(variable:String){
-				return judgeMan.judgementCounter.get(variable);
-			});
-
-			Lua_helper.add_callback(lua.state,"setOption", function(variable:String,val:Any){
-				Reflect.setField(currentOptions,variable,val);
-			});
-
-			Lua_helper.add_callback(lua.state,"getOption", function(variable:String){
-				return Reflect.field(currentOptions,variable);
-			});
-
-			Lua_helper.add_callback(lua.state,"compensateFPS", function(num:Float){ // prob need new name? idk
-				return Main.adjustFPS(num);
-			});
-
-			Lua_helper.add_callback(lua.state,"newOpponent", function(x:Float, y:Float, ?character:String = "bf", ?spriteName:String){
-				var char = new Character(x,y,character,false,!currentOptions.noChars);
-				var name = "UnnamedOpponent"+unnamedLuaSprites;
-
-				if(spriteName!=null)
-					name=spriteName;
-				else
-					unnamedLuaSprites++;
-
-				var lSprite = new LuaCharacter(char,name,spriteName!=null);
-				var classIdx = Lua.gettop(lua.state)+1;
-				lSprite.Register(lua.state);
-				Lua.pushvalue(lua.state,classIdx);
-				opponents.push(char);
-				stage.layers.get("dad").add(char);
-			});
-
-			Lua_helper.add_callback(lua.state,"newSprite", function(?x:Int=0,?y:Int=0,?drawBehind:Bool=false,?spriteName:String){
-				var sprite = new FlxSprite(x,y);
-				var name = "UnnamedSprite"+unnamedLuaSprites;
-
-				if(spriteName!=null)
-					name=spriteName;
-				else
-					unnamedLuaSprites++;
-
-				var lSprite = new LuaSprite(sprite,name,spriteName!=null);
-				var classIdx = Lua.gettop(lua.state)+1;
-				lSprite.Register(lua.state);
-				Lua.pushvalue(lua.state,classIdx);
-				if(drawBehind){
-					stage.add(sprite);
-				}else{
-					add(sprite);
-				};
-			});
-
-			var dirs = ["left","down","up","right"];
-			for(dir in 0...playerStrums.length){
-				var receptor = playerStrums.members[dir];
-				new LuaReceptor(receptor, '${dirs[dir]}PlrNote').Register(lua.state);
-			}
-			for(dir in 0...dadStrums.length){
-				var receptor = dadStrums.members[dir];
-				new LuaReceptor(receptor, '${dirs[dir]}DadNote').Register(lua.state);
-			}
-
-			var luaModchart = new LuaModchart(modchart);
-
-			bfLua = new LuaCharacter(boyfriend,"bf",true);
-			gfLua = new LuaCharacter(gf,"gf",true);
-			dadLua = new LuaCharacter(dad,"dad",true);
-
-			var bfIcon = new LuaSprite(healthBar.iconP1,"iconP1",true);
-			var dadIcon = new LuaSprite(healthBar.iconP1,"iconP2",true);
-
-			var window = new LuaWindow();
-
-			var luaGameCam = new LuaCam(FlxG.camera,"gameCam");
-			var luaHUDCam = new LuaCam(camHUD,"HUDCam");
-			var luaNotesCam = new LuaCam(camNotes,"notesCam");
-			var luaSustainCam = new LuaCam(camSus,"holdCam");
-			var luaReceptorCam = new LuaCam(camReceptor,"receptorCam");
-			// TODO: a flat 'camera' object which'll affect the properties of every camera
-
-			new LuaModMgr(modManager).Register(lua.state);
-
-			for(i in [luaModchart,window,bfLua,gfLua,dadLua,bfIcon,dadIcon,luaGameCam,luaHUDCam,luaNotesCam,luaSustainCam,luaReceptorCam])
-				i.Register(lua.state);
-
-
-			lua.errorHandler = function(error:String){
-				FlxG.log.advanced(error, EngineData.LUAERROR, true);
-			}
-
-			// this catches compile errors
-			try {
-				lua.runFile(Paths.modchart(songData.chartName.toLowerCase()));
-			}catch (e:Exception){
-				FlxG.log.advanced(e, EngineData.LUAERROR, true);
-			};
-		}
-	}
 
 	override public function create()
 	{
@@ -512,12 +376,6 @@ class PlayState extends MusicBeatState
 		if (FlxG.sound.music != null)
 			FlxG.sound.music.stop();
 
-		//lua = new LuaVM();
-		#if cpp
-			luaModchartExists = FileSystem.exists(Paths.modchart(songData.chartName.toLowerCase()));
-		#end
-
-		trace(luaModchartExists);
 		judgeBin = new FlxTypedGroup<JudgeSprite>();
 		comboBin = new FlxTypedGroup<ComboSprite>();
 		//judgeBin.add(new JudgeSprite());
@@ -526,18 +384,6 @@ class PlayState extends MusicBeatState
 		hitNotes=0;
 		totalNotes=0;
 		accuracy=1;
-
-		if (bad){
-			Lib.current.stage.window.borderless = true;
-
-			fx = new VCRDistortionEffect();
-        	fx.setVignette(true);
-        	fx.setVignetteMoving(true);
-        	fx.setGlitchModifier(0.1);
-        	fx.setDistortion(true);
-     
-        	fx.setNoise(true);
-		}
 		// var gameCam:FlxCamera = FlxG.camera;
 		camGame = new FNFCamera();
 		camRating = new FNFCamera();
@@ -554,10 +400,6 @@ class PlayState extends MusicBeatState
 		camReceptor.bgColor.alpha = 0;
 		pauseHUD = new FNFCamera();
 		pauseHUD.bgColor.alpha = 0;
-
-		if (bad){
-			ShaderManager.addCamEffect(fx, camGame);
-		}
 
 		FlxG.cameras.reset(camGame);
 		if(!currentOptions.ratingInHUD)
@@ -781,6 +623,7 @@ class PlayState extends MusicBeatState
 				add(chair);	
 
 				skin = 'maidTohru';
+				b = new SugarShader(null, {fragmentsrc: File.getContent(Paths.shader('TohruShader'))});
 			case 'forest':
 				add(dad);
 				add(stage.layers.get("dad"));
@@ -794,7 +637,7 @@ class PlayState extends MusicBeatState
 				add(overlap);
 
 				skin = 'maidElma';
-
+				b = new SugarShader(null, {fragmentsrc: File.getContent(Paths.shader('ElmaShader'))});
 			default:
 				add(dad);
 				add(stage.layers.get("dad"));
@@ -821,6 +664,18 @@ class PlayState extends MusicBeatState
 			remove(dad);
 			remove(boyfriend);
 		}
+
+		t = new SugarShader(null, {fragmentsrc: File.getContent(Paths.shader('BurstShader'))});
+
+
+		if(bad){
+			Lib.current.stage.window.borderless = true;	
+			b = new SugarShader(null, {fragmentsrc: File.getContent(Paths.shader('TvShader'))});
+			g = new SugarShader(null, {fragmentsrc: File.getContent(Paths.shader('GlitchShader'))});
+
+			camGame.setFilters([new ShaderFilter(g), new ShaderFilter(b)]);
+		}
+		else camGame.setFilters([new ShaderFilter(b)]);
 
 		var texKanna = Paths.getSparrowAtlas('maidDragon/cuteKanna');
 
@@ -882,8 +737,6 @@ class PlayState extends MusicBeatState
 
 		playerStrumLines = new FlxTypedGroup<FlxSprite>();
 		opponentStrumLines = new FlxTypedGroup<FlxSprite>();
-		luaSprites = new Map<String, FlxSprite>();
-		luaObjects = new Map<String, FlxBasic>();
 		refNotes = new FlxTypedGroup<FlxSprite>();
 		opponentRefNotes = new FlxTypedGroup<FlxSprite>();
 		refReceptors = new FlxTypedGroup<FlxSprite>();
@@ -1268,55 +1121,6 @@ class PlayState extends MusicBeatState
 		return reg1.replace(reg2.replace(a,""),"");
 	}
 
-	public function swapCharacterByLuaName(spriteName:String,newCharacter:String){
-		var sprite = luaSprites[spriteName];
-		if(sprite!=null){
-			var newSprite:Character;
-			var spriteX = sprite.x;
-			var spriteY = sprite.y;
-			var currAnim:String = "idle";
-			if(sprite.animation.curAnim!=null)
-				currAnim=sprite.animation.curAnim.name;
-			trace(currAnim);
-			remove(sprite);
-			// TODO: Make this BETTER!!!
-			if(spriteName=="bf"){
-				boyfriend = new Boyfriend(spriteX,spriteY,newCharacter,boyfriend.hasSprite);
-				newSprite = boyfriend;
-				bfLua.sprite = boyfriend;
-				//iconP1.changeCharacter(newCharacter);
-			}else if(spriteName=="dad"){
-				var index = opponents.indexOf(dad);
-				if(index>=0)opponents.remove(dad);
-				dad = new Character(spriteX,spriteY,newCharacter, dad.isPlayer ,dad.hasSprite);
-				newSprite = dad;
-				dadLua.sprite = dad;
-				if(index>=0)opponents.insert(index,dad);
-
-				//iconP2.changeCharacter(newCharacter);
-			}else if(spriteName=="gf"){
-				gf = new Character(spriteX,spriteY,newCharacter, gf.isPlayer ,gf.hasSprite);
-				newSprite = gf;
-				gfLua.sprite = gf;
-			}else{
-				newSprite = new Character(spriteX,spriteY,newCharacter);
-			}
-			healthBar.setIcons(boyfriend.iconName);
-			if(currentOptions.healthBarColors)
-				//healthBar.setColors(dad.iconColor,boyfriend.iconColor);
-
-			luaSprites[spriteName]=newSprite;
-			add(newSprite);
-			if(currAnim!="idle" && !currAnim.startsWith("dance")){
-				newSprite.playAnim(currAnim,true);
-			}else if(currAnim=='idle' || currAnim.startsWith("dance")){
-				newSprite.dance();
-			}
-
-
-		}
-	}
-
 	var startTimer:FlxTimer;
 	var perfectMode:Bool = false;
 
@@ -1366,13 +1170,6 @@ class PlayState extends MusicBeatState
 		Conductor.songPosition=Conductor.rawSongPos;
 
 		if(startPos>0)canScore=false;
-
-		#if FORCE_LUA_MODCHARTS
-		setupLuaSystem();
-		#else
-		if(currentOptions.loadModcharts)
-			setupLuaSystem();
-		#end
 
 		var swagCounter:Int = 0;
 
@@ -1443,7 +1240,7 @@ class PlayState extends MusicBeatState
 						countDownTween(set);
 						FlxG.sound.play(Paths.sound('intro1${altSuffix}'), 0.6);
 
-						daNameSong(currentOptions.downScroll);
+						if (!bad) daNameSong(currentOptions.downScroll);
 					case 3:
 						var go:FlxSprite = new FlxSprite().loadGraphic(CoolUtil.getBitmap(Paths.image(introAlts[2])));
 						go.scrollFactor.set();
@@ -1655,7 +1452,7 @@ class PlayState extends MusicBeatState
 
 		// CACHING TODOOOOOOOOO
 		PauseThing.cachePause(daCharacterPause);
-
+		MaidUi.cacheHUD();
 		CoolUtil.getSound(Paths.sound('missnote1'));
 		CoolUtil.getSound(Paths.sound('missnote2'));
 		CoolUtil.getSound(Paths.sound('missnote3'));
@@ -2186,7 +1983,7 @@ class PlayState extends MusicBeatState
 	// https://github.com/Quaver/Quaver
 
 	function updateScoreText(){
-		healthBar.setScore(${songScore}, ${grade});
+		if(!bad) healthBar.setScore(${songScore}, ${grade});
 		if(currentOptions.onlyScore){
 			if(botplayScore!=0){
 				if(songScore==0)
@@ -2286,10 +2083,6 @@ class PlayState extends MusicBeatState
 
 	override public function update(elapsed:Float)
 	{	
-
-		if (bad){
-			fx.update(elapsed);
-		}
 		if(FlxG.keys.justPressed.ONE){
 			lockNote(int);
 		}
@@ -2297,11 +2090,11 @@ class PlayState extends MusicBeatState
 			releaseNote(int);
 		}
 		
+		if(FlxG.keys.justPressed.UP){
+			vel += 1;
+		}
 		if(FlxG.keys.justPressed.DOWN){
-			int ++;
-			if (int >= 4){
-				int == 0;
-			}
+			vel -= 1;
 		}
 
 		if (curSong.toLowerCase() == 'killer-scream') //killer scream events
@@ -2432,11 +2225,6 @@ class PlayState extends MusicBeatState
 
 		//modchart.update(elapsed);
 
-		/*if (!bad)
-			healthBar.visible = ScoreUtils.botPlay?false:modchart.hudVisible;
-		if(presetTxt!=null)
-			presetTxt.visible = ScoreUtils.botPlay?false:modchart.hudVisible;*/
-
 		scoreTxt.visible = modchart.hudVisible;
 		shownAccuracy = truncateFloat(FlxMath.lerp(shownAccuracy,accuracy*100, Main.adjustFPS(0.2)),2);
 
@@ -2487,8 +2275,6 @@ class PlayState extends MusicBeatState
 		if (health > 2){
 			health = 2;
 			previousHealth = health;
-			if(luaModchartExists && lua!=null)
-				lua.setGlobalVar("health",health);
 		}
 
 		/* if (FlxG.keys.justPressed.NINE)
@@ -2541,10 +2327,6 @@ class PlayState extends MusicBeatState
 			// Conductor.lastSongPos = inst.time;
 		}
 		try{
-			if(luaModchartExists && lua!=null){
-				lua.setGlobalVar("songPosition",Conductor.songPosition);
-				lua.setGlobalVar("rawSongPos",Conductor.rawSongPos);
-			}
 		}catch(e:Any){
 			trace(e);
 		}
@@ -2736,9 +2518,6 @@ class PlayState extends MusicBeatState
 		{
 			health += 1;
 			previousHealth = health;
-			if(luaModchartExists && lua!=null)
-				lua.setGlobalVar("health",health);
-			trace("User is cheating!");
 		}
 		if(died)
 			health=0;
@@ -2916,12 +2695,13 @@ class PlayState extends MusicBeatState
 		if (generatedMusic)
 		{
 			if(startedCountdown){
-				if(burst && controls.BURST){
+				if(burst && controls.BURST && !bad){
+					camGame.setFilters([new ShaderFilter(b), new ShaderFilter(t)]);
 					healthBar.canPoint = false;
 					healthBar.pointCombo = 0;
 					healthBar.tempCombo = 0;
 					burst = false;
-					charZoom(true, 0.75, 'all');
+					charZoom(true, 0.70, 'all');
 					burstAnim = '-burst';
 
 					camHUD.flash();
@@ -2944,6 +2724,7 @@ class PlayState extends MusicBeatState
 							camHUD.flash();
 							bfTrail.visible = false;
 							charZoom(false, defaultCamZoom, 'all');
+							camGame.setFilters([new ShaderFilter(b)]);
 						}
 					},4);
 				}
@@ -3083,9 +2864,6 @@ class PlayState extends MusicBeatState
 								anim = anim.replace(altAnim,"");
 							}
 
-							if(luaModchartExists && lua!=null){
-								lua.call("dadNoteHit",[Math.abs(daNote.noteData),daNote.strumTime,Conductor.songPosition,anim]); // TODO: Note lua class???
-							}
 						if(opponent.animation.curAnim!=null){
 							var canHold = daNote.isSustainNote && opponent.animation.getByName(anim+"Hold")!=null;
 							if(canHold && !opponent.animation.curAnim.name.startsWith(anim)){
@@ -3184,14 +2962,6 @@ class PlayState extends MusicBeatState
 		camNotes.zoom = camReceptor.zoom;
 		camSus.zoom = camNotes.zoom;
 
-
-		if(luaModchartExists && lua!=null){
-			lua.setGlobalVar("curDecBeat",curDecBeat);
-			lua.setGlobalVar("curDecStep",curDecStep);
-
-			lua.call("update",[elapsed]);
-		}
-
 		if(Conductor.rawSongPos>=inst.length){
 			if(inst.volume>0 || vocals.volume>0)
 				endSong();
@@ -3259,12 +3029,6 @@ class PlayState extends MusicBeatState
 		vocals.volume = 0;
 		inst.stop();
 
-		#if cpp
-		if(lua!=null){
-			lua.destroy();
-			lua=null;
-		}
-		#end
 		if (SONG.validScore && !died && canScore)
 		{
 			#if !switch
@@ -3899,15 +3663,12 @@ class PlayState extends MusicBeatState
 		judgeMan.judgementCounter.set("miss",judgeMan.judgementCounter.get("miss")+1);
 		updateJudgementCounters();
 		previousHealth=health;
-		if(luaModchartExists && lua!=null){
-			lua.call("noteMiss",[direction]);
-		}
 		if (combo > 5 && gf.animOffsets.exists('sad'))
 		{
 			gf.playAnim('sad');
 		}
 		combo = 0;
-		healthBar.tempCombo = 0;
+		if(!bad) healthBar.tempCombo = 0;
 		showCombo();
 	
 		songScore += judgeMan.getJudgementScore('miss');
@@ -4001,15 +3762,12 @@ class PlayState extends MusicBeatState
 		judgeMan.judgementCounter.set("miss",judgeMan.judgementCounter.get("miss")+1);
 		updateJudgementCounters();
 		previousHealth=health;
-		if(luaModchartExists && lua!=null){
-			lua.call("hitMine",[note.noteData,note.strumTime,Conductor.songPosition,note.isSustainNote]);
-		}
 		if (combo > 5 && gf.animOffsets.exists('sad'))
 		{
 			gf.playAnim('sad');
 		}
 		combo = 0;
-		healthBar.tempCombo = 0;
+		if(!bad) healthBar.tempCombo = 0;
 		showCombo();
 
 		songScore -= 600;
@@ -4080,14 +3838,9 @@ class PlayState extends MusicBeatState
 
 		var strumLine = playerStrums.members[note.noteData%4];
 
-
-		if(luaModchartExists && lua!=null){
-			lua.call("goodNoteHit",[note.noteData,note.strumTime,Conductor.songPosition,note.isSustainNote]); // TODO: Note lua class???
-		}
-
 		if(!note.isSustainNote){
 			health += judgeMan.getJudgementHealth(judgement);
-			healthBar.plusCombo();
+			if(!bad) healthBar.plusCombo();
 		}
 
 		if(health>2)
@@ -4148,10 +3901,6 @@ class PlayState extends MusicBeatState
 	override function stepHit()
 	{
 		super.stepHit();
-		if(luaModchartExists && lua!=null){
-			lua.setGlobalVar("curStep",curStep);
-			lua.call("stepHit",[curStep]);
-		}
 		if(!paused){
 			if (inst != null && !startingSong){
 				if (inst.time > Conductor.rawSongPos + 45 || inst.time < Conductor.rawSongPos - 45)
@@ -4235,9 +3984,6 @@ class PlayState extends MusicBeatState
 			{
 				Conductor.changeBPM(SONG.notes[Math.floor(curStep / 16)].bpm);
 				FlxG.log.add('CHANGED BPM!');
-				if(luaModchartExists && lua!=null){
-					lua.setGlobalVar("bpm",Conductor.bpm);
-				}
 			}
 			// else
 			// Conductor.changeBPM(SONG.bpm);
@@ -4349,12 +4095,10 @@ class PlayState extends MusicBeatState
 				case 251:
 					trace('screamer');
 				case 256:
-					fx.setGlitchModifier(1);
 					camGame.alpha = 1;
 					FlxG.camera.flash(FlxColor.RED, 0.7);
 				case 320:
 					dadDrown = false;
-					fx.setGlitchModifier(0.1);
 					FlxTween.tween(camHUD, {alpha: 0}, 0.5);
 				case 327:
 					FlxTween.tween(camGame, {alpha: 1}, 0.8);
@@ -4427,12 +4171,6 @@ class PlayState extends MusicBeatState
 
 	override function switchTo(next:FlxState){
 		// Do all cleanup of stuff here! This makes it so you dont need to copy+paste shit to every switchState
-		#if cpp
-		if(lua!=null){
-			lua.destroy();
-			lua=null;
-		}
-		#end
 		FlxG.stage.removeEventListener(KeyboardEvent.KEY_DOWN,keyPress);
 		FlxG.stage.removeEventListener(KeyboardEvent.KEY_UP,keyRelease);
 
@@ -4494,3 +4232,4 @@ class PlayState extends MusicBeatState
 		storyWeek = songData.weekNum;
 	}
 }
+

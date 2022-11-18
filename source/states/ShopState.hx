@@ -54,25 +54,18 @@ class ShopState extends MusicBeatState
 
 		#if desktop DiscordClient.changePresence("Shop", null); #end
 
-		var bg:FlxBackdrop = new FlxBackdrop(CoolUtil.getBitmap(Paths.image('shopState/bg')), 10, 0, true, false);
+		var bg:FlxSprite = new FlxSprite().loadGraphic(CoolUtil.getBitmap(Paths.image('shopState/bg')));
 		bg.antialiasing = true;
-		bg.velocity.set(-50, 0);
 		add(bg);
 
-		var ov:FlxSprite = new FlxSprite().loadGraphic(CoolUtil.getBitmap(Paths.image('shopState/overlay1')));
-		ov.antialiasing = true;
-		add(ov);
-
-		var sh:FlxSprite = new FlxSprite().loadGraphic(CoolUtil.getBitmap(Paths.image('shopState/shapes')));
-		sh.antialiasing = true;
-		add(sh);
-
 		var box:FlxSprite = new FlxSprite(0, 483).loadGraphic(CoolUtil.getBitmap(Paths.image('shopState/box')));
+		box.scale.set(0.8, 0.8);
+		box.updateHitbox();
 		box.screenCenter(X);
 		box.antialiasing = true;
-		add(box);
+		
 
-		cat = new FlxSprite(135, 509);
+		cat = new FlxSprite(232, 495);
 		cat.frames = Paths.getSparrowAtlas('shopState/category');
 		cat.animation.addByPrefix('arrow', 'arrow');
 		cat.animation.addByPrefix('fire', 'fire');
@@ -80,22 +73,19 @@ class ShopState extends MusicBeatState
 		cat.scale.set(0.2, 0.2);
 		cat.updateHitbox();
 		cat.antialiasing = true;
-		add(cat);
 
-		info = new FlxTypeText(133, 564, 681, '', 23);
+		info = new FlxTypeText(227, 545, 800, '', 18);
 		info.font = Paths.font('scoreFont.ttf');
 		info.color = FlxColor.WHITE;
-		add(info);
+		info.antialiasing = true;
 
-		fafnir = new FlxSprite(828, 117);
+		fafnir = new FlxSprite(690, 133);
 		fafnir.frames = Paths.getSparrowAtlas('shopState/fafnir');
-		fafnir.scale.set(0.73, 0.73);
 		fafnir.animation.addByPrefix('talk', 'talk', 24, true);
 		fafnir.animation.addByPrefix('idle', 'idle', 15, true);
 		fafnir.animation.play('idle');
 		fafnir.updateHitbox();
 		fafnir.antialiasing = true;
-		add(fafnir);
 
 		obj = new FlxSpriteGroup();
 		add(obj);
@@ -108,7 +98,15 @@ class ShopState extends MusicBeatState
 			it.ID = i;
 			obj.add(it);
 			//FlxMouseEventManager.add(menuItem,onMouseDown,onMouseUp,onMouseOver,onMouseOut);
-		}
+		}		
+
+		var table:FlxSprite = new FlxSprite().loadGraphic(CoolUtil.getBitmap(Paths.image('shopState/table')));
+		table.antialiasing = true;
+		add(fafnir);
+		add(table);
+		add(box);
+		add(cat);
+		add(info);
 
 		bar = new FlxSprite(0, 60).loadGraphic(CoolUtil.getBitmap(Paths.image('shopState/barCoin')));
 		bar.antialiasing = true;
@@ -119,9 +117,11 @@ class ShopState extends MusicBeatState
 		lblmoney.color = FlxColor.PURPLE;
 		add(lblmoney);
 		
-		ind = new FlxSprite(435, 30).loadGraphic(CoolUtil.getBitmap(Paths.image('shopState/ind')));
+		ind = new FlxSprite(318, 75).loadGraphic(CoolUtil.getBitmap(Paths.image('shopState/ind')));
+		ind.scale.set(0.8, 0.8);
+		ind.updateHitbox();
 		ind.antialiasing = true;
-		FlxTween.tween(ind, {y: ind.y + 10}, 10, {type:FlxTween.PINGPONG, ease:FlxEase.backInOut});
+		FlxTween.tween(ind, {y: ind.y + 10}, 1, {type:FlxTween.PINGPONG, ease:FlxEase.backInOut});
 		add(ind);
 
 		var blackUpFront = new FlxSprite().makeGraphic(FlxG.width, 40, FlxColor.BLACK); add(blackUpFront);
@@ -178,21 +178,21 @@ class ShopState extends MusicBeatState
 			spr.alpha = 0;
 			if (spr.ID == curSelected) {
 				spr.alpha = 1;
-				spr.scale.set(0.6, 0.6);
+				spr.scale.set(0.5, 0.5);
 				spr.updateHitbox();
-				spr.setPosition(337, 156);
+				spr.setPosition(337 - 100, 166);
 			}
 			else if (spr.ID == curSelected - 1) {
 				spr.alpha = 0.6;
-				spr.scale.set(0.55, 0.55);
+				spr.scale.set(0.45, 0.45);
 				spr.updateHitbox();
-				spr.setPosition(64, 175);
+				spr.setPosition(64 - 40 , 185);
 			}
 			else if (spr.ID == curSelected + 1) {
 				spr.alpha = 0.6;
-				spr.scale.set(0.55, 0.55);
+				spr.scale.set(0.45, 0.45);
 				spr.updateHitbox();
-				spr.setPosition(626, 175);
+				spr.setPosition(626 - 150, 185);
 			}
 			
 			spr.updateHitbox();

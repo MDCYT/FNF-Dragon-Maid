@@ -44,6 +44,15 @@ class MaidUi extends FlxSpriteGroup {
   public var tempCombo = 0;
   private var tmrCombo:FlxTimer;
 
+  public static function cacheHUD():Void {
+		CoolUtil.getBitmap(Paths.image('maidUi/newMaidHud'));
+		CoolUtil.getBitmap(Paths.image('maidUi/scoreChar'));
+		CoolUtil.getBitmap(Paths.image('maidUi/discChar'));
+		CoolUtil.getBitmap(Paths.image('maidUi/goldDisc'));
+    CoolUtil.getBitmap(Paths.image('maidUi/plus'));
+    CoolUtil.getBitmap(Paths.image('maidUi/results'));
+	}
+
   public function new(x:Float, y:Float, player1:String, ?instance:FlxBasic, ?property:String, min:Float=0, max:Float=2, baseColor:FlxColor=0xFFFF0000){
     super(x,y);
     if(property==null || instance==null){

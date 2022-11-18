@@ -7,6 +7,8 @@ import flash.text.TextField;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.addons.display.FlxGridOverlay;
+import openfl.filters.ShaderFilter;
+import sys.io.File;
 import flixel.addons.transition.FlxTransitionableState;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.math.FlxMath;
@@ -86,6 +88,8 @@ class FreeplayState extends MusicBeatState
 	private var curPlaying:Bool = false;
 
 	private var iconArray:Array<HealthIcon> = [];
+
+	var cursed:SugarShader;
 
 	override function create()
 	{
@@ -271,6 +275,8 @@ class FreeplayState extends MusicBeatState
 
 		add(trans);
 		trans.transOut();
+
+		cursed = new SugarShader(null, {fragmentsrc: File.getContent(Paths.shader('TvShader'))});
 	}
 
 	public function addSongData(songData:EngineData.SongData){
@@ -516,15 +522,19 @@ class FreeplayState extends MusicBeatState
 		if (unlock){
 			if (songIs == 'burn-it-all'){
 				FlxG.sound.pause();
+				FlxG.camera.filtersEnabled = true;
+				FlxG.camera.setFilters([new ShaderFilter(cursed)]);
 				noise.play();
 				noise.volume = 1;
 				pause = true;
+				grpSongs.members[curSelected];
 			}
 			else{
 				if (pause){
 					FlxG.sound.resume();
 					pause = false;
 				}
+				FlxG.camera.filtersEnabled = false;
 				noise.pause();
 			}
 		}
@@ -563,6 +573,8 @@ class FreeplayState extends MusicBeatState
 				item.x = 0;
 			}
 		}
+
+		if(unlock && curSelected != 5) grpSongs.members[5].alpha = 0.1;
 
 		trace(theColor);
 

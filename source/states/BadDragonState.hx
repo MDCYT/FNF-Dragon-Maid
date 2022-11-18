@@ -8,12 +8,14 @@ import flixel.FlxObject;
 import flixel.FlxSprite;
 import flixel.addons.transition.FlxTransitionableState;
 import flixel.effects.FlxFlicker;
+import openfl.filters.ShaderFilter;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.group.FlxGroup;
 import flixel.text.FlxText;
 import flixel.system.FlxSound;
 import flixel.util.FlxColor;
 import flixel.util.FlxCollision;
+import sys.io.File;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import ui.*;
@@ -23,7 +25,6 @@ using StringTools;
 import flixel.FlxCamera;
 import openfl.Lib;
 import openfl.Assets;
-import ShaderManager;
 import Shaders;
 import flash.display.BitmapData;
 import flash.display.Bitmap;
@@ -50,6 +51,7 @@ class BadDragonState extends MusicBeatState
     var zoom:Float = -1;
     var daWindows:openfl.display.Window;
     
+    var tvShader:SugarShader;
     override function create()
     {
         super.create();
@@ -58,20 +60,10 @@ class BadDragonState extends MusicBeatState
 		DiscordClient.changePresence("Маған көмектесші", null);
 		#end
 
-        tumadre2 = new VCRDistortionEffect();
-        //Para despues, hacer que esta mierda tenga menos metodos dios que horrible se ve tener que hacer tantos metodos para una jodida viñeta del shader
-        tumadre2.setVignette(true);
-        tumadre2.setVignetteMoving(false);
-        tumadre2.setGlitchModifier(0);
-        tumadre2.setDistortion(true); 
-       
-        tumadre2.setNoise(true);
+        tvShader = new SugarShader(null, {fragmentsrc: File.getContent(Paths.shader('TvShader'))});
 
         defCam = new FlxCamera();
         FlxG.cameras.reset(defCam);
-
-        ShaderManager.addCamEffect(tumadre2, defCam);
-
 
 
         FlxG.sound.playMusic(Paths.music('bad'), 1);
@@ -111,7 +103,10 @@ class BadDragonState extends MusicBeatState
             defCam.visible = true;
             shoot(vel);
         });
+
+        FlxG.camera.setFilters([new ShaderFilter(tvShader)]);
     }
+
 
     function shoot(vel:Float = 0)
     {
@@ -164,7 +159,6 @@ class BadDragonState extends MusicBeatState
     override function update(elapsed:Float)
     {
         super.update(elapsed);
-        tumadre2.update(elapsed);
       
         //FlxG.fullscreen = true;
 

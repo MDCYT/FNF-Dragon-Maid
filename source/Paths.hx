@@ -69,6 +69,11 @@ class Paths
 		return folders;
 	}
 
+	inline static public function shader(key:String, ?library:String){
+        var path = getPath('shaders/$key.frag', TEXT, library);
+        return path;
+    }
+
 	// SLIGHTLY BASED ON https://github.com/Yoshubs/Forever-Engine/blob/master/source/ForeverTools.hx
 	// THANKS YOU GUYS ARE THE FUNKIN BEST
 	// IF YOU'RE READING THIS AND YOU HAVENT HEARD OF IT:
