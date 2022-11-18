@@ -90,6 +90,10 @@ class PlayState extends MusicBeatState
 	var b:SugarShader;
 	var g:SugarShader;
 
+	var sf_t:ShaderFilter;
+	var sf_b:ShaderFilter;
+	var sf_g:ShaderFilter;
+
 	public static var noteCounter:Map<String,Int> = [];
 	public static var inst:FlxSound;
 	public static var pauseAnimation:Int = 0;
@@ -623,7 +627,7 @@ class PlayState extends MusicBeatState
 				add(chair);	
 
 				skin = 'maidTohru';
-				b = new SugarShader(null, {fragmentsrc: File.getContent(Paths.shader('TohruShader'))});
+				b = new SugarShader(null, {fragmentsrc: File.getContent(Paths.shader('TohruShader'))}); sf_b = new ShaderFilter(b);
 			case 'forest':
 				add(dad);
 				add(stage.layers.get("dad"));
@@ -637,7 +641,7 @@ class PlayState extends MusicBeatState
 				add(overlap);
 
 				skin = 'maidElma';
-				b = new SugarShader(null, {fragmentsrc: File.getContent(Paths.shader('ElmaShader'))});
+				b = new SugarShader(null, {fragmentsrc: File.getContent(Paths.shader('ElmaShader'))}); sf_b = new ShaderFilter(b);
 			default:
 				add(dad);
 				add(stage.layers.get("dad"));
@@ -665,17 +669,16 @@ class PlayState extends MusicBeatState
 			remove(boyfriend);
 		}
 
-		t = new SugarShader(null, {fragmentsrc: File.getContent(Paths.shader('BurstShader'))});
-
+		t = new SugarShader(null, {fragmentsrc: File.getContent(Paths.shader('BurstShader'))}); sf_t = new ShaderFilter(t);
 
 		if(bad){
 			Lib.current.stage.window.borderless = true;	
-			b = new SugarShader(null, {fragmentsrc: File.getContent(Paths.shader('TvShader'))});
-			g = new SugarShader(null, {fragmentsrc: File.getContent(Paths.shader('GlitchShader'))});
+			b = new SugarShader(null, {fragmentsrc: File.getContent(Paths.shader('TvShader'))}); sf_b = new ShaderFilter(b);
+			g = new SugarShader(null, {fragmentsrc: File.getContent(Paths.shader('GlitchShader'))}); sf_g = new ShaderFilter(g);
 
-			camGame.setFilters([new ShaderFilter(g), new ShaderFilter(b)]);
+			camGame.setFilters([sf_g, sf_b]);
 		}
-		else camGame.setFilters([new ShaderFilter(b)]);
+		else camGame.setFilters([sf_b]);
 
 		var texKanna = Paths.getSparrowAtlas('maidDragon/cuteKanna');
 
@@ -991,7 +994,6 @@ class PlayState extends MusicBeatState
 
 		add(trans);
 		trans.cameras = [camHUD];
-
 	}
 
 	function daNameSong(pos:Bool)
@@ -2696,7 +2698,7 @@ class PlayState extends MusicBeatState
 		{
 			if(startedCountdown){
 				if(burst && controls.BURST && !bad){
-					camGame.setFilters([new ShaderFilter(b), new ShaderFilter(t)]);
+					camGame.setFilters([sf_b, sf_t]);
 					healthBar.canPoint = false;
 					healthBar.pointCombo = 0;
 					healthBar.tempCombo = 0;
@@ -2724,7 +2726,7 @@ class PlayState extends MusicBeatState
 							camHUD.flash();
 							bfTrail.visible = false;
 							charZoom(false, defaultCamZoom, 'all');
-							camGame.setFilters([new ShaderFilter(b)]);
+							camGame.setFilters([sf_b]);
 						}
 					},4);
 				}
